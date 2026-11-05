@@ -15,7 +15,7 @@ it('displays and sorts surnames first while accepting full composer names in sea
 });
 it('ships intact public-domain portraits with source credits and honest missing-portrait fallbacks', () => {
   const portraits = Object.values(COMPOSERS).flatMap(p=>p.portrait ? [p.portrait] : []);
-  expect(portraits).toHaveLength(14);
+  expect(portraits.length).toBeGreaterThanOrEqual(24);
   for(const portrait of portraits) {
     const bytes = readFileSync(resolve('public', `.${portrait.url}`));
     expect(bytes.length).toBe(portrait.bytes);

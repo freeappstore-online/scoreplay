@@ -9,7 +9,7 @@ import { readMusicXml } from './original-score';
 import { vi } from 'vitest';
 describe('reviewed free collection', () => {
   it('contains unique, playable editions with intact score assets and recorded provenance', () => {
-    expect(CATALOG.length).toBeGreaterThanOrEqual(60);
+    expect(CATALOG.length).toBeGreaterThanOrEqual(143);
     expect(new Set(CATALOG.map(p => p.id)).size).toBe(CATALOG.length);
     for (const piece of CATALOG) {
       expect(piece.sourceUrl).toMatch(/^https:\/\/(www.mutopiaproject.org|www.gutenberg.org)\//);

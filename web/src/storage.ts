@@ -1,5 +1,5 @@
 import { LIBRARY_LIMIT, LibraryFullError, libraryId, type LibraryEntry } from './library';
-export type Saved = { bytes: ArrayBuffer; name: string; displayTitle?: string; musicxml?: string; pdf?: ArrayBuffer };
+export type Saved = { bytes: ArrayBuffer; name: string; displayTitle?: string; musicxml?: string; pdf?: ArrayBuffer; catalogId?: string };
 async function database(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open('scoreplay', 2);

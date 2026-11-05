@@ -36,5 +36,5 @@ export async function loadCatalogPiece(piece: CatalogPiece, signal: AbortSignal)
   parseMidi(bytes, piece.title);
   if (new TextDecoder().decode(pdf.slice(0,5)) !== '%PDF-') throw new Error('The score download was incomplete. Please try again.');
   const musicxml = xmlBytes ? readMusicXml(new TextDecoder().decode(xmlBytes)).xml : undefined;
-  return { id: piece.id, name: `${piece.id}.mid`, title: piece.title, displayTitle: piece.title, bytes, pdf, musicxml, added: Date.now() };
+  return { id: piece.id, catalogId: piece.id, name: `${piece.id}.mid`, title: piece.title, displayTitle: piece.title, bytes, pdf, musicxml, added: Date.now() };
 }

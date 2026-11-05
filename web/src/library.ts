@@ -1,6 +1,6 @@
 import { parseMidi } from './music';
 import { readMusicXml } from './original-score';
-export type LibraryEntry = { id: string; name: string; title: string; displayTitle?: string; bytes: ArrayBuffer; musicxml?: string; pdf?: ArrayBuffer; added: number };
+export type LibraryEntry = { id: string; name: string; title: string; displayTitle?: string; bytes: ArrayBuffer; musicxml?: string; pdf?: ArrayBuffer; added: number; catalogId?: string };
 export const LIBRARY_LIMIT = 100;
 export class LibraryFullError extends Error {
   constructor() { super(`Your files hold up to ${LIBRARY_LIMIT} arrangements. Remove one before saving more.`); }
@@ -16,6 +16,8 @@ export async function prepareLibrary(files: File[], existing: LibraryEntry[]) {
     if (file.size > (extension === 'pdf' ? 20 : 5) * 1024 * 1024) throw new Error(`${file.name} is too large. MIDI/MusicXML: 5 MB; PDF: 20 MB.`);
     const id = libraryId(file.name);
     const entry = groups.get(id) ?? { ...(existing.find(e => e.id === id) ?? { id, title: file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '), added: Date.now() }) };
+    // An imported replacement is a private arrangement, even if its name matches a catalog item.
+    delete entry.catalogId;
     const bytes = await file.arrayBuffer();
     if (extension === 'mid' || extension === 'midi') { parseMidi(bytes, file.name); entry.bytes = bytes; entry.name = file.name; }
     else if (extension === 'pdf') {

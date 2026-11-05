@@ -188,5 +188,135 @@
       "sha256": "c8f872c5fdcf21129daf2ad096163ab9513dbafd897b8aef8c73ed02725fe2b1",
       "bytes": 18692
     }
+  },
+  "E. Satie": {
+    "fullName": "Erik Satie",
+    "label": "Satie, Erik",
+    "portrait": {
+      "url": "/composers/satie.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ericsatie.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Ericsatie.jpg/250px-Ericsatie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Henri Manuel",
+      "rights": "Public domain",
+      "sha256": "ff0b7592cc93edc3ef0286316d5037933b5c90893350994436a0329744bc80ed",
+      "bytes": 23092
+    }
+  },
+  "F. Liszt": {
+    "fullName": "Franz Liszt",
+    "label": "Liszt, Franz",
+    "portrait": {
+      "url": "/composers/liszt.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Franz_Liszt_by_Herman_Biow-_1843.png",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Franz_Liszt_by_Herman_Biow-_1843.png/250px-Franz_Liszt_by_Herman_Biow-_1843.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Herman Biow",
+      "rights": "Public domain",
+      "sha256": "9f0537b1b080fb90b3de2cb3ba5de2293291200aa6779d518cf05355f2ba07da",
+      "bytes": 137586
+    }
+  },
+  "C. Czerny": {
+    "fullName": "Carl Czerny",
+    "label": "Czerny, Carl",
+    "portrait": {
+      "url": "/composers/czerny.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Czerny_2_part.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Czerny_2_part.jpg/250px-Czerny_2_part.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Josef Kriehuber",
+      "rights": "Public domain",
+      "sha256": "ec686e50fa88e6ab3c6d35fe6da37ffa95f28640713226388a092e8ca74db64f",
+      "bytes": 16882
+    }
+  },
+  "F. Mendelssohn-Bartholdy": {
+    "fullName": "Felix Mendelssohn",
+    "label": "Mendelssohn, Felix",
+    "portrait": {
+      "url": "/composers/mendelssohn.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Felix_Mendelssohn_Bartholdy_by_Eduard_Magnus_(1833).jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Felix_Mendelssohn_Bartholdy_by_Eduard_Magnus_%281833%29.jpg/250px-Felix_Mendelssohn_Bartholdy_by_Eduard_Magnus_%281833%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Eduard Magnus",
+      "rights": "Public domain",
+      "sha256": "fe03fa50050f046d0fb8eba62206a2c596a234245ff5f39f8a97999faec4421d",
+      "bytes": 21980
+    }
+  },
+  "J. F. F. Burgmüller": {
+    "fullName": "Friedrich Burgmüller",
+    "label": "Burgmüller, Friedrich",
+    "portrait": {
+      "url": "/composers/burgmuller.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Friedrich_Burgm%C3%BCller.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Friedrich_Burgm%C3%BCller.jpg/250px-Friedrich_Burgm%C3%BCller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Fr. Meyer",
+      "rights": "Public domain",
+      "sha256": "ef73cbf61c9968128bf34c9ab9dc395cbc668da8412f8262ff5002e498cf4e31",
+      "bytes": 19305
+    }
+  },
+  "C. Saint-Saëns": {
+    "fullName": "Camille Saint-Saëns",
+    "label": "Saint-Saëns, Camille",
+    "portrait": {
+      "url": "/composers/saint-saens.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint-Sa%C3%ABns-circa-1880.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Saint-Sa%C3%ABns-circa-1880.jpg/250px-Saint-Sa%C3%ABns-circa-1880.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Charles Reutlinger (1816–81)",
+      "rights": "Public domain",
+      "sha256": "37d96d049b1c7cabe537ceadf42cbf1c0f66dfa1fd219201116a6e1fe9c98e7b",
+      "bytes": 32561
+    }
+  },
+  "A. Dvořák": {
+    "fullName": "Antonín Dvořák",
+    "label": "Dvořák, Antonín",
+    "portrait": {
+      "url": "/composers/dvorak.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dvorak.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Dvorak.jpg/250px-Dvorak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Unknown authorUnknown author",
+      "rights": "Public domain",
+      "sha256": "f62d652117034e62789b183f26b1fa1a6af2fe1a8c81b977373a5fba5de20bdb",
+      "bytes": 19074
+    }
+  },
+  "D. Scarlatti": {
+    "fullName": "Domenico Scarlatti",
+    "label": "Scarlatti, Domenico",
+    "portrait": {
+      "url": "/composers/scarlatti.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Domenico_Scarlatti.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Retrato_de_Domenico_Scarlatti.jpg/250px-Retrato_de_Domenico_Scarlatti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Domingo Antonio Velasco",
+      "rights": "Public domain",
+      "sha256": "f319e68b5917a26265cdb3538c9f5958ab97b68d137f8c435e1e5b5bd87924ed",
+      "bytes": 22229
+    }
+  },
+  "F. Sor": {
+    "fullName": "Fernando Sor",
+    "label": "Sor, Fernando",
+    "portrait": {
+      "url": "/composers/sor.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fernando_Sor.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Fernando_Sor.jpg/250px-Fernando_Sor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Godefroy Engelmann the Elder / After Joseph Bordes",
+      "rights": "Public domain",
+      "sha256": "a1f9bdafae0511913f851681115b080428274d6e068667531cea899b9a062409",
+      "bytes": 16481
+    }
+  },
+  "F. F. Chopin": {
+    "fullName": "Frédéric Chopin",
+    "label": "Chopin, Frédéric",
+    "portrait": {
+      "url": "/composers/chopin.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Frederic_Chopin_photo.jpeg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Frederic_Chopin_photo.jpeg/250px-Frederic_Chopin_photo.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Louis-Auguste Bisson",
+      "rights": "Public domain",
+      "sha256": "f67e6221fd8a6d741b2b6b9c5bf0d4d3d7e51efff3b42c7e5f6b65912176827d",
+      "bytes": 32716
+    }
   }
 }

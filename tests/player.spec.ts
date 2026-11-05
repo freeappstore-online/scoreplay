@@ -194,14 +194,14 @@ test('supplied Belle arrangements render their original scores and remain playab
 test('free collection filters, favourites, real nursery score and saved offline files', async ({ page, context }) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto('/library');
-  await expect(page.getByText('60 pieces found · 60 in the collection')).toBeVisible();
+  await expect(page.getByText(/\d+ pieces found · Free collection · \d+ total/)).toBeVisible();
   await page.getByRole('textbox', { name: 'Find a song' }).pressSequentially('London');
   await page.getByLabel('Category', { exact:true }).selectOption('Children & learning');
   await page.getByLabel('Difficulty · estimated').selectOption('Easy');
   await page.getByLabel('Instrument', { exact:true }).selectOption('Piano');
   await page.getByLabel('Score format').selectOption('musicxml');
   await page.getByLabel('Add a tag').selectOption('english');
-  await expect(page.getByText('1 piece found · 60 in the collection')).toBeVisible();
+  await expect(page.getByText(/1 piece found · Free collection · \d+ total/)).toBeVisible();
   await page.getByRole('button', { name:'Favourite London Bridge',exact:true }).click();
   await page.reload();
   await expect(page.getByRole('textbox', { name:'Find a song' })).toHaveValue('London');
@@ -232,7 +232,7 @@ test('free collection filters, favourites, real nursery score and saved offline 
   await page.getByLabel('Category', { exact:true }).selectOption('Children & learning');
   await expect(page.getByText('No pieces match just yet.')).toBeVisible();
   await page.getByRole('button', { name:'Clear filters',exact:true }).click();
-  await expect(page.getByText('60 pieces found · 60 in the collection')).toBeVisible();
+  await expect(page.getByText(/\d+ pieces found · Free collection · \d+ total/)).toBeVisible();
   await page.screenshot({path:'test-results/free-library-desktop.png',fullPage:true});
   await page.setViewportSize({width:390,height:844});
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
@@ -396,7 +396,7 @@ test('concurrent player imports respect the library limit; filename search and r
   await page.getByRole('link',{name:'Library',exact:true}).click();
   await page.getByRole('button',{name:'My files (100)',exact:true}).click();
   await page.getByRole('textbox',{name:'Find a song'}).pressSequentially(stored.last);
-  await expect(page.getByText('1 piece found',{exact:true})).toBeVisible();
+  await expect(page.getByText('1 piece found · In your saved files',{exact:true})).toBeVisible();
   await page.getByRole('button',{name:`Remove ${stored.last.replace('.mid','').replaceAll('-',' ')}`,exact:true}).click();
   await page.getByRole('button',{name:'Remove arrangement',exact:true}).click();
   await expect(page.getByRole('button',{name:'My files (99)',exact:true})).toBeVisible();

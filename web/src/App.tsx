@@ -7,6 +7,7 @@ import { formatTime } from './music';
 import { PianoRoll } from './PianoRoll';
 import type { LibraryEntry } from './library';
 import { useMusicFile } from './useMusicFile';
+import { piecePath, SharePiece } from './SharePiece';
 import { pwa } from './fas-capabilities/pwa';
 
 const Library = lazy(() => import('./LibraryScreen'));
@@ -24,9 +25,11 @@ export default function App() {
   const [audioLoading, setAudioLoading] = useState(false);
   const [pdfUrl, setPdfUrl] = useState('');
   const [original, setOriginal] = useState(true);
-  const [path, setPath] = useState(location.pathname);
+  const [route, setRoute] = useState(location.pathname + location.search);
+  const path = route.split('?')[0];
+  const linkedPieceId = path === '/' ? new URLSearchParams(route.split('?')[1] ?? '').get('piece') : null;
   const [player] = useState(() => new Player());
-  const { song, musicxml, pdf, revision, busy, error, notice, setError, open, demo, forget, openEntry } = useMusicFile(player);
+  const { song, musicxml, pdf, catalogId, revision, busy, error, notice, setError, open, demo, forget, openEntry } = useMusicFile(player, linkedPieceId);
   const [time, setTime] = useState(0), [playing, setPlaying] = useState(false);
   const [speed, setSpeed] = useState(1), [volume, setVolume] = useState(65), [loop, setLoop] = useState(false);
   const [muted, setMuted] = useState(new Set<number>());
@@ -36,7 +39,7 @@ export default function App() {
   useEffect(() => {
     player.sound = soundMode; player.onLoading = setAudioLoading;
     player.onUpdate = (t, p) => { setTime(t); setPlaying(p); };
-    const sync = () => setPath(location.pathname); addEventListener('popstate', sync);
+    const sync = () => setRoute(location.pathname + location.search); addEventListener('popstate', sync);
     const release = pwa.addBusyGuard(() => player.playing || player.loading);
     return () => { player.pause(); release(); removeEventListener('popstate', sync); };
   }, [player]);
@@ -49,7 +52,7 @@ export default function App() {
     };
     addEventListener('keydown', key); return () => removeEventListener('keydown', key);
   });
-  const navigate = (href: string) => { history.pushState(null, '', href); setPath(location.pathname); };
+  const navigate = (href: string) => { history.pushState(null, '', href); setRoute(location.pathname + location.search); };
   const start = async () => { setError(''); try { await player.play(); } catch (e) { setError(e instanceof Error ? e.message : 'Audio could not start. Please try Play again.'); } };
   const toggle = () => player.playing || player.loading ? player.pause() : start();
   const seek = (t: number) => { const resume = player.playing; player.seek(t); if (resume) void start(); };
@@ -64,7 +67,9 @@ export default function App() {
     const next = new Set(muted); if (next.has(i)) next.delete(i); else next.add(i);
     setMuted(next); player.muted = next; if (resume) void start();
   };
-  const openLibrary = async (entry: LibraryEntry) => { const pending = openEntry(entry); navigate('/'); await pending; };
+  const openLibrary = async (entry: LibraryEntry) => { const pending = openEntry(entry); navigate(entry.catalogId ? piecePath(entry.catalogId) : '/'); await pending; };
+  const clearPieceLink = () => { if (linkedPieceId !== null) { history.replaceState(null, '', '/'); setRoute('/'); } };
+  const openFile = (file?: File) => { if (file && !busy) { clearPieceLink(); void open(file); } };
   return <Shell app={fas} appName="Scoreplay" nav={NAV} onNavigate={navigate}>
     <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-6 sm:px-8 sm:py-9">
       {path === '/library' ? <Suspense fallback={<p role="status">Loading library…</p>}><Library onOpen={openLibrary} /></Suspense> : path === '/about' ? <>
@@ -74,22 +79,22 @@ export default function App() {
           <ol className="list-decimal space-y-2 pl-5"><li>Export your music as a standard MIDI (.mid or .midi), then choose Open MIDI.</li><li>Press Play or use the space bar. Use the measure buttons, click the piano roll, or drag the position slider to jump.</li><li>Slow down without changing pitch, mute a track, or loop the whole piece.</li></ol>
           <p>Original instruments uses each track’s instrument; Grand piano plays melodic tracks on piano and keeps percussion as drums. Note timing, tempo changes, velocity and sustain pedal are respected. Pitch bends and other expressive MIDI controllers are not yet reproduced.</p>
           <p>Switch between Sheet music and Piano roll. Sheet music is an approximate transcription: choose a track and rhythm grid, browse measures, or follow playback. MIDI does not preserve original notation, so key spelling, beaming, and hand assignments are estimated. Notes cannot be edited in this version. Import paired MusicXML and PDF scores through Library. MusicXML preserves the original notation; PDF opens the printed score. The free library includes classical and traditional pieces with MIDI and PDF scores, plus original MusicXML for nursery songs. Search by title, composer or tags, filter by difficulty and instrument, and star your favourites. Save a piece to My files to keep its files on this device. MuseScore project files and audio recordings are not supported. Maximum file size: 5 MB; maximum duration: two hours.</p>
-          <p>Your imported arrangements and their scores are saved in this browser on this device. They are never sent to a server. Remove arrangements in Library, or use “Clear last opened file” to clear just the last-opened selection. The demo is an arrangement of Beethoven’s public-domain Ode to Joy.</p>
+          <p>Use Share on a free-library piece to copy or send a link that opens its music and score. Recipients can listen without an account. Your imported arrangements and their scores are saved in this browser on this device. They are never sent to a server. Remove arrangements in Library, or use “Clear last opened file” to clear just the last-opened selection. The demo is an arrangement of Beethoven’s public-domain Ode to Joy.</p>
           <p className="text-xs text-muted"><a className="text-accent underline" href="https://github.com/mrbumpy409/GeneralUser-GS" target="_blank" rel="noopener noreferrer">GeneralUser GS by S. Christian Collins</a> · <a className="text-accent underline" href={SOUND_BANK.license} target="_blank" rel="noopener noreferrer">Sound bank terms</a> · <a className="text-accent underline" href="/sounds/SpessaSynth-LICENSE.txt" target="_blank" rel="noopener noreferrer">SpessaSynth engine</a></p>
           <Button onClick={() => navigate('/')}>Back to player</Button>
         </div></Card>
       </> : <>
         <PageHeader title="Make time for music." description="Your MIDI. Your tempo. A simple space to listen and practise." actions={<Badge variant="success">On your device</Badge>} />
-        <section aria-label="Import music" onDragOver={e => { e.preventDefault(); setDrag(true); }} onDragLeave={() => setDrag(false)} onDrop={e => { e.preventDefault(); setDrag(false); void open(e.dataTransfer.files[0]); }} className={`flex flex-col justify-between gap-4 rounded-2xl border border-dashed p-5 sm:flex-row sm:items-center ${drag ? 'border-accent bg-accent-soft' : 'border-line-strong bg-panel'}`}>
+        <section aria-label="Import music" onDragOver={e => { e.preventDefault(); setDrag(true); }} onDragLeave={() => setDrag(false)} onDrop={e => { e.preventDefault(); setDrag(false); openFile(e.dataTransfer.files[0]); }} className={`flex flex-col justify-between gap-4 rounded-2xl border border-dashed p-5 sm:flex-row sm:items-center ${drag ? 'border-accent bg-accent-soft' : 'border-line-strong bg-panel'}`}>
           <div className="flex items-center gap-4"><span aria-hidden="true" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-2xl text-accent">♫</span><div><h2 className="text-xl">Bring your own music</h2><p className="mt-1 text-sm text-muted">Drop a MIDI file here · .mid or .midi · up to 5 MB</p></div></div>
-          <div className="flex flex-wrap gap-2"><Button disabled={busy} onClick={demo}>Try demo</Button><Button onClick={() => navigate('/library')}>Browse free library</Button><Button primary disabled={busy} onClick={() => input.current?.click()}>{busy ? 'Opening…' : '↑ Open MIDI'}</Button></div>
-          <input ref={input} type="file" accept=".mid,.midi,audio/midi,audio/x-midi" aria-label="Choose MIDI file" className="sr-only" onChange={e => { const file = e.currentTarget.files?.[0]; e.currentTarget.value = ''; void open(file); }} />
+          <div className="flex flex-wrap gap-2"><Button disabled={busy} onClick={() => { clearPieceLink(); demo(); }}>Try demo</Button><Button onClick={() => navigate('/library')}>Browse free library</Button><Button primary disabled={busy} onClick={() => input.current?.click()}>{busy ? 'Opening…' : '↑ Open MIDI'}</Button></div>
+          <input ref={input} type="file" accept=".mid,.midi,audio/midi,audio/x-midi" aria-label="Choose MIDI file" className="sr-only" onChange={e => { const file = e.currentTarget.files?.[0]; e.currentTarget.value = ''; openFile(file); }} />
         </section>
-        {error && <div role="alert" className="rounded-xl border border-danger bg-danger-soft p-4 text-sm text-danger">{error}</div>}
+        {error && <div role="alert" className="rounded-xl border border-danger bg-danger-soft p-4 text-sm text-danger">{error}{linkedPieceId !== null && !song && <button className="ml-3 min-h-11 underline" onClick={() => location.reload()}>Retry linked piece</button>}</div>}
         <p role="status" className="min-h-5 text-xs text-muted">{notice}</p>
         {song && <>
           <section className="overflow-hidden rounded-2xl border border-line bg-paper" aria-label="Music player">
-            <div className="flex flex-wrap items-start justify-between gap-3 border-b border-line p-5 sm:p-6"><div><p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted">Now on the stand</p><h2 className="text-3xl">{song.title}</h2><p className="mt-2 text-sm text-muted">{song.tracks.length} tracks · {song.notes.length.toLocaleString()} notes · {Math.round(song.bpm)} BPM at start</p></div><Badge variant={playing ? 'success' : 'default'}>{playing ? 'Playing' : time >= song.duration ? 'Finished' : 'Ready to play'}</Badge></div>
+            <div className="flex flex-wrap items-start justify-between gap-3 border-b border-line p-5 sm:p-6"><div><p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted">Now on the stand</p><h2 className="text-3xl">{song.title}</h2><p className="mt-2 text-sm text-muted">{song.tracks.length} tracks · {song.notes.length.toLocaleString()} notes · {Math.round(song.bpm)} BPM at start</p></div><div className="flex flex-wrap items-start gap-2"><Badge variant={playing ? 'success' : 'default'}>{playing ? 'Playing' : time >= song.duration ? 'Finished' : 'Ready to play'}</Badge>{catalogId && <SharePiece key={catalogId} id={catalogId} title={song.title} />}</div></div>
             <div className="flex flex-wrap gap-2 border-b border-line bg-panel px-5 py-3" role="group" aria-label="Music view"><Button primary={mode === 'sheet'} aria-pressed={mode === 'sheet'} onClick={() => setMode('sheet')}>Sheet music</Button><Button primary={mode === 'roll'} aria-pressed={mode === 'roll'} onClick={() => setMode('roll')}>Piano roll</Button>{pdfUrl && <Button primary={mode === 'pdf'} aria-pressed={mode === 'pdf'} onClick={() => setMode('pdf')}>PDF score</Button>}</div>
             {mode === 'sheet' ? <>
               {musicxml && <div className="flex flex-wrap gap-2 px-5 pt-4"><Button aria-pressed={original} onClick={() => setOriginal(true)}>Original score</Button><Button aria-pressed={!original} onClick={() => setOriginal(false)}>MIDI transcription</Button></div>}
@@ -106,7 +111,7 @@ export default function App() {
             <Card><h2 className="mb-4 text-xl">Listen in layers</h2><div className="max-h-56 space-y-3 overflow-y-auto">{song.tracks.map((t, i) => <div key={i} className="flex items-center justify-between gap-3"><div className="flex min-w-0 items-center gap-3"><span aria-hidden="true" className={`h-2.5 w-2.5 shrink-0 rounded-full ${['bg-accent','bg-mint','bg-sky','bg-warning'][i % 4]}`} /><div className="min-w-0"><p className="truncate text-sm font-semibold">{t.name}</p><p className="truncate text-xs capitalize text-muted">{t.instrument}</p></div></div><Button aria-label={`${muted.has(i) ? 'Unmute' : 'Mute'} ${t.name}`} aria-pressed={muted.has(i)} onClick={() => toggleTrack(i)}>{muted.has(i) ? 'Muted' : 'On'}</Button></div>)}</div></Card>
           </div>
         </>}
-        <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5 text-xs text-muted"><p>A little less setup. A little more music.</p><button disabled={busy} className="min-h-11 underline underline-offset-4" onClick={() => void forget()}>Clear last opened file</button></footer>
+        <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5 text-xs text-muted"><p>A little less setup. A little more music.</p><button disabled={busy} className="min-h-11 underline underline-offset-4" onClick={() => { clearPieceLink(); void forget(); }}>Clear last opened file</button></footer>
       </>}
     </div>
   </Shell>;

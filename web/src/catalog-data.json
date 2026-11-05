@@ -2283,5 +2283,3039 @@
     "verified": "2026-11-06",
     "duration": 13.64,
     "bpm": 88
+  },
+  {
+    "id": "mutopia-1381",
+    "title": "Symphony No. 25, K. 183 — second movement",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Orchestra"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "KV 183 · Orchestra: Oboes, Horns, Violins, Viola, 'Cello, Bass. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1381",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf and Hartel (1880)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV183/Symphony25_2/Symphony25_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV183/Symphony25_2/Symphony25_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1381/score.mid",
+      "pdf": "/music/mutopia-1381/score.pdf"
+    },
+    "sha256": {
+      "midi": "6cbfc8f2011b2b99038973e6873a09d8e104fbb7a5548446f8a95c5f90c9226f",
+      "pdf": "580e7fbce5df4cddedc1967d475a84dc8c5e85ce03cc5d42b588a26e676e87d7"
+    },
+    "verified": "2026-11-06",
+    "duration": 309,
+    "bpm": 56
+  },
+  {
+    "id": "mutopia-2236",
+    "title": "Ah! vous dirai-je, maman (Twinkle, Twinkle) — guitar duet",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "classical",
+      "duet",
+      "familiar melody",
+      "twinkle twinkle",
+      "variations"
+    ],
+    "description": "2 Guitars. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2236",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Paris: Porro, n.d. Plate 79.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV265/guitar-duo-complete/guitar-duo-complete.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV265/guitar-duo-complete/guitar-duo-complete-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2236/score.mid",
+      "pdf": "/music/mutopia-2236/score.pdf"
+    },
+    "sha256": {
+      "midi": "f6c92ab2c25184bc848fb47b4235c27fb4616b91124aec2bd7129b63b9350969",
+      "pdf": "d76fa9e2aa105d799d7293ce6b24a9bbbddbd21d99cc6f0b408e491e637e6ef5"
+    },
+    "verified": "2026-11-06",
+    "duration": 532,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2238",
+    "title": "Ah! vous dirai-je, maman — Variation V, guitar duet",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "classical",
+      "duet",
+      "familiar melody",
+      "twinkle twinkle",
+      "variations"
+    ],
+    "description": "2 Guitars. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2238",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Paris: Porro, n.d. Plate 79.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV265/guitar-duo-varV/guitar-duo-varV.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV265/guitar-duo-varV/guitar-duo-varV-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2238/score.mid",
+      "pdf": "/music/mutopia-2238/score.pdf"
+    },
+    "sha256": {
+      "midi": "b58d0f6431939d337528b381b6a4fbc35622a0116eee717a378e8adade523c48",
+      "pdf": "e1813baab42b3989f9fd4bed1beaf975f39cf78a9e334fefa725cee6b18f9694"
+    },
+    "verified": "2026-11-06",
+    "duration": 28,
+    "bpm": 84
+  },
+  {
+    "id": "mutopia-1379",
+    "title": "Piano Sonata in C major, K. 309 — first movement",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 309 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1379",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1877-83)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV309/KV309_1/KV309_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV309/KV309_1/KV309_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1379/score.mid",
+      "pdf": "/music/mutopia-1379/score.pdf"
+    },
+    "sha256": {
+      "midi": "52ef514bf46fd437319327ac8abe7ea56001a3e7e411a592cfd412ea6950f33c",
+      "pdf": "264605eca6b9f4971cff3fbc0c933cb1847166e3bf30b5767e1c5b83fdf5c72d"
+    },
+    "verified": "2026-11-06",
+    "duration": 256,
+    "bpm": 146
+  },
+  {
+    "id": "mutopia-614",
+    "title": "Piano Sonata in A major, K. 331 — Theme",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=614",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_1_tema/KV331_1_1_tema.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_1_tema/KV331_1_1_tema-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-614/score.mid",
+      "pdf": "/music/mutopia-614/score.pdf"
+    },
+    "sha256": {
+      "midi": "028e017fe5030fa982d906b649c578e4e853473b8cb6b987410ed4edfc00c884",
+      "pdf": "909ddf6587ae9785acb37b397d345a87cf1451b47bd64325f7a11df7d66b6646"
+    },
+    "verified": "2026-11-06",
+    "duration": 115,
+    "bpm": 56
+  },
+  {
+    "id": "mutopia-615",
+    "title": "Piano Sonata in A major, K. 331 — Variation 1",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=615",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_2_var1/KV331_1_2_var1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_2_var1/KV331_1_2_var1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-615/score.mid",
+      "pdf": "/music/mutopia-615/score.pdf"
+    },
+    "sha256": {
+      "midi": "aad71ccf4760824bdaa7bfa3f0bfb3a58599e984185bc8f42141a3f4aa9c4a42",
+      "pdf": "9e840783ef612173eac2425452963ef5f2afd46faec53b7c953451fe1fb86710"
+    },
+    "verified": "2026-11-06",
+    "duration": 70,
+    "bpm": 92
+  },
+  {
+    "id": "mutopia-616",
+    "title": "Piano Sonata in A major, K. 331 — Variation 2",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=616",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_3_var2/KV331_1_3_var2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_3_var2/KV331_1_3_var2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-616/score.mid",
+      "pdf": "/music/mutopia-616/score.pdf"
+    },
+    "sha256": {
+      "midi": "bf7ffc2309bac344c7d4c7f7df381208e4e86a5b83eddf3e77d0fddb71d2b44f",
+      "pdf": "9400c3814bcbce7709f11a9caaef36846008ac53573706b20bc045fe4670c588"
+    },
+    "verified": "2026-11-06",
+    "duration": 115,
+    "bpm": 56
+  },
+  {
+    "id": "mutopia-617",
+    "title": "Piano Sonata in A major, K. 331 — Variation 3",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=617",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_4_var3/KV331_1_4_var3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_4_var3/KV331_1_4_var3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-617/score.mid",
+      "pdf": "/music/mutopia-617/score.pdf"
+    },
+    "sha256": {
+      "midi": "e0508deea94473736c415682d955b75cc4c14549b56004e8b6bb8b483ca9dee5",
+      "pdf": "48ea5c4ec7b1b82e9b6709d295a1e7fbabecdf8c2bd0fdc5cfd221f13d8b751a"
+    },
+    "verified": "2026-11-06",
+    "duration": 79,
+    "bpm": 82
+  },
+  {
+    "id": "mutopia-618",
+    "title": "Piano Sonata in A major, K. 331 — Variation 4",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=618",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_5_var4/KV331_1_5_var4.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_5_var4/KV331_1_5_var4-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-618/score.mid",
+      "pdf": "/music/mutopia-618/score.pdf"
+    },
+    "sha256": {
+      "midi": "15302b5c84575d75b51cf88aca037557bd4ba011b43ad497b34475ee6cc10617",
+      "pdf": "7b4420b2c0786b14c3bb83bba083bb6c2568be4569355e940b9c46ec449a1849"
+    },
+    "verified": "2026-11-06",
+    "duration": 85,
+    "bpm": 76
+  },
+  {
+    "id": "mutopia-619",
+    "title": "Piano Sonata in A major, K. 331 — Variation 5",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=619",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_6_var5/KV331_1_6_var5.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_6_var5/KV331_1_6_var5-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-619/score.mid",
+      "pdf": "/music/mutopia-619/score.pdf"
+    },
+    "sha256": {
+      "midi": "8fd0e380891de8e47613db901828f659bfbb7edd589ed38fa393f062f0032a41",
+      "pdf": "b06460dd7b5cf61ee16472849047edc1f7f431b45632c61b6cd63a31ad074090"
+    },
+    "verified": "2026-11-06",
+    "duration": 249,
+    "bpm": 26
+  },
+  {
+    "id": "mutopia-620",
+    "title": "Piano Sonata in A major, K. 331 — Variation 6",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=620",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_7_var6/KV331_1_7_var6.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_1_7_var6/KV331_1_7_var6-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-620/score.mid",
+      "pdf": "/music/mutopia-620/score.pdf"
+    },
+    "sha256": {
+      "midi": "09fa40ff4b70bbc742807f05fef993f4c15f910660c4d950bccebae2201fff17",
+      "pdf": "87dfb5eaa25991393ce88ce0157c6eb9143baec527edf7176262384c181401eb"
+    },
+    "verified": "2026-11-06",
+    "duration": 89,
+    "bpm": 118
+  },
+  {
+    "id": "mutopia-613",
+    "title": "Piano Sonata in A major, K. 331 — Minuet",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "dance",
+      "triple time",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=613",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_2_1_menuetto/KV331_2_1_menuetto.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_2_1_menuetto/KV331_2_1_menuetto-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-613/score.mid",
+      "pdf": "/music/mutopia-613/score.pdf"
+    },
+    "sha256": {
+      "midi": "3ba1912acb167ad527e964ecfaee4acb448baf74589ef6b8b338e8cdb0f5a6c8",
+      "pdf": "1d228ea2f0c1c86b1caa862d75be8d4b27d27a572f290ed2db61d17fa7d46917"
+    },
+    "verified": "2026-11-06",
+    "duration": 333,
+    "bpm": 134
+  },
+  {
+    "id": "mutopia-108",
+    "title": "Turkish March (Rondo alla turca), K. 331",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 331 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=108",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_3_RondoAllaTurca/KV331_3_RondoAllaTurca.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_3_RondoAllaTurca/KV331_3_RondoAllaTurca-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-108/score.mid",
+      "pdf": "/music/mutopia-108/score.pdf"
+    },
+    "sha256": {
+      "midi": "c14299cbdd34c8b2081da84dc06519ef8a52a0d589ee53c758d28b8e3d727d1c",
+      "pdf": "605b2f3f18f50f202fb80efadada57548757b19fc7d9529ef9cd55a591a16259"
+    },
+    "verified": "2026-11-06",
+    "duration": 255,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2034",
+    "title": "Fantasia in D minor, K. 397",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 397 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2034",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "'Mozart Album: Zongorára' Budapest: Zeneműkiadó Vállalat, 1951",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV397/Fantasia/Fantasia.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV397/Fantasia/Fantasia-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2034/score.mid",
+      "pdf": "/music/mutopia-2034/score.pdf"
+    },
+    "sha256": {
+      "midi": "22a84b967a00f9d7cf6bec68f6d4e9c0578c1275ad0eb7fc8e30979d375e58cb",
+      "pdf": "13130a4b0ab629a314989d076742a23af43cb69f579d965c2c7d6cdb51be2863"
+    },
+    "verified": "2026-11-06",
+    "duration": 283,
+    "bpm": 80
+  },
+  {
+    "id": "mutopia-356",
+    "title": "Piano Sonata in C minor, K. 457 — first movement",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 457 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=356",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Schirmer, 1918, and Breitkopf & Härtel, 1878",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV457/sonata1/sonata1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV457/sonata1/sonata1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-356/score.mid",
+      "pdf": "/music/mutopia-356/score.pdf"
+    },
+    "sha256": {
+      "midi": "2361be7e5ad570164438b972f81a818ae80f5d3d0422ca5fe9f82682ab9b896e",
+      "pdf": "7ec91e85df16ded206b1ef4d8e7b1f2a4c1e4ef71aeab862b46c337d729a9ed0"
+    },
+    "verified": "2026-11-06",
+    "duration": 264,
+    "bpm": 168
+  },
+  {
+    "id": "mutopia-357",
+    "title": "Piano Sonata in C minor, K. 457 — second movement",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 457 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=357",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Schirmer, 1918, and Breitkopf & Härtel, 1878",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV457/sonata2/sonata2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV457/sonata2/sonata2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-357/score.mid",
+      "pdf": "/music/mutopia-357/score.pdf"
+    },
+    "sha256": {
+      "midi": "5e9d640ea30f33fadba2fd988f76173639139e6547a19c5864317ac48691e407",
+      "pdf": "bcab9b7b2a4b7f05f9d867d37a4982c3b86ba6d90a83eac2a02b43b1ba6b48e2"
+    },
+    "verified": "2026-11-06",
+    "duration": 406,
+    "bpm": 34
+  },
+  {
+    "id": "mutopia-358",
+    "title": "Piano Sonata in C minor, K. 457 — third movement",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "KV 457 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=358",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Schirmer, 1918, and Breitkopf & Härtel, 1878",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV457/sonata3/sonata3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV457/sonata3/sonata3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-358/score.mid",
+      "pdf": "/music/mutopia-358/score.pdf"
+    },
+    "sha256": {
+      "midi": "8854cb50a05e37043c3c7256c0b196f29cd8d3b3ac78a8ed636e749aa1f8e1bb",
+      "pdf": "a99f21e735b95a222fa4455edcfbb9428485385d97d782fef9373c0e89c897d6"
+    },
+    "verified": "2026-11-06",
+    "duration": 435,
+    "bpm": 132
+  },
+  {
+    "id": "mutopia-553",
+    "title": "A Musical Joke, K. 522 — first movement",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Orchestra"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "KV 522 · Orchestra: Horns, Violin, Viola, 'Cello. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=553",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "free-scores.com",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV522/k522-mv1/k522-mv1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV522/k522-mv1/k522-mv1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-553/score.mid",
+      "pdf": "/music/mutopia-553/score.pdf"
+    },
+    "sha256": {
+      "midi": "d7349d1541e097b968b4a1a405094309a18e82b810b518b4f041718a82cd2b0d",
+      "pdf": "3900f0d1247e1179c5df8332115a92b86eccc562c7db352d24f518c7e8a8c45b"
+    },
+    "verified": "2026-11-06",
+    "duration": 178,
+    "bpm": 118
+  },
+  {
+    "id": "mutopia-501",
+    "title": "Abendempfindung (Evening Sentiment), K. 523",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "KV 523 · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=501",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel (serie 7 n. 30)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV523/k523/k523.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV523/k523/k523-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-501/score.mid",
+      "pdf": "/music/mutopia-501/score.pdf"
+    },
+    "sha256": {
+      "midi": "025ac71d6fce71236235087f0f5089817929e3f16c67e26ab98b288d4962085d",
+      "pdf": "618d2dd51358d031f2918d3e425b3854f658c849d8606247913d526fa5ee477c"
+    },
+    "verified": "2026-11-06",
+    "duration": 291,
+    "bpm": 90
+  },
+  {
+    "id": "mutopia-2244",
+    "title": "Notte e giorno — Don Giovanni",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "Voice (Bass), Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2244",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Ed. 191 / DON GIOVANNI / An Opera in Two Acts / Libretto by / LORENZO DA PONTE / Music by / W. A. MOZART / VOCAL SCORE / Including Secco Recitatives / English version by / NATALIE MACFARREN / With an Essay on the / story of the Opera by / H. E. KREHBIEL / G. SCHIRMER, Inc., NEW YORK (IMSLP68957-PMLP36804)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV527/NotteEGiorno/NotteEGiorno.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV527/NotteEGiorno/NotteEGiorno-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2244/score.mid",
+      "pdf": "/music/mutopia-2244/score.pdf"
+    },
+    "sha256": {
+      "midi": "84116952f7eb524947e1d960bcd6673b85e492c4674ab38bbee0ae8471ea66f0",
+      "pdf": "ccf943f1ac084f087e3fe958f318cc0da57885c11d9eab7dced0f4934d60da77"
+    },
+    "verified": "2026-11-06",
+    "duration": 113,
+    "bpm": 155
+  },
+  {
+    "id": "mutopia-239",
+    "title": "Gigue in G major, K. 574",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "dance",
+      "triple time",
+      "solo"
+    ],
+    "description": "KV 574 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=239",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf und Härtel edition (1880s)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV574/k574/k574.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV574/k574/k574-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-239/score.mid",
+      "pdf": "/music/mutopia-239/score.pdf"
+    },
+    "sha256": {
+      "midi": "bbd4b3a0381ff099cd9e5c26a55e68c0819d4f08d37c79d17314f2f1c1f041c6",
+      "pdf": "da228abee5ec27ec61a569833b6fa657ccb16b8da82d68e34449757a3d1e9a44"
+    },
+    "verified": "2026-11-06",
+    "duration": 49,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-364",
+    "title": "Dies irae — Requiem, K. 626",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Orchestra",
+      "Voice"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "KV 626 · Voice (SATB), Orchestra: Basset Horns in F, Bassoon, Trumpet in D, Timpani, Violins, Viola, Cello, Organ/Bass. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=364",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Haertel, 1877",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV626/dies_irae/dies_irae.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV626/dies_irae/dies_irae-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-364/score.mid",
+      "pdf": "/music/mutopia-364/score.pdf"
+    },
+    "sha256": {
+      "midi": "988faf187f2a661bfbfe7d6ef5a53241b96c21394969f23c01d000dc9796a399",
+      "pdf": "90eefef8dd26f44d1f6630392aeafc3dbbd5d9fc759b64913c1496deb0386ff6"
+    },
+    "verified": "2026-11-06",
+    "duration": 90,
+    "bpm": 180
+  },
+  {
+    "id": "mutopia-1895",
+    "title": "Trois Nouvelles Etudes, No. 1 F Minor",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "B.130 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1895",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP00329, pages #128-129 - Bote & Bock, 1880",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/B130/TroisNouvellesEtudes_Chopin_n1/TroisNouvellesEtudes_Chopin_n1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/B130/TroisNouvellesEtudes_Chopin_n1/TroisNouvellesEtudes_Chopin_n1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1895/score.mid",
+      "pdf": "/music/mutopia-1895/score.pdf"
+    },
+    "sha256": {
+      "midi": "3a307179dc100e220066f775dc72958cdf9a3e86d201982e81d02062752d00c6",
+      "pdf": "6c0668f985b27843cc9df0d92d0ed9753219db7abca9fbe2f23cabdfedc19d7d"
+    },
+    "verified": "2026-11-06",
+    "duration": 161,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-508",
+    "title": "Étude in A minor, Op. 10 No. 2",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "Op. 10, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=508",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900b",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/10-02-i/10-02-i.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/10-02-i/10-02-i-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-508/score.mid",
+      "pdf": "/music/mutopia-508/score.pdf"
+    },
+    "sha256": {
+      "midi": "ebee39ee0f9bd743586cbcd4890d3f0e39f24808957302341316a734e42a7989",
+      "pdf": "d81e33a53d723a0dcf92b3efae2e62466cf4c4e6caf29246405d2a7b4e177b0c"
+    },
+    "verified": "2026-11-06",
+    "duration": 82,
+    "bpm": 144
+  },
+  {
+    "id": "mutopia-484",
+    "title": "Étude in F minor, Op. 10 No. 9",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "Op. 10, No. 9 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=484",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900b",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/chopin-op-10-09-wfi/chopin-op-10-09-wfi.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/chopin-op-10-09-wfi/chopin-op-10-09-wfi-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-484/score.mid",
+      "pdf": "/music/mutopia-484/score.pdf"
+    },
+    "sha256": {
+      "midi": "dbb7ffac4c7299bad98d445932f63464f647d89eef0b67853a671e92f337d814",
+      "pdf": "81d6b088cc3b136e9589ff10e2500b19342f0db49a73e380b56c125a1478073a"
+    },
+    "verified": "2026-11-06",
+    "duration": 83,
+    "bpm": 144
+  },
+  {
+    "id": "mutopia-914",
+    "title": "Étude in C major, Op. 10 No. 1",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "Opus 10, No. 1 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=914",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900b",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/chp-10-01/chp-10-01.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/chp-10-01/chp-10-01-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-914/score.mid",
+      "pdf": "/music/mutopia-914/score.pdf"
+    },
+    "sha256": {
+      "midi": "42c52ece86795168636b3bbd387393fba9759214498a20b39308c848f8e49f03",
+      "pdf": "6f8ea4b25f30dc071d79538548b201a6e0470e683144ce21da35a4b4886573b2"
+    },
+    "verified": "2026-11-06",
+    "duration": 108,
+    "bpm": 176
+  },
+  {
+    "id": "mutopia-926",
+    "title": "Black Key Étude, Op. 10 No. 5",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "Opus 10, No. 5 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=926",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900b",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/chp-10-05/chp-10-05.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/chp-10-05/chp-10-05-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-926/score.mid",
+      "pdf": "/music/mutopia-926/score.pdf"
+    },
+    "sha256": {
+      "midi": "3b7c267dc6047e881b7404e47259de23dce3cfe8fe74966a1cc28adacf5e3336",
+      "pdf": "41f18241e00744fdc1b33ab6e2fa81c1b020d3c399b0945fff34a03bde9f2220"
+    },
+    "verified": "2026-11-06",
+    "duration": 90,
+    "bpm": 116
+  },
+  {
+    "id": "mutopia-743",
+    "title": "Revolutionary Étude, Op. 10 No. 12",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "Opus 10, No. 12 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=743",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900b",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/op-10-12-wfi/op-10-12-wfi.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/op-10-12-wfi/op-10-12-wfi-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-743/score.mid",
+      "pdf": "/music/mutopia-743/score.pdf"
+    },
+    "sha256": {
+      "midi": "1902287905aa68175f9d13207e6cfc397894d4210617ec1a5c1ae38334c3c7d6",
+      "pdf": "a98f9062f12248db9479115d954e4847230d9bfaefd30d9e7b037c60b25f0ae7"
+    },
+    "verified": "2026-11-06",
+    "duration": 125,
+    "bpm": 160
+  },
+  {
+    "id": "mutopia-489",
+    "title": "Aeolian Harp Étude, Op. 25 No. 1",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "Op. 25, No. 1 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=489",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900b",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O25/chopin-op-25-01/chopin-op-25-01.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O25/chopin-op-25-01/chopin-op-25-01-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-489/score.mid",
+      "pdf": "/music/mutopia-489/score.pdf"
+    },
+    "sha256": {
+      "midi": "d694598daa09b697e4ff9b3f58a61df498128a58cc761436c3eecfa65241d06b",
+      "pdf": "08c837a70b2e64e45351d42c1eb66c3487b41dcbc55629c8ce8d165311023fc7"
+    },
+    "verified": "2026-11-06",
+    "duration": 114,
+    "bpm": 104
+  },
+  {
+    "id": "mutopia-468",
+    "title": "Prelude in E minor, Op. 28 No. 4",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Op. 28 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=468",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, 1879",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-4/Chop-28-4.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-4/Chop-28-4-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-468/score.mid",
+      "pdf": "/music/mutopia-468/score.pdf"
+    },
+    "sha256": {
+      "midi": "c1d7e05aa4e6e2baeec2e9108402a969c16d5df302b82fd66d110634697f2e3b",
+      "pdf": "54014f0c8e86d4196728dbdfdbdaed9a0e23c5868525c39590ac673f8c82f7f7"
+    },
+    "verified": "2026-11-06",
+    "duration": 108,
+    "bpm": 56
+  },
+  {
+    "id": "mutopia-469",
+    "title": "Prelude in B minor, Op. 28 No. 6",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Op. 28 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=469",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Peters",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-6/Chop-28-6.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-6/Chop-28-6-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-469/score.mid",
+      "pdf": "/music/mutopia-469/score.pdf"
+    },
+    "sha256": {
+      "midi": "b9328cbeaa149c49eab925794e94f3b95f579a41e4d9c781c953aad0b940bf63",
+      "pdf": "0a65152634e32f57ea48a06bfae5d947cb7fae6bc0c6f2a2fd37f43b3c49518e"
+    },
+    "verified": "2026-11-06",
+    "duration": 101,
+    "bpm": 45
+  },
+  {
+    "id": "mutopia-470",
+    "title": "Prelude in A major, Op. 28 No. 7",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Op. 28 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=470",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Peters",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-7/Chop-28-7.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-7/Chop-28-7-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-470/score.mid",
+      "pdf": "/music/mutopia-470/score.pdf"
+    },
+    "sha256": {
+      "midi": "6eed7f2185afd852f01d695e50db84cdb4c8742de1a26294dc3202569346ef36",
+      "pdf": "98b1359e63ccd4740fa6fc22ef8c802189b01f11b9625bd39aecc8472a9e28a6"
+    },
+    "verified": "2026-11-06",
+    "duration": 24,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-471",
+    "title": "Raindrop Prelude, Op. 28 No. 15",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Op. 28 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=471",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Peters",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-15/Chop-28-15.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-15/Chop-28-15-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-471/score.mid",
+      "pdf": "/music/mutopia-471/score.pdf"
+    },
+    "sha256": {
+      "midi": "bb9532e59bee378a42f0c53b64bf223ba4d6e261e00c1e2efb3ed8e023833bd9",
+      "pdf": "211785415e4e2e38333c34d2148151b5846806311b10cb64e3545ad82ae436db"
+    },
+    "verified": "2026-11-06",
+    "duration": 267,
+    "bpm": 80
+  },
+  {
+    "id": "mutopia-472",
+    "title": "Prelude in C minor, Op. 28 No. 20",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 28 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=472",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Peters",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-20/Chop-28-20.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-20/Chop-28-20-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-472/score.mid",
+      "pdf": "/music/mutopia-472/score.pdf"
+    },
+    "sha256": {
+      "midi": "9cc6c417d4bb261644f6bd3d00033025e675a25694fd172be2f98e93efc1fcfe",
+      "pdf": "a92fda36c173c9ffdee03291015d7332d6e60dab9df0d981856a28fec684ad9d"
+    },
+    "verified": "2026-11-06",
+    "duration": 74,
+    "bpm": 42
+  },
+  {
+    "id": "mutopia-1727",
+    "title": "Piano Sonata No. 2 in B-flat minor, Op. 35",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 35 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1727",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900c",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O35/chp-op-35-4-scholz-fi/chp-op-35-4-scholz-fi.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O35/chp-op-35-4-scholz-fi/chp-op-35-4-scholz-fi-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1727/score.mid",
+      "pdf": "/music/mutopia-1727/score.pdf"
+    },
+    "sha256": {
+      "midi": "5e6ac4bfa8fd44daf75dc09bc5097f97e0afd8e913a0aa7644b064644f4f61ce",
+      "pdf": "444ac71285ba0d38bdeb84e60eb01d08c9f971d629ba2b7f25a7769e632d2243"
+    },
+    "verified": "2026-11-06",
+    "duration": 82,
+    "bpm": 224
+  },
+  {
+    "id": "mutopia-1776",
+    "title": "Prelude",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 45 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1776",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition by Herrmann Scholtz (1845-1918)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O45/chopin_prelude_op45/chopin_prelude_op45.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O45/chopin_prelude_op45/chopin_prelude_op45-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1776/score.mid",
+      "pdf": "/music/mutopia-1776/score.pdf"
+    },
+    "sha256": {
+      "midi": "5889aae90f500478eb55f41e08625d2ad19eaa7b8098c50eec5d27c145e83835",
+      "pdf": "4564cddaed69fd80f22afd6d47d2afbdbb6a10192f11c2f249caeefdf7c7cb72"
+    },
+    "verified": "2026-11-06",
+    "duration": 198,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-422",
+    "title": "Ballade No. 4 in F minor, Op. 52",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "O 52 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=422",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Joseffy Edition",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O52/ballade-4/ballade-4.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O52/ballade-4/ballade-4-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-422/score.mid",
+      "pdf": "/music/mutopia-422/score.pdf"
+    },
+    "sha256": {
+      "midi": "d43381e221c19af1c6072ccdb417bb1ade308fab7e35d9fd2a947ef20aa4d47b",
+      "pdf": "ff22a013c0a725822ac8611ea17462705f04861dda117cff5639dc400371600b"
+    },
+    "verified": "2026-11-06",
+    "duration": 717,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-483",
+    "title": "Minute Waltz, Op. 64 No. 1",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "dance",
+      "triple time",
+      "solo"
+    ],
+    "description": "Op. 64 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=483",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Peters",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O64/chopin_valse_op64_no1/chopin_valse_op64_no1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O64/chopin_valse_op64_no1/chopin_valse_op64_no1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-483/score.mid",
+      "pdf": "/music/mutopia-483/score.pdf"
+    },
+    "sha256": {
+      "midi": "62333ad9f9b22603d009734ab500330a12ac09aeca13d185ac0ba64a7fb9d206",
+      "pdf": "bef0557dd6d14aff2c52e132fb52df1864e61951289bde9fa47fc0667eb1a16f"
+    },
+    "verified": "2026-11-06",
+    "duration": 90,
+    "bpm": 280
+  },
+  {
+    "id": "mutopia-1693",
+    "title": "Fantaisie-Impromptu, Op. 66",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 66 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1693",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Herrmann Scholtz (1845-1918)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O66/chopin_fantaisie-impromptu/chopin_fantaisie-impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O66/chopin_fantaisie-impromptu/chopin_fantaisie-impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1693/score.mid",
+      "pdf": "/music/mutopia-1693/score.pdf"
+    },
+    "sha256": {
+      "midi": "b29f6add7473b6e931c2e66349e860bf0e884cf68e19e90420a4870aae689f96",
+      "pdf": "7fd8d00291594863f7fad119a20c632ce08f2ccfc34b79a5b6afc1f97e21cee3"
+    },
+    "verified": "2026-11-06",
+    "duration": 254,
+    "bpm": 168
+  },
+  {
+    "id": "mutopia-511",
+    "title": "Waltz in B minor, Op. 69 No. 2",
+    "composer": "F. F. Chopin",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "dance",
+      "triple time",
+      "solo"
+    ],
+    "description": "Op. 69, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=511",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Peters, Herrmann Scholtz, 1900a",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ChopinFF/O69/w10-h-moll-cfi/w10-h-moll-cfi.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ChopinFF/O69/w10-h-moll-cfi/w10-h-moll-cfi-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-511/score.mid",
+      "pdf": "/music/mutopia-511/score.pdf"
+    },
+    "sha256": {
+      "midi": "a7a0e2aca89fc9d530fe50e9538948621b8a6e1883c705353e15928d411f1ae2",
+      "pdf": "751b3d4dccd70fa57f535e15328753dc72f97b8c5ad431d8f2475a95fbc04146"
+    },
+    "verified": "2026-11-06",
+    "duration": 172,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-37",
+    "title": "Gymnopédie No. 1",
+    "composer": "E. Satie",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=37",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Dover Edition",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_1/gymnopedie_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_1/gymnopedie_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-37/score.mid",
+      "pdf": "/music/mutopia-37/score.pdf"
+    },
+    "sha256": {
+      "midi": "09ce7337b4bf42ba12e1aa64b4c7dc7fcfa6455f1070cb12f8880a755df97384",
+      "pdf": "e2b99b96bbca71077194c903cb4e390a435756892edf37040ae9dbea4cc7492a"
+    },
+    "verified": "2026-11-06",
+    "duration": 141,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-38",
+    "title": "Gymnopédie No. 2",
+    "composer": "E. Satie",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=38",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Dover Edition",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_2/gymnopedie_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_2/gymnopedie_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-38/score.mid",
+      "pdf": "/music/mutopia-38/score.pdf"
+    },
+    "sha256": {
+      "midi": "02e8ae8d7e1f6073f12f62a61a63cf07b260a1cf49f4a9008ee4e3f8e1934d30",
+      "pdf": "d0610760586812cc76c404d4735337d72065541498a04bd1598d181e47369e01"
+    },
+    "verified": "2026-11-06",
+    "duration": 195,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-39",
+    "title": "Gymnopédie No. 3",
+    "composer": "E. Satie",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=39",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Dover Edition",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_3/gymnopedie_3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_3/gymnopedie_3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-39/score.mid",
+      "pdf": "/music/mutopia-39/score.pdf"
+    },
+    "sha256": {
+      "midi": "fd1dceff4da08e997b083acc5b571bebe980bc89421b75b052dbb93ecf06ca23",
+      "pdf": "999d0242b61bc3f812134d12277c12d47f16d006a58240121db42ae692effc96"
+    },
+    "verified": "2026-11-06",
+    "duration": 180,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-236",
+    "title": "Ballade No. 2 in B minor",
+    "composer": "F. Liszt",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=236",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Unknown",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/LisztF/ballade/ballade.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/LisztF/ballade/ballade-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-236/score.mid",
+      "pdf": "/music/mutopia-236/score.pdf"
+    },
+    "sha256": {
+      "midi": "5b14d624934ffbd84a4dca7ced36fb1d23552a6a9dc48ee3d39755f0bedf1749",
+      "pdf": "c7afdf3428f9c0425d6b2532bc2b4dd4938549756dc42c27d2c7fe7e06edb608"
+    },
+    "verified": "2026-11-06",
+    "duration": 1395,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2146",
+    "title": "Melodic Study, Op. 840 No. 1",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 1 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2146",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-1/op840-1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-1/op840-1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2146/score.mid",
+      "pdf": "/music/mutopia-2146/score.pdf"
+    },
+    "sha256": {
+      "midi": "6ee0bf432211a3e3372ea67266a255d99b0cf9db5ad35ba6dd2787e06b087f14",
+      "pdf": "ab63abc65b08396c1da85f73514fc732f967c1b9438978384b0808255672bf36"
+    },
+    "verified": "2026-11-06",
+    "duration": 55,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-2147",
+    "title": "Melodic Study, Op. 840 No. 2",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2147",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-2/op840-2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-2/op840-2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2147/score.mid",
+      "pdf": "/music/mutopia-2147/score.pdf"
+    },
+    "sha256": {
+      "midi": "7d8ba07e3836e2a5fac7f7ce3eabc94238b63ed0435b3927f14807677ef64f5a",
+      "pdf": "164c6c529f3079fcace2177a3f00e7635a65a66f7d872fbb4e53b5b0e6836919"
+    },
+    "verified": "2026-11-06",
+    "duration": 49,
+    "bpm": 118
+  },
+  {
+    "id": "mutopia-2148",
+    "title": "Melodic Study, Op. 840 No. 3",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 3 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2148",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-3/op840-3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-3/op840-3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2148/score.mid",
+      "pdf": "/music/mutopia-2148/score.pdf"
+    },
+    "sha256": {
+      "midi": "8bbe2f4e99c5cffc46904c927e326e1ec084f580fe142fb5397131a896fb7399",
+      "pdf": "a879d116f5fa9a2aaffc7a858e7ee9857bb2751fb21cce504f2995384f9db375"
+    },
+    "verified": "2026-11-06",
+    "duration": 55,
+    "bpm": 78
+  },
+  {
+    "id": "mutopia-2149",
+    "title": "Melodic Study, Op. 840 No. 4",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 4 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2149",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-4/op840-4.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-4/op840-4-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2149/score.mid",
+      "pdf": "/music/mutopia-2149/score.pdf"
+    },
+    "sha256": {
+      "midi": "08c4c946c5a93b5ab3da3aec17a02a20d723e3bf461787e9240813744d6f52e7",
+      "pdf": "6550ba4161887680684e738ffb0d30b77a51825a3b9be213e3e140414be16c44"
+    },
+    "verified": "2026-11-06",
+    "duration": 68,
+    "bpm": 168
+  },
+  {
+    "id": "mutopia-2150",
+    "title": "Melodic Study, Op. 840 No. 5",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 5 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2150",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-5/op840-5.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-5/op840-5-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2150/score.mid",
+      "pdf": "/music/mutopia-2150/score.pdf"
+    },
+    "sha256": {
+      "midi": "87bd494877ca42f4c3f046d62fad148ce85270cafe0069b62a2380b78c63b6a1",
+      "pdf": "9ae8790fe5b298a643c661663e2060805e9603de9a34977c77e367a7a51f7d37"
+    },
+    "verified": "2026-11-06",
+    "duration": 56,
+    "bpm": 85
+  },
+  {
+    "id": "mutopia-2151",
+    "title": "Melodic Study, Op. 840 No. 6",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 6 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2151",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-6/op840-6.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-6/op840-6-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2151/score.mid",
+      "pdf": "/music/mutopia-2151/score.pdf"
+    },
+    "sha256": {
+      "midi": "bc112ad07760fc1e42fd33ac837ea34cd7a7bf47c3ac7521d8da132f7b102f65",
+      "pdf": "78edd8de7ab555627d4ed11352b03dec349f5c1c88f2d69324a407d8686bf863"
+    },
+    "verified": "2026-11-06",
+    "duration": 42,
+    "bpm": 135
+  },
+  {
+    "id": "mutopia-2152",
+    "title": "Melodic Study, Op. 840 No. 7",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 7 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2152",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-7/op840-7.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-7/op840-7-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2152/score.mid",
+      "pdf": "/music/mutopia-2152/score.pdf"
+    },
+    "sha256": {
+      "midi": "8e30e2598893fbfcd84d775ec7c40d09438a6ed29d03857bfb29a1b17ca2f36a",
+      "pdf": "483713f701fba341c1f0df4ba8e8ff4576bd69ce5d74d961a0a21d1ca7a6e7ef"
+    },
+    "verified": "2026-11-06",
+    "duration": 48,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-2153",
+    "title": "Melodic Study, Op. 840 No. 8",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 8 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2153",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-8/op840-8.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-8/op840-8-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2153/score.mid",
+      "pdf": "/music/mutopia-2153/score.pdf"
+    },
+    "sha256": {
+      "midi": "dfb16b4e376c545e816306e38c0acbf92dc5a5d769d2f2ea2de9b14aebedd9d8",
+      "pdf": "4b3e046038ae7969d0e645058cddc54604b6c7876a3dfb039c5d6efa2dbaba27"
+    },
+    "verified": "2026-11-06",
+    "duration": 31,
+    "bpm": 121
+  },
+  {
+    "id": "mutopia-2154",
+    "title": "Melodic Study, Op. 840 No. 9",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 9 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2154",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-9/op840-9.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-9/op840-9-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2154/score.mid",
+      "pdf": "/music/mutopia-2154/score.pdf"
+    },
+    "sha256": {
+      "midi": "a08ab8554d83e54476b1000a8ec2d977835c9f207c3016e7d955cd37dad55a62",
+      "pdf": "5bc3d19bd9d6f4b697d21d8824216f428615993b94298f9e7af72bcfbeb5db74"
+    },
+    "verified": "2026-11-06",
+    "duration": 47,
+    "bpm": 121
+  },
+  {
+    "id": "mutopia-2177",
+    "title": "Melodic Study, Op. 840 No. 10",
+    "composer": "C. Czerny",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Op. 840, No. 10 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2177",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "IMSLP; Mainz: Schott, n.d.[1855]. Plate 13253",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-10/op840-10.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-10/op840-10-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2177/score.mid",
+      "pdf": "/music/mutopia-2177/score.pdf"
+    },
+    "sha256": {
+      "midi": "a9fe82814a7684bed177d5ad54ee3b29f11328e8b4452a46d7726d20c8d510dd",
+      "pdf": "c5480b4c999d05bd76605425d6af67193efc2906121b77e1865fbffebe3534a3"
+    },
+    "verified": "2026-11-06",
+    "duration": 63,
+    "bpm": 121
+  },
+  {
+    "id": "mutopia-27",
+    "title": "Morceau de concert for horn, Op. 94",
+    "composer": "C. Saint-Saëns",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Horn"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "O94 · Horn. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=27",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "D.&F.4605",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Saint-SaensC/O94/morceau-de-concert/morceau-de-concert.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Saint-SaensC/O94/morceau-de-concert/morceau-de-concert-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-27/score.mid",
+      "pdf": "/music/mutopia-27/score.pdf"
+    },
+    "sha256": {
+      "midi": "ea1cd9360c61e7169f2dae0d5059d395dbd87bea7317cf4eed84ea303650731b",
+      "pdf": "bddfa400e823c40e0f8cd339b46fbd671186bc0b70cc83deff3c442b7918f787"
+    },
+    "verified": "2026-11-06",
+    "duration": 869,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1653",
+    "title": "Scherzo in E minor",
+    "composer": "F. Mendelssohn-Bartholdy",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 16, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1653",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "http://imslp.org/wiki/Image:Mendelssohn_-_Op.16_-_3_Caprices.pdf",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O16/mendelssohn-scherzo-eminor/mendelssohn-scherzo-eminor.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O16/mendelssohn-scherzo-eminor/mendelssohn-scherzo-eminor-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1653/score.mid",
+      "pdf": "/music/mutopia-1653/score.pdf"
+    },
+    "sha256": {
+      "midi": "d50310909461ea988ce2f7a87af691d6d551bc0f58ad3842f56e551a345139bf",
+      "pdf": "a88ae0e432dc761e9d012b95a6028f1d1318d271b7174afffb3683e75c645803"
+    },
+    "verified": "2026-11-06",
+    "duration": 430,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-989",
+    "title": "Song Without Words — Restlessness, Op. 19 No. 5",
+    "composer": "F. Mendelssohn-Bartholdy",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 19, No. 5 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=989",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Novello, Ewer & Co., ca 1880",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O19/5.Inquietude/5.Inquietude.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O19/5.Inquietude/5.Inquietude-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-989/score.mid",
+      "pdf": "/music/mutopia-989/score.pdf"
+    },
+    "sha256": {
+      "midi": "2064d38e3695316036ac256692eec8cbb50a8aa825ebf57254831a980a3e140a",
+      "pdf": "0fda613c5c6c933ebcfcf7da702919ff2f079d5d150f322ad186cb7a1f6c8e97"
+    },
+    "verified": "2026-11-06",
+    "duration": 512,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1741",
+    "title": "Venetian Boat Song, Op. 30 No. 6",
+    "composer": "F. Mendelssohn-Bartholdy",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Op. 30, No. 6 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1741",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1874-1877",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O30/LiederOhneWorte_-_Op30_No6/LiederOhneWorte_-_Op30_No6.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O30/LiederOhneWorte_-_Op30_No6/LiederOhneWorte_-_Op30_No6-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1741/score.mid",
+      "pdf": "/music/mutopia-1741/score.pdf"
+    },
+    "sha256": {
+      "midi": "3de7c0dae2206d5bdd2ddb5f49c3e2851df0d218472c868c0212d0f98b19ccaf",
+      "pdf": "973bbf147386c3a2d9f81f8bf6f62ca148c9a6142a2c49ee5cbbb54883617934"
+    },
+    "verified": "2026-11-06",
+    "duration": 166,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-592",
+    "title": "Song Without Words — Folk Song, Op. 53 No. 5",
+    "composer": "F. Mendelssohn-Bartholdy",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 53 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=592",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O53/SongWW_opus53no5/SongWW_opus53no5.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O53/SongWW_opus53no5/SongWW_opus53no5-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-592/score.mid",
+      "pdf": "/music/mutopia-592/score.pdf"
+    },
+    "sha256": {
+      "midi": "83acfe599f76c69fa919ae1fbfb5125db37743d1cb5ce227d71d4b1d2ab27520",
+      "pdf": "22aaf8f295d04741e624ba26d49b434f0d1da4f8e300a1a72dc0727b536e6df0"
+    },
+    "verified": "2026-11-06",
+    "duration": 156,
+    "bpm": 128
+  },
+  {
+    "id": "mutopia-1744",
+    "title": "Song Without Words, Op. 85 No. 1",
+    "composer": "F. Mendelssohn-Bartholdy",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 85, No. 1 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1744",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1874-1877",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O85/LiederOhneWorte_-_Op85_No1/LiederOhneWorte_-_Op85_No1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O85/LiederOhneWorte_-_Op85_No1/LiederOhneWorte_-_Op85_No1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1744/score.mid",
+      "pdf": "/music/mutopia-1744/score.pdf"
+    },
+    "sha256": {
+      "midi": "8787c94a71a6a0d847a724249ebe37e35522425d0bfe2fa6f1193ea8201c8a3b",
+      "pdf": "751aa73d7878dbbfe7c3efa5b180a04d5d2a5921230c41470b7d695aa13268cf"
+    },
+    "verified": "2026-11-06",
+    "duration": 100,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-589",
+    "title": "Song Without Words, Op. 102 No. 3",
+    "composer": "F. Mendelssohn-Bartholdy",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 102 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=589",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O102/SongWW_opus102no3/SongWW_opus102no3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O102/SongWW_opus102no3/SongWW_opus102no3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-589/score.mid",
+      "pdf": "/music/mutopia-589/score.pdf"
+    },
+    "sha256": {
+      "midi": "3afc7418b8f8150558b8b4dc1544f56a04d6b08bc13b639d5f5aaad1496a4239",
+      "pdf": "01c9475bb3d8506762d1b5757250e23e56364eaba7db8331b74ad9defd3bc761"
+    },
+    "verified": "2026-11-06",
+    "duration": 101,
+    "bpm": 168
+  },
+  {
+    "id": "mutopia-202",
+    "title": "La Candeur — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=202",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-01/25EF-01.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-01/25EF-01-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-202/score.mid",
+      "pdf": "/music/mutopia-202/score.pdf"
+    },
+    "sha256": {
+      "midi": "ad185dbf3cb7e3e187cbe6e38c5ead706cf375b9d441f7191429027436b2a8e4",
+      "pdf": "d65e0d8132da464b7c2f1e2f1c7b649946f89b8596b95e7373c454d0d223d319"
+    },
+    "verified": "2026-11-06",
+    "duration": 36,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-203",
+    "title": "l'Arabesque — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=203",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-02/25EF-02.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-02/25EF-02-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-203/score.mid",
+      "pdf": "/music/mutopia-203/score.pdf"
+    },
+    "sha256": {
+      "midi": "9b689a9b3f178e7bb2b5899d0559e223e9d8de7081d83fc087760ac2b4d378e1",
+      "pdf": "38e77d34af818774ff888a7ba64637b8820b0ace4e7ece5aa67c0d157cd2a661"
+    },
+    "verified": "2026-11-06",
+    "duration": 26,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-218",
+    "title": "La Pastorale — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=218",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-03/25EF-03.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-03/25EF-03-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-218/score.mid",
+      "pdf": "/music/mutopia-218/score.pdf"
+    },
+    "sha256": {
+      "midi": "192500ee12358537bf92811064ee4ad0b680c78302d5762175a3c32fe573a577",
+      "pdf": "278500ead2c9f578a6a7158fd382ecf7210cc89cf063b643026661044bddd43c"
+    },
+    "verified": "2026-11-06",
+    "duration": 51,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-219",
+    "title": "La Petite Réunion — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=219",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-04/25EF-04.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-04/25EF-04-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-219/score.mid",
+      "pdf": "/music/mutopia-219/score.pdf"
+    },
+    "sha256": {
+      "midi": "c88010cace8858c30ca95e3075cf5e4afdde19b5ad7c37cceb96159f6c55326c",
+      "pdf": "42fa49948bbe6f04583b6a660fe7ee8c4743474ce0ee8ce5e757839b6765c26a"
+    },
+    "verified": "2026-11-06",
+    "duration": 47,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-214",
+    "title": "Innocence — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=214",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-05/25EF-05.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-05/25EF-05-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-214/score.mid",
+      "pdf": "/music/mutopia-214/score.pdf"
+    },
+    "sha256": {
+      "midi": "39768b50abb623d24986b0e3993518ca92a6f1340d6154fc092f218cb6b97fee",
+      "pdf": "a94740fa90a20752564b103456b6bae941cd65c0539bbab2db239e08b20e7301"
+    },
+    "verified": "2026-11-06",
+    "duration": 27,
+    "bpm": 112
+  },
+  {
+    "id": "mutopia-215",
+    "title": "Progrès — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=215",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-06/25EF-06.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-06/25EF-06-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-215/score.mid",
+      "pdf": "/music/mutopia-215/score.pdf"
+    },
+    "sha256": {
+      "midi": "d28e280d333d8a97262a4ffeba00fab251d382cd9a17e45a517d6613cb03f722",
+      "pdf": "cb1f238292b6164eeff7425aea36ce3ffbc07cbb734d7aaa0dab5c9176d02fa8"
+    },
+    "verified": "2026-11-06",
+    "duration": 29,
+    "bpm": 132
+  },
+  {
+    "id": "mutopia-216",
+    "title": "Le Courant Limpide — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=216",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-07/25EF-07.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-07/25EF-07-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-216/score.mid",
+      "pdf": "/music/mutopia-216/score.pdf"
+    },
+    "sha256": {
+      "midi": "9547c21afbaa004cd95174752098bf6997a541d97759d2ef34f499432c5ecab5",
+      "pdf": "ebf5caf9766509f518f848863e712266b253aabf3a664e8d0f7ed7725d48b72d"
+    },
+    "verified": "2026-11-06",
+    "duration": 22,
+    "bpm": 176
+  },
+  {
+    "id": "mutopia-217",
+    "title": "La Gracieuse — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=217",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-08/25EF-08.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-08/25EF-08-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-217/score.mid",
+      "pdf": "/music/mutopia-217/score.pdf"
+    },
+    "sha256": {
+      "midi": "f103bc6cb67cdbbad517170d6a7c51428e9a8481c74eec10258ea34a58b832fd",
+      "pdf": "69b7e2e74694d81603eb75ac683aff68d3b12471e8c2dccc662630cb98acaee4"
+    },
+    "verified": "2026-11-06",
+    "duration": 29,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-220",
+    "title": "La Chasse — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=220",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-09/25EF-09.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-09/25EF-09-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-220/score.mid",
+      "pdf": "/music/mutopia-220/score.pdf"
+    },
+    "sha256": {
+      "midi": "eb2d52c7df1681e23b8dc258d6933060984c7013d32c1a140c121fda48801848",
+      "pdf": "819b7c94b1a0c61583b1977b0144fa41bcfb3ff6c0530e23bf2fc0034de5fcbf"
+    },
+    "verified": "2026-11-06",
+    "duration": 51,
+    "bpm": 200
+  },
+  {
+    "id": "mutopia-221",
+    "title": "Tendre Fleur — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=221",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-10/25EF-10.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-10/25EF-10-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-221/score.mid",
+      "pdf": "/music/mutopia-221/score.pdf"
+    },
+    "sha256": {
+      "midi": "58dd9eec57bfcb7fb8a924530e8f6c1e1599a02fc10cc4f79ae6d1ef6e2a0c85",
+      "pdf": "4f1ad5a19a76b69f5aebabc621258fbd4aac9abdbf4a34c1a6bc457f386807dd"
+    },
+    "verified": "2026-11-06",
+    "duration": 37,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-222",
+    "title": "La Bergeronnette — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=222",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-11/25EF-11.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-11/25EF-11-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-222/score.mid",
+      "pdf": "/music/mutopia-222/score.pdf"
+    },
+    "sha256": {
+      "midi": "815d6886a43312608acfe1a8ffbd3b4ff982a8ac857be771dc102b1916d34754",
+      "pdf": "303f658e2be3029766fa1174af67e7e35191fd0e42a3ad0dc0d76093e9146220"
+    },
+    "verified": "2026-11-06",
+    "duration": 22,
+    "bpm": 158
+  },
+  {
+    "id": "mutopia-223",
+    "title": "L'Adieu — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=223",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-12/25EF-12.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-12/25EF-12-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-223/score.mid",
+      "pdf": "/music/mutopia-223/score.pdf"
+    },
+    "sha256": {
+      "midi": "4df722747c392323660dc4f9940acbb38af8b9952759d4c5cc7a02cf2e7f5cf8",
+      "pdf": "67ae554980bba36e0b337f8e0096e4a487eec99215ff991aca58639d4dded0a0"
+    },
+    "verified": "2026-11-06",
+    "duration": 53,
+    "bpm": 184
+  },
+  {
+    "id": "mutopia-224",
+    "title": "Consolation — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=224",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-13/25EF-13.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-13/25EF-13-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-224/score.mid",
+      "pdf": "/music/mutopia-224/score.pdf"
+    },
+    "sha256": {
+      "midi": "e06faed242a40debad24cfd95f0376bbba8ec12f88a75cc6443dc53c9db5eb6e",
+      "pdf": "49defcba5ae5471533c98744d4cb7d8ed65ace77673ea6e6ae4e18016fddd252"
+    },
+    "verified": "2026-11-06",
+    "duration": 41,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-225",
+    "title": "La Styrienne — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=225",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-14/25EF-14.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-14/25EF-14-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-225/score.mid",
+      "pdf": "/music/mutopia-225/score.pdf"
+    },
+    "sha256": {
+      "midi": "99052280f7e0895f4850f7691540ad8931b3f0fec3961ee6ad538faace0190fc",
+      "pdf": "166c40d7f8968fa6fe87f2b79db7116d357dfe9a91962a43f58428dbab534e43"
+    },
+    "verified": "2026-11-06",
+    "duration": 37,
+    "bpm": 176
+  },
+  {
+    "id": "mutopia-227",
+    "title": "Ballade — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=227",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-15/25EF-15.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-15/25EF-15-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-227/score.mid",
+      "pdf": "/music/mutopia-227/score.pdf"
+    },
+    "sha256": {
+      "midi": "cfba2544b8049f72bfda038620ff0543e9e1845b6e4d7431e4798f50ce06f716",
+      "pdf": "96c1dd8bcc4fbc167428800c24e5db41f3e27e2e25e9eb4604bc781fb7d386ca"
+    },
+    "verified": "2026-11-06",
+    "duration": 83,
+    "bpm": 104
+  },
+  {
+    "id": "mutopia-228",
+    "title": "Douce Plainte — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=228",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-16/25EF-16.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-16/25EF-16-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-228/score.mid",
+      "pdf": "/music/mutopia-228/score.pdf"
+    },
+    "sha256": {
+      "midi": "c2ae841112f76ee00732264d501f9c66df048d7626f61f95883292a8867ece8c",
+      "pdf": "c840a4b536e11ab8a5c4278a1d867f2be76c234d48c6b57855d3fb7a526446ff"
+    },
+    "verified": "2026-11-06",
+    "duration": 34,
+    "bpm": 126
+  },
+  {
+    "id": "mutopia-229",
+    "title": "La Babillarde — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=229",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-17/25EF-17.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-17/25EF-17-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-229/score.mid",
+      "pdf": "/music/mutopia-229/score.pdf"
+    },
+    "sha256": {
+      "midi": "5893fa14e84e9c5e19080a365b76db400f861e4197dcf5ee402d9fea79f68e8c",
+      "pdf": "babe300ced7e46b45945d3266fe0e8a20b7f589c4fcc01b0a97fcc843afddf08"
+    },
+    "verified": "2026-11-06",
+    "duration": 29,
+    "bpm": 108
+  },
+  {
+    "id": "mutopia-230",
+    "title": "Inquiétude — Op. 100",
+    "composer": "J. F. F. Burgmüller",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "learning",
+      "practice",
+      "study",
+      "solo"
+    ],
+    "description": "Opus 100. · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=230",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Collection Litolff, 19th Century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-18/25EF-18.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-18/25EF-18-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-230/score.mid",
+      "pdf": "/music/mutopia-230/score.pdf"
+    },
+    "sha256": {
+      "midi": "355c12bf2789ad7d95b2afab18b08556c9d1e31602256026ce5fa71c1f9244fe",
+      "pdf": "eeba38b4d61e91eb7113025fc11a9c32eec10a2ccad75b25f0a3cd65b16c4c7c"
+    },
+    "verified": "2026-11-06",
+    "duration": 26,
+    "bpm": 138
+  },
+  {
+    "id": "mutopia-584",
+    "title": "Songs My Mother Taught Me, Op. 55 No. 4",
+    "composer": "A. Dvořák",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "gentle",
+      "reflective"
+    ],
+    "description": "O 55 · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=584",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "The University Society, 1904",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/DvorakA/O55/dvorak-als-die-alte-mutter/dvorak-als-die-alte-mutter.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/DvorakA/O55/dvorak-als-die-alte-mutter/dvorak-als-die-alte-mutter-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-584/score.mid",
+      "pdf": "/music/mutopia-584/score.pdf"
+    },
+    "sha256": {
+      "midi": "112c8943a0e4bb3ee6dcaa9678d131ed3ac34065671cb46a0b3659da187feaf1",
+      "pdf": "c356572a092888a475690d5a5097417cd08f571b9b819b7797eec50dfaa0fb78"
+    },
+    "verified": "2026-11-06",
+    "duration": 100,
+    "bpm": 90
+  },
+  {
+    "id": "mutopia-141",
+    "title": "Keyboard Sonata in C minor, K. 11",
+    "composer": "D. Scarlatti",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "K 11 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=141",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "P.J. Tonger Musik Verlag, 19th century",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ScarlattiD/K11/sonatensatz/sonatensatz.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ScarlattiD/K11/sonatensatz/sonatensatz-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-141/score.mid",
+      "pdf": "/music/mutopia-141/score.pdf"
+    },
+    "sha256": {
+      "midi": "47d90a716ef613368609db391df9b0bb2086ea5f8ab530013848d4b9a0609b8c",
+      "pdf": "8f48d7b46efac596346d825fc30d106e9c0e23881cf05ea88b80714b4e22c974"
+    },
+    "verified": "2026-11-06",
+    "duration": 58,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-139",
+    "title": "Keyboard Sonata in C major",
+    "composer": "D. Scarlatti",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical"
+    ],
+    "description": "Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=139",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bartholf Senff 1880s",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/ScarlattiD/ds_sonate_c/ds_sonate_c.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/ScarlattiD/ds_sonate_c/ds_sonate_c-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-139/score.mid",
+      "pdf": "/music/mutopia-139/score.pdf"
+    },
+    "sha256": {
+      "midi": "2f24654d937178f9fe42a0cd6833e23c99313df7c6a1e91723a074330ab07835",
+      "pdf": "781be7043c844282f2fc53f60f49f214343ba27ba83f34773c1380e5485a44f7"
+    },
+    "verified": "2026-11-06",
+    "duration": 138,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-64",
+    "title": "Guitar Étude, Op. 35 No. 14",
+    "composer": "F. Sor",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "classical",
+      "study",
+      "practice",
+      "solo"
+    ],
+    "description": "Opus 35, No. 14 · Guitar. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=64",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Unknown",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SorF/O35/Sor_Etude_Opus35_14/Sor_Etude_Opus35_14.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SorF/O35/Sor_Etude_Opus35_14/Sor_Etude_Opus35_14-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-64/score.mid",
+      "pdf": "/music/mutopia-64/score.pdf"
+    },
+    "sha256": {
+      "midi": "940605a8c05a2ae14bc6b68db07a4042064187f012d83adc908c649894fc9724",
+      "pdf": "76fae245ad1370cc04b3b5b83ddccd6adebc35e936466f6248aa5b2e6b79a94f"
+    },
+    "verified": "2026-11-06",
+    "duration": 72,
+    "bpm": 80
   }
 ]

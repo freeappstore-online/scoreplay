@@ -29,9 +29,10 @@ it('preserves original notation and pickup timing, and strips external images', 
 
 it('keeps a saved arrangement title and date when attaching a score', async () => {
   const [entry] = await prepareLibrary([new File([demoBytes()], 'piece.mid')], []);
-  entry.title = 'My piano lesson'; entry.added = 123;
+  entry.title = 'My piano lesson'; entry.added = 123; entry.catalogId = 'mutopia-5';
   const [updated] = await prepareLibrary([new File([xml], 'piece.musicxml')], [entry]);
   expect(updated.title).toBe('My piano lesson');
   expect(updated.added).toBe(123);
+  expect(updated.catalogId).toBeUndefined();
   expect(entry.musicxml).toBeUndefined();
 });

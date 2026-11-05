@@ -4,18 +4,22 @@ import { demoBytes, MAX_FILE_SIZE, parseMidi, type Song } from './music';
 import { libraryId, LibraryFullError, type LibraryEntry } from './library';
 import { libraryEntries, savedFile, writeLibrary, type Saved } from './storage';
 import { pwa } from './fas-capabilities/pwa';
+import { CATALOG, loadCatalogPiece } from './catalog';
 
 /** Owns the selected document and serializes persistence, so old reads cannot replace a newer selection. */
-export function useMusicFile(player: Player) {
+export function useMusicFile(player: Player, linkedPieceId: string | null = null) {
   const [song, setSong] = useState<Song | null>(null);
   const [musicxml, setMusicxml] = useState<string>(), [pdf, setPdf] = useState<ArrayBuffer>();
   const [revision, setRevision] = useState(0);
+  const [catalogId, setCatalogId] = useState<string>();
+  const selectedCatalog = useRef<string | undefined>(undefined);
   const [busy, setBusy] = useState(true), [error, setError] = useState(''), [notice, setNotice] = useState('');
   const generation = useRef(0), busyRef = useRef(true), writes = useRef(Promise.resolve()), pendingWrites = useRef(0);
   const setLoading = (value: boolean) => { busyRef.current = value; setBusy(value); };
   const apply = (file: Saved, parsed = parseMidi(file.bytes, file.name)) => {
     if (file.displayTitle) parsed.title = file.displayTitle;
     player.load(parsed); setSong(parsed); setMusicxml(file.musicxml); setPdf(file.pdf);
+    selectedCatalog.current = file.catalogId; setCatalogId(file.catalogId);
     setRevision(value => value + 1); setError('');
   };
   const persist = (id: number, operation: () => Promise<unknown>) => {
@@ -27,6 +31,7 @@ export function useMusicFile(player: Player) {
   useEffect(() => {
     const id = ++generation.current;
     const release = pwa.addBusyGuard(() => busyRef.current || pendingWrites.current > 0);
+    if (linkedPieceId !== null) return () => { generation.current++; release(); };
     void savedFile().then(saved => {
       if (id !== generation.current) return;
       apply(saved ?? { bytes: demoBytes(), name: 'Ode to Joy.mid' });
@@ -38,6 +43,32 @@ export function useMusicFile(player: Player) {
     }).finally(() => { if (id === generation.current) setLoading(false); });
     return () => { generation.current++; release(); };
   }, [player]);
+  useEffect(() => {
+    if (linkedPieceId === null || selectedCatalog.current === linkedPieceId) return;
+    const id = ++generation.current, controller = new AbortController();
+    player.pause(); setSong(null); setMusicxml(undefined); setPdf(undefined);
+    selectedCatalog.current = undefined; setCatalogId(undefined);
+    setLoading(true); setError(''); setNotice('Opening linked piece…');
+    void (async () => {
+      try {
+        const piece = CATALOG.find(item => item.id === linkedPieceId);
+        if (!piece) throw new Error('This piece link is not in the free collection. Browse the library to choose a piece.');
+        const [last, saved] = await Promise.all([savedFile().catch(() => undefined), libraryEntries().catch(() => [])]);
+        if (id !== generation.current) return;
+        const cached = last?.catalogId === piece.id ? last : saved.find(item => item.catalogId === piece.id);
+        const entry = cached ?? await loadCatalogPiece(piece, controller.signal);
+        if (id !== generation.current) return;
+        apply(entry); setNotice('Music and score ready. Press Play to listen.');
+        try { await persist(id, () => savedFile(entry)); }
+        catch { if (id === generation.current) setNotice('Music and score ready. This browser could not save the selection.'); }
+      } catch (error) {
+        if (id === generation.current && !controller.signal.aborted) {
+          setError(error instanceof Error ? error.message : 'Could not open this piece. Please reload to try again.'); setNotice('');
+        }
+      } finally { if (id === generation.current) setLoading(false); }
+    })();
+    return () => { controller.abort(); if (id === generation.current) { generation.current++; setLoading(false); } };
+  }, [linkedPieceId, player]);
   const open = async (file?: File) => {
     if (!file || busyRef.current) return;
     const id = ++generation.current;
@@ -51,6 +82,7 @@ export function useMusicFile(player: Player) {
       try { existing = (await libraryEntries()).find(entry => entry.id === libraryId(file.name)); } catch { /* Still open without storage. */ }
       if (id !== generation.current) return;
       const entry: LibraryEntry = { ...existing, id: libraryId(file.name), bytes, name: file.name, title: existing?.title ?? file.name.replace(/\.midi?$/i, '').replace(/[-_]/g, ' '), added: existing?.added ?? Date.now() };
+      delete entry.catalogId;
       apply(entry, parsed);
       try {
         await persist(id, () => writeLibrary([entry], entry));
@@ -83,5 +115,5 @@ export function useMusicFile(player: Player) {
       if (id === generation.current) setNotice('Music and score ready. Saved as your last-opened piece on this device.');
     }).catch(() => { if (id === generation.current) setNotice('Opened. Could not save the last-opened selection.'); });
   };
-  return { song, musicxml, pdf, revision, busy, error, notice, setError, open, demo, forget, openEntry };
+  return { song, musicxml, pdf, catalogId, revision, busy, error, notice, setError, open, demo, forget, openEntry };
 }
