@@ -3,6 +3,8 @@
 @source "../../node_modules/@freeappstore/sdk/dist";
 
 @theme inline {
+  --color-score-paper: var(--score-paper);
+  --color-score-ink: var(--score-ink);
   --color-paper: var(--paper);
   --color-paper-deep: var(--paper-deep, var(--paper));
   --color-ink: var(--ink);
@@ -54,6 +56,8 @@
 
 @layer base {
 :root {
+  --score-paper: #ffffff;
+  --score-ink: #111111;
   --paper: #fffefb;
   --ink: #243444;
   --muted: #6b7280;

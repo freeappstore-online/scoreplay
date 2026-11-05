@@ -1,7 +1,8 @@
 import { Midi } from '@tonejs/midi';
 
-export type Note = { midi: number; time: number; duration: number; velocity: number; track: number };
-export type Song = { title: string; duration: number; bpm: number; tracks: { name: string; instrument: string; percussion: boolean }[]; notes: Note[] };
+export type Note = { midi: number; time: number; duration: number; velocity: number; track: number; beat: number; beats: number };
+export type Song = { title: string; duration: number; bpm: number; tracks: { name: string; instrument: string; percussion: boolean }[]; notes: Note[];
+  tempos: { beat: number; time: number; bpm: number }[]; meters: { beat: number; numerator: number; denominator: number }[] };
 export const MAX_FILE_SIZE = 5 * 1024 * 1024;
 
 export function parseMidi(bytes: ArrayBuffer, filename: string): Song {
@@ -28,7 +29,7 @@ export function parseMidi(bytes: ArrayBuffer, filename: string): Song {
       while (low < high) { const mid = (low + high) >>> 1; if (pedal[mid].time <= end) low = mid + 1; else high = mid; }
       if (low > 0 && pedal[low - 1].value >= .5 && !track.instrument.percussion) end = nextRelease[low] ?? end;
       if (Number.isFinite(n.time) && Number.isFinite(end) && n.time >= 0 && end > n.time) {
-        notes.push({ midi: n.midi, time: n.time, duration: end - n.time, velocity: n.velocity, track: i });
+        notes.push({ midi: n.midi, time: n.time, duration: end - n.time, velocity: n.velocity, track: i, beat: n.ticks / midi.header.ppq, beats: n.durationTicks / midi.header.ppq });
       }
     });
   });
@@ -37,7 +38,18 @@ export function parseMidi(bytes: ArrayBuffer, filename: string): Song {
   if (duration > 7200) throw new Error('Please use a MIDI file shorter than two hours.');
   return { title: midi.name.trim() || filename.replace(/\.midi?$/i, ''), duration, bpm: midi.header.tempos[0]?.bpm ?? 120,
     tracks: tracks.map((t, i) => ({ name: t.name || `Track ${i + 1}`, instrument: t.instrument.name, percussion: t.instrument.percussion })),
-    notes: notes.sort((a, b) => a.time - b.time) };
+    notes: notes.sort((a, b) => a.time - b.time),
+    tempos: [{ beat: 0, time: 0, bpm: 120 }, ...midi.header.tempos.map(t => ({ beat: t.ticks / midi.header.ppq, time: midi.header.ticksToSeconds(t.ticks), bpm: t.bpm }))],
+    meters: [{ beat: 0, numerator: 4, denominator: 4 }, ...midi.header.timeSignatures.map(t => ({ beat: t.ticks / midi.header.ppq, numerator: t.timeSignature[0], denominator: t.timeSignature[1] }))] };
+}
+
+export function beatAtTime(song: Song, time: number) {
+  const tempo = [...song.tempos].reverse().find(t => t.time <= time) ?? song.tempos[0];
+  return tempo.beat + (time - tempo.time) * tempo.bpm / 60;
+}
+export function timeAtBeat(song: Song, beat: number) {
+  const tempo = [...song.tempos].reverse().find(t => t.beat <= beat) ?? song.tempos[0];
+  return tempo.time + (beat - tempo.beat) * 60 / tempo.bpm;
 }
 
 export function demoBytes(): ArrayBuffer {

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ButtonHTMLAttributes } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState, type ButtonHTMLAttributes } from 'react';
 import { initApp } from '@freeappstore/sdk';
 import { Badge, Card, PageHeader, Shell, type NavItem } from '@freeappstore/sdk/ui';
 import { Player } from './audio';
@@ -7,12 +7,15 @@ import { PianoRoll } from './PianoRoll';
 import { savedFile } from './storage';
 import { pwa } from './fas-capabilities/pwa';
 
+const SheetMusic = lazy(() => import('./SheetMusic'));
+
 export const fas = initApp({ appId: 'scoreplay' });
 const NAV: NavItem[] = [{ label: 'Player', href: '/', title: 'Scoreplay — MIDI player' }, { label: 'How to use', href: '/about', title: 'How to use — Scoreplay' }];
 function Button({ primary, className = '', ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { primary?: boolean }) {
   return <button {...props} className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${primary ? 'border-accent bg-accent text-paper hover:bg-accent-hover' : 'border-line bg-paper text-ink hover:bg-panel'} ${className}`} />;
 }
 export default function App() {
+  const [mode, setMode] = useState('sheet');
   const [path, setPath] = useState(location.pathname);
   const [player] = useState(() => new Player());
   const [song, setSong] = useState<Song | null>(null);
@@ -73,9 +76,9 @@ export default function App() {
         <PageHeader title="A little room for your music." description="Open a MIDI, press play, and take it at your own pace." />
         <Card><div className="space-y-5 text-sm leading-7">
           <h2 className="text-2xl">From file to first note</h2>
-          <ol className="list-decimal space-y-2 pl-5"><li>Export your music as a standard MIDI (.mid or .midi), then choose Open MIDI.</li><li>Press Play or use the space bar. Click the piano roll or drag the position slider to jump.</li><li>Slow down without changing pitch, mute a track, or loop the whole piece.</li></ol>
+          <ol className="list-decimal space-y-2 pl-5"><li>Export your music as a standard MIDI (.mid or .midi), then choose Open MIDI.</li><li>Press Play or use the space bar. Use the measure buttons, click the piano roll, or drag the position slider to jump.</li><li>Slow down without changing pitch, mute a track, or loop the whole piece.</li></ol>
           <p>Scoreplay plays MIDI with a lightweight synthesized tone and basic percussion. It respects note timing, tempo changes, velocity, and sustain pedal. Instrument names come from your file; this version does not reproduce a full instrument sound library, pitch bends, or other expressive controllers.</p>
-          <p>This is a simple MIDI player with a piano roll. It does not edit notes or display engraved sheet music. PDF, MusicXML, MuseScore project files, and audio recordings are not supported. Maximum file size: 5 MB; maximum duration: two hours.</p>
+          <p>Switch between Sheet music and Piano roll. Sheet music is an approximate transcription: choose a track and rhythm grid, browse measures, or follow playback. MIDI does not preserve original notation, so key spelling, beaming, and hand assignments are estimated. Notes cannot be edited in this version. PDF, MusicXML, MuseScore project files, and audio recordings are not supported. Maximum file size: 5 MB; maximum duration: two hours.</p>
           <p>Your most recent imported MIDI is saved in this browser on this device. It is never sent to a server. Use “Forget saved MIDI” to remove it. The demo is an arrangement of Beethoven’s public-domain Ode to Joy.</p>
           <Button onClick={() => navigate('/')}>Back to player</Button>
         </div></Card>
@@ -91,8 +94,8 @@ export default function App() {
         {song && <>
           <section className="overflow-hidden rounded-2xl border border-line bg-paper" aria-label="Music player">
             <div className="flex flex-wrap items-start justify-between gap-3 border-b border-line p-5 sm:p-6"><div><p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted">Now on the stand</p><h2 className="text-3xl">{song.title}</h2><p className="mt-2 text-sm text-muted">{song.tracks.length} tracks · {song.notes.length.toLocaleString()} notes · {Math.round(song.bpm)} BPM at start</p></div><Badge variant={playing ? 'success' : 'default'}>{playing ? 'Playing' : time >= song.duration ? 'Finished' : 'Ready to play'}</Badge></div>
-            <div className="flex items-center justify-between border-b border-line bg-panel px-5 py-3 text-xs text-muted"><span className="font-semibold uppercase tracking-widest">Piano roll</span><span>Click to seek</span></div>
-            <PianoRoll song={song} time={time} muted={muted} onSeek={seek} />
+            <div className="flex gap-2 border-b border-line bg-panel px-5 py-3" role="group" aria-label="Music view"><Button primary={mode === 'sheet'} aria-pressed={mode === 'sheet'} onClick={() => setMode('sheet')}>Sheet music</Button><Button primary={mode === 'roll'} aria-pressed={mode === 'roll'} onClick={() => setMode('roll')}>Piano roll</Button></div>
+            {mode === 'sheet' ? <Suspense fallback={<p role="status" className="p-5 text-sm text-muted">Loading sheet music…</p>}><SheetMusic key={song.title + song.notes.length + song.duration} song={song} time={time} playing={playing} onSeek={seek} /></Suspense> : <PianoRoll song={song} time={time} muted={muted} onSeek={seek} />}
             <div className="space-y-5 border-t border-line p-5 sm:p-6">
               <div><label htmlFor="position" className="sr-only">Playback position</label><input id="position" type="range" min="0" max={song.duration} step="0.01" value={time} aria-valuetext={`${formatTime(time)} of ${formatTime(song.duration)}`} onChange={e => seek(Number(e.target.value))} className="w-full accent-accent" /><div className="mt-1 flex justify-between font-mono text-xs text-muted"><span>{formatTime(time)}</span><span>{formatTime(song.duration)}</span></div></div>
               <div className="flex flex-wrap items-center justify-between gap-5"><div className="flex flex-wrap items-center gap-2"><Button onClick={() => player.seek(0)} aria-label="Stop and rewind">↤</Button><Button primary className="min-w-28" disabled={busy} onClick={() => void toggle()}>{playing ? 'Ⅱ Pause' : '▶ Play'}</Button><Button aria-pressed={loop} onClick={() => { player.loop = !loop; setLoop(!loop); }}>↻ Loop {loop ? 'on' : 'off'}</Button></div><span className="hidden text-xs text-muted sm:block">Space to play / pause</span></div>
