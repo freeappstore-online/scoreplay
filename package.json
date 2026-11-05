@@ -1,0 +1,21 @@
+{
+  "name": "scoreplay",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=22"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  },
+  "scripts": {
+    "dev": "pnpm --filter @scoreplay/web dev",
+    "build": "pnpm --filter @scoreplay/web build",
+    "preview": "pnpm --filter @scoreplay/web preview",
+    "typecheck": "pnpm --filter @scoreplay/web exec tsc -b",
+    "test": "pnpm --filter @scoreplay/web test"
+  }
+}
