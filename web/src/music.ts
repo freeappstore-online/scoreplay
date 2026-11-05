@@ -1,7 +1,7 @@
 import { Midi } from '@tonejs/midi';
 
 export type Note = { midi: number; time: number; duration: number; velocity: number; track: number; beat: number; beats: number };
-export type Song = { title: string; duration: number; bpm: number; tracks: { name: string; instrument: string; percussion: boolean }[]; notes: Note[];
+export type Song = { title: string; duration: number; bpm: number; tracks: { name: string; instrument: string; program?: number; percussion: boolean }[]; notes: Note[];
   tempos: { beat: number; time: number; bpm: number }[]; meters: { beat: number; numerator: number; denominator: number }[] };
 export const MAX_FILE_SIZE = 5 * 1024 * 1024;
 
@@ -37,7 +37,7 @@ export function parseMidi(bytes: ArrayBuffer, filename: string): Song {
   const duration = notes.reduce((end, n) => Math.max(end, n.time + n.duration), 0);
   if (duration > 7200) throw new Error('Please use a MIDI file shorter than two hours.');
   return { title: midi.name.trim() || filename.replace(/\.midi?$/i, ''), duration, bpm: midi.header.tempos[0]?.bpm ?? 120,
-    tracks: tracks.map((t, i) => ({ name: t.name || `Track ${i + 1}`, instrument: t.instrument.name, percussion: t.instrument.percussion })),
+    tracks: tracks.map((t, i) => ({ name: t.name || `Track ${i + 1}`, instrument: t.instrument.name, program: t.instrument.number, percussion: t.instrument.percussion })),
     notes: notes.sort((a, b) => a.time - b.time),
     tempos: [{ beat: 0, time: 0, bpm: 120 }, ...midi.header.tempos.map(t => ({ beat: t.ticks / midi.header.ppq, time: midi.header.ticksToSeconds(t.ticks), bpm: t.bpm }))],
     meters: [{ beat: 0, numerator: 4, denominator: 4 }, ...midi.header.timeSignatures.map(t => ({ beat: t.ticks / midi.header.ppq, numerator: t.timeSignature[0], denominator: t.timeSignature[1] }))] };

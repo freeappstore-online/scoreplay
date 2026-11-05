@@ -5,7 +5,7 @@ let clock = 0;
 const starts: number[] = [];
 let stopped = 0;
 let resume = () => Promise.resolve();
-const param = () => ({ value: 0, setValueAtTime() {}, linearRampToValueAtTime() {}, exponentialRampToValueAtTime() {}, setTargetAtTime() {} });
+const param = () => ({ value: 0, setValueAtTime() {}, linearRampToValueAtTime() {}, exponentialRampToValueAtTime() {}, setTargetAtTime() {}, cancelScheduledValues() {} });
 class Context {
   get currentTime() { return clock; }
   destination = {};
@@ -15,7 +15,7 @@ class Context {
   createOscillator() { return { frequency: param(), type: '', onended: null, connect() {}, disconnect() {}, start(t: number) { starts.push(t); }, stop() { stopped++; } }; }
 }
 let player: Player;
-beforeEach(() => { clock = 0; starts.length = 0; stopped = 0; resume = () => Promise.resolve(); vi.useFakeTimers(); vi.stubGlobal('AudioContext', Context); player = new Player(); player.load(parseMidi(demoBytes(), 'demo.mid')); });
+beforeEach(() => { clock = 0; starts.length = 0; stopped = 0; resume = () => Promise.resolve(); vi.useFakeTimers(); vi.stubGlobal('AudioContext', Context); player = new Player(); player.sound = 'simple'; player.load(parseMidi(demoBytes(), 'demo.mid')); });
 afterEach(() => { player.destroy(); vi.useRealTimers(); vi.unstubAllGlobals(); });
 it('advances at selected speed, pauses, resumes held notes, and rewinds', async () => {
   player.speed = .5; await player.play();

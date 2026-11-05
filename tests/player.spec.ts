@@ -257,3 +257,111 @@ test('classical download failures recover; MIDI notation and source PDF work', a
   await page.getByRole('button', { name:'PDF score',exact:true }).click();
   await expect(page.getByRole('link', { name:'Open PDF score in a new tab ↗' })).toBeVisible();
 });
+
+test('sampled instruments produce audio, preserve transport, and reopen offline', async ({ page, context }) => {
+  test.setTimeout(90000);
+  const errors: string[]=[]; page.on('pageerror',e=>errors.push(e.message));
+  await page.addInitScript(() => {
+    const Native=window.AudioContext; (window as any).audioProbes=[]; (window as any).oscillators=0;
+    window.AudioContext=class extends Native {
+      createGain() { const gain=super.createGain(), connect=gain.connect.bind(gain); (gain as any).connect=(destination:AudioNode)=>{ if(destination===this.destination){const probe=this.createAnalyser();connect(probe);(window as any).audioProbes.push(probe);}return connect(destination);};return gain; }
+      createOscillator() { (window as any).oscillators++;return super.createOscillator(); }
+    };
+  });
+  const peak=()=>page.evaluate(()=>{const probe=(window as any).audioProbes[0] as AnalyserNode;if(!probe)return 0;const values=new Float32Array(probe.fftSize);probe.getFloatTimeDomainData(values);return Math.max(...values.map(Math.abs));});
+  await page.goto('/');
+  await expect(page.getByLabel('Playback sound',{exact:true})).toHaveValue('sampled');
+  await page.getByLabel('Choose MIDI file').setInputFiles({name:'sample-study.mid',mimeType:'audio/midi',buffer:fixture()});
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible({timeout:45000});
+  await expect.poll(peak).toBeGreaterThan(.001);
+  expect(await page.evaluate(()=>(window as any).oscillators)).toBe(0);
+  await expect(page.getByRole('status').filter({hasText:'Instrument sounds saved on this device.'})).toBeVisible();
+  await page.getByRole('button',{name:'Ⅱ Pause',exact:true}).click();
+  await expect.poll(peak).toBeLessThan(.0001);
+  const position=page.getByRole('slider',{name:'Playback position',exact:true});
+  await position.fill('2');
+  await page.getByLabel('Playback speed').selectOption('0.5');
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect.poll(peak).toBeGreaterThan(.001); // A held note is reconstructed at the seek point.
+  await page.getByRole('button',{name:'Mute Right hand',exact:true}).click();
+  await expect.poll(peak).toBeLessThan(.0001);
+  await page.getByRole('button',{name:'Unmute Right hand',exact:true}).click();
+  await expect.poll(peak).toBeGreaterThan(.001);
+  await page.getByRole('button',{name:'Stop and rewind',exact:true}).click();
+  await expect.poll(peak).toBeLessThan(.0001);
+  await page.getByLabel('Playback sound',{exact:true}).selectOption('piano');
+  await page.screenshot({path:'test-results/sampled-player.png',fullPage:true});
+  await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
+  await page.reload();
+  await context.setOffline(true);
+  await expect(page.getByLabel('Playback sound',{exact:true})).toHaveValue('piano');
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible({timeout:20000});
+  await expect.poll(peak).toBeGreaterThan(.001);
+  await expect(page.getByRole('status').filter({hasText:'Instrument sounds loaded from this device.'})).toBeVisible();
+  await context.setOffline(false);
+  await page.getByRole('link',{name:'Library',exact:true}).click();
+  await expect.poll(peak).toBeLessThan(.0001);
+  expect(errors).toEqual([]);
+});
+
+test('sound download errors have a working fallback; navigation cancels pending playback', async ({page})=>{
+  test.setTimeout(60000);
+  await page.route('**/sounds/*.sf3',route=>route.fulfill({status:503,body:'Offline'}));
+  await page.goto('/');await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect(page.getByRole('alert')).toContainText('Instrument sounds could not be downloaded');
+  await page.getByLabel('Playback sound',{exact:true}).selectOption('simple');
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'Ⅱ Pause',exact:true}).click();
+  await page.getByRole('button',{name:'Stop and rewind',exact:true}).click();
+  await page.unroute('**/sounds/*.sf3');
+  let release!:()=>void;
+  const gate=new Promise<void>(resolve=>{release=resolve;});
+  await page.route('**/sounds/*.sf3',async route=>{await gate;await route.continue();});
+  await page.getByLabel('Playback sound',{exact:true}).selectOption('sampled');
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Cancel play',exact:true})).toBeVisible();
+  await page.getByRole('link',{name:'Library',exact:true}).click();
+  const downloaded=page.waitForResponse(r=>r.url().includes('/sounds/') && r.url().endsWith('.sf3') && r.status()===200);
+  release();await downloaded;await page.unroute('**/sounds/*.sf3');
+  await page.getByRole('link',{name:'Player',exact:true}).click();
+  await expect(page.getByRole('button',{name:'▶ Play',exact:true})).toBeVisible();
+  await expect(page.getByRole('status').filter({hasText:/Instrument sounds (saved|ready)/})).toBeVisible({timeout:45000});
+  await expect(page.getByRole('button',{name:'▶ Play',exact:true})).toBeVisible();
+  await expect(page.getByRole('slider',{name:'Playback position',exact:true})).toHaveValue('0');
+});
+
+test('recorded violin differs from grand piano and percussion stays audible', async ({page})=>{
+  test.setTimeout(90000);
+  await page.addInitScript(()=>{
+    const Native=window.AudioContext;
+    window.AudioContext=class extends Native {
+      createGain(){const g=super.createGain(),connect=g.connect.bind(g);(g as any).connect=(dest:AudioNode)=>{if(dest===this.destination){const probe=this.createAnalyser();probe.smoothingTimeConstant=0;connect(probe);(window as any).timbreProbe=probe;}return connect(dest);};return g;}
+    };
+  });
+  const spectrum=()=>page.evaluate(()=>{const probe=(window as any).timbreProbe as AnalyserNode;const data=new Float32Array(probe.frequencyBinCount);probe.getFloatFrequencyData(data);const part=Array.from(data.slice(5,180),db=>10**(db/20));const sum=part.reduce((a,b)=>a+b,0);return part.map(x=>x/(sum||1));});
+  const midi=new Midi();midi.name='Instrument comparison';
+  const violin=midi.addTrack();violin.name='Violin';violin.instrument.number=40;violin.addNote({midi:69,time:0,duration:8,velocity:.8});
+  const drums=midi.addTrack();drums.name='Drums';drums.channel=9;for(let i=0;i<8;i++)drums.addNote({midi:i%2?38:36,time:i,duration:.2,velocity:.9});
+  await page.goto('/');
+  await page.getByLabel('Choose MIDI file').setInputFiles({name:'instruments.mid',mimeType:'audio/midi',buffer:Buffer.from(midi.toArray())});
+  await page.getByRole('button',{name:'Mute Drums',exact:true}).click();
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible({timeout:45000});
+  await page.waitForTimeout(600);const strings=await spectrum();
+  await page.getByRole('button',{name:'Stop and rewind',exact:true}).click();
+  await page.getByLabel('Playback sound',{exact:true}).selectOption('piano');
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible();
+  await page.waitForTimeout(600);const piano=await spectrum();
+  expect(strings.reduce((a,b)=>a+b,0)).toBeCloseTo(1);
+  expect(piano.reduce((a,b)=>a+b,0)).toBeCloseTo(1);
+  expect(strings.reduce((sum,value,i)=>sum+Math.abs(value-piano[i]),0)).toBeGreaterThan(.15);
+  await page.getByRole('button',{name:'Stop and rewind',exact:true}).click();
+  await page.getByRole('button',{name:'Mute Violin',exact:true}).click();
+  await page.getByRole('button',{name:'Unmute Drums',exact:true}).click();
+  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+  await expect.poll(()=>page.evaluate(()=>{const p=(window as any).timbreProbe as AnalyserNode;const a=new Float32Array(p.fftSize);p.getFloatTimeDomainData(a);return Math.max(...a.map(Math.abs));})).toBeGreaterThan(.001);
+});

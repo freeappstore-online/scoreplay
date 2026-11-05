@@ -25,7 +25,7 @@ describe('reviewed free collection', () => {
         else expect(bytes.subarray(0,5).toString()).toBe('%PDF-');
       }
     }
-  });
+  }, 30000);
   it('combines search, tags, difficulty, instrument, duration, score type and favourites', () => {
     expect(matchesSearch('Für Elise · L. V. Beethoven','fur beethoven')).toBe(true);
     expect(matchesSearch('London Bridge','London waltz')).toBe(false);

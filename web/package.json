@@ -14,7 +14,9 @@
     "@tonejs/midi": "^2.0.28",
     "opensheetmusicdisplay": "^2.2.1",
     "react": "^19",
-    "react-dom": "^19"
+    "react-dom": "^19",
+    "spessasynth_core": "4.4.7",
+    "spessasynth_lib": "4.4.5"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1",
