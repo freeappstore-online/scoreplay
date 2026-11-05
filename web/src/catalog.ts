@@ -1,4 +1,5 @@
 import data from './catalog-data.json';
+import { composerInfo } from './composers';
 import type { LibraryEntry } from './library';
 import { parseMidi } from './music';
 import { readMusicXml } from './original-score';
@@ -9,13 +10,13 @@ export const DEFAULT_FILTERS: Filters = { query: '', scope: 'free', category: ''
 const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
 export const matchesSearch = (text: string, query: string) => normalize(query).trim().split(/\s+/).every(word => normalize(text).includes(word));
 export function filterCatalog(filters: Filters, favorites: string[]) {
-  const result = CATALOG.filter(p => matchesSearch([p.title,p.composer,p.category,p.description,...p.instruments,...p.tags].join(' '), filters.query)
+  const result = CATALOG.filter(p => matchesSearch([p.title,p.composer,composerInfo(p.composer).fullName,composerInfo(p.composer).label,p.category,p.description,...p.instruments,...p.tags].join(' '), filters.query)
     && (!filters.category || p.category === filters.category) && (!filters.difficulty || p.difficulty === filters.difficulty)
     && (!filters.instrument || p.instruments.includes(filters.instrument)) && (!filters.composer || p.composer === filters.composer)
     && (!filters.duration || p.duration <= Number(filters.duration)) && (!filters.score || !!p.assets.musicxml)
     && filters.tags.every(tag => p.tags.includes(tag)) && (filters.scope !== 'favorites' || favorites.includes(p.id)));
   const levels = ['Easy','Intermediate','Advanced'];
-  return result.sort((a,b) => (filters.sort === 'duration' ? a.duration-b.duration : filters.sort === 'difficulty' ? levels.indexOf(a.difficulty)-levels.indexOf(b.difficulty) : filters.sort === 'composer' ? a.composer.localeCompare(b.composer) : 0) || a.title.localeCompare(b.title));
+  return result.sort((a,b) => (filters.sort === 'duration' ? a.duration-b.duration : filters.sort === 'difficulty' ? levels.indexOf(a.difficulty)-levels.indexOf(b.difficulty) : filters.sort === 'composer' ? composerInfo(a.composer).label.localeCompare(composerInfo(b.composer).label) : 0) || a.title.localeCompare(b.title));
 }
 export function readPreferences(): { filters: Filters; favorites: string[] } {
   try {

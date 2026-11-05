@@ -1,0 +1,192 @@
+{
+  "L. V. Beethoven": {
+    "fullName": "Ludwig van Beethoven",
+    "label": "Beethoven, Ludwig van",
+    "portrait": {
+      "url": "/composers/beethoven.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg/250px-Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Joseph Karl Stieler",
+      "rights": "Public domain",
+      "sha256": "0bba5c6974275ebea6f667563ec4679d7a757c590d75fd5b6940d192d07d1a3c",
+      "bytes": 21846
+    }
+  },
+  "C. Debussy": {
+    "fullName": "Claude Debussy",
+    "label": "Debussy, Claude",
+    "portrait": {
+      "url": "/composers/debussy.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Claude_Debussy_by_Atelier_Nadar.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Claude_Debussy_by_Atelier_Nadar.jpg/250px-Claude_Debussy_by_Atelier_Nadar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Adam Cuerden",
+      "rights": "Public domain",
+      "sha256": "d38c708d055fafad782ece2042de6a3bbcd33b0aae7c470eaa8db8bc0f194d20",
+      "bytes": 22250
+    }
+  },
+  "F. Horetzky": {
+    "fullName": "Felix Horetzky",
+    "label": "Horetzky, Felix"
+  },
+  "J. S. Bach": {
+    "fullName": "Johann Sebastian Bach",
+    "label": "Bach, Johann Sebastian",
+    "portrait": {
+      "url": "/composers/bach.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Johann_Sebastian_Bach.jpg/250px-Johann_Sebastian_Bach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Elias Gottlob Haussmann",
+      "rights": "Public domain",
+      "sha256": "9ddba5dde3637f1703f4de72275dbc138c2008d728a588bee60b036a25a82e46",
+      "bytes": 20118
+    }
+  },
+  "Christian Petzold": {
+    "fullName": "Christian Petzold",
+    "label": "Petzold, Christian"
+  },
+  "W. A. Mozart": {
+    "fullName": "Wolfgang Amadeus Mozart",
+    "label": "Mozart, Wolfgang Amadeus",
+    "portrait": {
+      "url": "/composers/mozart.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Mozart_Family_-_Wolfgang_Amadeus_Mozart_headshot.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/The_Mozart_Family_-_Wolfgang_Amadeus_Mozart_headshot.jpg/250px-The_Mozart_Family_-_Wolfgang_Amadeus_Mozart_headshot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Johann Nepomuk della Croce",
+      "rights": "Public domain",
+      "sha256": "1c036ecebf4fcdaadb1fff7ede94da7110e9a026d4b777e42344ebf98d3a20e0",
+      "bytes": 25254
+    }
+  },
+  "R. Schumann": {
+    "fullName": "Robert Schumann",
+    "label": "Schumann, Robert",
+    "portrait": {
+      "url": "/composers/schumann.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Robert_Schumann_1839.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Robert_Schumann_1839.jpg/250px-Robert_Schumann_1839.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Josef Kriehuber",
+      "rights": "Public domain",
+      "sha256": "d7cfbc0b25f7f12fbd3611e2bbf0e5fd245f15be2b1f666b0afe98d140e407fc",
+      "bytes": 13167
+    }
+  },
+  "P. I. Tchaikovsky": {
+    "fullName": "Pyotr Ilyich Tchaikovsky",
+    "label": "Tchaikovsky, Pyotr Ilyich",
+    "portrait": {
+      "url": "/composers/tchaikovsky.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tchaikovsky_by_Reutlinger_(cropped).jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Tchaikovsky_by_Reutlinger_%28cropped%29.jpg/250px-Tchaikovsky_by_Reutlinger_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Émile Reutlinger",
+      "rights": "Public domain",
+      "sha256": "6028e30fd76f10315109dc3478202b1b8285b4a3d375e1388ef8ea28186ffd91",
+      "bytes": 16113
+    }
+  },
+  "E. Grieg": {
+    "fullName": "Edvard Grieg",
+    "label": "Grieg, Edvard",
+    "portrait": {
+      "url": "/composers/grieg.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edvard_Grieg_(1888)_by_Elliot_and_Fry.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Edvard_Grieg_%281888%29_by_Elliot_and_Fry.jpg/250px-Edvard_Grieg_%281888%29_by_Elliot_and_Fry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Elliott & Fry",
+      "rights": "Public domain",
+      "sha256": "3c08fc227aef33756f30f62fb1c2c78841f22a6199823503415f135a352ba1ea",
+      "bytes": 23670
+    }
+  },
+  "J. Brahms": {
+    "fullName": "Johannes Brahms",
+    "label": "Brahms, Johannes",
+    "portrait": {
+      "url": "/composers/brahms.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:JohannesBrahms_(cropped).jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/JohannesBrahms_%28cropped%29.jpg/250px-JohannesBrahms_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "C. Brasch, Berlin (biography)",
+      "rights": "Public domain",
+      "sha256": "2daa3c528c1b93638e4ba10ff64945019c932ad1c7541a1b0506ae0323bf7f13",
+      "bytes": 16725
+    }
+  },
+  "G. F. Handel": {
+    "fullName": "George Frideric Handel",
+    "label": "Handel, George Frideric",
+    "portrait": {
+      "url": "/composers/handel.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:George_Frideric_Handel_by_Balthasar_Denner.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/George_Frideric_Handel_by_Balthasar_Denner.jpg/250px-George_Frideric_Handel_by_Balthasar_Denner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Attributed to Balthasar Denner",
+      "rights": "Public domain",
+      "sha256": "7fe924ef83440d95031d43b4bfb339169a083fd54965b6c6a35abbd7f2124832",
+      "bytes": 13331
+    }
+  },
+  "S. Joplin": {
+    "fullName": "Scott Joplin",
+    "label": "Joplin, Scott",
+    "portrait": {
+      "url": "/composers/joplin.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scott_Joplin_in_1912.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Scott_Joplin_in_1912.jpg/250px-Scott_Joplin_in_1912.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Unknown author",
+      "rights": "Public domain",
+      "sha256": "0fd3b05345c5586bee0b16ff9d3743c88537fb05d60cf1e70c48bb3f639b1bb4",
+      "bytes": 20545
+    }
+  },
+  "G. Fauré": {
+    "fullName": "Gabriel Fauré",
+    "label": "Fauré, Gabriel",
+    "portrait": {
+      "url": "/composers/faure.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atelier_Nadar_-_Gabriel_Faur%C3%A9_(1845-1924),_Komponist_(Zeno_Fotografie).jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Atelier_Nadar_-_Gabriel_Faur%C3%A9_%281845-1924%29%2C_Komponist_%28Zeno_Fotografie%29.jpg/250px-Atelier_Nadar_-_Gabriel_Faur%C3%A9_%281845-1924%29%2C_Komponist_%28Zeno_Fotografie%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Atelier Nadar",
+      "rights": "Public domain",
+      "sha256": "5db8d79bbb982eadc57a5f528e86b6f1dbc31718f6f12d933179bdd8f6897e7a",
+      "bytes": 13686
+    }
+  },
+  "C. Gounod": {
+    "fullName": "Charles Gounod",
+    "label": "Gounod, Charles",
+    "portrait": {
+      "url": "/composers/gounod.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Gounod_-_photogr._Bayard_%26_Bertall_-_btv1b84542916.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Charles_Gounod_-_photogr._Bayard_%26_Bertall_-_btv1b84542916.jpg/250px-Charles_Gounod_-_photogr._Bayard_%26_Bertall_-_btv1b84542916.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Bayard & Bertall, restored by Adam Cuerden",
+      "rights": "Public domain",
+      "sha256": "7c4b905533fafd119864848ea2c31a95d5cb0a2037cb4a3025202a4979fe7d39",
+      "bytes": 27451
+    }
+  },
+  "F. Schubert": {
+    "fullName": "Franz Schubert",
+    "label": "Schubert, Franz",
+    "portrait": {
+      "url": "/composers/schubert.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Franz_Schubert_by_Wilhelm_August_Rieder_1875.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Franz_Schubert_by_Wilhelm_August_Rieder_1875.jpg/250px-Franz_Schubert_by_Wilhelm_August_Rieder_1875.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Wilhelm August Rieder",
+      "rights": "Public domain",
+      "sha256": "da664917e858264d364acf43fd930f0ba22192eb95baf78e16ea59db6d8ac499",
+      "bytes": 15409
+    }
+  },
+  "F. J. Haydn": {
+    "fullName": "Joseph Haydn",
+    "label": "Haydn, Joseph",
+    "portrait": {
+      "url": "/composers/haydn.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Haydn.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Joseph_Haydn.jpg/250px-Joseph_Haydn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Thomas Hardy",
+      "rights": "Public domain",
+      "sha256": "c8f872c5fdcf21129daf2ad096163ab9513dbafd897b8aef8c73ed02725fe2b1",
+      "bytes": 18692
+    }
+  }
+}
