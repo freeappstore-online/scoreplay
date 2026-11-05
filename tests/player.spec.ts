@@ -272,11 +272,13 @@ test('sampled instruments produce audio, preserve transport, and reopen offline'
   await page.goto('/');
   await expect(page.getByLabel('Playback sound',{exact:true})).toHaveValue('sampled');
   await page.getByLabel('Choose MIDI file').setInputFiles({name:'sample-study.mid',mimeType:'audio/midi',buffer:fixture()});
+  await page.evaluate(async()=>{await navigator.serviceWorker.ready;});
+  await page.reload();
+  await context.setOffline(true); // Built-in instruments must work before the first Play.
   await page.getByRole('button',{name:'▶ Play',exact:true}).click();
   await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible({timeout:45000});
   await expect.poll(peak).toBeGreaterThan(.001);
   expect(await page.evaluate(()=>(window as any).oscillators)).toBe(0);
-  await expect(page.getByRole('status').filter({hasText:'Instrument sounds saved on this device.'})).toBeVisible();
   await page.getByRole('button',{name:'Ⅱ Pause',exact:true}).click();
   await expect.poll(peak).toBeLessThan(.0001);
   const position=page.getByRole('slider',{name:'Playback position',exact:true});
@@ -299,38 +301,40 @@ test('sampled instruments produce audio, preserve transport, and reopen offline'
   await page.getByRole('button',{name:'▶ Play',exact:true}).click();
   await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible({timeout:20000});
   await expect.poll(peak).toBeGreaterThan(.001);
-  await expect(page.getByRole('status').filter({hasText:'Instrument sounds loaded from this device.'})).toBeVisible();
   await context.setOffline(false);
   await page.getByRole('link',{name:'Library',exact:true}).click();
   await expect.poll(peak).toBeLessThan(.0001);
   expect(errors).toEqual([]);
 });
 
-test('sound download errors have a working fallback; navigation cancels pending playback', async ({page})=>{
-  test.setTimeout(60000);
-  await page.route('**/sounds/*.sf3',route=>route.fulfill({status:503,body:'Offline'}));
-  await page.goto('/');await page.getByRole('button',{name:'▶ Play',exact:true}).click();
-  await expect(page.getByRole('alert')).toContainText('Instrument sounds could not be downloaded');
-  await page.getByLabel('Playback sound',{exact:true}).selectOption('simple');
-  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
-  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible();
-  await page.getByRole('button',{name:'Ⅱ Pause',exact:true}).click();
-  await page.getByRole('button',{name:'Stop and rewind',exact:true}).click();
-  await page.unroute('**/sounds/*.sf3');
-  let release!:()=>void;
-  const gate=new Promise<void>(resolve=>{release=resolve;});
-  await page.route('**/sounds/*.sf3',async route=>{await gate;await route.continue();});
-  await page.getByLabel('Playback sound',{exact:true}).selectOption('sampled');
-  await page.getByRole('button',{name:'▶ Play',exact:true}).click();
-  await expect(page.getByRole('button',{name:'Cancel play',exact:true})).toBeVisible();
-  await page.getByRole('link',{name:'Library',exact:true}).click();
-  const downloaded=page.waitForResponse(r=>r.url().includes('/sounds/') && r.url().endsWith('.sf3') && r.status()===200);
-  release();await downloaded;await page.unroute('**/sounds/*.sf3');
-  await page.getByRole('link',{name:'Player',exact:true}).click();
-  await expect(page.getByRole('button',{name:'▶ Play',exact:true})).toBeVisible();
-  await expect(page.getByRole('status').filter({hasText:/Instrument sounds (saved|ready)/})).toBeVisible({timeout:45000});
-  await expect(page.getByRole('button',{name:'▶ Play',exact:true})).toBeVisible();
-  await expect(page.getByRole('slider',{name:'Playback position',exact:true})).toHaveValue('0');
+test.describe('asset loading without a service worker', () => {
+  test.use({ serviceWorkers: 'block' });
+  test('sound loading errors have a working fallback; navigation cancels pending playback', async ({page})=>{
+    test.setTimeout(60000);
+    await page.route('**/sounds/*.sf3',route=>route.fulfill({status:503,body:'Offline'}));
+    await page.goto('/');await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+    await expect(page.getByRole('alert')).toContainText('Instrument audio could not load');
+    await page.getByLabel('Playback sound',{exact:true}).selectOption('simple');
+    await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+    await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible();
+    await page.getByRole('button',{name:'Ⅱ Pause',exact:true}).click();
+    await page.getByRole('button',{name:'Stop and rewind',exact:true}).click();
+    await page.unroute('**/sounds/*.sf3');
+    let release!:()=>void;
+    const gate=new Promise<void>(resolve=>{release=resolve;});
+    await page.route('**/sounds/*.sf3',async route=>{await gate;await route.continue();});
+    await page.getByLabel('Playback sound',{exact:true}).selectOption('sampled');
+    await page.getByRole('button',{name:'▶ Play',exact:true}).click();
+    await expect(page.getByRole('button',{name:'Cancel play',exact:true})).toBeVisible();
+    await page.getByRole('link',{name:'Library',exact:true}).click();
+    const downloaded=page.waitForResponse(r=>r.url().includes('/sounds/') && r.url().endsWith('.sf3') && r.status()===200);
+    release();await (await downloaded).finished();await page.unroute('**/sounds/*.sf3');
+    await page.waitForTimeout(500); // Allow background engine preparation to finish after cancellation.
+    await page.getByRole('link',{name:'Player',exact:true}).click();
+    await expect(page.getByRole('button',{name:'▶ Play',exact:true})).toBeVisible();
+    await expect(page.getByRole('slider',{name:'Playback position',exact:true})).toHaveValue('0');
+  });
+
 });
 
 test('recorded violin differs from grand piano and percussion stays audible', async ({page})=>{

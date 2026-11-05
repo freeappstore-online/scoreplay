@@ -1,6 +1,6 @@
 import { WorkletSynthesizer, Sequencer } from 'spessasynth_lib';
 import processorUrl from 'spessasynth_lib/dist/spessasynth_processor.min.js?url';
-import { loadSoundBank, type SoundStatus } from './sound-cache';
+import { loadSoundBank } from './sound-cache';
 import { sampledSequence } from './sampled-sequence';
 import type { Song } from './music';
 export class SampledAudio {
@@ -18,9 +18,9 @@ export class SampledAudio {
     this.sequencer = new Sequencer(this.synth, { skipToFirstNoteOn: false });
     this.sequencer.loopCount = 0;
   }
-  static async create(context: AudioContext, destination: AudioNode, report: (status: SoundStatus) => void) {
+  static async create(context: AudioContext, destination: AudioNode) {
     if (!context.audioWorklet) throw new Error('Sampled instruments are unavailable in this browser. Choose Simple tones to play.');
-    const [bytes] = await Promise.all([loadSoundBank(report), context.audioWorklet.addModule(processorUrl)]);
+    const [bytes] = await Promise.all([loadSoundBank(), context.audioWorklet.addModule(processorUrl)]);
     const audio = new SampledAudio(context, destination);
     try {
       await audio.synth.soundBankManager.addSoundBank(bytes, 'generaluser');

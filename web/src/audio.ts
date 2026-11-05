@@ -1,6 +1,5 @@
 import { notesAt, type Note, type Song } from './music';
 import type { SampledAudio } from './sampled-audio';
-import type { SoundStatus } from './sound-cache';
 export type SoundMode = 'sampled' | 'piano' | 'simple';
 
 export class Player {
@@ -13,7 +12,6 @@ export class Player {
   sound: SoundMode = 'sampled';
   loading = false;
   onLoading: (loading: boolean) => void = () => {};
-  onSoundStatus: (status: SoundStatus) => void = () => {};
   private voices = new Set<OscillatorNode>();
   private timer?: ReturnType<typeof setInterval>;
   private origin = 0;
@@ -48,7 +46,7 @@ export class Player {
           this.compressor ??= this.context.createDynamicsCompressor();
           this.compressor.threshold.value = -8; this.compressor.knee.value = 12; this.compressor.ratio.value = 4;
           this.compressor.disconnect(); this.compressor.connect(this.master);
-          this.sampledPromise = import('./sampled-audio').then(({ SampledAudio }) => SampledAudio.create(this.context!, this.compressor!, status => this.onSoundStatus(status)))
+          this.sampledPromise = import('./sampled-audio').then(({ SampledAudio }) => SampledAudio.create(this.context!, this.compressor!))
             .then(engine => { if (this.destroyed) { engine.destroy(); throw new Error('Player closed.'); } this.sampled = engine; return engine; })
             .catch(error => { this.sampledPromise = undefined; throw error; });
         }
@@ -69,7 +67,7 @@ export class Player {
         }
       }
       this.tick(); this.timer = setInterval(() => this.tick(), 25);
-    } catch (error) { if (generation === this.generation) { if (this.sound !== 'simple') this.onSoundStatus({ message: 'Instrument sounds unavailable. Retry Play or choose Simple tones.' }); throw error; } }
+    } catch (error) { if (generation === this.generation) { throw error; } }
     finally { if (generation === this.generation) { this.loading = false; this.onLoading(false); } }
   }
   pause() {
