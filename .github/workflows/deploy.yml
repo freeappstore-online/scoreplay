@@ -46,7 +46,7 @@ jobs:
           fi
       - name: Resolve build target
         id: target
-        run: npx --yes @freeappstore/cli@0.4.67 build-target --app-id "${GITHUB_REPOSITORY##*/}" --github-output
+        run: npx --yes @freeappstore/cli@0.4.76 build-target --app-id "${GITHUB_REPOSITORY##*/}" --github-output
       - name: Typecheck (when configured)
         run: pnpm run --if-present typecheck
       - name: Tests (when configured)
@@ -56,7 +56,7 @@ jobs:
           BUILD_COMMAND: ${{ steps.target.outputs.build-command }}
         run: bash -e -c "$BUILD_COMMAND"
       - name: Verify build output
-        run: npx --yes @freeappstore/cli@0.4.67 build-target --artifact --app-id "${GITHUB_REPOSITORY##*/}"
+        run: npx --yes @freeappstore/cli@0.4.76 build-target --artifact --app-id "${GITHUB_REPOSITORY##*/}"
       - name: Retain verified dependency lock
         run: |
           set -euo pipefail

@@ -31,13 +31,13 @@ export default function App() {
   const [drag, setDrag] = useState(false);
   const input = useRef<HTMLInputElement>(null);
   const generation = useRef(0);
-  const load = (bytes: ArrayBuffer, name: string, xml?: string, pdfBytes?: ArrayBuffer) => {
-    const parsed = parseMidi(bytes, name); player.load(parsed); setSong(parsed); setMuted(new Set()); setMusicxml(xml); setPdf(pdfBytes); setOriginal(true); setError(''); setMode('sheet');
+  const load = (bytes: ArrayBuffer, name: string, xml?: string, pdfBytes?: ArrayBuffer, title?: string) => {
+    const parsed = parseMidi(bytes, name); if (title) parsed.title = title; player.load(parsed); setSong(parsed); setMuted(new Set()); setMusicxml(xml); setPdf(pdfBytes); setOriginal(true); setError(''); setMode('sheet');
   };
   useEffect(() => {
     player.onUpdate = (t, p) => { setTime(t); setPlaying(p); };
     const id = ++generation.current;
-    void savedFile().then(saved => { if (id === generation.current) { load(saved?.bytes ?? demoBytes(), saved?.name ?? 'Ode to Joy.mid', saved?.musicxml, saved?.pdf); setNotice(saved ? 'Restored your last MIDI file from this device.' : 'Demo ready · Beethoven’s Ode to Joy'); } })
+    void savedFile().then(saved => { if (id === generation.current) { load(saved?.bytes ?? demoBytes(), saved?.name ?? 'Ode to Joy.mid', saved?.musicxml, saved?.pdf, saved?.displayTitle); setNotice(saved ? 'Restored your last MIDI file from this device.' : 'Demo ready · Beethoven’s Ode to Joy'); } })
       .catch(() => { if (id === generation.current) { load(demoBytes(), 'Ode to Joy.mid'); setNotice('Demo ready. Local file storage is unavailable in this browser.'); } })
       .finally(() => { if (id === generation.current) setBusy(false); });
     const sync = () => setPath(location.pathname); addEventListener('popstate', sync);
@@ -76,16 +76,16 @@ export default function App() {
   };
   const demo = () => { load(demoBytes(), 'Ode to Joy.mid'); setNotice('Demo ready · Beethoven’s Ode to Joy'); };
   const forget = async () => { try { await savedFile(null); demo(); setNotice('Last-opened file cleared. Manage saved arrangements in Library.'); } catch { setError('Could not remove the saved file. Please try again.'); } };
-  const openLibrary = async (entry: LibraryEntry) => { load(entry.bytes, entry.name, entry.musicxml, entry.pdf); navigate('/'); try { await savedFile(entry); setNotice('Opened from your private library.'); } catch { setNotice('Opened. Could not save the last-opened selection.'); } };
+  const openLibrary = async (entry: LibraryEntry) => { load(entry.bytes, entry.name, entry.musicxml, entry.pdf, entry.displayTitle); navigate('/'); try { await savedFile(entry); setNotice('Music and score ready. Saved as your last-opened piece on this device.'); } catch { setNotice('Opened. Could not save the last-opened selection.'); } };
   return <Shell app={fas} appName="Scoreplay" nav={NAV} onNavigate={navigate}>
     <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-6 sm:px-8 sm:py-9">
-      {path === '/library' ? <Suspense fallback={<p role="status">Loading library…</p>}><Library onOpen={entry => void openLibrary(entry)} /></Suspense> : path === '/about' ? <>
+      {path === '/library' ? <Suspense fallback={<p role="status">Loading library…</p>}><Library onOpen={openLibrary} /></Suspense> : path === '/about' ? <>
         <PageHeader title="A little room for your music." description="Open a MIDI, press play, and take it at your own pace." />
         <Card><div className="space-y-5 text-sm leading-7">
           <h2 className="text-2xl">From file to first note</h2>
           <ol className="list-decimal space-y-2 pl-5"><li>Export your music as a standard MIDI (.mid or .midi), then choose Open MIDI.</li><li>Press Play or use the space bar. Use the measure buttons, click the piano roll, or drag the position slider to jump.</li><li>Slow down without changing pitch, mute a track, or loop the whole piece.</li></ol>
           <p>Scoreplay plays MIDI with a lightweight synthesized tone and basic percussion. It respects note timing, tempo changes, velocity, and sustain pedal. Instrument names come from your file; this version does not reproduce a full instrument sound library, pitch bends, or other expressive controllers.</p>
-          <p>Switch between Sheet music and Piano roll. Sheet music is an approximate transcription: choose a track and rhythm grid, browse measures, or follow playback. MIDI does not preserve original notation, so key spelling, beaming, and hand assignments are estimated. Notes cannot be edited in this version. Import paired MusicXML and PDF scores through Library. MusicXML preserves the original notation; PDF opens the printed score. The Disney discovery catalog links to licensed publishers and retailers; import your own MIDI files for playback. MuseScore project files and audio recordings are not supported. Maximum file size: 5 MB; maximum duration: two hours.</p>
+          <p>Switch between Sheet music and Piano roll. Sheet music is an approximate transcription: choose a track and rhythm grid, browse measures, or follow playback. MIDI does not preserve original notation, so key spelling, beaming, and hand assignments are estimated. Notes cannot be edited in this version. Import paired MusicXML and PDF scores through Library. MusicXML preserves the original notation; PDF opens the printed score. The free library includes classical and traditional pieces with MIDI and PDF scores, plus original MusicXML for nursery songs. Search by title, composer or tags, filter by difficulty and instrument, and star your favourites. Save a piece to My files to keep its files on this device. MuseScore project files and audio recordings are not supported. Maximum file size: 5 MB; maximum duration: two hours.</p>
           <p>Your imported arrangements and their scores are saved in this browser on this device. They are never sent to a server. Remove arrangements in Library, or use “Clear last opened file” to clear just the last-opened selection. The demo is an arrangement of Beethoven’s public-domain Ode to Joy.</p>
           <Button onClick={() => navigate('/')}>Back to player</Button>
         </div></Card>
@@ -93,7 +93,7 @@ export default function App() {
         <PageHeader title="Make time for music." description="Your MIDI. Your tempo. A simple space to listen and practise." actions={<Badge variant="success">On your device</Badge>} />
         <section aria-label="Import music" onDragOver={e => { e.preventDefault(); setDrag(true); }} onDragLeave={() => setDrag(false)} onDrop={e => { e.preventDefault(); setDrag(false); void open(e.dataTransfer.files[0]); }} className={`flex flex-col justify-between gap-4 rounded-2xl border border-dashed p-5 sm:flex-row sm:items-center ${drag ? 'border-accent bg-accent-soft' : 'border-line-strong bg-panel'}`}>
           <div className="flex items-center gap-4"><span aria-hidden="true" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-2xl text-accent">♫</span><div><h2 className="text-xl">Bring your own music</h2><p className="mt-1 text-sm text-muted">Drop a MIDI file here · .mid or .midi · up to 5 MB</p></div></div>
-          <div className="flex flex-wrap gap-2"><Button disabled={busy} onClick={demo}>Try demo</Button><Button primary disabled={busy} onClick={() => input.current?.click()}>{busy ? 'Opening…' : '↑ Open MIDI'}</Button></div>
+          <div className="flex flex-wrap gap-2"><Button disabled={busy} onClick={demo}>Try demo</Button><Button onClick={() => navigate('/library')}>Browse free library</Button><Button primary disabled={busy} onClick={() => input.current?.click()}>{busy ? 'Opening…' : '↑ Open MIDI'}</Button></div>
           <input ref={input} type="file" accept=".mid,.midi,audio/midi,audio/x-midi" aria-label="Choose MIDI file" className="sr-only" onChange={e => void open(e.target.files?.[0])} />
         </section>
         {error && <div role="alert" className="rounded-xl border border-danger bg-danger-soft p-4 text-sm text-danger">{error}</div>}

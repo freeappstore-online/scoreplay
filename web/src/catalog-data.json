@@ -1,0 +1,2287 @@
+[
+  {
+    "id": "mutopia-931",
+    "title": "Für Elise — piano",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "WoO 59 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=931",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur_Elise_WoO59/fur_Elise_WoO59-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-931/score.mid",
+      "pdf": "/music/mutopia-931/score.pdf"
+    },
+    "sha256": {
+      "midi": "1c12c21c7bbf4cf163896732672648a69d497636059837abd153c71abe50215a",
+      "pdf": "0641395b4e97811bb89751352719bb9994cacd4f13da7b9429fe65716dfdc328"
+    },
+    "verified": "2026-11-06",
+    "duration": 130.42,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-2059",
+    "title": "Für Elise — guitar duet",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "classical",
+      "duet"
+    ],
+    "description": "WoO 59 · 2 Guitars. Arr: J. J. Olson. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2059",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur-elise-guitar-duo/fur-elise-guitar-duo.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO59/fur-elise-guitar-duo/fur-elise-guitar-duo-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2059/score.mid",
+      "pdf": "/music/mutopia-2059/score.pdf"
+    },
+    "sha256": {
+      "midi": "17ea4cb9fb9b1bedd3afb7d00b5871da18b11a82e0a61278b89dccd462d57fc0",
+      "pdf": "936e6d5713b2f2077fe9646ea164ded12028897402828ce59437758f6ee13da1"
+    },
+    "verified": "2026-11-06",
+    "duration": 195.63,
+    "bpm": 48
+  },
+  {
+    "id": "mutopia-2101",
+    "title": "Moonlight Sonata — first movement, guitar duet",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "classical",
+      "duet",
+      "gentle"
+    ],
+    "description": "2 Guitars. Arr: F. Tárrega & J. J. Olson. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2101",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Madrid: Ildefonso Alier, n.d. Plate 5754",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O27/moonlight-guitar-duo/moonlight-guitar-duo.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O27/moonlight-guitar-duo/moonlight-guitar-duo-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2101/score.mid",
+      "pdf": "/music/mutopia-2101/score.pdf"
+    },
+    "sha256": {
+      "midi": "a0d3ae4355720be0e694c00f1c4eba0ab8ce94ae6bd83fca126eccf4eb12f0bc",
+      "pdf": "6fd6ebc653eebfe0a329f3918f5923c32c1bf85076adb70db71acffd9bbedf29"
+    },
+    "verified": "2026-11-06",
+    "duration": 274,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1778",
+    "title": "Clair de lune",
+    "composer": "C. Debussy",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "modern",
+      "solo",
+      "gentle"
+    ],
+    "description": "L75 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1778",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "E. Fromont (1905)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1778/score.mid",
+      "pdf": "/music/mutopia-1778/score.pdf"
+    },
+    "sha256": {
+      "midi": "4eee9a1546ffde1ff74cb9824ba0e57cbc821185a15185bfea9faed97820bf8c",
+      "pdf": "6f8ab460228af0f86663c9eba64e508e1af408bb635dcd593a037241d19b6cc3"
+    },
+    "verified": "2026-11-06",
+    "duration": 322.5,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1111",
+    "title": "Au clair de la lune — guitar",
+    "composer": "F. Horetzky",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "classical",
+      "solo",
+      "gentle"
+    ],
+    "description": "Classical Guitar. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1111",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Boije collection #268",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/HoretzkyF/horetzky21/horetzky21.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/HoretzkyF/horetzky21/horetzky21-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1111/score.mid",
+      "pdf": "/music/mutopia-1111/score.pdf"
+    },
+    "sha256": {
+      "midi": "5fe77a997dff609a9867805e28875794d8a75f59b225f97ba208c1ecacc458b6",
+      "pdf": "06dec22039809940ad318f8cc3b81a664e593f3f53c2c6da9e02587f5a9565f3"
+    },
+    "verified": "2026-11-06",
+    "duration": 32,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-5",
+    "title": "Prelude in C major, BWV 846",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "BWV 846 · Harpsichord, Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=5",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Unknown",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-5/score.mid",
+      "pdf": "/music/mutopia-5/score.pdf"
+    },
+    "sha256": {
+      "midi": "874e07d0479542971bfceaf420d6117da8d602d89d26eea4610e7dd1ef58bf26",
+      "pdf": "b1c5be9fb63954df9c1a3e7b651ae930c4e5e332a5ab3e14b197379cfa04c35a"
+    },
+    "verified": "2026-11-06",
+    "duration": 140,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-4",
+    "title": "Fugue in C major, BWV 846",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "BWV 846 · Harpsichord, Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=4",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Unknown",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-fugue1/wtk1-fugue1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-fugue1/wtk1-fugue1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-4/score.mid",
+      "pdf": "/music/mutopia-4/score.pdf"
+    },
+    "sha256": {
+      "midi": "e89f7d09096bbaf1bcb9e7b5d083c92e396fb9432c956d27185864e17a314ef1",
+      "pdf": "bb1e08c6768256be507af65da04446af143b7033a7a067c939f2d63b779d218c"
+    },
+    "verified": "2026-11-06",
+    "duration": 98.18,
+    "bpm": 66
+  },
+  {
+    "id": "mutopia-75",
+    "title": "Minuet in G — keyboard",
+    "composer": "Christian Petzold",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "baroque",
+      "solo",
+      "dance",
+      "triple time"
+    ],
+    "description": "BWV Anh. 114 · Harpsichord, Piano, Clavichord. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=75",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/anna-magdalena-04/anna-magdalena-04.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/anna-magdalena-04/anna-magdalena-04-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-75/score.mid",
+      "pdf": "/music/mutopia-75/score.pdf"
+    },
+    "sha256": {
+      "midi": "fd87a6673e18104047842a1c858d2c9d8eb9ad845d7a8fa46e3664b17642cb75",
+      "pdf": "6b34ba44122d9694156a113c749eee0bf3232f54ead431a44be6f2a1b6f32c8b"
+    },
+    "verified": "2026-11-06",
+    "duration": 41.14,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-258",
+    "title": "Minuet in G — trumpet duet",
+    "composer": "Christian Petzold",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Trumpet"
+    ],
+    "tags": [
+      "baroque",
+      "solo",
+      "dance",
+      "triple time"
+    ],
+    "description": "BWV Anh. 114 · Transcribed for Trumpet Duet. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=258",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Transcribed",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/Minuet-xpose/Minuet-xpose.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWVAnh114/Minuet-xpose/Minuet-xpose-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-258/score.mid",
+      "pdf": "/music/mutopia-258/score.pdf"
+    },
+    "sha256": {
+      "midi": "4199c2f47ca19389f89902385acfea4237f4e58d850b2ee698af2dc8e86e8557",
+      "pdf": "5f167ba9902c6630514dbe63e4f2a99c04f9de6ff28d88470329b58804436ad7"
+    },
+    "verified": "2026-11-06",
+    "duration": 43.64,
+    "bpm": 132
+  },
+  {
+    "id": "mutopia-1770",
+    "title": "Minuet in F major, K. 2",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo",
+      "dance",
+      "triple time"
+    ],
+    "description": "KV 2 · Pianoforte. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1770",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Leipzig: Breitkopf & Härtel, 1877-1910. Plate W.A.M. 2.4.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV2/menuet_k2/menuet_k2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1770/score.mid",
+      "pdf": "/music/mutopia-1770/score.pdf"
+    },
+    "sha256": {
+      "midi": "7446008d77c7237d814b64f698e8fadbb3ee1e7bf914a8dd643ee9f99523d120",
+      "pdf": "921e441748a0b1a6e290508c76e054efc50d53f86611fb7815597d926fa76323"
+    },
+    "verified": "2026-11-06",
+    "duration": 72,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1380",
+    "title": "Symphony No. 25 - KV183 (1st Movement)",
+    "composer": "W. A. Mozart",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Orchestra"
+    ],
+    "tags": [
+      "classical",
+      "duet"
+    ],
+    "description": "KV 183 · Orchestra: Oboes, Horns, Violins, Viola, 'Cello, Bass. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1380",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf and Hartel (1880)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/MozartWA/KV183/Symphony25_1/Symphony25_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/MozartWA/KV183/Symphony25_1/Symphony25_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1380/score.mid",
+      "pdf": "/music/mutopia-1380/score.pdf"
+    },
+    "sha256": {
+      "midi": "36bcc5b01a15e5c478ea1298ea93fe92b6bba6106ceeea29a2c3ab6921bca092",
+      "pdf": "d68e5e00df22e554068a5d2da993597171d247beb509bb3a90fab72db70b9f6b"
+    },
+    "verified": "2026-11-06",
+    "duration": 652.5,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-354",
+    "title": "Of Foreign Lands and Peoples",
+    "composer": "R. Schumann",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "romantic",
+      "solo",
+      "gentle"
+    ],
+    "description": "O 15 N 1 · Piano. n/a. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=354",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Leichte Stucke, 1900",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No01/SchumannOp15No01.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No01/SchumannOp15No01-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-354/score.mid",
+      "pdf": "/music/mutopia-354/score.pdf"
+    },
+    "sha256": {
+      "midi": "e58e708afe8b31c634a0e9f3354a4ed94670e929d82926f7ff49dea3ebe146c2",
+      "pdf": "55f58753bc8309128bee008fe90c9d2499db79079cd1b4a4d3ae08b6603e7e9d"
+    },
+    "verified": "2026-11-06",
+    "duration": 36.67,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-372",
+    "title": "Perfect Happiness",
+    "composer": "R. Schumann",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "romantic",
+      "solo",
+      "gentle"
+    ],
+    "description": "Op. 15, No. 5 · Piano. n/a. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=372",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Leichte Stucke, 1900",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No05/SchumannOp15No05.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No05/SchumannOp15No05-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-372/score.mid",
+      "pdf": "/music/mutopia-372/score.pdf"
+    },
+    "sha256": {
+      "midi": "e2759b2fad61078694c74250fdb4032aa9d6ab624c3c0b0d53d2a1172119b1df",
+      "pdf": "26caaabe5b5dc817b3c4830cb3da0ecca4a56294690349605b9cb6b3b471bc24"
+    },
+    "verified": "2026-11-06",
+    "duration": 34.64,
+    "bpm": 84
+  },
+  {
+    "id": "mutopia-504",
+    "title": "Träumerei (Dreaming)",
+    "composer": "R. Schumann",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "romantic",
+      "solo",
+      "gentle"
+    ],
+    "description": "O 15 N 7 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=504",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Leichte Stucke, 1900",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No07/SchumannOp15No07.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No07/SchumannOp15No07-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-504/score.mid",
+      "pdf": "/music/mutopia-504/score.pdf"
+    },
+    "sha256": {
+      "midi": "6e0045d5783ff28dedcf05813074fe407ca3846e5e2a7246f2793ac5614e4851",
+      "pdf": "55f7c9e3c63f3006f50f44eccdfb7b4f74b70cd9c606a62d377138450994a782"
+    },
+    "verified": "2026-11-06",
+    "duration": 110.68,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2032",
+    "title": "Morning Prayer",
+    "composer": "P. I. Tchaikovsky",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "romantic",
+      "solo",
+      "learning",
+      "album for the young"
+    ],
+    "description": "Op. 39, No. 1 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2032",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Schirmer, 1904",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/01MorningPrayer/01MorningPrayer.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/01MorningPrayer/01MorningPrayer-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2032/score.mid",
+      "pdf": "/music/mutopia-2032/score.pdf"
+    },
+    "sha256": {
+      "midi": "7ec37d25e8ea12d0b2053a5916140f7d03b4cdf1357c01171fd8a3c1d8c6e50f",
+      "pdf": "4001cb8625c891213fff128e543d3af8559daea75caa94dae8d142f01ded09c7"
+    },
+    "verified": "2026-11-06",
+    "duration": 69.68,
+    "bpm": 62
+  },
+  {
+    "id": "mutopia-1806",
+    "title": "March of the Wooden Soldiers",
+    "composer": "P. I. Tchaikovsky",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "march",
+      "solo",
+      "learning",
+      "album for the young"
+    ],
+    "description": "Op. 39, No. 5 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1806",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Schirmer, 1904",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/05MarchOfTheWoodenSoldiers/05MarchOfTheWoodenSoldiers.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/05MarchOfTheWoodenSoldiers/05MarchOfTheWoodenSoldiers-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1806/score.mid",
+      "pdf": "/music/mutopia-1806/score.pdf"
+    },
+    "sha256": {
+      "midi": "a9717d793785c3c702d85e20f99a81de60faedd29fc4e7dcb240fbc99a9b0d2b",
+      "pdf": "4e408cc23ec5888f5558811f20ad005a1053fefdca750db9abd901f5bc390b73"
+    },
+    "verified": "2026-11-06",
+    "duration": 40.5,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-2080",
+    "title": "Old French Song",
+    "composer": "P. I. Tchaikovsky",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo",
+      "learning",
+      "album for the young"
+    ],
+    "description": "Op. 39, No. 16 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2080",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Schirmer, 1904",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2080/score.mid",
+      "pdf": "/music/mutopia-2080/score.pdf"
+    },
+    "sha256": {
+      "midi": "112c3b61dab55f58bc44d9f3522ef21b3479ffa1953097783ff8c4f10e40175d",
+      "pdf": "e051dabc69b63bf9e665ac8579273a5f2583768ea4c453de8ea138d55fae5c7e"
+    },
+    "verified": "2026-11-06",
+    "duration": 55.29,
+    "bpm": 70
+  },
+  {
+    "id": "mutopia-1171",
+    "title": "The Seasons: January",
+    "composer": "P. I. Tchaikovsky",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "romantic",
+      "solo"
+    ],
+    "description": "O 37,1 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1171",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Rob. Forberg, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O37/Tschaikowsky-op37.1/Tschaikowsky-op37.1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O37/Tschaikowsky-op37.1/Tschaikowsky-op37.1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1171/score.mid",
+      "pdf": "/music/mutopia-1171/score.pdf"
+    },
+    "sha256": {
+      "midi": "34110e377929c99b8f730cabdde73b11cc5cbb58573be6a1727e893b23fcbdb4",
+      "pdf": "47cda3159907710eec720b0023b25f261890085be4e8bd1a0f7493f1e190ec5d"
+    },
+    "verified": "2026-11-06",
+    "duration": 257.5,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-896",
+    "title": "Napolitan Dance (Swan Lake)",
+    "composer": "P. I. Tchaikovsky",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Trumpet"
+    ],
+    "tags": [
+      "classical",
+      "duet"
+    ],
+    "description": "Trumpet, Percussion and Piano. arr. Laurence Sardain. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=896",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "New arrangement",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/dansenapolitaine/dansenapolitaine.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/dansenapolitaine/dansenapolitaine-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-896/score.mid",
+      "pdf": "/music/mutopia-896/score.pdf"
+    },
+    "sha256": {
+      "midi": "084540482e5522035447a44be092d38084c3308cdd2ea4f8c468b861f9fba43b",
+      "pdf": "4d972399a3239c1514243c88a84e5154c2f2b78daed51664d0791d7261bc207b"
+    },
+    "verified": "2026-11-06",
+    "duration": 89.17,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-246",
+    "title": "Åse’s Death",
+    "composer": "E. Grieg",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "romantic",
+      "solo"
+    ],
+    "description": "O 46, No. 2 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=246",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Kunkel Brothers 1891 - Kunkel's Musical Review, May 1893",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/GriegE/O46/02-lamortdase/02-lamortdase.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/GriegE/O46/02-lamortdase/02-lamortdase-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-246/score.mid",
+      "pdf": "/music/mutopia-246/score.pdf"
+    },
+    "sha256": {
+      "midi": "eb0b5f5b76894fe4140f4ab98616472db87e9501827bc92fec144c6253e8375f",
+      "pdf": "4f52cd313f06889692d3e96c53c1ce8bfbb4907d62958d65c44fbdc690da70ef"
+    },
+    "verified": "2026-11-06",
+    "duration": 216,
+    "bpm": 50
+  },
+  {
+    "id": "mutopia-1888",
+    "title": "In the Hall of the Mountain King",
+    "composer": "E. Grieg",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 46, No. 4 · Piano. Edvard Grieg. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1888",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "The University Society, 1918",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/GriegE/O46/Dans_l_antre_du_roi_de_la_montagne/Dans_l_antre_du_roi_de_la_montagne.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/GriegE/O46/Dans_l_antre_du_roi_de_la_montagne/Dans_l_antre_du_roi_de_la_montagne-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1888/score.mid",
+      "pdf": "/music/mutopia-1888/score.pdf"
+    },
+    "sha256": {
+      "midi": "0c256a809b5af1faef81b6aad6106088a71d76b12435d5f0775d4ceee60c917e",
+      "pdf": "9b7f152a2000c0dc1a28918af7af54d4792006b4354a6f133fbda217d61a3b6a"
+    },
+    "verified": "2026-11-06",
+    "duration": 145.23,
+    "bpm": 138
+  },
+  {
+    "id": "mutopia-481",
+    "title": "Brahms’ Lullaby",
+    "composer": "J. Brahms",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar",
+      "Recorder"
+    ],
+    "tags": [
+      "romantic",
+      "duet",
+      "gentle",
+      "lullaby"
+    ],
+    "description": "Recorder, Guitar. Arreglo por Diego F. Guillen. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=481",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Arranged by typesetter",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BrahmsJ/LullabyBrahms-C/LullabyBrahms-C.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BrahmsJ/LullabyBrahms-C/LullabyBrahms-C-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-481/score.mid",
+      "pdf": "/music/mutopia-481/score.pdf"
+    },
+    "sha256": {
+      "midi": "9a0d0124ebe252beaaa65aee14d9dcab02693d1765bc6e2fc0afddd9bc49ccfb",
+      "pdf": "e792571137ea3cb4e1546f57d5d2f3cde72cd77cac58f6c283e644b3c1ba5334"
+    },
+    "verified": "2026-11-06",
+    "duration": 36,
+    "bpm": 80
+  },
+  {
+    "id": "mutopia-264",
+    "title": "Waltz No. 3",
+    "composer": "J. Brahms",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "romantic",
+      "solo",
+      "gentle",
+      "dance",
+      "triple time"
+    ],
+    "description": "O 39 · Guitar. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=264",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Transcribed",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BrahmsJ/O39/brahms-vals3/brahms-vals3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BrahmsJ/O39/brahms-vals3/brahms-vals3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-264/score.mid",
+      "pdf": "/music/mutopia-264/score.pdf"
+    },
+    "sha256": {
+      "midi": "1f8b02539a12bdc10b4224fa84d4111fb054ea6739761f78f6d05724269413d1",
+      "pdf": "eec6814a25568e86ed4922651dd7fdc90fc125bdc3a24b2c8b3561e7b33f42e0"
+    },
+    "verified": "2026-11-06",
+    "duration": 49.5,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-794",
+    "title": "Waltz No. 15",
+    "composer": "J. Brahms",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "romantic",
+      "solo",
+      "gentle",
+      "dance",
+      "triple time"
+    ],
+    "description": "Op. 39 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=794",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Ed. R. Joseffy",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BrahmsJ/O39/waltz-op39-15/waltz-op39-15.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BrahmsJ/O39/waltz-op39-15/waltz-op39-15-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-794/score.mid",
+      "pdf": "/music/mutopia-794/score.pdf"
+    },
+    "sha256": {
+      "midi": "e081ef3fe7023cdf4656e1528df50534b2e3df863cd0a194a04a82206f783ace",
+      "pdf": "6201700f28c51d9388857fd77acc6b4894535b3753f68628f5492928b08b52d9"
+    },
+    "verified": "2026-11-06",
+    "duration": 67.76,
+    "bpm": 116
+  },
+  {
+    "id": "mutopia-150",
+    "title": "Entrée",
+    "composer": "G. F. Handel",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "Harpsichord, Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=150",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Schott 1930",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/02-entree/02-entree.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/02-entree/02-entree-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-150/score.mid",
+      "pdf": "/music/mutopia-150/score.pdf"
+    },
+    "sha256": {
+      "midi": "a3bd76e941f62b2399e9a0de2eac4cf4ea910f640f7e8a8584ca3ad9dc42ff46",
+      "pdf": "09a15df911af16a5d98dad1484facb59c32d0fb7cb5d7689c47fd8365ad2cd45"
+    },
+    "verified": "2026-11-06",
+    "duration": 49.57,
+    "bpm": 92
+  },
+  {
+    "id": "mutopia-151",
+    "title": "Gavotte",
+    "composer": "G. F. Handel",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "Harpsichord, Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=151",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Schott 1930",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/03-gavotte/03-gavotte.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/03-gavotte/03-gavotte-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-151/score.mid",
+      "pdf": "/music/mutopia-151/score.pdf"
+    },
+    "sha256": {
+      "midi": "5d24dcb8a435cb85465f48592a7d0a5674c5fe225e10667d5db571e80ed5cb67",
+      "pdf": "5165a9766293aac3671c46df5cd22178e0575ffca108b0c197a510896163f1e3"
+    },
+    "verified": "2026-11-06",
+    "duration": 52.17,
+    "bpm": 92
+  },
+  {
+    "id": "mutopia-154",
+    "title": "Impertinence",
+    "composer": "G. F. Handel",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "Harpsichord, Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=154",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Schott 1930",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/06-impertinence/06-impertinence.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/06-impertinence/06-impertinence-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-154/score.mid",
+      "pdf": "/music/mutopia-154/score.pdf"
+    },
+    "sha256": {
+      "midi": "ba50ce19be0683144b3c48e834e302cceecd250189b9804575d340d17bbcaa96",
+      "pdf": "62e7387e03bb888e7c062ef790954cb4a3b1f9a49496d9b814d5c7d977c6515a"
+    },
+    "verified": "2026-11-06",
+    "duration": 46.15,
+    "bpm": 104
+  },
+  {
+    "id": "mutopia-157",
+    "title": "Menuet I",
+    "composer": "G. F. Handel",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "Harpsichord, Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=157",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Edition Schott 1930",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/09-menueti/09-menueti.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/HandelGF/Aylesford/09-menueti/09-menueti-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-157/score.mid",
+      "pdf": "/music/mutopia-157/score.pdf"
+    },
+    "sha256": {
+      "midi": "6dc3eca3f7ef1c8b6913aa557966839ef8e49c45df77d587703d1be18be16530",
+      "pdf": "230be6cb3b1d345d338a83b4c43376dce3a6077b677889f6a13c77072b527a74"
+    },
+    "verified": "2026-11-06",
+    "duration": 25.5,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-98",
+    "title": "Sonatina in B-flat Major",
+    "composer": "G. F. Handel",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "HWV 585 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=98",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Handel's Werke (1859)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/HandelGF/HWV585/sonatina-in-b-flat-major/sonatina-in-b-flat-major.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/HandelGF/HWV585/sonatina-in-b-flat-major/sonatina-in-b-flat-major-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-98/score.mid",
+      "pdf": "/music/mutopia-98/score.pdf"
+    },
+    "sha256": {
+      "midi": "92d59f554dfc5fb6a509a1c7eb5db958c9d51819e7411d06208b7deb140a2811",
+      "pdf": "57e84974e99dd3b5d21f899fb47b7d1d3515bc7a21b27a686c62817c30772b8d"
+    },
+    "verified": "2026-11-06",
+    "duration": 38,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-23",
+    "title": "Maple Leaf Rag",
+    "composer": "S. Joplin",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "ragtime",
+      "syncopation",
+      "solo"
+    ],
+    "description": "Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=23",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Reproduction of original edition (1899)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/JoplinS/maple/maple.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/JoplinS/maple/maple-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-23/score.mid",
+      "pdf": "/music/mutopia-23/score.pdf"
+    },
+    "sha256": {
+      "midi": "3dd712a85fabd267f5a2cee5cb23af4683408c2f29b8814721844498f1ee4f66",
+      "pdf": "5fe2fe073a6fa5ba249370b46640b8e96df99b8bb4fbe7e2fc4c19a046176c6f"
+    },
+    "verified": "2026-11-06",
+    "duration": 144,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-636",
+    "title": "Sicilienne",
+    "composer": "G. Fauré",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "romantic",
+      "solo"
+    ],
+    "description": "O 78 · Guitar. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=636",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Transcribed by Ludovic Alexandre Morin",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/FaureG/O78/faure-sicilienne-guitare-doigtee/faure-sicilienne-guitare-doigtee.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/FaureG/O78/faure-sicilienne-guitare-doigtee/faure-sicilienne-guitare-doigtee-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-636/score.mid",
+      "pdf": "/music/mutopia-636/score.pdf"
+    },
+    "sha256": {
+      "midi": "68e876206fd7c2189a168f96f21d942790d72edd4e69e39ee35bfba87ca4a90b",
+      "pdf": "0808a17e47e8466b607dafecbeeedd31f39c6aa4deb55a351201e7e13c41bc2a"
+    },
+    "verified": "2026-11-06",
+    "duration": 59.7,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-256",
+    "title": "Ave Maria: Meditation on the First Prelude of J. S. Bach",
+    "composer": "C. Gounod",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Trumpet"
+    ],
+    "tags": [
+      "baroque",
+      "solo"
+    ],
+    "description": "Transcribed for Trumpet. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=256",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Transcribed",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/GounodC/AveMaria/AveMaria.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/GounodC/AveMaria/AveMaria-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-256/score.mid",
+      "pdf": "/music/mutopia-256/score.pdf"
+    },
+    "sha256": {
+      "midi": "c248fb0bf18db461820886bc565da074a7bf9ad7a794afddf00c71855f3b1391",
+      "pdf": "ab3c6637875207d29c0604ab834dd71941c533f17a92d4df1bffc178c0493ce9"
+    },
+    "verified": "2026-11-06",
+    "duration": 95.4,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-1054",
+    "title": "Ave Maria (Ellens dritter Gesang)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "romantic",
+      "duet"
+    ],
+    "description": "D.839 (Op. 52, No. 6) · Voice and Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1054",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C.F. Peters (Band I)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D839/SchubertF-D839_AveMaria/SchubertF-D839_AveMaria.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D839/SchubertF-D839_AveMaria/SchubertF-D839_AveMaria-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1054/score.mid",
+      "pdf": "/music/mutopia-1054/score.pdf"
+    },
+    "sha256": {
+      "midi": "289d1d2c8f5a16f1b1732bc1a60652e662f24e09531ebb0d8017b49712724684",
+      "pdf": "e54fc0cdf5ab559927b7662be9d1177e9b9b3f76510624f30d24b2d2a00277bc"
+    },
+    "verified": "2026-11-06",
+    "duration": 432.5,
+    "bpm": 24
+  },
+  {
+    "id": "mutopia-109",
+    "title": "Greensleeves",
+    "composer": "Traditional",
+    "category": "Traditional",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar"
+    ],
+    "tags": [
+      "renaissance",
+      "solo"
+    ],
+    "description": "Lute, Guitar, Vihuela. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=109",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Unknown",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/Traditional/Greensleaves/Greensleaves.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/Traditional/Greensleaves/Greensleaves-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-109/score.mid",
+      "pdf": "/music/mutopia-109/score.pdf"
+    },
+    "sha256": {
+      "midi": "468c9878cff4709a7f369819313eea41eb38f90a043e377540ac66d8d2f937f7",
+      "pdf": "ccc1d0b035a244d5160f283069e04fe60662ad7688680c2122dbbda67cce1d83"
+    },
+    "verified": "2026-11-06",
+    "duration": 36.38,
+    "bpm": 160
+  },
+  {
+    "id": "mutopia-1211",
+    "title": "Sonata No. 1 (1st Movement: Allegro)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Op. 2, No. 1 · Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1211",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O2/LVB_Sonate_02no1_1/LVB_Sonate_02no1_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O2/LVB_Sonate_02no1_1/LVB_Sonate_02no1_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1211/score.mid",
+      "pdf": "/music/mutopia-1211/score.pdf"
+    },
+    "sha256": {
+      "midi": "db70c788926524fb75fec6586903ae07e23166c11ac55e0106d97ba80675f75a",
+      "pdf": "c27b92fce9408c552df05e7cdd6bbcd925ce05350d91b43c36442ad171684df4"
+    },
+    "verified": "2026-11-06",
+    "duration": 191.37,
+    "bpm": 190
+  },
+  {
+    "id": "mutopia-186",
+    "title": "Sonate I, II - Menuetto",
+    "composer": "F. J. Haydn",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "solo"
+    ],
+    "description": "Hob. XVI:27 · Harpsichord, Piano. Complete edition; difficulty is an estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=186",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C. F. Peters, 1880s",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/HaydnFJ/HOB-XVI-27/hob-xvi-27-ii-menuet-trio/hob-xvi-27-ii-menuet-trio.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/HaydnFJ/HOB-XVI-27/hob-xvi-27-ii-menuet-trio/hob-xvi-27-ii-menuet-trio-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-186/score.mid",
+      "pdf": "/music/mutopia-186/score.pdf"
+    },
+    "sha256": {
+      "midi": "37b97075c873529760c96539f9894ec6eb99cc1065d76344f7b1fc397d6b63d4",
+      "pdf": "7ed055fcd9d03d62653f5d1776e6afefa8a27848bf0eaf6e1fa04560c2cd124e"
+    },
+    "verified": "2026-11-06",
+    "duration": 129.13,
+    "bpm": 92
+  },
+  {
+    "id": "nursery-polly",
+    "title": "Polly Put the Kettle On",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/polly.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/polly.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/polly.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-polly/score.mid",
+      "musicxml": "/music/nursery-polly/score.musicxml",
+      "pdf": "/music/nursery-polly/score.pdf"
+    },
+    "sha256": {
+      "midi": "8cead162c4e139b3a35f57badec35136d297060954f4d5f8d0bd8417be923b27",
+      "musicxml": "442b14704ec6fe414eb18fd4c94eb6505eeda9bcaa81e3bee48389477d7377ee",
+      "pdf": "7806811c24e2d92c6ab1794377643cf1fdbc381b48599f29fc75a3ea726c50dd"
+    },
+    "verified": "2026-11-06",
+    "duration": 16,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-hotcrossbuns",
+    "title": "Hot Cross Buns",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/hotcrossbuns.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/hotcrossbuns.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/hotcrossbuns.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-hotcrossbuns/score.mid",
+      "musicxml": "/music/nursery-hotcrossbuns/score.musicxml",
+      "pdf": "/music/nursery-hotcrossbuns/score.pdf"
+    },
+    "sha256": {
+      "midi": "3d78bee1e0da514320c2ab31d4bd9889a1b0549efe5ca9e10ebf10e84b8d7a2c",
+      "musicxml": "60f33fffd0cbb610f4668a6cf873c0c6276e373a01b9a19c8621f1badcc8f10f",
+      "pdf": "f0bbf8969fbb3b236ece265d0e8677a0dbdaee0fd7ba4489b3b40c572870b4a1"
+    },
+    "verified": "2026-11-06",
+    "duration": 32,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-schlaf",
+    "title": "Sleep, Baby, Sleep",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "lullaby",
+      "gentle",
+      "german"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/schlaf.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/schlaf.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/schlaf.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-schlaf/score.mid",
+      "musicxml": "/music/nursery-schlaf/score.musicxml",
+      "pdf": "/music/nursery-schlaf/score.pdf"
+    },
+    "sha256": {
+      "midi": "0d605dfb888b4aa5ccaee6268bdf949c09981b53b63bd66d9a2e64a14347a730",
+      "musicxml": "35d3a334949c319c623941aae9746676bf7b21c242eacd6c82b8632c46c3bd33",
+      "pdf": "34eceade7a980e05959278eb21e4baab62be28a29319ff7f23555b0546a76982"
+    },
+    "verified": "2026-11-06",
+    "duration": 29.25,
+    "bpm": 80
+  },
+  {
+    "id": "nursery-lucylocket",
+    "title": "Lucy Locket",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/lucylocket.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/lucylocket.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/lucylocket.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-lucylocket/score.mid",
+      "musicxml": "/music/nursery-lucylocket/score.musicxml",
+      "pdf": "/music/nursery-lucylocket/score.pdf"
+    },
+    "sha256": {
+      "midi": "a5701f3962af589dd7cc253a7f22aa18e96195e045b95d53ff433cdebe074495",
+      "musicxml": "8ea5878519a4fccaf921cfd14d46cdbe9dd3e4e0ba4b3b1889945e363ef8459b",
+      "pdf": "9c328fe5cb1f22c4f6f528a9e516ba9075790fac9e632f41e6f8f5b03db1a70a"
+    },
+    "verified": "2026-11-06",
+    "duration": 8.57,
+    "bpm": 112
+  },
+  {
+    "id": "nursery-paper",
+    "title": "If All the World Were Paper",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/paper.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/paper.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/paper.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-paper/score.mid",
+      "musicxml": "/music/nursery-paper/score.musicxml",
+      "pdf": "/music/nursery-paper/score.pdf"
+    },
+    "sha256": {
+      "midi": "8ae55f92be2efb790e4fc17b85a8655395309f9ed118c6354f16f0f56025f909",
+      "musicxml": "50f4f527e626b53529365f2c0f47db2155828ddb3415ec7932d31b45dd41f4f7",
+      "pdf": "b9258ed7b7df84a8271a7a2b45f3b6c134425eb79e55346e46f58f889c0a9942"
+    },
+    "verified": "2026-11-06",
+    "duration": 12,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-fairyship",
+    "title": "The Fairy Ship",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/fairyship.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/fairyship.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/fairyship.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-fairyship/score.mid",
+      "musicxml": "/music/nursery-fairyship/score.musicxml",
+      "pdf": "/music/nursery-fairyship/score.pdf"
+    },
+    "sha256": {
+      "midi": "6f561592fd11d281b42969d458f4bf6a24f0acc2c542fe79e1a7316d1d9138e6",
+      "musicxml": "f1697062c2e3f79850356f52e2e4853a99a5b508c13d9c8e923d1e42402c1efd",
+      "pdf": "b4522f109da387e05a2414cb06bf8eec9d51bac353ba6642ff4c402168af7e29"
+    },
+    "verified": "2026-11-06",
+    "duration": 24,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-northwind",
+    "title": "The North Wind and the Robin",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/northwind.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/northwind.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/northwind.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-northwind/score.mid",
+      "musicxml": "/music/nursery-northwind/score.musicxml",
+      "pdf": "/music/nursery-northwind/score.pdf"
+    },
+    "sha256": {
+      "midi": "b995cb5e354576d5940ebe931c68022f7eb5921d75ceb1beae530430e692636d",
+      "musicxml": "65897e59a09b1193eb534386b551fea9f4e785c62544d9a15232a3881bcf1bbf",
+      "pdf": "10e5797b915393c9800254317095ea198d65a57e2355c7329ebdaa4bfacf4b46"
+    },
+    "verified": "2026-11-06",
+    "duration": 12.25,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-abc",
+    "title": "ABC",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/abc.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/abc.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/abc.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-abc/score.mid",
+      "musicxml": "/music/nursery-abc/score.musicxml",
+      "pdf": "/music/nursery-abc/score.pdf"
+    },
+    "sha256": {
+      "midi": "6a16da85b0139a221b06f047412afadcf6b7f99a42c0337190b8f069e8333312",
+      "musicxml": "3dcd1782c94d29fd577635bbdea029026b27ef9e3cea6ef4d0fee26f2860682d",
+      "pdf": "6973d6f91738032f022a1732f8018743217ffb5ec0e42e0a9aa181488d7811c9"
+    },
+    "verified": "2026-11-06",
+    "duration": 11.5,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-aikendrum",
+    "title": "Aiken Drum",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/aikendrum.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/aikendrum.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/aikendrum.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-aikendrum/score.mid",
+      "musicxml": "/music/nursery-aikendrum/score.musicxml",
+      "pdf": "/music/nursery-aikendrum/score.pdf"
+    },
+    "sha256": {
+      "midi": "ee338c18751dad10c1d60426f7fbce1e5060fab8dda4adfb18b896f1c504fdc5",
+      "musicxml": "183a5114d089d0cfc92e9066e2ef22b489bc8ccafac199951da20f7d7d1f5716",
+      "pdf": "e16261d2e23ffd43369d3c08d06c8b719e6e832ca1c7fbb057c405705589c488"
+    },
+    "verified": "2026-11-06",
+    "duration": 16.87,
+    "bpm": 112
+  },
+  {
+    "id": "nursery-avignon",
+    "title": "Sur le pont d’Avignon",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "french"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/avignon.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/avignon.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/avignon.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-avignon/score.mid",
+      "musicxml": "/music/nursery-avignon/score.musicxml",
+      "pdf": "/music/nursery-avignon/score.pdf"
+    },
+    "sha256": {
+      "midi": "ff8d13f494c07fb654699cd999e5add1ed61a8f1c79a10876587ad5e378a173c",
+      "musicxml": "af297464317a0c934c5c2b310c5fd63bac26fd1240364ed4c45bfb2cb3f8878e",
+      "pdf": "fb033d1614b9f62e83bdb63d0432e4beac12b3db17ccf8b8b89750420167d4e4"
+    },
+    "verified": "2026-11-06",
+    "duration": 24.17,
+    "bpm": 108
+  },
+  {
+    "id": "nursery-londonbridge",
+    "title": "London Bridge",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/londonbridge.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/londonbridge.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/londonbridge.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-londonbridge/score.mid",
+      "musicxml": "/music/nursery-londonbridge/score.musicxml",
+      "pdf": "/music/nursery-londonbridge/score.pdf"
+    },
+    "sha256": {
+      "midi": "e1bffb54ff25929d0c29ee2c0d448cf035adc32b358d763e67216d65b938c757",
+      "musicxml": "a48240154d16f26c0ce5a7ac0fd85c597fb5a9c37729ce3d8a8d03ae38cda0d6",
+      "pdf": "99e2d711f8afba2080bcfd015cc446e83a4cd22b57001089d0a82dd18865800d"
+    },
+    "verified": "2026-11-06",
+    "duration": 10.07,
+    "bpm": 140
+  },
+  {
+    "id": "nursery-charley",
+    "title": "Charley Over the Water",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/charley.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/charley.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/charley.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-charley/score.mid",
+      "musicxml": "/music/nursery-charley/score.musicxml",
+      "pdf": "/music/nursery-charley/score.pdf"
+    },
+    "sha256": {
+      "midi": "6e395bea974caaa5521c4154e27cd9ce3a9c426d27ceddfd8235db40736fb462",
+      "musicxml": "e8942e763003bff457198ba316f15a0c1daa3d27a668d75b675c73ec9db32fa9",
+      "pdf": "c924ab114e04570cd88ad845a583d167d649c6c8dc86384079503bd63ea4f660"
+    },
+    "verified": "2026-11-06",
+    "duration": 15.92,
+    "bpm": 130
+  },
+  {
+    "id": "nursery-threelittlekittens",
+    "title": "Three Little Kittens",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/threelittlekittens.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/threelittlekittens.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/threelittlekittens.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-threelittlekittens/score.mid",
+      "musicxml": "/music/nursery-threelittlekittens/score.musicxml",
+      "pdf": "/music/nursery-threelittlekittens/score.pdf"
+    },
+    "sha256": {
+      "midi": "85950a467a9851078150f17f82f457ed03f538c50cb8ac3f1f33e13a0f4fae4b",
+      "musicxml": "239cba30bbe0efb36f96b170336b2396342fe5eb1a7da32dac4e99baa0b04cf1",
+      "pdf": "e269efdb5dbf4605643c64f59eb83e8f2e351f3d82840ebe32831e2e36da4f08"
+    },
+    "verified": "2026-11-06",
+    "duration": 11.75,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-pussycat",
+    "title": "Pussy-Cat",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/pussycat.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/pussycat.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/pussycat.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-pussycat/score.mid",
+      "musicxml": "/music/nursery-pussycat/score.musicxml",
+      "pdf": "/music/nursery-pussycat/score.pdf"
+    },
+    "sha256": {
+      "midi": "e9ace0fd86aed6275913f77a2d052fb5ece82a8bcbb59b2f31c301f426b7eee1",
+      "musicxml": "82d2e308650e616f85563b1ed69cbf40e4cddd58f1649b2bc91eaa46f85f5ed7",
+      "pdf": "68047897e93038f25f33e6583867cc07703922ac81b18083a40801b610bdf0e3"
+    },
+    "verified": "2026-11-06",
+    "duration": 9,
+    "bpm": 160
+  },
+  {
+    "id": "nursery-zweihasen",
+    "title": "Two Hares",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "german"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/zweihasen.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/zweihasen.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/zweihasen.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-zweihasen/score.mid",
+      "musicxml": "/music/nursery-zweihasen/score.musicxml",
+      "pdf": "/music/nursery-zweihasen/score.pdf"
+    },
+    "sha256": {
+      "midi": "637559555f268576453edf006bb79cee8650c531d9b6c57fa79abe21ac6c45b2",
+      "musicxml": "b468ddc93451ac6dddcb9af39d59a277889bd3beefb72303ec71d32342dba4c1",
+      "pdf": "9ffe786d241aa88c8648622af8acea1ad301d01569768a7ee1176755f0a9876c"
+    },
+    "verified": "2026-11-06",
+    "duration": 23.5,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-ringeltanz",
+    "title": "Ring Dance",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "german"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/ringeltanz.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/ringeltanz.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/ringeltanz.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-ringeltanz/score.mid",
+      "musicxml": "/music/nursery-ringeltanz/score.musicxml",
+      "pdf": "/music/nursery-ringeltanz/score.pdf"
+    },
+    "sha256": {
+      "midi": "0f12b62e84a134f8876fe235a7bb2294d97dac2be7e21d58c9903f5a2dd7d172",
+      "musicxml": "ec56aeaae6789fcade80589aa083a73c82de83e823c59c5161d4cb03b395ed03",
+      "pdf": "95b39b00b41514272c8c790374ae753acd626391b6014895420fec06f2fa028e"
+    },
+    "verified": "2026-11-06",
+    "duration": 18.6,
+    "bpm": 100
+  },
+  {
+    "id": "nursery-bergere",
+    "title": "The Shepherdess",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "french"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/bergere.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/bergere.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/bergere.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-bergere/score.mid",
+      "musicxml": "/music/nursery-bergere/score.musicxml",
+      "pdf": "/music/nursery-bergere/score.pdf"
+    },
+    "sha256": {
+      "midi": "56c93f6e9b4ca98eb0a768a2ac34d2cc6f81a3aa94bbb0e022b19e33c040d009",
+      "musicxml": "494659c6f3d402629f63ac5ae849c03e91c20207778301186ffa7aa90d5038c5",
+      "pdf": "1752440cbd3f8fafbeaee4083bcf3dbf0063db6437100e304e3270d20d5f2f71"
+    },
+    "verified": "2026-11-06",
+    "duration": 12.64,
+    "bpm": 140
+  },
+  {
+    "id": "nursery-petitchasseur",
+    "title": "The Little Hunter",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "french"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/petitchasseur.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/petitchasseur.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/petitchasseur.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-petitchasseur/score.mid",
+      "musicxml": "/music/nursery-petitchasseur/score.musicxml",
+      "pdf": "/music/nursery-petitchasseur/score.pdf"
+    },
+    "sha256": {
+      "midi": "ce9e6f541c5a3f0bbe1fdddcdbd75b54e2ba27a0f324a1304320e5512788ea0a",
+      "musicxml": "cdfc0bf17886455e045955198797f62b7f04a00e1597639f88173510008d4ac2",
+      "pdf": "f218c52ebdd819e4257d6146baf3283aacc44669432d1f19f2d07394fcb147ef"
+    },
+    "verified": "2026-11-06",
+    "duration": 12.86,
+    "bpm": 112
+  },
+  {
+    "id": "nursery-looby",
+    "title": "Looby Light",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/looby.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/looby.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/looby.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-looby/score.mid",
+      "musicxml": "/music/nursery-looby/score.musicxml",
+      "pdf": "/music/nursery-looby/score.pdf"
+    },
+    "sha256": {
+      "midi": "9bd18fb91d17e48bff8ceea3b62e2228623ddb66c6330b7c1bf4a2a2e936647f",
+      "musicxml": "78e3caa8497bdd659eb6cbcbb967dff7242281d3302bd171c63ac35fc435d262",
+      "pdf": "de2865dbd711c9c91cdf0a60d483e62b32ac0dfedc3907f330d68661e632b953"
+    },
+    "verified": "2026-11-06",
+    "duration": 33.92,
+    "bpm": 130
+  },
+  {
+    "id": "nursery-margerydaw",
+    "title": "Margery Daw",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/margerydaw.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/margerydaw.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/margerydaw.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-margerydaw/score.mid",
+      "musicxml": "/music/nursery-margerydaw/score.musicxml",
+      "pdf": "/music/nursery-margerydaw/score.pdf"
+    },
+    "sha256": {
+      "midi": "8fabc29e206a1383a25753a559eb80773654727440a09d95ce7be35d984c4b2d",
+      "musicxml": "e641c12d48f060c9ce9d6978034b7ff9944614b4cf446e2c1a5c09a47782440f",
+      "pdf": "36d5935949bfee2700d8eec8895c62f21f8052532d14f6541b33797d99f39770"
+    },
+    "verified": "2026-11-06",
+    "duration": 12,
+    "bpm": 120
+  },
+  {
+    "id": "nursery-buyabroom",
+    "title": "Buy a Broom",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/buyabroom.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/buyabroom.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/buyabroom.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-buyabroom/score.mid",
+      "musicxml": "/music/nursery-buyabroom/score.musicxml",
+      "pdf": "/music/nursery-buyabroom/score.pdf"
+    },
+    "sha256": {
+      "midi": "a140a5f0b8178b9615e9f0c2887e676449a5be9172a1ea555ac1f7fe109eebe4",
+      "musicxml": "44b6082586a15567eb98e3d65f66d940d6671ac456bc5e73fdc828a8581adca7",
+      "pdf": "69a16d50f606c956b99d841c47dbf913682d189451d166cb69f3a121ac8b402a"
+    },
+    "verified": "2026-11-06",
+    "duration": 29.2,
+    "bpm": 150
+  },
+  {
+    "id": "nursery-hausegesinde",
+    "title": "The Household",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "german"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/hausegesinde.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/hausegesinde.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/hausegesinde.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-hausegesinde/score.mid",
+      "musicxml": "/music/nursery-hausegesinde/score.musicxml",
+      "pdf": "/music/nursery-hausegesinde/score.pdf"
+    },
+    "sha256": {
+      "midi": "ff0a255e30acd74b45b616581ec7965880dc41461164b77b701e7b75b651584b",
+      "musicxml": "0f8d676a85458dea81eae44a763272bdb5ba87aa0889165745e255eabe94f3f8",
+      "pdf": "ded4971547eee2d29841e98a396caa48b0225002690123f2bb81b76b82b2649b"
+    },
+    "verified": "2026-11-06",
+    "duration": 10.8,
+    "bpm": 100
+  },
+  {
+    "id": "nursery-billypringle",
+    "title": "Billy Pringle",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/billypringle.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/billypringle.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/billypringle.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-billypringle/score.mid",
+      "musicxml": "/music/nursery-billypringle/score.musicxml",
+      "pdf": "/music/nursery-billypringle/score.pdf"
+    },
+    "sha256": {
+      "midi": "26371bd48028b9b1b6d36c4625e52ffde97c3e88273691587695123eeacef216",
+      "musicxml": "ebc03ea085d7ef7b404931c465ce6202a68c5965228ca48b0a0a765ceb07480f",
+      "pdf": "a8541b4b6d96a41aff70bce896235ebeacd37aaec6d49a169d1248fafde55748"
+    },
+    "verified": "2026-11-06",
+    "duration": 31.41,
+    "bpm": 128
+  },
+  {
+    "id": "nursery-fourpresents",
+    "title": "The Four Presents",
+    "composer": "Traditional · arranged by Lucy Crane",
+    "category": "Children & learning",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "nursery rhyme",
+      "sing along",
+      "learning",
+      "english"
+    ],
+    "description": "Historic nursery-song arrangement from The Baby’s Bouquet (1878). Melody with accompaniment; difficulty is an estimate.",
+    "source": "Project Gutenberg · The Baby’s Bouquet",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/25432",
+    "rights": "Public domain source (1878)",
+    "rightsUrl": "https://www.gutenberg.org/policy/permission.html",
+    "edition": "Tunes collected and arranged by Lucy Crane (1842–1882); music transcribed by Linda Cantoni.",
+    "urls": {
+      "midi": "https://www.gutenberg.org/files/25432/25432-h/music/fourpresents.midi",
+      "musicxml": "https://www.gutenberg.org/files/25432/25432-h/music/fourpresents.xml",
+      "pdf": "https://www.gutenberg.org/files/25432/25432-h/music/fourpresents.pdf"
+    },
+    "assets": {
+      "midi": "/music/nursery-fourpresents/score.mid",
+      "musicxml": "/music/nursery-fourpresents/score.musicxml",
+      "pdf": "/music/nursery-fourpresents/score.pdf"
+    },
+    "sha256": {
+      "midi": "f3714a427c05c3d0a2a119067f49f2e1e86b6dc40608d33b8ea3d33811982230",
+      "musicxml": "e4546d6b989f8f53cfac2ddbf389b922b7eb8897de023fc1701cb4b1e90197ed",
+      "pdf": "4ad427507ef5441fb982c4eeed86160ba8132fcd1e07ea5dc50a0fed66259156"
+    },
+    "verified": "2026-11-06",
+    "duration": 13.64,
+    "bpm": 88
+  }
+]

@@ -1,6 +1,6 @@
 import { parseMidi } from './music';
 import { readMusicXml } from './original-score';
-export type LibraryEntry = { id: string; name: string; title: string; bytes: ArrayBuffer; musicxml?: string; pdf?: ArrayBuffer; added: number };
+export type LibraryEntry = { id: string; name: string; title: string; displayTitle?: string; bytes: ArrayBuffer; musicxml?: string; pdf?: ArrayBuffer; added: number };
 export const libraryId = (name: string) => name.replace(/\.(mid|midi|musicxml|xml|pdf)$/i, '').toLowerCase();
 export async function prepareLibrary(files: File[], existing: LibraryEntry[]) {
   if (!files.length) return [];
@@ -29,12 +29,3 @@ export async function prepareLibrary(files: File[], existing: LibraryEntry[]) {
   if (combined.size > 100) throw new Error('This library supports 100 arrangements. Remove one before adding more.');
   return entries;
 }
-
-export const DISNEY_CATALOG = [
-  { title: 'Belle', film: 'Beauty and the Beast', url: 'https://www.musicnotes.com/sheetmusic/beauty-and-the-beast/belle/MN0057057', source: 'Musicnotes · piano, vocal & guitar' },
-  { title: 'Let It Go', film: 'Frozen', url: 'https://www.halleonard.com/product/140822/let-it-go', source: 'Hal Leonard · easy piano' },
-  ...[
-    ['A Whole New World', 'Aladdin'], ["How Far I’ll Go", 'Moana'], ['Part of Your World', 'The Little Mermaid'],
-    ['Can You Feel the Love Tonight?', 'The Lion King'], ['I See the Light', 'Tangled'], ['Reflection', 'Mulan'],
-  ].map(([title, film]) => ({ title, film, url: 'https://www.halleonard.com/product/354996/disney-goes-classical', source: 'Hal Leonard · Disney Goes Classical songbook' })),
-];
