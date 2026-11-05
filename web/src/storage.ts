@@ -1,4 +1,4 @@
-import type { LibraryEntry } from './library';
+import { LIBRARY_LIMIT, LibraryFullError, libraryId, type LibraryEntry } from './library';
 export type Saved = { bytes: ArrayBuffer; name: string; displayTitle?: string; musicxml?: string; pdf?: ArrayBuffer };
 async function database(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -7,36 +7,61 @@ async function database(): Promise<IDBDatabase> {
       if (!request.result.objectStoreNames.contains('files')) request.result.createObjectStore('files');
       if (!request.result.objectStoreNames.contains('library')) request.result.createObjectStore('library', { keyPath: 'id' });
     };
-    request.onsuccess = () => resolve(request.result);
+    request.onsuccess = () => {
+      const db = request.result;
+      db.onversionchange = () => db.close();
+      resolve(db);
+    };
     request.onerror = () => reject(request.error);
   });
 }
-export async function savedFile(value?: Saved | null): Promise<Saved | undefined> {
+// Resolve only after commit, and close the connection on every outcome.
+async function transaction<T>(stores: string[], mode: IDBTransactionMode, work: (tx: IDBTransaction, fail: (error: Error) => void) => () => T): Promise<T> {
   const db = await database();
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction('files', value === undefined ? 'readonly' : 'readwrite');
+  try {
+    return await new Promise<T>((resolve, reject) => {
+      const tx = db.transaction(stores, mode);
+      let failure: Error | null = null;
+      tx.onabort = tx.onerror = () => reject(failure ?? tx.error ?? new Error('Local storage could not finish the operation.'));
+      try {
+        const result = work(tx, error => { failure = error; tx.abort(); });
+        tx.oncomplete = () => { try { resolve(result()); } catch (error) { reject(error); } };
+      } catch (error) { tx.abort(); reject(error); }
+    });
+  } finally { db.close(); }
+}
+export function savedFile(value?: Saved | null): Promise<Saved | undefined> {
+  return transaction(['files'], value === undefined ? 'readonly' : 'readwrite', tx => {
     const store = tx.objectStore('files');
     const request = value === undefined ? store.get('last') : value === null ? store.delete('last') : store.put(value, 'last');
-    tx.oncomplete = () => { db.close(); resolve(value === undefined ? request.result : undefined); };
-    tx.onerror = () => { db.close(); reject(tx.error); };
-    tx.onabort = () => { db.close(); reject(tx.error); };
+    return () => value === undefined ? request.result : undefined;
   });
 }
-
-export async function libraryEntries(): Promise<LibraryEntry[]> {
-  const db = await database();
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction('library', 'readonly'); const request = tx.objectStore('library').getAll();
-    tx.oncomplete = () => { db.close(); resolve(request.result.sort((a: LibraryEntry, b: LibraryEntry) => a.title.localeCompare(b.title))); };
-    tx.onerror = () => { db.close(); reject(tx.error); };
+export function libraryEntries(): Promise<LibraryEntry[]> {
+  return transaction(['library'], 'readonly', tx => {
+    const request = tx.objectStore('library').getAll();
+    return () => (request.result as LibraryEntry[]).sort((a, b) => a.title.localeCompare(b.title));
   });
 }
-export async function writeLibrary(entries: LibraryEntry[], removeId?: string): Promise<void> {
-  const db = await database();
-  return new Promise((resolve, reject) => {
-    const tx = db.transaction('library', 'readwrite'); const store = tx.objectStore('library');
-    entries.forEach(entry => store.put(entry)); if (removeId) store.delete(removeId);
-    tx.oncomplete = () => { db.close(); resolve(); };
-    tx.onerror = tx.onabort = () => { db.close(); reject(tx.error); };
+export function writeLibrary(entries: LibraryEntry[], lastOpened?: Saved): Promise<void> {
+  return transaction(lastOpened ? ['library', 'files'] : ['library'], 'readwrite', (tx, fail) => {
+    const store = tx.objectStore('library');
+    const keys = store.getAllKeys();
+    keys.onsuccess = () => {
+      const combined = new Set([...keys.result, ...entries.map(entry => entry.id)]);
+      // The limit and writes share one transaction, including concurrent tabs.
+      if (combined.size > LIBRARY_LIMIT) { fail(new LibraryFullError()); return; }
+      entries.forEach(entry => store.put(entry));
+      if (lastOpened) tx.objectStore('files').put(lastOpened, 'last');
+    };
+    return () => undefined;
+  });
+}
+export function removeLibraryEntry(id: string): Promise<void> {
+  return transaction(['library', 'files'], 'readwrite', tx => {
+    tx.objectStore('library').delete(id);
+    const files = tx.objectStore('files'), last = files.get('last');
+    last.onsuccess = () => { if (last.result && libraryId(last.result.name) === id) files.delete('last'); };
+    return () => undefined;
   });
 }

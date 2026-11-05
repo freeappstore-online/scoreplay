@@ -26,3 +26,12 @@ it('preserves original notation and pickup timing, and strips external images', 
   expect(parsed.measures.map(m => [m.label, m.start, m.end])).toEqual([['0',0,1],['1',1,4]]);
   expect(() => readMusicXml('<!DOCTYPE score-partwise [<!ENTITY a "test">]>' + xml)).toThrow('entity');
 });
+
+it('keeps a saved arrangement title and date when attaching a score', async () => {
+  const [entry] = await prepareLibrary([new File([demoBytes()], 'piece.mid')], []);
+  entry.title = 'My piano lesson'; entry.added = 123;
+  const [updated] = await prepareLibrary([new File([xml], 'piece.musicxml')], [entry]);
+  expect(updated.title).toBe('My piano lesson');
+  expect(updated.added).toBe(123);
+  expect(entry.musicxml).toBeUndefined();
+});

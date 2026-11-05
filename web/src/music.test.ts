@@ -34,3 +34,15 @@ describe('MIDI import', () => {
     expect(() => parseMidi(smpte, 'smpte.mid')).toThrow('SMPTE');
   });
 });
+
+it('uses the default tempo until a later first tempo change', () => {
+  const midi = new Midi();
+  midi.header.tempos = [{ ticks: 480, bpm: 60 }]; midi.header.update();
+  const track = midi.addTrack();
+  track.addNote({ midi: 60, ticks: 0, durationTicks: 960 });
+  track.addNote({ midi: 64, ticks: 480, durationTicks: 480 });
+  const song = parseMidi(bytes(midi), 'late-tempo.mid');
+  expect(song.bpm).toBe(120);
+  expect(song.notes[0].duration).toBeCloseTo(1.5);
+  expect(song.notes[1].time).toBeCloseTo(.5);
+});

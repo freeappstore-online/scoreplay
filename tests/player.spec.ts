@@ -369,3 +369,62 @@ test('recorded violin differs from grand piano and percussion stays audible', as
   await page.getByRole('button',{name:'▶ Play',exact:true}).click();
   await expect.poll(()=>page.evaluate(()=>{const p=(window as any).timbreProbe as AnalyserNode;const a=new Float32Array(p.fftSize);p.getFloatTimeDomainData(a);return Math.max(...a.map(Math.abs));})).toBeGreaterThan(.001);
 });
+
+test('concurrent player imports respect the library limit; filename search and removal preserve storage', async ({page, context}) => {
+  test.setTimeout(90000);
+  await page.goto('/');
+  await expect(page.getByRole('heading',{name:'Ode to Joy',exact:true})).toBeVisible();
+  await page.evaluate(async bytes => {
+    const db = await new Promise<IDBDatabase>((resolve,reject)=>{ const r=indexedDB.open('scoreplay',2);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error); });
+    await new Promise<void>((resolve,reject)=>{const tx=db.transaction('library','readwrite');for(let i=0;i<99;i++)tx.objectStore('library').put({id:`saved-${i}`,name:`saved-${i}.mid`,title:`Saved ${i}`,bytes:Uint8Array.from(bytes).buffer,added:1});tx.oncomplete=()=>resolve();tx.onabort=()=>reject(tx.error);});db.close();
+  },Array.from(fixture()));
+  const other=await context.newPage();await other.goto('/');
+  await expect(other.getByRole('heading',{name:'Ode to Joy',exact:true})).toBeVisible();
+  await Promise.all([
+    page.getByLabel('Choose MIDI file').setInputFiles({name:'concurrent-a.mid',mimeType:'audio/midi',buffer:fixture()}),
+    other.getByLabel('Choose MIDI file').setInputFiles({name:'concurrent-b.mid',mimeType:'audio/midi',buffer:fixture()}),
+  ]);
+  for(const tab of [page,other])await expect(tab.getByRole('status').filter({hasText:/Saved on this device and added|File opened.*100 arrangements/})).toBeVisible();
+  const stored=await page.evaluate(async()=>{
+    const db=await new Promise<IDBDatabase>(resolve=>{const r=indexedDB.open('scoreplay',2);r.onsuccess=()=>resolve(r.result);});
+    return new Promise<{count:number;last:string}>((resolve,reject)=>{const tx=db.transaction(['library','files'],'readonly');const count=tx.objectStore('library').count(),last=tx.objectStore('files').get('last');tx.oncomplete=()=>{db.close();resolve({count:count.result,last:last.result.name});};tx.onabort=()=>{db.close();reject(tx.error);};});
+  });
+  expect(stored.count).toBe(100);expect(stored.last).toMatch(/^concurrent-[ab]\.mid$/);
+  // Updating an existing arrangement at capacity is allowed.
+  await page.getByLabel('Choose MIDI file').setInputFiles({name:stored.last,mimeType:'audio/midi',buffer:fixture()});
+  await expect(page.getByRole('status').filter({hasText:'Saved on this device and added'})).toBeVisible();
+  await page.getByRole('link',{name:'Library',exact:true}).click();
+  await page.getByRole('button',{name:'My files (100)',exact:true}).click();
+  await page.getByRole('textbox',{name:'Find a song'}).pressSequentially(stored.last);
+  await expect(page.getByText('1 piece found',{exact:true})).toBeVisible();
+  await page.getByRole('button',{name:`Remove ${stored.last.replace('.mid','').replaceAll('-',' ')}`,exact:true}).click();
+  await page.getByRole('button',{name:'Remove arrangement',exact:true}).click();
+  await expect(page.getByRole('button',{name:'My files (99)',exact:true})).toBeVisible();
+  await page.getByRole('link',{name:'Player',exact:true}).click();await page.reload();
+  await expect(page.getByRole('heading',{name:'Ode to Joy',exact:true})).toBeVisible();
+});
+
+test('opening another score resets its page and holding Space does not toggle repeatedly', async ({page}) => {
+  const xml='<score-partwise version="4.0"><part-list><score-part id="P1"><part-name>Piano</part-name></score-part></part-list><part id="P1">'+Array.from({length:8},(_,i)=>`<measure number="${i+1}">${i===0?'<attributes><divisions>1</divisions><time><beats>4</beats><beat-type>4</beat-type></time><clef><sign>G</sign><line>2</line></clef></attributes>':''}<note><pitch><step>C</step><octave>4</octave></pitch><duration>4</duration><type>whole</type></note></measure>`).join('')+'</part></score-partwise>';
+  await page.goto('/library');
+  await page.getByLabel('Import library files').setInputFiles(['first','second'].flatMap(name=>[
+    {name:`${name}.mid`,mimeType:'audio/midi',buffer:fixture()},
+    {name:`${name}.musicxml`,mimeType:'application/xml',buffer:Buffer.from(xml)},
+  ]));
+  await expect(page.getByRole('status').filter({hasText:'2 arrangements saved'})).toBeVisible();
+  await page.getByRole('button',{name:'Open first',exact:true}).click();
+  await page.getByRole('button',{name:'Next score page →',exact:true}).click();
+  await expect(page.getByText('Score page 2 of 2',{exact:true})).toBeVisible();
+  await page.getByLabel('Choose MIDI file').setInputFiles({name:'second.mid',mimeType:'audio/midi',buffer:fixture()});
+  await expect(page.getByRole('status').filter({hasText:'Saved on this device and added'})).toBeVisible();
+  await expect(page.getByText('Score page 1 of 2',{exact:true})).toBeVisible();
+  await expect(page.getByRole('img',{name:/Original score, measures/}).locator('svg')).toBeVisible();
+  await page.getByLabel('Playback sound',{exact:true}).selectOption('simple');
+  await page.getByRole('heading',{name:'Practice study',exact:true}).click();
+  await page.keyboard.down('Space');
+  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible();
+  await page.keyboard.down('Space');
+  await expect(page.getByRole('button',{name:'Ⅱ Pause',exact:true})).toBeVisible();
+  await page.keyboard.up('Space');await page.keyboard.press('Space');
+  await expect(page.getByRole('button',{name:'▶ Play',exact:true})).toBeVisible();
+});

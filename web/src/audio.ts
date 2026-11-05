@@ -37,7 +37,7 @@ export class Player {
     try {
       this.context ??= new AudioContext();
       if (!this.master) { this.master = this.context.createGain(); this.master.gain.value = 0; this.master.connect(this.context.destination); }
-      // Resume within the user's gesture, before downloading any sounds.
+      // Resume within the user's gesture, before loading the audio engine.
       await this.context.resume();
       if (generation !== this.generation) return;
       if (this.offset >= song.duration) this.offset = 0;
@@ -67,7 +67,7 @@ export class Player {
         }
       }
       this.tick(); this.timer = setInterval(() => this.tick(), 25);
-    } catch (error) { if (generation === this.generation) { throw error; } }
+    } catch (error) { if (generation === this.generation) { this.pause(); throw error; } }
     finally { if (generation === this.generation) { this.loading = false; this.onLoading(false); } }
   }
   pause() {

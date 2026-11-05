@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { Badge, Card, ConfirmDialog, PageHeader } from '@freeappstore/sdk/ui';
-import { libraryId, prepareLibrary, type LibraryEntry } from './library';
-import { libraryEntries, savedFile, writeLibrary } from './storage';
+import { prepareLibrary, type LibraryEntry } from './library';
+import { libraryEntries, removeLibraryEntry, writeLibrary } from './storage';
 import { CATALOG, DEFAULT_FILTERS, filterCatalog, loadCatalogPiece, matchesSearch, readPreferences, type CatalogPiece, type Filters } from './catalog';
 import { formatTime } from './music';
+import { pwa } from './fas-capabilities/pwa';
 const button = 'inline-flex min-h-11 items-center justify-center rounded-xl border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink hover:bg-panel disabled:opacity-40';
 const control = 'min-h-11 w-full min-w-0 rounded-xl border border-line bg-paper px-3 text-sm text-ink';
 const options = (key: 'category' | 'difficulty' | 'composer' | 'instruments' | 'tags') => [...new Set(CATALOG.flatMap(p => p[key]))].sort();
@@ -17,6 +18,7 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
   useEffect(() => { void libraryEntries().then(setEntries).catch(() => setError('Local storage is unavailable. You can still browse and open the free collection.')); return () => request.current?.abort(); }, []);
   useEffect(() => { try { localStorage.setItem('scoreplay-library-preferences', JSON.stringify({ filters, favorites })); } catch { setNotice('Preferences cannot be saved in this browser.'); } }, [filters, favorites]);
   useEffect(() => setLimit(12), [filters]);
+  useEffect(() => pwa.addBusyGuard(() => !!busy), [busy]);
   const change = <K extends keyof Filters>(key: K, value: Filters[K]) => setFilters(f => ({ ...f, [key]: value }));
   const favorite = (id: string) => setFavorites(ids => ids.includes(id) ? ids.filter(x => x !== id) : [...ids,id]);
   const tag = (value: string) => change('tags', filters.tags.includes(value) ? filters.tags.filter(t => t !== value) : [...filters.tags,value]);
@@ -33,23 +35,22 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
     try {
       const entry = await loadCatalogPiece(piece, controller.signal);
       if (save) {
-        const current = await libraryEntries();
-        if (current.length >= 100 && !current.some(e => e.id === entry.id)) throw new Error('Your files hold up to 100 arrangements. Remove one before saving more.');
         await writeLibrary([entry]); await refresh(); setNotice(`${piece.title} saved with its score on this device.`);
       } else await onOpen(entry);
     } catch (e) { if (!controller.signal.aborted) setError(e instanceof Error ? e.message : 'Could not open this piece. Please try again.'); }
     finally { if (!controller.signal.aborted) { setBusy(''); request.current = null; } }
   };
   const removeEntry = async () => {
-    if (!remove) return;
-    try { await writeLibrary([], remove.id); const last = await savedFile(); if (last && libraryId(last.name) === remove.id) await savedFile(null); await refresh(); setFavorites(ids => ids.filter(id => id !== `local:${remove.id}`)); setNotice(`${remove.title} removed from this device.`); }
+    if (!remove || busy) return;
+    setBusy('remove'); setError('');
+    try { await removeLibraryEntry(remove.id); await refresh(); setFavorites(ids => ids.filter(id => id !== `local:${remove.id}`)); setNotice(`${remove.title} removed from this device.`); }
     catch { setError('Could not remove the arrangement. Please try again.'); }
-    finally { setRemove(null); }
+    finally { setRemove(null); setBusy(''); }
   };
   const catalog = filters.scope === 'mine' ? [] : filterCatalog(filters, favorites);
   const hasMetadataFilter = !!(filters.category || filters.difficulty || filters.instrument || filters.composer || filters.duration || filters.score || filters.tags.length);
   const eligibleIds = new Set(filterCatalog({ ...filters, scope: 'free' }, []).map(p => p.id));
-  const own = filters.scope === 'free' ? [] : entries.filter(e => matchesSearch(e.title,filters.query) && (!hasMetadataFilter || eligibleIds.has(e.id)) && (filters.scope !== 'favorites' || favorites.includes(`local:${e.id}`)));
+  const own = filters.scope === 'free' ? [] : entries.filter(e => matchesSearch(`${e.title} ${e.name}`,filters.query) && (!hasMetadataFilter || eligibleIds.has(e.id)) && (filters.scope !== 'favorites' || favorites.includes(`local:${e.id}`)));
   const isFiltered = Object.entries(filters).some(([key,value]) => !['scope','sort'].includes(key) && (Array.isArray(value) ? value.length : value));
   const clear = () => setFilters({ ...DEFAULT_FILTERS, scope: filters.scope });
   const select = (label: string, key: 'category'|'difficulty'|'instrument'|'composer'|'duration'|'score'|'sort', values: [string,string][]) => <label className="min-w-0"><span className="mb-1.5 block text-xs font-semibold text-muted">{label}</span><select aria-label={label} className={control} value={filters[key]} onChange={e => change(key,e.target.value)}>{values.map(([value,text]) => <option key={value} value={value}>{text}</option>)}</select></label>;
@@ -81,7 +82,7 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
     </section>
     {error && <p role="alert" className="rounded-xl bg-danger-soft p-4 text-sm text-danger">{error}</p>}
     {notice && <p role="status" className="text-sm text-muted">{notice}</p>}
-    {busy && busy !== 'import' && <p role="status" className="text-sm text-muted">Opening music and score…</p>}
+    {busy && !['import','remove'].includes(busy) && <p role="status" className="text-sm text-muted">Opening music and score…</p>}
     {filters.scope !== 'mine' && <section className="space-y-4" aria-label="Free music results">
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{catalog.slice(0,limit).map(piece => <Card key={piece.id}><article className="flex h-full flex-col gap-4">
         <div className="flex items-start justify-between gap-2"><div><p className="text-xs font-semibold uppercase tracking-wider text-muted">{piece.category}</p><h2 className="mt-2 text-xl">{piece.title}</h2><p className="mt-2 text-sm text-muted">{piece.composer}</p></div><button className="min-h-11 min-w-11 shrink-0 rounded-lg text-xl text-accent hover:bg-accent-soft" aria-label={`Favourite ${piece.title}`} aria-pressed={favorites.includes(piece.id)} onClick={() => favorite(piece.id)}>{favorites.includes(piece.id) ? '★' : '☆'}</button></div>
@@ -93,7 +94,7 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
       </article></Card>)}</div>
       {catalog.length > limit && <button className={`${button} w-full`} onClick={() => setLimit(n => n+12)}>Show more · {catalog.length-limit} remaining</button>}
     </section>}
-    {filters.scope !== 'free' && <section className="space-y-4" aria-label="My arrangements"><h2 className="text-2xl">My arrangements</h2><p className="text-xs text-muted">Saved on this device. Search applies to your filenames and titles.</p><div className="grid gap-4 md:grid-cols-2">{own.map(entry => <Card key={entry.id}><div className="space-y-4"><div className="flex items-start justify-between gap-3"><div><h3 className="text-xl capitalize">{entry.title}</h3><p className="mt-1 break-all text-xs text-muted">{entry.name}</p></div><button className={button} aria-label={`Favourite saved ${entry.title}`} aria-pressed={favorites.includes(`local:${entry.id}`)} onClick={() => favorite(`local:${entry.id}`)}>{favorites.includes(`local:${entry.id}`) ? '★' : '☆'}</button></div><div className="flex flex-wrap gap-2"><Badge>MIDI playback</Badge>{entry.musicxml && <Badge variant="accent">Original sheet music</Badge>}{entry.pdf && <Badge>PDF score</Badge>}</div><div className="flex flex-wrap gap-2"><button className={button} disabled={!!busy} onClick={() => void onOpen(entry).catch(e => setError(e instanceof Error ? e.message : 'Could not open this arrangement.'))} aria-label={`Open ${entry.title}`}>Open & play</button><button className={button} aria-label={`Remove ${entry.title}`} onClick={() => setRemove(entry)}>Remove</button></div></div></Card>)}</div></section>}
+    {filters.scope !== 'free' && <section className="space-y-4" aria-label="My arrangements"><h2 className="text-2xl">My arrangements</h2><p className="text-xs text-muted">Saved on this device. Search applies to your filenames and titles.</p><div className="grid gap-4 md:grid-cols-2">{own.map(entry => <Card key={entry.id}><div className="space-y-4"><div className="flex items-start justify-between gap-3"><div><h3 className="text-xl capitalize">{entry.title}</h3><p className="mt-1 break-all text-xs text-muted">{entry.name}</p></div><button className={button} aria-label={`Favourite saved ${entry.title}`} aria-pressed={favorites.includes(`local:${entry.id}`)} onClick={() => favorite(`local:${entry.id}`)}>{favorites.includes(`local:${entry.id}`) ? '★' : '☆'}</button></div><div className="flex flex-wrap gap-2"><Badge>MIDI playback</Badge>{entry.musicxml && <Badge variant="accent">Original sheet music</Badge>}{entry.pdf && <Badge>PDF score</Badge>}</div><div className="flex flex-wrap gap-2"><button className={button} disabled={!!busy} onClick={() => void onOpen(entry).catch(e => setError(e instanceof Error ? e.message : 'Could not open this arrangement.'))} aria-label={`Open ${entry.title}`}>Open & play</button><button className={button} disabled={!!busy} aria-label={`Remove ${entry.title}`} onClick={() => setRemove(entry)}>Remove</button></div></div></Card>)}</div></section>}
     {!catalog.length && !own.length && <div className="rounded-2xl border border-dashed border-line p-8 text-center"><h2 className="text-xl">{filters.scope === 'mine' && !entries.length ? 'Your own music belongs here.' : filters.scope === 'favorites' && !favorites.length ? 'Start a shelf of favourites.' : 'No pieces match just yet.'}</h2><p className="mt-3 text-sm text-muted">{filters.scope === 'mine' ? 'Import your MIDI and matching scores below, or save a piece from the free collection.' : filters.scope === 'favorites' && !favorites.length ? 'Tap a star on any piece to keep it here.' : 'Try fewer filters, another tag, or a different search.'}</p>{isFiltered && <button className={`${button} mt-4`} onClick={clear}>Reset search and filters</button>}</div>}
     <section className="space-y-3 rounded-2xl border border-dashed border-line-strong bg-panel p-5" aria-label="Library import" onDragOver={e => e.preventDefault()} onDrop={e => { e.preventDefault(); void importFiles([...e.dataTransfer.files]); }}>
       <div className="flex flex-wrap items-center justify-between gap-3"><div><h2 className="text-xl">Bring your own collection</h2><p className="mt-2 text-sm text-muted">Select MIDI files and matching MusicXML or PDF scores together.</p></div><button className={button} disabled={!!busy} onClick={() => input.current?.click()}>{busy === 'import' ? 'Importing…' : '↑ Import music files'}</button></div>

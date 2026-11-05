@@ -1,6 +1,10 @@
 import { parseMidi } from './music';
 import { readMusicXml } from './original-score';
 export type LibraryEntry = { id: string; name: string; title: string; displayTitle?: string; bytes: ArrayBuffer; musicxml?: string; pdf?: ArrayBuffer; added: number };
+export const LIBRARY_LIMIT = 100;
+export class LibraryFullError extends Error {
+  constructor() { super(`Your files hold up to ${LIBRARY_LIMIT} arrangements. Remove one before saving more.`); }
+}
 export const libraryId = (name: string) => name.replace(/\.(mid|midi|musicxml|xml|pdf)$/i, '').toLowerCase();
 export async function prepareLibrary(files: File[], existing: LibraryEntry[]) {
   if (!files.length) return [];
@@ -11,7 +15,7 @@ export async function prepareLibrary(files: File[], existing: LibraryEntry[]) {
     if (!['mid','midi','musicxml','xml','pdf'].includes(extension ?? '')) throw new Error(`Unsupported file: ${file.name}`);
     if (file.size > (extension === 'pdf' ? 20 : 5) * 1024 * 1024) throw new Error(`${file.name} is too large. MIDI/MusicXML: 5 MB; PDF: 20 MB.`);
     const id = libraryId(file.name);
-    const entry = groups.get(id) ?? { ...existing.find(e => e.id === id), id, title: file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '), added: Date.now() };
+    const entry = groups.get(id) ?? { ...(existing.find(e => e.id === id) ?? { id, title: file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' '), added: Date.now() }) };
     const bytes = await file.arrayBuffer();
     if (extension === 'mid' || extension === 'midi') { parseMidi(bytes, file.name); entry.bytes = bytes; entry.name = file.name; }
     else if (extension === 'pdf') {
@@ -26,6 +30,6 @@ export async function prepareLibrary(files: File[], existing: LibraryEntry[]) {
     entries.push(entry as LibraryEntry);
   }
   const combined = new Map(existing.map(e => [e.id, e])); entries.forEach(e => combined.set(e.id, e));
-  if (combined.size > 100) throw new Error('This library supports 100 arrangements. Remove one before adding more.');
+  if (combined.size > LIBRARY_LIMIT) throw new LibraryFullError();
   return entries;
 }

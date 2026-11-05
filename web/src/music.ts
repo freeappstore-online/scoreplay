@@ -14,6 +14,12 @@ export function parseMidi(bytes: ArrayBuffer, filename: string): Song {
   if (!h.getUint16(12)) throw new Error('The MIDI file has invalid timing.');
   let midi: Midi;
   try { midi = new Midi(bytes); } catch { throw new Error('This MIDI file could not be read. Try exporting it again.'); }
+  // Tone's time map uses the first tempo for elapsed time before that event.
+  // Supply MIDI's default so a delayed first tempo does not shift later notes.
+  if (midi.header.tempos[0]?.ticks > 0) {
+    midi.header.tempos.unshift({ ticks: 0, bpm: 120 });
+    midi.header.update();
+  }
   const tracks = midi.tracks.filter(t => t.notes.length);
   if (tracks.reduce((n, t) => n + t.notes.length, 0) > 100000) throw new Error('This file is too complex. Please use a MIDI file with fewer than 100,000 notes.');
   const notes: Note[] = [];

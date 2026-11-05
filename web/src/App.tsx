@@ -3,10 +3,10 @@ import { initApp } from '@freeappstore/sdk';
 import { Badge, Card, PageHeader, Shell, type NavItem } from '@freeappstore/sdk/ui';
 import { Player, type SoundMode } from './audio';
 import { SOUND_BANK } from './sound-cache';
-import { demoBytes, formatTime, MAX_FILE_SIZE, parseMidi, type Song } from './music';
+import { formatTime } from './music';
 import { PianoRoll } from './PianoRoll';
-import { libraryEntries, savedFile, writeLibrary } from './storage';
-import { libraryId, type LibraryEntry } from './library';
+import type { LibraryEntry } from './library';
+import { useMusicFile } from './useMusicFile';
 import { pwa } from './fas-capabilities/pwa';
 
 const Library = lazy(() => import('./LibraryScreen'));
@@ -22,38 +22,30 @@ export default function App() {
   const [mode, setMode] = useState('sheet');
   const [soundMode, setSoundMode] = useState<SoundMode>(() => { try { const saved = localStorage.getItem('scoreplay-sound-mode'); return saved === 'piano' || saved === 'simple' ? saved : 'sampled'; } catch { return 'sampled'; } });
   const [audioLoading, setAudioLoading] = useState(false);
-  const [musicxml, setMusicxml] = useState<string>(), [pdf, setPdf] = useState<ArrayBuffer>(), [pdfUrl, setPdfUrl] = useState('');
+  const [pdfUrl, setPdfUrl] = useState('');
   const [original, setOriginal] = useState(true);
   const [path, setPath] = useState(location.pathname);
   const [player] = useState(() => new Player());
-  const [song, setSong] = useState<Song | null>(null);
+  const { song, musicxml, pdf, revision, busy, error, notice, setError, open, demo, forget, openEntry } = useMusicFile(player);
   const [time, setTime] = useState(0), [playing, setPlaying] = useState(false);
   const [speed, setSpeed] = useState(1), [volume, setVolume] = useState(65), [loop, setLoop] = useState(false);
   const [muted, setMuted] = useState(new Set<number>());
-  const [error, setError] = useState(''), [notice, setNotice] = useState(''), [busy, setBusy] = useState(true);
   const [drag, setDrag] = useState(false);
   const input = useRef<HTMLInputElement>(null);
-  const generation = useRef(0);
-  const load = (bytes: ArrayBuffer, name: string, xml?: string, pdfBytes?: ArrayBuffer, title?: string) => {
-    const parsed = parseMidi(bytes, name); if (title) parsed.title = title; player.load(parsed); setSong(parsed); setMuted(new Set()); setMusicxml(xml); setPdf(pdfBytes); setOriginal(true); setError(''); setMode('sheet');
-  };
+  useEffect(() => { setMuted(new Set()); setOriginal(true); setMode('sheet'); }, [revision]);
   useEffect(() => {
     player.sound = soundMode; player.onLoading = setAudioLoading;
     player.onUpdate = (t, p) => { setTime(t); setPlaying(p); };
-    const id = ++generation.current;
-    void savedFile().then(saved => { if (id === generation.current) { load(saved?.bytes ?? demoBytes(), saved?.name ?? 'Ode to Joy.mid', saved?.musicxml, saved?.pdf, saved?.displayTitle); setNotice(saved ? 'Restored your last MIDI file from this device.' : 'Demo ready · Beethoven’s Ode to Joy'); } })
-      .catch(() => { if (id === generation.current) { load(demoBytes(), 'Ode to Joy.mid'); setNotice('Demo ready. Local file storage is unavailable in this browser.'); } })
-      .finally(() => { if (id === generation.current) setBusy(false); });
     const sync = () => setPath(location.pathname); addEventListener('popstate', sync);
     const release = pwa.addBusyGuard(() => player.playing || player.loading);
-    return () => { generation.current++; player.pause(); release(); removeEventListener('popstate', sync); };
+    return () => { player.pause(); release(); removeEventListener('popstate', sync); };
   }, [player]);
   useEffect(() => { if (!pdf) { setPdfUrl(''); return; } const url = URL.createObjectURL(new Blob([pdf], { type: 'application/pdf' })); setPdfUrl(url); return () => URL.revokeObjectURL(url); }, [pdf]);
   useEffect(() => { if (path !== '/') player.pause(); }, [path, player]);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if (e.code !== 'Space' || path !== '/' || (e.target as HTMLElement).closest('button,input,select,textarea,a,[contenteditable]')) return;
-      e.preventDefault(); void toggle();
+      if (busy || e.code !== 'Space' || path !== '/' || (e.target as HTMLElement).closest('button,input,select,textarea,a,[contenteditable]')) return;
+      e.preventDefault(); if (!e.repeat) void toggle();
     };
     addEventListener('keydown', key); return () => removeEventListener('keydown', key);
   });
@@ -72,20 +64,7 @@ export default function App() {
     const next = new Set(muted); if (next.has(i)) next.delete(i); else next.add(i);
     setMuted(next); player.muted = next; if (resume) void start();
   };
-  const open = async (file?: File) => {
-    if (!file || busy) return;
-    generation.current++; setBusy(true); setError(''); setNotice('');
-    try {
-      if (file.size > MAX_FILE_SIZE) throw new Error('Please choose a MIDI file smaller than 5 MB.');
-      const bytes = await file.arrayBuffer(); load(bytes, file.name);
-      try { const existing = (await libraryEntries()).find(e => e.id === libraryId(file.name)); const entry: LibraryEntry = { ...existing, id: libraryId(file.name), bytes, name: file.name, title: file.name.replace(/\.midi?$/i, '').replace(/[-_]/g, ' '), added: Date.now() }; await writeLibrary([entry]); await savedFile(entry); setMusicxml(entry.musicxml); setPdf(entry.pdf); setNotice('Saved on this device and added to your library. Your MIDI file is never uploaded.'); }
-      catch { setNotice('File opened. This browser could not save it for next time.'); }
-    } catch (e) { setError(e instanceof Error ? e.message : 'Could not open this file.'); }
-    finally { setBusy(false); if (input.current) input.current.value = ''; }
-  };
-  const demo = () => { load(demoBytes(), 'Ode to Joy.mid'); setNotice('Demo ready · Beethoven’s Ode to Joy'); };
-  const forget = async () => { try { await savedFile(null); demo(); setNotice('Last-opened file cleared. Manage saved arrangements in Library.'); } catch { setError('Could not remove the saved file. Please try again.'); } };
-  const openLibrary = async (entry: LibraryEntry) => { load(entry.bytes, entry.name, entry.musicxml, entry.pdf, entry.displayTitle); navigate('/'); try { await savedFile(entry); setNotice('Music and score ready. Saved as your last-opened piece on this device.'); } catch { setNotice('Opened. Could not save the last-opened selection.'); } };
+  const openLibrary = async (entry: LibraryEntry) => { const pending = openEntry(entry); navigate('/'); await pending; };
   return <Shell app={fas} appName="Scoreplay" nav={NAV} onNavigate={navigate}>
     <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-6 sm:px-8 sm:py-9">
       {path === '/library' ? <Suspense fallback={<p role="status">Loading library…</p>}><Library onOpen={openLibrary} /></Suspense> : path === '/about' ? <>
@@ -104,7 +83,7 @@ export default function App() {
         <section aria-label="Import music" onDragOver={e => { e.preventDefault(); setDrag(true); }} onDragLeave={() => setDrag(false)} onDrop={e => { e.preventDefault(); setDrag(false); void open(e.dataTransfer.files[0]); }} className={`flex flex-col justify-between gap-4 rounded-2xl border border-dashed p-5 sm:flex-row sm:items-center ${drag ? 'border-accent bg-accent-soft' : 'border-line-strong bg-panel'}`}>
           <div className="flex items-center gap-4"><span aria-hidden="true" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-2xl text-accent">♫</span><div><h2 className="text-xl">Bring your own music</h2><p className="mt-1 text-sm text-muted">Drop a MIDI file here · .mid or .midi · up to 5 MB</p></div></div>
           <div className="flex flex-wrap gap-2"><Button disabled={busy} onClick={demo}>Try demo</Button><Button onClick={() => navigate('/library')}>Browse free library</Button><Button primary disabled={busy} onClick={() => input.current?.click()}>{busy ? 'Opening…' : '↑ Open MIDI'}</Button></div>
-          <input ref={input} type="file" accept=".mid,.midi,audio/midi,audio/x-midi" aria-label="Choose MIDI file" className="sr-only" onChange={e => void open(e.target.files?.[0])} />
+          <input ref={input} type="file" accept=".mid,.midi,audio/midi,audio/x-midi" aria-label="Choose MIDI file" className="sr-only" onChange={e => { const file = e.currentTarget.files?.[0]; e.currentTarget.value = ''; void open(file); }} />
         </section>
         {error && <div role="alert" className="rounded-xl border border-danger bg-danger-soft p-4 text-sm text-danger">{error}</div>}
         <p role="status" className="min-h-5 text-xs text-muted">{notice}</p>
@@ -114,7 +93,7 @@ export default function App() {
             <div className="flex flex-wrap gap-2 border-b border-line bg-panel px-5 py-3" role="group" aria-label="Music view"><Button primary={mode === 'sheet'} aria-pressed={mode === 'sheet'} onClick={() => setMode('sheet')}>Sheet music</Button><Button primary={mode === 'roll'} aria-pressed={mode === 'roll'} onClick={() => setMode('roll')}>Piano roll</Button>{pdfUrl && <Button primary={mode === 'pdf'} aria-pressed={mode === 'pdf'} onClick={() => setMode('pdf')}>PDF score</Button>}</div>
             {mode === 'sheet' ? <>
               {musicxml && <div className="flex flex-wrap gap-2 px-5 pt-4"><Button aria-pressed={original} onClick={() => setOriginal(true)}>Original score</Button><Button aria-pressed={!original} onClick={() => setOriginal(false)}>MIDI transcription</Button></div>}
-              <Suspense fallback={<p role="status" className="p-5 text-sm text-muted">Loading sheet music…</p>}>{musicxml && original ? <OriginalScore xml={musicxml} song={song} time={time} onSeek={seek} /> : <SheetMusic key={song.title + song.notes.length + song.duration} song={song} time={time} playing={playing} onSeek={seek} />}</Suspense>
+              <Suspense fallback={<p role="status" className="p-5 text-sm text-muted">Loading sheet music…</p>}>{musicxml && original ? <OriginalScore key={revision} xml={musicxml} song={song} time={time} onSeek={seek} /> : <SheetMusic key={revision} song={song} time={time} playing={playing} onSeek={seek} />}</Suspense>
             </> : mode === 'pdf' && pdfUrl ? <div className="space-y-3 p-5"><a className="text-sm text-accent underline" href={pdfUrl} target="_blank" rel="noopener noreferrer">Open PDF score in a new tab ↗</a><iframe src={pdfUrl} title="PDF score" className="h-[650px] w-full rounded-lg border border-line bg-score-paper" /></div> : <PianoRoll song={song} time={time} muted={muted} onSeek={seek} />}
             <div className="space-y-5 border-t border-line p-5 sm:p-6">
               <div><label htmlFor="position" className="sr-only">Playback position</label><input id="position" type="range" min="0" max={song.duration} step="0.01" value={time} aria-valuetext={`${formatTime(time)} of ${formatTime(song.duration)}`} onChange={e => seek(Number(e.target.value))} className="w-full accent-accent" /><div className="mt-1 flex justify-between font-mono text-xs text-muted"><span>{formatTime(time)}</span><span>{formatTime(song.duration)}</span></div></div>
