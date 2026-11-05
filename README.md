@@ -1,51 +1,14 @@
-# template-standalone
+# Scoreplay
 
-The standalone-app template used by [`fas init`](https://github.com/freeappstore-online/platform/tree/main/packages/cli) to scaffold new free apps for [FreeAppStore](https://freeappstore.online).
+A simple, private MIDI player: open a `.mid` / `.midi`, watch the piano roll, and practise with speed, volume, track-mute and whole-piece loop controls.
 
-You almost certainly want to use the CLI, not clone this directly:
+- Live: https://scoreplay.freeappstore.online
+- Install: `pnpm install`
+- Develop: `pnpm dev`
+- Validate: `pnpm typecheck && pnpm test && pnpm build`
+- Browser checks: `pnpm exec playwright test` (installs Chromium with `pnpm exec playwright install chromium`)
+- Deploy: push directly to `main`.
 
-```bash
-npm i -g @freeappstore/cli
-fas init my-app
-```
+MIDI files are parsed locally using @tonejs/midi. The last imported file is stored in IndexedDB and can be removed from the player. Playback uses Web Audio with a synthesized tone and basic percussion; there is no soundfont download. Tempo changes, polyphony, note velocity and sustain pedal are supported. Pitch bends, other controllers, sheet-music engraving and note editing are outside this version's scope. Limits: 5 MB, 100,000 notes, two hours, 256 simultaneous voices. MIDI format 0 and 1 using PPQ timing are supported.
 
-The CLI and builder generate app projects from the platform's shared starter foundation. This repository is a release mirror for review and template-specific assets; its `scoreplay`, `scoreplay_JS`, and `scoreplay_TEXT` tokens are source placeholders and are not meant to be replaced manually. Use `fas init` to create a runnable app with a validated ID and safely escaped display name.
-
-## What's in here
-
-- `web/` — Vite + React + TypeScript + Tailwind 4 app, ESM-only.
-- `web/src/App.tsx` — the app wrapped in the SDK's `Shell` (`@freeappstore/sdk/ui`) with two starter screens, Home (`/`) and About (`/about`), declared in its `nav` prop. A new app renders the standard topbar, its navigation (`<nav aria-label="Main">`), an error boundary, toasts and an offline banner from the first render. No sign-in required.
-- `web/src/index.css` — brand fonts (Manrope + Fraunces) and the design tokens (`--paper`, `--ink`, `--accent`, …); dark mode via `:root[data-theme='dark']`, which the SDK sets from the system or the Shell's theme toggle.
-- `web/src/main.tsx` — React entry point.
-- `web/index.html` — links Manrope + Fraunces, sets PWA meta tags, references the manifest.
-- `web/public/manifest.json` — PWA manifest with `name`, `display`, `start_url`.
-- `package.json` — pnpm workspace, `dev` / `build` / `typecheck` / `test` scripts.
-- `.github/workflows/compliance.yml` — runs the same checks as `fas check` on every PR. Source of truth lives in the [`@freeappstore/compliance`](https://www.npmjs.com/package/@freeappstore/compliance) package.
-
-## Creating an app
-
-```bash
-npm i -g @freeappstore/cli
-fas init my-app
-cd my-app
-pnpm install && pnpm dev
-```
-
-Then run `fas publish` to provision repo + hosting + DNS, or open the [submission form](https://github.com/freeappstore-online/submissions/issues/new) for maintainer review.
-
-## License
-
-MIT.
-
-## Mobile viewport defaults
-
-The app starts at device width with page zoom restricted by the viewport meta tag
-and `touch-action: pan-x pan-y` in `web/src/index.css`. The root clips horizontal
-page overflow; vertical scrolling and explicit inner scrollers remain available.
-Keep layouts responsive at 320px and put wide tables/carousels in their own scroll
-containers. Maps and game canvases can handle their own gestures.
-
-These defaults also apply when launched from the home screen. Browser or accessibility
-settings can override zoom restrictions. For an app that needs browser pinch zoom,
-remove `maximum-scale` and `user-scalable` from `web/index.html` and change the root
-`touch-action` rules to `manipulation`. Keep the app's text-size controls available.
+The bundled demo is an arrangement of Beethoven's public-domain Ode to Joy. Free, MIT licensed, no ads or tracking.

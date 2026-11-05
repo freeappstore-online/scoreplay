@@ -12,6 +12,6 @@ it('uses this scaffold id for synthetic authenticated SDK requests', async () =>
   });
   const { fas } = await import('./App');
   await fas.kv.get('identity-probe');
-  expect(requests).toContain('https://api.freeappstore.online/v1/apps/APPID/roles/ensure-member');
-  expect(requests).toContain('https://api.freeappstore.online/v1/apps/APPID/kv/identity-probe');
+  expect(requests).toContain('https://api.freeappstore.online/v1/apps/scoreplay/roles/ensure-member');
+  expect(requests).toContain('https://api.freeappstore.online/v1/apps/scoreplay/kv/identity-probe');
 });

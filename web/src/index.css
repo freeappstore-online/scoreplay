@@ -54,17 +54,17 @@
 
 @layer base {
 :root {
-  --paper: #ffffff;
-  --ink: #1a1a1a;
+  --paper: #fffefb;
+  --ink: #243444;
   --muted: #6b7280;
   --line: #e5e7eb;
   --line-strong: #d1d5db;
-  --panel: #f9fafb;
+  --panel: #f5f6f3;
   --success: #16a34a;
   --warning: #d97706;
   --danger: #dc2626;
   --accent: #2563eb;
-  --paper-deep: #f3f4f6;
+  --paper-deep: #eef1ed;
   --ink-strong: var(--ink);
   --panel-glass: rgba(255, 255, 255, 0.72);
   --popover: var(--paper);
@@ -121,6 +121,8 @@
 :root[data-text="lg"] { font-size: 112.5%; }
 :root[data-text="sm"] { font-size: 87.5%; }
 
+button, input, select, a { touch-action: manipulation; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 body {
   margin: 0;
   background: var(--paper);

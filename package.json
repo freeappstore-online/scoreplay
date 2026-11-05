@@ -17,5 +17,9 @@
     "preview": "pnpm --filter @scoreplay/web preview",
     "typecheck": "pnpm --filter @scoreplay/web exec tsc -b",
     "test": "pnpm --filter @scoreplay/web test"
-  }
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  },
+  "type": "module"
 }

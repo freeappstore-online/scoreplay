@@ -1,6 +1,6 @@
 {
-  "name": "scoreplay",
-  "short_name": "scoreplay",
+  "name": "Scoreplay",
+  "short_name": "Scoreplay",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

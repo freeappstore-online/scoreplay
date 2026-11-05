@@ -1,5 +1,5 @@
 {
-  "appId": "APPID",
+  "appId": "scoreplay",
   "applicationRoot": "web",
   "outputPath": "web/dist",
   "buildCommand": "pnpm build"

@@ -1,0 +1,69 @@
+import { Midi } from '@tonejs/midi';
+
+export type Note = { midi: number; time: number; duration: number; velocity: number; track: number };
+export type Song = { title: string; duration: number; bpm: number; tracks: { name: string; instrument: string; percussion: boolean }[]; notes: Note[] };
+export const MAX_FILE_SIZE = 5 * 1024 * 1024;
+
+export function parseMidi(bytes: ArrayBuffer, filename: string): Song {
+  if (bytes.byteLength > MAX_FILE_SIZE) throw new Error('Please choose a MIDI file smaller than 5 MB.');
+  const h = new DataView(bytes);
+  if (bytes.byteLength < 14 || h.getUint32(0) !== 0x4d546864) throw new Error('This is not a MIDI file. Choose a .mid or .midi file.');
+  if (h.getUint16(8) > 1) throw new Error('This MIDI format is not supported. Export a standard format 0 or 1 MIDI file.');
+  if (h.getUint16(12) & 0x8000) throw new Error('SMPTE-timed MIDI is not supported. Export MIDI using musical beat timing.');
+  if (!h.getUint16(12)) throw new Error('The MIDI file has invalid timing.');
+  let midi: Midi;
+  try { midi = new Midi(bytes); } catch { throw new Error('This MIDI file could not be read. Try exporting it again.'); }
+  const tracks = midi.tracks.filter(t => t.notes.length);
+  if (tracks.reduce((n, t) => n + t.notes.length, 0) > 100000) throw new Error('This file is too complex. Please use a MIDI file with fewer than 100,000 notes.');
+  const notes: Note[] = [];
+  tracks.forEach((track, i) => {
+    const pedal = track.controlChanges[64] ?? [];
+    const nextRelease: (number | undefined)[] = new Array(pedal.length);
+    let release: number | undefined;
+    for (let j = pedal.length - 1; j >= 0; j--) { if (pedal[j].value < .5) release = pedal[j].time; nextRelease[j] = release; }
+    track.notes.forEach(n => {
+      let end = n.time + n.duration;
+      // Honour sustain pedal releases, while avoiding an indefinitely held final pedal.
+      let low = 0, high = pedal.length;
+      while (low < high) { const mid = (low + high) >>> 1; if (pedal[mid].time <= end) low = mid + 1; else high = mid; }
+      if (low > 0 && pedal[low - 1].value >= .5 && !track.instrument.percussion) end = nextRelease[low] ?? end;
+      if (Number.isFinite(n.time) && Number.isFinite(end) && n.time >= 0 && end > n.time) {
+        notes.push({ midi: n.midi, time: n.time, duration: end - n.time, velocity: n.velocity, track: i });
+      }
+    });
+  });
+  if (!notes.length) throw new Error('This MIDI file contains no playable notes.');
+  const duration = notes.reduce((end, n) => Math.max(end, n.time + n.duration), 0);
+  if (duration > 7200) throw new Error('Please use a MIDI file shorter than two hours.');
+  return { title: midi.name.trim() || filename.replace(/\.midi?$/i, ''), duration, bpm: midi.header.tempos[0]?.bpm ?? 120,
+    tracks: tracks.map((t, i) => ({ name: t.name || `Track ${i + 1}`, instrument: t.instrument.name, percussion: t.instrument.percussion })),
+    notes: notes.sort((a, b) => a.time - b.time) };
+}
+
+export function demoBytes(): ArrayBuffer {
+  const midi = new Midi();
+  midi.name = 'Ode to Joy';
+  midi.header.setTempo(108);
+  const melody = midi.addTrack(); melody.name = 'Melody';
+  const bass = midi.addTrack(); bass.name = 'Accompaniment';
+  const pitches = [64,64,65,67,67,65,64,62,60,60,62,64,64,62,62,64,64,65,67,67,65,64,62,60,60,62,64,62,60,60];
+  let beat = 0;
+  pitches.forEach((pitch, i) => {
+    const length = [14,29].includes(i) ? 2 : [12,27].includes(i) ? 1.5 : [13,28].includes(i) ? .5 : 1;
+    melody.addNote({ midi: pitch, time: beat * 60 / 108, duration: length * 60 / 108 * .9, velocity: .75 });
+    beat += length;
+  });
+  for (let b = 0; b < beat; b += 2) {
+    const root = b % 8 < 4 ? 48 : 43;
+    [root, root + 7].forEach(pitch => bass.addNote({ midi: pitch, time: b * 60 / 108, duration: 1.8 * 60 / 108, velocity: .45 }));
+  }
+  return Uint8Array.from(midi.toArray()).buffer;
+}
+
+export function formatTime(seconds: number) {
+  return `${Math.floor(seconds / 60)}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
+}
+
+export function notesAt(notes: Note[], time: number, muted: Set<number>) {
+  return notes.filter(n => !muted.has(n.track) && n.time <= time && n.time + n.duration > time);
+}

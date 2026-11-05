@@ -11,3 +11,5 @@ dist
 /web/public/pwa-192x192.png
 /web/public/pwa-512x512.png
 /web/public/maskable-icon-512x512.png
+/test-results/
+/playwright-report/
