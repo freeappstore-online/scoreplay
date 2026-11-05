@@ -67,8 +67,8 @@ test('import, actual audio signal, controls, keyboard, persistence and profile',
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.screenshot({ path: 'test-results/desktop.png', fullPage: true });
   const icon = await page.request.get('/favicon.ico'); expect(icon.ok()).toBe(true);
-  await page.getByRole('button', { name: 'Forget saved MIDI' }).click();
-  await expect(page.getByRole('status').filter({ hasText: 'Saved MIDI removed' })).toBeVisible();
+  await page.getByRole('button', { name: 'Clear last opened file' }).click();
+  await expect(page.getByRole('status').filter({ hasText: 'Last-opened file cleared' })).toBeVisible();
   await page.reload(); await expect(page.getByRole('heading', { name: 'Ode to Joy' })).toBeVisible();
   expect(errors).toEqual([]);
 });
@@ -124,5 +124,69 @@ test('engraved score, track and rhythm choices, paging, cursor and mode switchin
   await page.waitForTimeout(150);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
   await page.screenshot({ path: 'test-results/sheet-mobile.png', fullPage: true });
+  expect(errors).toEqual([]);
+});
+
+test('library pairs original notation and PDF, searches, restores and removes', async ({ page }) => {
+  const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
+  const xml = '<score-partwise version="4.0"><part-list><score-part id="P1"><part-name>Piano</part-name></score-part></part-list><part id="P1">' + Array.from({ length: 8 }, (_, i) => `<measure number="${i+1}">${i === 0 ? '<attributes><divisions>1</divisions><key><fifths>-2</fifths></key><time><beats>4</beats><beat-type>4</beat-type></time><clef><sign>G</sign><line>2</line></clef></attributes>' : ''}<note><pitch><step>B</step><alter>-1</alter><octave>4</octave></pitch><duration>4</duration><type>whole</type></note></measure>`).join('') + '</part></score-partwise>';
+  await page.goto('/library');
+  await page.getByLabel('Import library files').setInputFiles([
+    { name: 'Belle-melody.mid', mimeType: 'audio/midi', buffer: fixture() },
+    { name: 'Belle-melody.musicxml', mimeType: 'application/xml', buffer: Buffer.from(xml) },
+    { name: 'Belle-melody.pdf', mimeType: 'application/pdf', buffer: Buffer.from('%PDF-1.4\n%%EOF') },
+  ]);
+  await expect(page.getByRole('status').filter({ hasText: '1 arrangement saved' })).toBeVisible();
+  await page.getByRole('textbox', { name: 'Find a song' }).pressSequentially('Belle');
+  await expect(page.getByRole('heading', { name: 'Belle', exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Let It Go', exact: true })).toHaveCount(0);
+  await page.getByRole('button', { name: 'Open Belle melody', exact: true }).click();
+  const original = page.getByRole('img', { name: /Original score, measures/ });
+  await expect(original.locator('svg')).toBeVisible({ timeout: 20000 });
+  await expect(page.getByText('Original MusicXML notation', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Next score page →', exact: true }).click();
+  await expect(page.getByText('Score page 2 of 2', { exact: true })).toBeVisible();
+  await expect(original.locator('svg')).toBeVisible();
+  await page.getByRole('button', { name: 'MIDI transcription', exact: true }).click();
+  await expect(page.getByRole('img', { name: /Staff notation/ }).locator('svg')).toBeVisible();
+  await page.getByRole('button', { name: 'PDF score', exact: true }).click();
+  await expect(page.getByRole('link', { name: 'Open PDF score in a new tab ↗' })).toHaveAttribute('href', /^blob:/);
+  await page.reload();
+  await expect(page.getByText('Original MusicXML notation', { exact: true })).toBeVisible();
+  await expect(original.locator('svg')).toBeVisible();
+  await page.getByRole('link', { name: 'Library', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Open Belle melody', exact: true })).toBeVisible();
+  await page.screenshot({ path: 'test-results/library.png', fullPage: true });
+  await page.getByRole('button', { name: 'Remove Belle melody', exact: true }).click();
+  await page.getByRole('button', { name: 'Remove arrangement', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Open Belle melody', exact: true })).toHaveCount(0);
+  await page.reload();
+  await expect(page.getByRole('button', { name: 'Open Belle melody', exact: true })).toHaveCount(0);
+  expect(errors).toEqual([]);
+});
+
+test('supplied Belle arrangements render their original scores and remain playable', async ({ page }) => {
+  test.skip(!process.env.SCOREPLAY_BELLE_DIR, 'Optional user-provided local music fixtures');
+  test.setTimeout(90000);
+  const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
+  const names = ['Belle-band.mid', 'Belle-melody-piano-bass.mid', 'Belle-melody-piano-bass.musicxml', 'Belle-melody-piano-bass.pdf', 'Belle-melody.mid', 'Belle-melody.musicxml', 'Belle-melody.pdf', 'Belle-orchestral.mid'];
+  await page.goto('/library');
+  await page.getByLabel('Import library files').setInputFiles(names.map(name => `${process.env.SCOREPLAY_BELLE_DIR}/${name}`));
+  await expect(page.getByRole('status').filter({ hasText: '4 arrangements saved' })).toBeVisible({ timeout: 20000 });
+  await page.getByRole('button', { name: 'Open Belle melody piano bass', exact: true }).click();
+  const original = page.getByRole('img', { name: /Original score, measures/ });
+  await expect(original.locator('svg')).toBeVisible({ timeout: 30000 });
+  await expect(page.getByText('Score page 1 of 42', { exact: true })).toBeVisible();
+  await page.screenshot({ path: 'test-results/belle-original.png', fullPage: true });
+  await page.getByRole('button', { name: '▶ Play', exact: true }).click();
+  await expect.poll(async () => Number(await page.getByRole('slider', { name: 'Playback position', exact: true }).inputValue())).toBeGreaterThan(.2);
+  await page.getByRole('button', { name: 'Ⅱ Pause', exact: true }).click();
+  await page.getByRole('button', { name: 'Next score page →', exact: true }).click();
+  await expect(page.getByText('Score page 2 of 42', { exact: true })).toBeVisible();
+  await expect(original.locator('svg')).toBeVisible({ timeout: 30000 });
+  await page.getByRole('button', { name: 'PDF score', exact: true }).click();
+  await expect(page.getByRole('link', { name: 'Open PDF score in a new tab ↗' })).toBeVisible();
+  await page.reload();
+  await expect(original.locator('svg')).toBeVisible({ timeout: 30000 });
   expect(errors).toEqual([]);
 });
