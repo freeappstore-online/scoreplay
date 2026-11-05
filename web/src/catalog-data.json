@@ -5317,5 +5317,1006 @@
     "verified": "2026-11-06",
     "duration": 72,
     "bpm": 80
+  },
+  {
+    "id": "mutopia-2048-1-1",
+    "title": "L’estro armonico, Op. 3 No. 1 — I. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 1 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "1/score.mid",
+      "pdf": "1/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-1-1/score.mid",
+      "pdf": "/music/mutopia-2048-1/score.pdf"
+    },
+    "sha256": {
+      "midi": "5df1f4f895249384a6e9594893ad0e8315361ac7a495a4dd8f4570a1882f2a84",
+      "pdf": "fdbd93ab35bacdd35ef22e6bccde5c47d588c0b0e53abd6c99c36acc3e2b820e"
+    },
+    "verified": "2026-11-06",
+    "duration": 204,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-2048-1-2",
+    "title": "L’estro armonico, Op. 3 No. 1 — II. Largo e Spiccato",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 2 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "1/score-1.mid",
+      "pdf": "1/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-1-2/score.mid",
+      "pdf": "/music/mutopia-2048-1/score.pdf"
+    },
+    "sha256": {
+      "midi": "6218b8bb9ce5b3e76d1fcd987a8ec8bbae80a19a4a3d9ad78353000b50330661",
+      "pdf": "fdbd93ab35bacdd35ef22e6bccde5c47d588c0b0e53abd6c99c36acc3e2b820e"
+    },
+    "verified": "2026-11-06",
+    "duration": 129,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2048-1-3",
+    "title": "L’estro armonico, Op. 3 No. 1 — III. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 3 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "1/score-2.mid",
+      "pdf": "1/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-1-3/score.mid",
+      "pdf": "/music/mutopia-2048-1/score.pdf"
+    },
+    "sha256": {
+      "midi": "59b6292f32099988a3989145c8c97ee8629a41c1a10945076a6f68d88f00859f",
+      "pdf": "fdbd93ab35bacdd35ef22e6bccde5c47d588c0b0e53abd6c99c36acc3e2b820e"
+    },
+    "verified": "2026-11-06",
+    "duration": 187,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-2048-2-1",
+    "title": "L’estro armonico, Op. 3 No. 2 — I. Adagio e Spiccato",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 1 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "2/score.mid",
+      "pdf": "2/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-2-1/score.mid",
+      "pdf": "/music/mutopia-2048-2/score.pdf"
+    },
+    "sha256": {
+      "midi": "9f2b673c79622defcbf128cbedbadb17275915a16ba00d952644398b9cfaa258",
+      "pdf": "733fc23dafd6266f6dbcbad6d7c32161f409e1f5f0a0017fb1d1d4315a6bea33"
+    },
+    "verified": "2026-11-06",
+    "duration": 52,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2048-2-2",
+    "title": "L’estro armonico, Op. 3 No. 2 — II. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 2 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "2/score-1.mid",
+      "pdf": "2/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-2-2/score.mid",
+      "pdf": "/music/mutopia-2048-2/score.pdf"
+    },
+    "sha256": {
+      "midi": "53e8a844ad2a0377bd8ebf812f7347bb4867b42cba811c782109174191ed0524",
+      "pdf": "733fc23dafd6266f6dbcbad6d7c32161f409e1f5f0a0017fb1d1d4315a6bea33"
+    },
+    "verified": "2026-11-06",
+    "duration": 168,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-2048-2-3",
+    "title": "L’estro armonico, Op. 3 No. 2 — III. Larghetto",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 3 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "2/score-2.mid",
+      "pdf": "2/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-2-3/score.mid",
+      "pdf": "/music/mutopia-2048-2/score.pdf"
+    },
+    "sha256": {
+      "midi": "2a50e01582199ec14e4aa2b8aeb2901c9142954c8864b1772b6e65a85500a91e",
+      "pdf": "733fc23dafd6266f6dbcbad6d7c32161f409e1f5f0a0017fb1d1d4315a6bea33"
+    },
+    "verified": "2026-11-06",
+    "duration": 121,
+    "bpm": 70
+  },
+  {
+    "id": "mutopia-2048-2-4",
+    "title": "L’estro armonico, Op. 3 No. 2 — IV. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 4 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "2/score-3.mid",
+      "pdf": "2/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-2-4/score.mid",
+      "pdf": "/music/mutopia-2048-2/score.pdf"
+    },
+    "sha256": {
+      "midi": "cb8dbada74d02283a70ec10bacbef81a8ab0ec011383b9e18869f72f68959f46",
+      "pdf": "733fc23dafd6266f6dbcbad6d7c32161f409e1f5f0a0017fb1d1d4315a6bea33"
+    },
+    "verified": "2026-11-06",
+    "duration": 183,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-2048-3-1",
+    "title": "L’estro armonico, Op. 3 No. 3 — I. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 1 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "3/score.mid",
+      "pdf": "3/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-3-1/score.mid",
+      "pdf": "/music/mutopia-2048-3/score.pdf"
+    },
+    "sha256": {
+      "midi": "d140a001d93ae44b6c9fc6b4cd12b186f66a673b183681f0c69468003520d2d2",
+      "pdf": "9d20b986504f0839e3d57528302426f428773a08bc6ee7eb0f8722a4aebfa84c"
+    },
+    "verified": "2026-11-06",
+    "duration": 154,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-2048-3-2",
+    "title": "L’estro armonico, Op. 3 No. 3 — II. Largo",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 2 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "3/score-1.mid",
+      "pdf": "3/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-3-2/score.mid",
+      "pdf": "/music/mutopia-2048-3/score.pdf"
+    },
+    "sha256": {
+      "midi": "6f9c92b3b22602c10f49e66cee78a0480f7c91bb65c4838f076e451c19829727",
+      "pdf": "9d20b986504f0839e3d57528302426f428773a08bc6ee7eb0f8722a4aebfa84c"
+    },
+    "verified": "2026-11-06",
+    "duration": 96,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2048-3-3",
+    "title": "L’estro armonico, Op. 3 No. 3 — III. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 3 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "3/score-2.mid",
+      "pdf": "3/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-3-3/score.mid",
+      "pdf": "/music/mutopia-2048-3/score.pdf"
+    },
+    "sha256": {
+      "midi": "f238cd4d9d193634146c0baba4c77bc9c210f8e6bb310b0b66a7d0ad6c821adc",
+      "pdf": "9d20b986504f0839e3d57528302426f428773a08bc6ee7eb0f8722a4aebfa84c"
+    },
+    "verified": "2026-11-06",
+    "duration": 137,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-2048-4-1",
+    "title": "L’estro armonico, Op. 3 No. 4 — I. Andante",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 1 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "4/score.mid",
+      "pdf": "4/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-4-1/score.mid",
+      "pdf": "/music/mutopia-2048-4/score.pdf"
+    },
+    "sha256": {
+      "midi": "13375522518fabca1d7632573b87985c22ff8e8a77d3ba64c589256b98f56fd9",
+      "pdf": "9a042a3e8e5e3c27bbf6141e20f29ab386666d9890ef85471e1c0e2ab4abd75f"
+    },
+    "verified": "2026-11-06",
+    "duration": 136,
+    "bpm": 70
+  },
+  {
+    "id": "mutopia-2048-4-2",
+    "title": "L’estro armonico, Op. 3 No. 4 — II. Allegro assai",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 2 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "4/score-1.mid",
+      "pdf": "4/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-4-2/score.mid",
+      "pdf": "/music/mutopia-2048-4/score.pdf"
+    },
+    "sha256": {
+      "midi": "04c55525c840d01a1a99348b0a12c9c5a5f3105736e510447fe1d3b6c900d3b3",
+      "pdf": "9a042a3e8e5e3c27bbf6141e20f29ab386666d9890ef85471e1c0e2ab4abd75f"
+    },
+    "verified": "2026-11-06",
+    "duration": 141,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-2048-4-3",
+    "title": "L’estro armonico, Op. 3 No. 4 — III. Adagio",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 3 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "4/score-2.mid",
+      "pdf": "4/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-4-3/score.mid",
+      "pdf": "/music/mutopia-2048-4/score.pdf"
+    },
+    "sha256": {
+      "midi": "76c9c8c1dfb4e4db4619cd90b2acd10de1378e336216d137036c211c0ebfa353",
+      "pdf": "9a042a3e8e5e3c27bbf6141e20f29ab386666d9890ef85471e1c0e2ab4abd75f"
+    },
+    "verified": "2026-11-06",
+    "duration": 24,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-2048-4-4",
+    "title": "L’estro armonico, Op. 3 No. 4 — IV. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 4 of 4. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "4/score-3.mid",
+      "pdf": "4/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-4-4/score.mid",
+      "pdf": "/music/mutopia-2048-4/score.pdf"
+    },
+    "sha256": {
+      "midi": "d40dfb7822ae3ced702e308fe7bdd6e38fbbfa145b1ca41daba7118c1d06d27c",
+      "pdf": "9a042a3e8e5e3c27bbf6141e20f29ab386666d9890ef85471e1c0e2ab4abd75f"
+    },
+    "verified": "2026-11-06",
+    "duration": 98,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-2048-5-1",
+    "title": "L’estro armonico, Op. 3 No. 5 — I. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 1 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "5/score.mid",
+      "pdf": "5/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-5-1/score.mid",
+      "pdf": "/music/mutopia-2048-5/score.pdf"
+    },
+    "sha256": {
+      "midi": "37a8ee51b0d5c06ad20bf0c44cc205b6d5dad3a09bbad44d760e5bbeddf93342",
+      "pdf": "1269bb3aa45ee68ccdc8a09bda5263ae6e80d9265259d32d6bcb6bbfb516c5f2"
+    },
+    "verified": "2026-11-06",
+    "duration": 168,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-2048-5-2",
+    "title": "L’estro armonico, Op. 3 No. 5 — II. Largo",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 2 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "5/score-1.mid",
+      "pdf": "5/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-5-2/score.mid",
+      "pdf": "/music/mutopia-2048-5/score.pdf"
+    },
+    "sha256": {
+      "midi": "1cf83d7046823345f0b657cb1693d61531b9d4a541a010db8de588391dbafecb",
+      "pdf": "1269bb3aa45ee68ccdc8a09bda5263ae6e80d9265259d32d6bcb6bbfb516c5f2"
+    },
+    "verified": "2026-11-06",
+    "duration": 58,
+    "bpm": 50
+  },
+  {
+    "id": "mutopia-2048-5-3",
+    "title": "L’estro armonico, Op. 3 No. 5 — III. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 3 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "5/score-2.mid",
+      "pdf": "5/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-5-3/score.mid",
+      "pdf": "/music/mutopia-2048-5/score.pdf"
+    },
+    "sha256": {
+      "midi": "1e4059ec172f747851ac754f084ba3b758e50a21340b39002ba04fd98e3cb97b",
+      "pdf": "1269bb3aa45ee68ccdc8a09bda5263ae6e80d9265259d32d6bcb6bbfb516c5f2"
+    },
+    "verified": "2026-11-06",
+    "duration": 177,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-2048-6-1",
+    "title": "Violin Concerto in A minor, Op. 3 No. 6 — I. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 1 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "6/score.mid",
+      "pdf": "6/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-6-1/score.mid",
+      "pdf": "/music/mutopia-2048-6/score.pdf"
+    },
+    "sha256": {
+      "midi": "3aad87382b9b6eac43c569432302b43fef7b0a5c07718d92a02d8c7abb180345",
+      "pdf": "0e8d6bf1bf3fce15c61d65ac372b2c4d501fb4cc1e4524368b2512540179c9f7"
+    },
+    "verified": "2026-11-06",
+    "duration": 160,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-2048-6-2",
+    "title": "Violin Concerto in A minor, Op. 3 No. 6 — II. Largo",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 2 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "6/score-1.mid",
+      "pdf": "6/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-6-2/score.mid",
+      "pdf": "/music/mutopia-2048-6/score.pdf"
+    },
+    "sha256": {
+      "midi": "99463ed54d4fdf5a7ff0d1c760cba76f5189c1bf36332cc669469360e66d84f9",
+      "pdf": "0e8d6bf1bf3fce15c61d65ac372b2c4d501fb4cc1e4524368b2512540179c9f7"
+    },
+    "verified": "2026-11-06",
+    "duration": 67,
+    "bpm": 50
+  },
+  {
+    "id": "mutopia-2048-6-3",
+    "title": "Violin Concerto in A minor, Op. 3 No. 6 — III. Presto",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 3 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2048",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Estienne Roger & Michel Charles Le Cene, c. 1725–1743; typeset by Felix Janda.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/O3/vivaldi-o3/vivaldi-o3-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "6/score-2.mid",
+      "pdf": "6/score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-2048-6-3/score.mid",
+      "pdf": "/music/mutopia-2048-6/score.pdf"
+    },
+    "sha256": {
+      "midi": "4dfeec8b1f703f2b198af9ef37d9b949be61ce284ed8fa6f07d33b741175cc23",
+      "pdf": "0e8d6bf1bf3fce15c61d65ac372b2c4d501fb4cc1e4524368b2512540179c9f7"
+    },
+    "verified": "2026-11-06",
+    "duration": 124,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-310-1",
+    "title": "Concerto for Viola d’amore and Lute, RV 540 — I. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Viola d’amore",
+      "Lute",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 1 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=310",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Ricordi; typeset by Erik Sandberg.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/rv540/rv540-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/rv540/rv540-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "score.mid",
+      "pdf": "score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-310-1/score.mid",
+      "pdf": "/music/mutopia-310/score.pdf"
+    },
+    "sha256": {
+      "midi": "35267fbf1a0616ffefc6fa1e6f5f41156f2dc2734d375ac9f28f3e540e1b4440",
+      "pdf": "0347fa5081ad26d658046daaf1acc59002ecbb2a7f47f4f0d3453d33ed3971be"
+    },
+    "verified": "2026-11-06",
+    "duration": 269,
+    "bpm": 81
+  },
+  {
+    "id": "mutopia-310-2",
+    "title": "Concerto for Viola d’amore and Lute, RV 540 — II. Largo",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Viola d’amore",
+      "Lute",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "gentle",
+      "slow movement"
+    ],
+    "description": "Movement 2 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=310",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Ricordi; typeset by Erik Sandberg.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/rv540/rv540-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/rv540/rv540-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "score-1.mid",
+      "pdf": "score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-310-2/score.mid",
+      "pdf": "/music/mutopia-310/score.pdf"
+    },
+    "sha256": {
+      "midi": "68114033b16eb90d52d51d174b8364357377922b72cc56898fd7705170ddac09",
+      "pdf": "0347fa5081ad26d658046daaf1acc59002ecbb2a7f47f4f0d3453d33ed3971be"
+    },
+    "verified": "2026-11-06",
+    "duration": 98,
+    "bpm": 32
+  },
+  {
+    "id": "mutopia-310-3",
+    "title": "Concerto for Viola d’amore and Lute, RV 540 — III. Allegro",
+    "composer": "A. Vivaldi",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Viola d’amore",
+      "Lute",
+      "Strings"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "concerto",
+      "strings",
+      "lively"
+    ],
+    "description": "Movement 3 of 3. MIDI plays this movement; the original PDF contains the complete concerto. MIDI sheet music follows the selected movement. Difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=310",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Ricordi; typeset by Erik Sandberg.",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/VivaldiA/rv540/rv540-mids.zip",
+      "pdf": "https://www.mutopiaproject.org/ftp/VivaldiA/rv540/rv540-a4-pdfs.zip"
+    },
+    "archiveMembers": {
+      "midi": "score-2.mid",
+      "pdf": "score-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-310-3/score.mid",
+      "pdf": "/music/mutopia-310/score.pdf"
+    },
+    "sha256": {
+      "midi": "9e9f687c88865a9130b9e9e79bcc29fb340101038e7d39862e68a6900006df23",
+      "pdf": "0347fa5081ad26d658046daaf1acc59002ecbb2a7f47f4f0d3453d33ed3971be"
+    },
+    "verified": "2026-11-06",
+    "duration": 155,
+    "bpm": 78
   }
 ]

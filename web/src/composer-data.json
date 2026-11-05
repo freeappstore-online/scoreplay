@@ -318,5 +318,18 @@
       "sha256": "f67e6221fd8a6d741b2b6b9c5bf0d4d3d7e51efff3b42c7e5f6b65912176827d",
       "bytes": 32716
     }
+  },
+  "A. Vivaldi": {
+    "fullName": "Antonio Vivaldi",
+    "label": "Vivaldi, Antonio",
+    "portrait": {
+      "url": "/composers/vivaldi.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vivaldi.jpg",
+      "assetUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Vivaldi.jpg/250px-Vivaldi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "artist": "Unidentified painter",
+      "rights": "Public domain",
+      "sha256": "e0c3e90886c6ce10747a479fa34aa0dbadd7c5cab2f45bdfc6fcc5c5416c014c",
+      "bytes": 26499
+    }
   }
 }
