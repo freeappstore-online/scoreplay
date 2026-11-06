@@ -1,6 +1,6 @@
 # Scoreplay
 
-A simple, private MIDI player: open a `.mid` / `.midi`, read the sheet music or watch the piano roll, and practise with speed, volume, track-mute and whole-piece loop controls.
+A simple, private MIDI player: open a `.mid` / `.midi`, read the sheet music or watch the piano roll, and practise with transposition, precise speed, section loops, a metronome, count-in, and track mute/solo controls.
 
 - Live: https://scoreplay.freeappstore.online
 - Install: `pnpm install`
@@ -28,6 +28,14 @@ The nursery scores include MIDI, original MusicXML and PDF. They come from *The 
 Search is accent-insensitive and matches all words across titles, composers and tags. Filters combine category, estimated difficulty, instrument, composer, duration, original MusicXML and multiple tags. Sort by title, composer, length or difficulty. Favourites and filters persist locally. Assets load on demand; Save to my files stores MIDI and scores in IndexedDB for reuse without another download. The app shell must have been cached for offline navigation. User imports are never uploaded or included in the public catalog. No paid sources or Disney downloads are bundled.
 
 Run `node scripts/sync-catalog.mjs` to re-fetch exact source assets and verify their pinned hashes. `pnpm test` validates every bundled MIDI, PDF and MusicXML, and catalog integrity. Changes to the catalog require reviewing source rights and updating pinned metadata deliberately.
+
+## Practice controls
+
+Transpose up to twelve semitones in either direction. Playback, original MusicXML notation, MIDI transcription and piano roll follow the selected pitch; percussion stays unchanged. Options outside the piece’s MIDI note range are disabled. Printed PDFs and downloaded source files retain their original key. Tempo remains independent of pitch, with a 25–200% slider in one-percent steps and a current BPM readout.
+
+Set A and B at the playhead or enter exact seconds to repeat a passage. Clear the section to return to whole-piece playback; the transport Loop button can toggle repetition while retaining the markers. Notes crossing a loop boundary are clipped. Repeated sampled passages reuse their prepared sequence. The metronome follows MIDI tempo and meter changes, grouping compound meters such as 6/8. An optional one-bar count-in holds the playhead before starting and does not repeat on each loop. Pause or Stop cancels it immediately.
+
+Solo isolates one track and restores the previous mute mix when cleared. Changing a mute control exits solo. Pitch, loop section and solo reset when another piece opens; practice settings are session controls, not edits to the source file. Library previews use normal pitch without a metronome or count-in and restore the selected piece’s practice settings afterward, paused.
 
 ## Sampled playback
 

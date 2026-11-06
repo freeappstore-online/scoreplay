@@ -13,7 +13,7 @@ export class LibraryPreview {
   private generation = 0;
   private request?: AbortController;
   private source?: PreviewSource;
-  private saved?: Pick<Player, 'song' | 'speed' | 'loop' | 'muted' | 'volume' | 'sound' | 'onUpdate' | 'onLoading'> & { time: number };
+  private saved?: Pick<Player, 'song' | 'speed' | 'loop' | 'loopRange' | 'transpose' | 'metronome' | 'countIn' | 'muted' | 'volume' | 'sound' | 'onUpdate' | 'onLoading'> & { time: number };
   constructor(private player: Player) {}
   getSnapshot = () => this.state;
   subscribe = (listener: () => void) => { this.listeners.add(listener); return () => { this.listeners.delete(listener); }; };
@@ -31,9 +31,10 @@ export class LibraryPreview {
   private borrow() {
     if (this.saved) return;
     const p = this.player;
-    this.saved = { song: p.song, time: p.time, speed: p.speed, loop: p.loop, muted: new Set(p.muted), volume: p.volume, sound: p.sound, onUpdate: p.onUpdate, onLoading: p.onLoading };
+    this.saved = { song: p.song, time: p.time, speed: p.speed, loop: p.loop, loopRange: p.loopRange, transpose: p.transpose, metronome: p.metronome, countIn: p.countIn, muted: new Set(p.muted), volume: p.volume, sound: p.sound, onUpdate: p.onUpdate, onLoading: p.onLoading };
     p.pause(); p.onUpdate = this.onUpdate; p.onLoading = this.onLoading;
     p.speed = 1; p.loop = false; p.muted = new Set();
+    p.loopRange = null; p.transpose = 0; p.metronome = false; p.countIn = false;
   }
   async toggle(source: PreviewSource) {
     if (this.state.id === source.id) {
@@ -72,6 +73,7 @@ export class LibraryPreview {
       this.player.pause();
       this.player.onUpdate = saved.onUpdate; this.player.onLoading = saved.onLoading;
       this.player.sound = saved.sound; this.player.speed = saved.speed; this.player.loop = saved.loop;
+      this.player.loopRange = saved.loopRange; this.player.transpose = saved.transpose; this.player.metronome = saved.metronome; this.player.countIn = saved.countIn;
       this.player.setVolume(saved.volume);
       if (saved.song) this.player.load(saved.song); else this.player.song = null;
       this.player.seek(saved.time); this.player.muted = saved.muted;

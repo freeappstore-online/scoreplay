@@ -6,7 +6,7 @@ const song = (title: string) => ({ ...parseMidi(demoBytes(), title), title });
 function setup() {
   const original = song('Original');
   const player = {
-    song: original, time: 7, playing: false, loading: false, speed: .5, loop: true, muted: new Set([1]), volume: .3, sound: 'simple',
+    song: original, time: 7, playing: false, loading: false, speed: .5, loop: true, loopRange: { start: 2, end: 8 }, transpose: 3, metronome: true, countIn: true, muted: new Set([1]), volume: .3, sound: 'simple',
     onUpdate: vi.fn(), onLoading: vi.fn(),
     pause() { this.playing = false; this.onLoading(false); this.onUpdate(this.time, false); },
     load(value: typeof original) { this.pause(); this.song = value; this.time = 0; this.muted = new Set(); this.onUpdate(0, false); },
@@ -27,8 +27,10 @@ it('ignores stale downloads, reuses one player, and restores the original docume
   await preview.toggle(source('Second')); first.resolve(song('First')); await pending;
   expect(signal.aborted).toBe(true); expect(player.song.title).toBe('Second'); expect(player.play).toHaveBeenCalledOnce();
   expect(player.speed).toBe(1); expect(player.loop).toBe(false); expect(player.muted.size).toBe(0);
+  expect(player.transpose).toBe(0); expect(player.loopRange).toBeNull(); expect(player.metronome).toBe(false); expect(player.countIn).toBe(false);
   player.time = 3; player.onUpdate(3, true); expect(preview.getSnapshot().time).toBe(3);
   preview.stop();
+  expect(player.transpose).toBe(3); expect(player.loopRange).toEqual({ start: 2, end: 8 }); expect(player.metronome).toBe(true); expect(player.countIn).toBe(true);
   expect(player.song).toBe(original); expect(player.time).toBe(7); expect(player.speed).toBe(.5); expect(player.loop).toBe(true);
   expect(player.muted).toEqual(new Set([1])); expect(player.volume).toBe(.3); expect(player.sound).toBe('simple');
   expect(player.onUpdate).toBe(mainUpdate); expect(player.playing).toBe(false); expect(preview.getSnapshot().phase).toBe('idle');

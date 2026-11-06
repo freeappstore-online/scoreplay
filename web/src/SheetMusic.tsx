@@ -19,7 +19,6 @@ export default function SheetMusic({ song, time, playing, onSeek }: { song: Song
   const selectedTrack = track < song.tracks.length ? track : -1;
   const xml = useMemo(() => scoreXml(song, measures, safePage, selectedTrack, quantum), [song, measures, safePage, selectedTrack, quantum]);
   const pitchedTracks = song.tracks.map((t, i) => ({ ...t, i })).filter(t => !t.percussion);
-  useEffect(() => { setTrack(-1); setPage(0); }, [song]);
   useEffect(() => { if (follow) setPage(Math.floor(currentMeasure / PAGE_MEASURES)); }, [currentMeasure, follow, playing]);
   useEffect(() => {
     const el = container.current;

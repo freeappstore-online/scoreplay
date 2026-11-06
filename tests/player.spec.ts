@@ -343,8 +343,9 @@ test('recorded violin differs from grand piano and percussion stays audible', as
   test.setTimeout(90000);
   await page.addInitScript(()=>{
     const Native=window.AudioContext;
+    // Keep the first destination probe (music); the metronome has a separate output.
     window.AudioContext=class extends Native {
-      createGain(){const g=super.createGain(),connect=g.connect.bind(g);(g as any).connect=(dest:AudioNode)=>{if(dest===this.destination){const probe=this.createAnalyser();probe.smoothingTimeConstant=0;connect(probe);(window as any).timbreProbe=probe;}return connect(dest);};return g;}
+      createGain(){const g=super.createGain(),connect=g.connect.bind(g);(g as any).connect=(dest:AudioNode)=>{if(dest===this.destination){const probe=this.createAnalyser();probe.smoothingTimeConstant=0;connect(probe);(window as any).timbreProbe ??= probe;}return connect(dest);};return g;}
     };
   });
   const spectrum=()=>page.evaluate(()=>{const probe=(window as any).timbreProbe as AnalyserNode;const data=new Float32Array(probe.frequencyBinCount);probe.getFloatFrequencyData(data);const part=Array.from(data.slice(5,180),db=>10**(db/20));const sum=part.reduce((a,b)=>a+b,0);return part.map(x=>x/(sum||1));});

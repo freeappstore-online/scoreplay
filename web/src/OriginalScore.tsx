@@ -2,8 +2,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { beatAtTime, timeAtBeat, type Song } from './music';
 import { readMusicXml } from './original-score';
 import type { OpenSheetMusicDisplay } from 'opensheetmusicdisplay';
+import { pitchLabel } from './practice';
 const PAGE_SIZE = 4;
-export default function OriginalScore({ xml, song, time, onSeek }: { xml: string; song: Song; time: number; onSeek: (time: number) => void }) {
+export default function OriginalScore({ xml, song, time, onSeek, transpose = 0 }: { xml: string; song: Song; time: number; onSeek: (time: number) => void; transpose?: number }) {
   const score = useMemo(() => readMusicXml(xml), [xml]);
   const [page, setPage] = useState(0), [loading, setLoading] = useState(true), [error, setError] = useState(''), [follow, setFollow] = useState(true);
   const [ready, setReady] = useState(0), [rendered, setRendered] = useState(0);
@@ -20,13 +21,15 @@ export default function OriginalScore({ xml, song, time, onSeek }: { xml: string
     let cancelled = false, osmd: OpenSheetMusicDisplay | undefined, observer: ResizeObserver | undefined, frame = 0;
     setLoading(true); setError(''); renderer.current = null;
     const el = container.current!;
-    void import('opensheetmusicdisplay').then(async ({ OpenSheetMusicDisplay }) => {
+    void import('opensheetmusicdisplay').then(async ({ OpenSheetMusicDisplay, IntervalTransposeCalculator }) => {
       if (cancelled) return;
       el.replaceChildren();
       osmd = new OpenSheetMusicDisplay(el, { autoResize: false, backend: 'svg', drawTitle: false, drawSubtitle: false, drawComposer: false, drawPartNames: true, drawMeasureNumbers: true, drawMeasureNumbersOnlyAtSystemStart: false, followCursor: false });
       osmd.setLogLevel('error');
       await osmd.load(new DOMParser().parseFromString(score.xml, 'application/xml'));
       if (cancelled) return;
+      osmd.TransposeCalculator = new IntervalTransposeCalculator();
+      osmd.Sheet.Transpose = transpose;
       renderer.current = osmd; setReady(value => value + 1);
       let width = el.clientWidth;
       observer = new ResizeObserver(() => {
@@ -37,7 +40,7 @@ export default function OriginalScore({ xml, song, time, onSeek }: { xml: string
       observer.observe(el);
     }).catch(() => { if (!cancelled) { setLoading(false); setError('The original score could not be displayed. Try the MIDI transcription or PDF score.'); } });
     return () => { cancelled = true; observer?.disconnect(); cancelAnimationFrame(frame); osmd?.cursor?.Dispose(); osmd?.clear(); renderer.current = null; };
-  }, [score]);
+  }, [score, transpose]);
   useEffect(() => {
     const osmd = renderer.current;
     if (!osmd) return;
@@ -82,7 +85,7 @@ export default function OriginalScore({ xml, song, time, onSeek }: { xml: string
   }, [beat, safePage, rendered, follow, visible]);
   const button = 'min-h-11 rounded-lg border border-line bg-paper px-3 py-2 text-sm text-ink disabled:opacity-40';
   return <section className="space-y-4 p-4 sm:p-5" aria-label="Original MusicXML score">
-    <div className="flex flex-wrap items-center justify-between gap-3"><p className="text-sm font-semibold">Original MusicXML notation</p><label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={follow} onChange={e => setFollow(e.target.checked)} />Follow playback</label></div>
+    <div className="flex flex-wrap items-center justify-between gap-3"><p className="text-sm font-semibold">{transpose ? `Score notation · ${pitchLabel(transpose)}` : 'Original MusicXML notation'}</p><label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={follow} onChange={e => setFollow(e.target.checked)} />Follow playback</label></div>
     <p className="text-xs leading-5 text-muted">Original notes, clefs, keys, voices and lyrics. The cursor follows MIDI timing; scores with repeats or a different arrangement may not line up.</p>
     {loading && <p role="status" className="text-sm text-muted">Loading original score…</p>}{error && <p role="alert" className="text-sm text-danger">{error}</p>}
     <div ref={viewport} className="overflow-x-auto rounded-xl border border-line bg-score-paper" tabIndex={0} aria-label="Scrollable original sheet music"><div ref={container} className="relative min-h-40 min-w-[640px] text-score-ink" role="img" aria-label={`Original score, measures ${visible[0]?.label} to ${visible[visible.length - 1]?.label}`} /></div>
