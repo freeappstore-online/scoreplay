@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Badge, Card, ConfirmDialog, PageHeader } from '@freeappstore/sdk/ui';
 import { prepareLibrary, type LibraryEntry } from './library';
 import { libraryEntries, removeLibraryEntry, writeLibrary } from './storage';
-import { CATALOG, DEFAULT_FILTERS, filterCatalog, loadCatalogPiece, matchesSearch, readPreferences, type CatalogPiece, type Filters } from './catalog';
-import { formatTime } from './music';
+import { CATALOG, DEFAULT_FILTERS, filterCatalog, loadCatalogPiece, loadCatalogSong, matchesSearch, readPreferences, type CatalogPiece, type Filters } from './catalog';
+import { formatTime, parseMidi } from './music';
+import type { Player } from './audio';
+import { LibraryPreview } from './library-preview';
+import { PreviewBar, PreviewButton } from './LibraryPreview';
 import { pwa } from './fas-capabilities/pwa';
 import { composerInfo } from './composers';
 import { ComposerIdentity } from './ComposerIdentity';
@@ -11,8 +14,16 @@ import { SharePiece } from './SharePiece';
 const button = 'inline-flex min-h-11 items-center justify-center rounded-xl border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink hover:bg-panel disabled:opacity-40';
 const selectedButton = 'inline-flex min-h-11 items-center justify-center rounded-xl border-2 border-accent bg-accent px-4 py-2 text-sm font-bold text-paper shadow-sm';
 const control = 'min-h-11 w-full min-w-0 rounded-xl border border-line bg-paper px-3 text-sm text-ink';
-const options = (key: 'category' | 'difficulty' | 'composer' | 'instruments' | 'tags') => [...new Set(CATALOG.flatMap(p => p[key]))].sort((a,b) => (key === 'composer' ? composerInfo(a).label : a).localeCompare(key === 'composer' ? composerInfo(b).label : b));
-export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => Promise<void> }) {
+const optionKeys = ['category', 'difficulty', 'composer', 'instruments', 'tags'] as const;
+const catalogOptions = Object.fromEntries(optionKeys.map(key => [key, [...new Set(CATALOG.flatMap(p => p[key]))].sort((a,b) => (key === 'composer' ? composerInfo(a).label : a).localeCompare(key === 'composer' ? composerInfo(b).label : b))]));
+const options = (key: typeof optionKeys[number]): string[] => catalogOptions[key];
+const composerCounts = new Map(options('composer').map(name => [name, CATALOG.filter(p => p.composer === name).length]));
+export default function Library({ onOpen, player, ready }: { onOpen: (entry: LibraryEntry) => Promise<void>; player: Player; ready: boolean }) {
+  const [preview] = useState(() => new LibraryPreview(player));
+  useEffect(() => {
+    const release = pwa.addBusyGuard(() => ['loading','playing'].includes(preview.getSnapshot().phase));
+    return () => { preview.stop(); release(); };
+  }, [preview]);
   const [initial] = useState(readPreferences);
   const [filters, setFilters] = useState(initial.filters), [favorites, setFavorites] = useState(initial.favorites);
   const [entries, setEntries] = useState<LibraryEntry[]>([]), [limit, setLimit] = useState(12);
@@ -28,13 +39,14 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
   const tag = (value: string) => change('tags', filters.tags.includes(value) ? filters.tags.filter(t => t !== value) : [...filters.tags,value]);
   const refresh = async () => setEntries(await libraryEntries());
   const importFiles = async (files: File[]) => {
-    if (busy) return; setBusy('import'); setError(''); setNotice('');
+    if (busy) return; preview.stop(); setBusy('import'); setError(''); setNotice('');
     try { const prepared = await prepareLibrary(files, await libraryEntries()); await writeLibrary(prepared); await refresh(); setFilters({ ...DEFAULT_FILTERS, scope: 'mine' }); setNotice(`${prepared.length} arrangement${prepared.length === 1 ? '' : 's'} saved on this device.`); }
     catch (e) { setError(e instanceof Error ? e.message : 'Could not save these files. Your browser may be out of storage.'); }
     finally { setBusy(''); if (input.current) input.current.value = ''; }
   };
   const usePiece = async (piece: CatalogPiece, save: boolean) => {
     if (busy) return;
+    if (!save) preview.stop();
     const controller = new AbortController(); request.current = controller; setBusy(piece.id); setError(''); setNotice('');
     try {
       const entry = await loadCatalogPiece(piece, controller.signal);
@@ -46,15 +58,17 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
   };
   const removeEntry = async () => {
     if (!remove || busy) return;
+    if (preview.getSnapshot().id === `local:${remove.id}`) preview.stop();
     setBusy('remove'); setError('');
     try { await removeLibraryEntry(remove.id); await refresh(); setFavorites(ids => ids.filter(id => id !== `local:${remove.id}`)); setNotice(`${remove.title} removed from this device.`); }
     catch { setError('Could not remove the arrangement. Please try again.'); }
     finally { setRemove(null); setBusy(''); }
   };
-  const catalog = filters.scope === 'mine' ? [] : filterCatalog(filters, favorites);
+  const catalog = useMemo(() => filters.scope === 'mine' ? [] : filterCatalog(filters, favorites), [filters, favorites]);
+  const savedById = useMemo(() => new Map(entries.map(entry => [entry.id, entry])), [entries]);
   const hasMetadataFilter = !!(filters.category || filters.difficulty || filters.instrument || filters.composer || filters.duration || filters.score || filters.tags.length);
-  const eligibleIds = new Set(filterCatalog({ ...filters, scope: 'free' }, []).map(p => p.id));
-  const own = filters.scope === 'free' ? [] : entries.filter(e => matchesSearch(`${e.title} ${e.name}`,filters.query) && (!hasMetadataFilter || eligibleIds.has(e.id)) && (filters.scope !== 'favorites' || favorites.includes(`local:${e.id}`)));
+  const eligibleIds = useMemo(() => hasMetadataFilter && filters.scope !== 'free' ? new Set(filterCatalog({ ...filters, scope: 'free' }, []).map(p => p.id)) : new Set<string>(), [filters, hasMetadataFilter]);
+  const own = useMemo(() => filters.scope === 'free' ? [] : entries.filter(e => matchesSearch(`${e.title} ${e.name}`,filters.query) && (!hasMetadataFilter || eligibleIds.has(e.id)) && (filters.scope !== 'favorites' || favorites.includes(`local:${e.id}`))), [entries, filters, hasMetadataFilter, eligibleIds, favorites]);
   const isFiltered = Object.entries(filters).some(([key,value]) => !['scope','sort'].includes(key) && (Array.isArray(value) ? value.length : value));
   const clear = () => setFilters({ ...DEFAULT_FILTERS, scope: filters.scope });
   const select = (label: string, key: 'category'|'difficulty'|'instrument'|'composer'|'duration'|'score'|'sort', values: [string,string][]) => <label className="min-w-0"><span className="mb-1.5 block text-xs font-semibold text-muted">{label}</span><select aria-label={label} className={control} value={filters[key]} onChange={e => change(key,e.target.value)}>{values.map(([value,text]) => <option key={value} value={value}>{text}</option>)}</select></label>;
@@ -69,7 +83,7 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
     <section aria-label="Browse composers" className="space-y-3"><h2 className="text-xl">Browse composers</h2><div className="grid grid-cols-2 gap-2 md:grid-cols-3">{['W. A. Mozart','L. V. Beethoven','J. S. Bach','A. Vivaldi','F. F. Chopin','E. Satie','F. Schubert','P. I. Tchaikovsky','F. Mendelssohn-Bartholdy'].filter(name => CATALOG.some(p => p.composer === name)).map(name => {
       const composer = composerInfo(name), active = filters.scope === 'free' && filters.composer === name;
       return <button key={name} aria-label={`Browse ${composer.label}`} aria-pressed={active} className={`flex min-w-0 items-center gap-3 rounded-xl border-2 p-3 text-left ${active ? 'border-accent bg-accent text-paper' : 'border-line bg-paper text-ink hover:border-accent'}`} onClick={() => setFilters({ ...DEFAULT_FILTERS, composer: name })}>
-        {composer.portrait && <img src={composer.portrait.url} alt="" width={36} height={48} loading="lazy" className="h-12 w-9 shrink-0 rounded object-cover object-top" />}<span className="min-w-0"><span className="block text-sm font-bold">{active && '✓ '}{composer.label.split(',')[0]}</span><span className="block text-xs">{CATALOG.filter(p => p.composer === name).length} {CATALOG.filter(p => p.composer === name).length === 1 ? 'piece' : 'pieces'}</span></span>
+        {composer.portrait && <img src={composer.portrait.url} alt="" width={36} height={48} loading="lazy" className="h-12 w-9 shrink-0 rounded object-cover object-top" />}<span className="min-w-0"><span className="block text-sm font-bold">{active && '✓ '}{composer.label.split(',')[0]}</span><span className="block text-xs">{composerCounts.get(name)} {composerCounts.get(name) === 1 ? 'piece' : 'pieces'}</span></span>
       </button>;
     })}</div></section>
     <div role="group" aria-label="Library shelves" className="flex flex-wrap gap-2">{[['free','Free collection'],['mine',`My files (${entries.length})`],['favorites',`Favourites (${favorites.length})`]].map(([value,label]) => <button key={value} className={filters.scope === value ? selectedButton : button} aria-pressed={filters.scope === value} onClick={() => setFilters(f => ({ ...DEFAULT_FILTERS, scope: value, query: f.query }))}>{filters.scope === value && <span aria-hidden="true" className="mr-2">✓</span>}{label}</button>)}</div>
@@ -99,12 +113,12 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
         <div className="flex flex-wrap gap-2"><Badge>{piece.difficulty}</Badge><Badge>{formatTime(piece.duration)}</Badge><Badge>{piece.instruments.join(' + ')}</Badge></div>
         <div className="flex flex-wrap gap-1.5">{piece.tags.map(t => <button key={t} className={`min-h-8 rounded-full border px-2.5 py-1 text-xs ${filters.tags.includes(t) ? 'border-accent bg-accent-soft text-accent' : 'border-line text-muted hover:text-accent'}`} aria-pressed={filters.tags.includes(t)} onClick={() => tag(t)}>#{t}</button>)}</div>
         <p className="text-xs leading-5 text-muted">{piece.assets.musicxml ? 'Original sheet music + PDF' : 'MIDI sheet music + original PDF'}</p>
-        <div className="mt-auto flex flex-wrap gap-2"><button className={`${button} border-accent text-accent`} disabled={!!busy} onClick={() => void usePiece(piece,false)} aria-label={`Open ${piece.title}`}>Open & play</button><button className={button} disabled={!!busy || entries.some(e => e.id === piece.id)} onClick={() => void usePiece(piece,true)}>{entries.some(e => e.id === piece.id) ? 'Saved to my files' : 'Save to my files'}</button><SharePiece id={piece.id} title={piece.title} /></div>
+        <div className="mt-auto flex flex-wrap gap-2"><PreviewButton preview={preview} disabled={!!busy || !ready} source={{ id: `catalog:${piece.id}`, title: piece.title, load: async signal => { const saved = savedById.get(piece.id); return saved?.catalogId === piece.id ? parseMidi(saved.bytes, piece.title) : loadCatalogSong(piece, signal); } }} /><button className={`${button} border-accent text-accent`} disabled={!!busy} onClick={() => void usePiece(piece,false)} aria-label={`Open ${piece.title}`}>Open score</button><button className={button} disabled={!!busy || entries.some(e => e.id === piece.id)} onClick={() => void usePiece(piece,true)}>{entries.some(e => e.id === piece.id) ? 'Saved to my files' : 'Save to my files'}</button><SharePiece id={piece.id} title={piece.title} /></div>
         <details className="border-t border-line pt-3 text-xs leading-5 text-muted"><summary className="cursor-pointer py-1 font-semibold">About, downloads & credits</summary><div className="mt-3 space-y-3"><p>{piece.description}</p><p>{piece.edition}</p>{composerInfo(piece.composer).portrait && <p>Portrait: {composerInfo(piece.composer).portrait!.artist}. {composerInfo(piece.composer).portrait!.rights}. <a className="text-accent underline" href={composerInfo(piece.composer).portrait!.sourceUrl} target="_blank" rel="noopener noreferrer">Image source ↗</a></p>}<p>{piece.rights} · <a className="text-accent underline" href={piece.rightsUrl} target="_blank" rel="noopener noreferrer">Rights details ↗</a></p><a className="block text-accent underline" href={piece.sourceUrl} target="_blank" rel="noopener noreferrer">{piece.source} ↗</a><div className="flex flex-wrap gap-4"><a className="min-h-8 text-accent underline" href={piece.assets.midi} download={`${piece.title}.mid`}>Download MIDI</a><a className="min-h-8 text-accent underline" href={piece.assets.pdf} download={`${piece.title}.pdf`}>Download PDF</a>{piece.assets.musicxml && <a className="min-h-8 text-accent underline" href={piece.assets.musicxml} download={`${piece.title}.musicxml`}>MusicXML</a>}</div></div></details>
       </article></Card>)}</div>
       {catalog.length > limit && <button className={`${button} w-full`} onClick={() => setLimit(n => n+12)}>Show more · {catalog.length-limit} remaining</button>}
     </section>}
-    {(filters.scope === 'mine' || own.length > 0) && <section className="space-y-4" aria-label="My arrangements"><h2 className="text-2xl">My arrangements</h2><p className="text-xs text-muted">Saved on this device. Search applies to your filenames and titles.</p><div className="grid gap-4 md:grid-cols-2">{own.map(entry => <Card key={entry.id}><div className="space-y-4"><div className="flex items-start justify-between gap-3"><div><h3 className="text-xl capitalize">{entry.title}</h3><p className="mt-1 break-all text-xs text-muted">{entry.name}</p></div><button className={favorites.includes(`local:${entry.id}`) ? selectedButton : button} aria-label={`Favourite saved ${entry.title}`} aria-pressed={favorites.includes(`local:${entry.id}`)} onClick={() => favorite(`local:${entry.id}`)}>{favorites.includes(`local:${entry.id}`) ? '★' : '☆'}</button></div><div className="flex flex-wrap gap-2"><Badge>MIDI playback</Badge>{entry.musicxml && <Badge variant="accent">Original sheet music</Badge>}{entry.pdf && <Badge>PDF score</Badge>}</div><div className="flex flex-wrap gap-2"><button className={button} disabled={!!busy} onClick={() => void onOpen(entry).catch(e => setError(e instanceof Error ? e.message : 'Could not open this arrangement.'))} aria-label={`Open ${entry.title}`}>Open & play</button><button className={button} disabled={!!busy} aria-label={`Remove ${entry.title}`} onClick={() => setRemove(entry)}>Remove</button></div></div></Card>)}</div></section>}
+    {(filters.scope === 'mine' || own.length > 0) && <section className="space-y-4" aria-label="My arrangements"><h2 className="text-2xl">My arrangements</h2><p className="text-xs text-muted">Saved on this device. Search applies to your filenames and titles.</p><div className="grid gap-4 md:grid-cols-2">{own.map(entry => <Card key={entry.id}><div className="space-y-4"><div className="flex items-start justify-between gap-3"><div><h3 className="text-xl capitalize">{entry.title}</h3><p className="mt-1 break-all text-xs text-muted">{entry.name}</p></div><button className={favorites.includes(`local:${entry.id}`) ? selectedButton : button} aria-label={`Favourite saved ${entry.title}`} aria-pressed={favorites.includes(`local:${entry.id}`)} onClick={() => favorite(`local:${entry.id}`)}>{favorites.includes(`local:${entry.id}`) ? '★' : '☆'}</button></div><div className="flex flex-wrap gap-2"><Badge>MIDI playback</Badge>{entry.musicxml && <Badge variant="accent">Original sheet music</Badge>}{entry.pdf && <Badge>PDF score</Badge>}</div><div className="flex flex-wrap gap-2"><PreviewButton preview={preview} disabled={!!busy || !ready} source={{ id: `local:${entry.id}`, title: entry.title, load: async () => parseMidi(entry.bytes, entry.title) }} /><button className={button} disabled={!!busy} onClick={() => { preview.stop(); void onOpen(entry).catch(e => setError(e instanceof Error ? e.message : 'Could not open this arrangement.')); }} aria-label={`Open ${entry.title}`}>Open score</button><button className={button} disabled={!!busy} aria-label={`Remove ${entry.title}`} onClick={() => setRemove(entry)}>Remove</button></div></div></Card>)}</div></section>}
     {!catalog.length && !own.length && <div className="rounded-2xl border border-dashed border-line p-8 text-center"><h2 className="text-xl">{filters.scope === 'mine' && !entries.length ? 'Your own music belongs here.' : filters.scope === 'favorites' && !favorites.length ? 'Start a shelf of favourites.' : filters.scope === 'favorites' ? 'No favourites match these filters.' : 'No pieces match just yet.'}</h2><p className="mt-3 text-sm text-muted">{filters.scope === 'mine' ? 'Import your MIDI and matching scores below, or save a piece from the free collection.' : filters.scope === 'favorites' && !favorites.length ? 'Tap a star on any piece to keep it here.' : 'Try fewer filters, another tag, or a different search.'}</p>{filters.scope !== 'free' && <button className={`${selectedButton} mt-4 mr-2`} onClick={() => change('scope','free')}>Search all free pieces</button>}{isFiltered && <button className={`${button} mt-4`} onClick={clear}>Reset search and filters</button>}</div>}
     <section className="space-y-3 rounded-2xl border border-dashed border-line-strong bg-panel p-5" aria-label="Library import" onDragOver={e => e.preventDefault()} onDrop={e => { e.preventDefault(); void importFiles([...e.dataTransfer.files]); }}>
       <div className="flex flex-wrap items-center justify-between gap-3"><div><h2 className="text-xl">Bring your own collection</h2><p className="mt-2 text-sm text-muted">Select MIDI files and matching MusicXML or PDF scores together.</p></div><button className={button} disabled={!!busy} onClick={() => input.current?.click()}>{busy === 'import' ? 'Importing…' : '↑ Import music files'}</button></div>
@@ -112,6 +126,7 @@ export default function Library({ onOpen }: { onOpen: (entry: LibraryEntry) => P
       <input ref={input} className="sr-only" type="file" multiple accept=".mid,.midi,.musicxml,.xml,.pdf" aria-label="Import library files" onChange={e => void importFiles([...e.target.files ?? []])} />
     </section>
     <footer className="space-y-2 border-t border-line pt-5 text-xs leading-5 text-muted"><p>All collection downloads are free. Mutopia editions carry public-domain dedications; nursery songs come from the 1878 collection The Baby’s Bouquet. Each piece includes its source and rights details. Difficulty labels are editorial estimates for the complete arrangement.</p><p>PDF preserves the published score. MusicXML preserves original notation where available; MIDI sheet music is an approximate transcription. Playback uses recorded instruments, with a lightweight Simple tones option.</p><a className="text-accent underline" href="/music/gutenberg-license.txt" target="_blank" rel="noopener noreferrer">Project Gutenberg source terms</a></footer>
+    <PreviewBar preview={preview} />
     <ConfirmDialog open={!!remove} title="Remove this arrangement?" message="Its MIDI and attached scores will be removed from this browser. Your original files are unaffected." confirmLabel="Remove arrangement" variant="danger" onCancel={() => setRemove(null)} onConfirm={() => void removeEntry()} />
   </>;
 }

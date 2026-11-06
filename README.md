@@ -19,7 +19,7 @@ Open Library to import up to 100 arrangements. Select MIDI, uncompressed partwis
 
 A paired MusicXML score is shown as its original notation, with measure paging and optional MIDI timing following. Repeats or different arrangements can make score and MIDI timing diverge. PDF scores use the browser PDF viewer with a separate-tab fallback. The MIDI transcription remains available.
 
-The free collection bundles 166 public-domain pieces and movements: 24 nursery songs and 142 classical/traditional entries. All have MIDI and original PDF; nursery songs also have MusicXML. Sources, rights links, original download URLs, verification dates and SHA-256 hashes are recorded in `web/src/catalog-data.json`. Mutopia editions are explicitly public-domain dedications. The 1878 nursery collection is from Project Gutenberg's *The Baby’s Bouquet*, arranged by Lucy Crane (1842–1882), transcribed by Linda Cantoni; the source terms are retained in `web/public/music/gutenberg-license.txt`.
+The free collection bundles 226 public-domain pieces and movements: 24 nursery songs and 202 classical/traditional entries. All have MIDI and original PDF; nursery songs also have MusicXML. Sources, rights links, original download URLs, verification dates and SHA-256 hashes are recorded in `web/src/catalog-data.json`. Mutopia editions are explicitly public-domain dedications. The 1878 nursery collection is from Project Gutenberg's *The Baby’s Bouquet*, arranged by Lucy Crane (1842–1882), transcribed by Linda Cantoni; the source terms are retained in `web/public/music/gutenberg-license.txt`.
 
 Search is accent-insensitive and matches all words across titles, composers and tags. Filters combine category, estimated difficulty, instrument, composer, duration, original MusicXML and multiple tags. Sort by title, composer, length or difficulty. Favourites and filters persist locally. Assets load on demand; Save to my files stores MIDI and scores in IndexedDB for reuse without another download. The app shell must have been cached for offline navigation. User imports are never uploaded or included in the public catalog. No paid sources or Disney downloads are bundled.
 
@@ -48,3 +48,14 @@ The library now includes 24 Mozart entries, 18 Chopin pieces, all three Gymnopé
 Vivaldi has 23 movements from the first six concertos of *L’estro armonico*, Op. 3, and the Concerto for Viola d’amore and Lute, RV 540. Each MIDI is the complete selected movement; its PDF contains the full concerto, as noted in the piece description. The two Mutopia editions are public-domain dedications. The archive member names are pinned alongside the source ZIP URLs and extracted-file hashes in `catalog-data.json`.
 
 `node scripts/sync-catalog.mjs [piece-id ...]` also supports ZIP-backed editions using Python 3's standard library; shared archives are fetched once per run. Omitting IDs verifies the full catalog. The browser receives ordinary static MIDI/PDF assets and needs no ZIP support.
+
+
+## Search-result previews and library scaling
+
+Preview buttons play MIDI directly in the free collection, favourites and saved-file results. Only one preview plays at a time. A persistent play/pause/stop bar remains available while filtering. Leaving Library, opening a score, or cancelling a pending preview stops it. Previews never replace the selected document or last-opened file; returning to Player restores its position, speed, loop, mute and volume settings, paused.
+
+`LibraryPreview` temporarily borrows the existing `Player`, so preview and full playback share one AudioContext and sampled-instrument engine. Audio is unlocked in the initiating click before asynchronous MIDI fetching. Aborted or superseded downloads cannot start late. MIDI alone is fetched for previews; PDFs and MusicXML load only when opening or saving a piece. A saved catalog copy can preview offline. Errors support retry without navigation.
+
+The catalog module is lazy-loaded for Library and shared links, with precomputed search text and filter options. Result calculations are memoized; transport progress updates only the preview bar, not the search results. Reading a known saved piece uses an IndexedDB key lookup instead of loading the whole saved library. The PWA caches app JavaScript, portraits and the shared sound bank; it does not precache all music or score files. Catalog growth increases hosted static storage and small searchable metadata, not simultaneous playback engines or downloaded score files.
+
+The latest 60 additions include Bach inventions and organ works, Beethoven sonata and symphony movements, Schubert songs and impromptus, and Debussy’s first Arabesque. Each source edition's public-domain dedication and MIDI/PDF hashes were verified before adding it.

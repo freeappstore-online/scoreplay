@@ -30,6 +30,12 @@ export class Player {
     return this.playing && this.context ? Math.min(this.song?.duration ?? 0, this.offset + (this.context.currentTime - this.origin) * this.speed) : this.offset;
   }
   load(song: Song) { this.pause(); this.song = song; this.offset = 0; this.muted = new Set(); this.onUpdate(0, false); }
+  /** Unlock on the click itself, before a preview's MIDI fetch awaits the network. */
+  unlock() {
+    if (this.destroyed) return Promise.reject(new Error('Player closed.'));
+    this.context ??= new AudioContext();
+    return this.context.resume();
+  }
   async play() {
     if (!this.song || this.playing || this.destroyed) return;
     const generation = ++this.generation, song = this.song;

@@ -6,8 +6,8 @@ import { useMusicFile } from './useMusicFile';
 import { demoBytes } from './music';
 import type { Player } from './audio';
 import type { LibraryEntry } from './library';
-import { libraryEntries, savedFile, writeLibrary } from './storage';
-vi.mock('./storage', () => ({ libraryEntries: vi.fn(), savedFile: vi.fn(), writeLibrary: vi.fn() }));
+import { libraryEntry, savedFile, writeLibrary } from './storage';
+vi.mock('./storage', () => ({ libraryEntry: vi.fn(), savedFile: vi.fn(), writeLibrary: vi.fn() }));
 vi.mock('./fas-capabilities/pwa', () => ({ pwa: { addBusyGuard: () => () => {} } }));
 function deferred<T>() { let resolve!: (value: T) => void; const promise = new Promise<T>(r => { resolve = r; }); return { promise, resolve }; }
 const entry = (name: string): LibraryEntry => ({ id: name, name: `${name}.mid`, title: name, displayTitle: name, bytes: demoBytes(), added: 1 });
@@ -15,7 +15,7 @@ let root: Root, state: ReturnType<typeof useMusicFile>, player: Player;
 function Probe() { state = useMusicFile(player); return null; }
 beforeEach(() => {
   vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT', true);
-  vi.mocked(libraryEntries).mockResolvedValue([]); vi.mocked(savedFile).mockResolvedValue(undefined); vi.mocked(writeLibrary).mockResolvedValue(undefined);
+  vi.mocked(libraryEntry).mockResolvedValue(undefined); vi.mocked(savedFile).mockResolvedValue(undefined); vi.mocked(writeLibrary).mockResolvedValue(undefined);
   player = { load: vi.fn() } as unknown as Player;
   root = createRoot(document.createElement('div'));
 });

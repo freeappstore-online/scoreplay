@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import type { Player } from './audio';
 import { demoBytes, MAX_FILE_SIZE, parseMidi, type Song } from './music';
 import { libraryId, LibraryFullError, type LibraryEntry } from './library';
-import { libraryEntries, savedFile, writeLibrary, type Saved } from './storage';
+import { libraryEntry, savedFile, writeLibrary, type Saved } from './storage';
 import { pwa } from './fas-capabilities/pwa';
-import { CATALOG, loadCatalogPiece } from './catalog';
 
 /** Owns the selected document and serializes persistence, so old reads cannot replace a newer selection. */
 export function useMusicFile(player: Player, linkedPieceId: string | null = null) {
@@ -51,11 +50,13 @@ export function useMusicFile(player: Player, linkedPieceId: string | null = null
     setLoading(true); setError(''); setNotice('Opening linked piece…');
     void (async () => {
       try {
+        const { CATALOG, loadCatalogPiece } = await import('./catalog');
+        if (id !== generation.current) return;
         const piece = CATALOG.find(item => item.id === linkedPieceId);
         if (!piece) throw new Error('This piece link is not in the free collection. Browse the library to choose a piece.');
-        const [last, saved] = await Promise.all([savedFile().catch(() => undefined), libraryEntries().catch(() => [])]);
+        const [last, saved] = await Promise.all([savedFile().catch(() => undefined), libraryEntry(piece.id).catch(() => undefined)]);
         if (id !== generation.current) return;
-        const cached = last?.catalogId === piece.id ? last : saved.find(item => item.catalogId === piece.id);
+        const cached = last?.catalogId === piece.id ? last : saved?.catalogId === piece.id ? saved : undefined;
         const entry = cached ?? await loadCatalogPiece(piece, controller.signal);
         if (id !== generation.current) return;
         apply(entry); setNotice('Music and score ready. Press Play to listen.');
@@ -79,7 +80,7 @@ export function useMusicFile(player: Player, linkedPieceId: string | null = null
       if (id !== generation.current) return;
       const parsed = parseMidi(bytes, file.name);
       let existing: LibraryEntry | undefined;
-      try { existing = (await libraryEntries()).find(entry => entry.id === libraryId(file.name)); } catch { /* Still open without storage. */ }
+      try { existing = await libraryEntry(libraryId(file.name)); } catch { /* Still open without storage. */ }
       if (id !== generation.current) return;
       const entry: LibraryEntry = { ...existing, id: libraryId(file.name), bytes, name: file.name, title: existing?.title ?? file.name.replace(/\.midi?$/i, '').replace(/[-_]/g, ' '), added: existing?.added ?? Date.now() };
       delete entry.catalogId;

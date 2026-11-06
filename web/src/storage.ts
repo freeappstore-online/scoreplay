@@ -43,6 +43,12 @@ export function libraryEntries(): Promise<LibraryEntry[]> {
     return () => (request.result as LibraryEntry[]).sort((a, b) => a.title.localeCompare(b.title));
   });
 }
+export function libraryEntry(id: string): Promise<LibraryEntry | undefined> {
+  return transaction(['library'], 'readonly', tx => {
+    const request = tx.objectStore('library').get(id);
+    return () => request.result;
+  });
+}
 export function writeLibrary(entries: LibraryEntry[], lastOpened?: Saved): Promise<void> {
   return transaction(lastOpened ? ['library', 'files'] : ['library'], 'readwrite', (tx, fail) => {
     const store = tx.objectStore('library');

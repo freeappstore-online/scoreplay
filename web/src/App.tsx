@@ -72,7 +72,7 @@ export default function App() {
   const openFile = (file?: File) => { if (file && !busy) { clearPieceLink(); void open(file); } };
   return <Shell app={fas} appName="Scoreplay" nav={NAV} onNavigate={navigate}>
     <div className="mx-auto w-full max-w-6xl space-y-6 px-4 py-6 sm:px-8 sm:py-9">
-      {path === '/library' ? <Suspense fallback={<p role="status">Loading library…</p>}><Library onOpen={openLibrary} /></Suspense> : path === '/about' ? <>
+      {path === '/library' ? <Suspense fallback={<p role="status">Loading library…</p>}><Library onOpen={openLibrary} player={player} ready={!busy} /></Suspense> : path === '/about' ? <>
         <PageHeader title="A little room for your music." description="Open a MIDI, press play, and take it at your own pace." />
         <Card><div className="space-y-5 text-sm leading-7">
           <h2 className="text-2xl">From file to first note</h2>

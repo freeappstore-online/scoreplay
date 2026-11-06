@@ -6318,5 +6318,2233 @@
     "verified": "2026-11-06",
     "duration": 155,
     "bpm": 78
+  },
+  {
+    "id": "mutopia-992",
+    "title": "Sonata No. 6 (1st Movement: Allegro)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 10, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=992",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O10/lvb_sonate_10no2_1/lvb_sonate_10no2_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O10/lvb_sonate_10no2_1/lvb_sonate_10no2_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-992/score.mid",
+      "pdf": "/music/mutopia-992/score.pdf"
+    },
+    "sha256": {
+      "midi": "7d89d43a5eba9773ab49287874806084622830f7588598bf42641ad557b6d276",
+      "pdf": "1e64c8327d654ea39856d01a982625e0f3140467c3a2c299098aaf0796af99f8"
+    },
+    "verified": "2026-11-06",
+    "duration": 255,
+    "bpm": 96
+  },
+  {
+    "id": "mutopia-993",
+    "title": "Sonata No. 6 (2nd Movement: Allegretto)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 10, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=993",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O10/lvb_sonate_10no2_2/lvb_sonate_10no2_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O10/lvb_sonate_10no2_2/lvb_sonate_10no2_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-993/score.mid",
+      "pdf": "/music/mutopia-993/score.pdf"
+    },
+    "sha256": {
+      "midi": "b70d9b70b901c2272b4c3a941853dbe1df36f63189ce14893f678ccb8dd855b7",
+      "pdf": "8b6cac5b5827009b29e7c5ef3725a79e3d24eca6b05bb2a0e99cba6a703efc5d"
+    },
+    "verified": "2026-11-06",
+    "duration": 171,
+    "bpm": 178
+  },
+  {
+    "id": "mutopia-994",
+    "title": "Sonata No. 6 (3rd Movement: Presto)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 10, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=994",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O10/lvb_sonate_10no2_3/lvb_sonate_10no2_3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O10/lvb_sonate_10no2_3/lvb_sonate_10no2_3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-994/score.mid",
+      "pdf": "/music/mutopia-994/score.pdf"
+    },
+    "sha256": {
+      "midi": "72ebb89ede5671dfd6700d27fd565ec7954d82e973144524acf3403b9aaa6dff",
+      "pdf": "beda5c3388b3c19523f2d5628deaf12c26d34c5f04b40ab8b3de349021be9202"
+    },
+    "verified": "2026-11-06",
+    "duration": 121,
+    "bpm": 148
+  },
+  {
+    "id": "mutopia-299",
+    "title": "Sonata No. 8 “Pathétique” (1st Movement: Grave, Allegro molto e con brio)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 13 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=299",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "G. Schirmer, 1894 and Berners, 1908",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-1/pathetique-1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-1/pathetique-1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-299/score.mid",
+      "pdf": "/music/mutopia-299/score.pdf"
+    },
+    "sha256": {
+      "midi": "cfe2b012227077a304a0ed282a98dceaca6a73bd0fb4d3f2249ac4bacbe30121",
+      "pdf": "024079d0225423b40c07811badbfeed01d2497e759690a3c271d83b3678ab072"
+    },
+    "verified": "2026-11-06",
+    "duration": 375,
+    "bpm": 33
+  },
+  {
+    "id": "mutopia-295",
+    "title": "Sonata No. 8 “Pathétique” (2nd Movement: Adagio cantabile)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "Op. 13 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=295",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Berners, 1908 (edited by A. Winterberger); Peters, 1910",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-295/score.mid",
+      "pdf": "/music/mutopia-295/score.pdf"
+    },
+    "sha256": {
+      "midi": "92c685ca98001473bcc21fa98110cc125ab489c1bf49be185e062d204a268492",
+      "pdf": "e06ebea3d4935ac18bf9c50f433f6f4fe0ca5cd9b29752a8b8138dd2780c97d6"
+    },
+    "verified": "2026-11-06",
+    "duration": 243,
+    "bpm": 36
+  },
+  {
+    "id": "mutopia-296",
+    "title": "Sonata No. 8 “Pathétique” (3rd Movement: Rondo)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 13 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=296",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Berners, 1908 (edited by A. Winterberger)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-3/pathetique-3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-3/pathetique-3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-296/score.mid",
+      "pdf": "/music/mutopia-296/score.pdf"
+    },
+    "sha256": {
+      "midi": "e0e27f158b9eac0747569f0e4096c96c54a5eba425c567b368523afef2190797",
+      "pdf": "d5da24a678defb1ec283aa28539dae87f8b6776ecc85ec6b3418e9acce274b0f"
+    },
+    "verified": "2026-11-06",
+    "duration": 233,
+    "bpm": 216
+  },
+  {
+    "id": "mutopia-944",
+    "title": "Romance for Violin and Orchestra, Op. 40",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Violin",
+      "Orchestra"
+    ],
+    "tags": [
+      "classical",
+      "classical period"
+    ],
+    "description": "Op. 40 · Violin, Orchestra. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=944",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf and Hartel",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O40/Romanze_Opus40/Romanze_Opus40.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O40/Romanze_Opus40/Romanze_Opus40-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-944/score.mid",
+      "pdf": "/music/mutopia-944/score.pdf"
+    },
+    "sha256": {
+      "midi": "5ef4d6e9d85e107c2951391d52ae98c129e1b9a0b995ddc5437729a60ba67e76",
+      "pdf": "a3a4113554d46f31e9e35989be7a29d8a77d71f63bdb110056ae72767b6f5e9e"
+    },
+    "verified": "2026-11-06",
+    "duration": 460,
+    "bpm": 48
+  },
+  {
+    "id": "mutopia-912",
+    "title": "Sonata No. 19 (1st Movement: Andante)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 49, No. 1 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=912",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no1_1/LVB_Sonate_49no1_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no1_1/LVB_Sonate_49no1_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-912/score.mid",
+      "pdf": "/music/mutopia-912/score.pdf"
+    },
+    "sha256": {
+      "midi": "ba6c0d49597a2d3d7f883448b9a8debce65db19f5e36922286c011bed22783ea",
+      "pdf": "55710529b193ba1804b288085f441a100c47b9716e7dd73bd3546f6f04aadea2"
+    },
+    "verified": "2026-11-06",
+    "duration": 134,
+    "bpm": 98
+  },
+  {
+    "id": "mutopia-913",
+    "title": "Sonata No. 19 (2nd Movement: Rondo-Allegro)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 49, No. 1 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=913",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no1_2/LVB_Sonate_49no1_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no1_2/LVB_Sonate_49no1_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-913/score.mid",
+      "pdf": "/music/mutopia-913/score.pdf"
+    },
+    "sha256": {
+      "midi": "d1ed7e7264cadc84cd32c25eb3cc12063b51f5b2e3ddbf8da35b86dce216082f",
+      "pdf": "78eca1f1628382b0f989c53de1a059f508888a1d97fe4cd8501adb9a96b16587"
+    },
+    "verified": "2026-11-06",
+    "duration": 238,
+    "bpm": 124
+  },
+  {
+    "id": "mutopia-776",
+    "title": "Sonata No. 20 (1st Movement: Allegro, ma non troppo)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 49, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=776",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_1/LVB_Sonate_49no2_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_1/LVB_Sonate_49no2_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-776/score.mid",
+      "pdf": "/music/mutopia-776/score.pdf"
+    },
+    "sha256": {
+      "midi": "02cd2ff58d6a98c15a6fa825bca2c5538294215ce3fe5815efe42fc864aa0670",
+      "pdf": "55b5a0b4676abb01ca50f258f19170ab1492023d5e5f19af12230e39aeab089f"
+    },
+    "verified": "2026-11-06",
+    "duration": 205,
+    "bpm": 142
+  },
+  {
+    "id": "mutopia-777",
+    "title": "Sonata No. 20 (2nd Movement: Tempo di Menuetto)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 49, No. 2 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=777",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_2/LVB_Sonate_49no2_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O49/LVB_Sonate_49no2_2/LVB_Sonate_49no2_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-777/score.mid",
+      "pdf": "/music/mutopia-777/score.pdf"
+    },
+    "sha256": {
+      "midi": "bbc781ca46ebd2e22e4fc9976a5fd5647c1da43dc7d545525c4b87d0244e251f",
+      "pdf": "4655d2713d7238f5cb16ba614c64ca787642a2f9642a03b1f35fb6628da6ad3c"
+    },
+    "verified": "2026-11-06",
+    "duration": 161,
+    "bpm": 134
+  },
+  {
+    "id": "mutopia-941",
+    "title": "Symphony No. 5 - Opus 67 (1st Movement)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Orchestra"
+    ],
+    "tags": [
+      "classical",
+      "classical period"
+    ],
+    "description": "Op. 67 · Orchestra. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=941",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf and Härtel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O67/Symphony5_1/Symphony5_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O67/Symphony5_1/Symphony5_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-941/score.mid",
+      "pdf": "/music/mutopia-941/score.pdf"
+    },
+    "sha256": {
+      "midi": "0ce1bca911ba8e6234fd2e474a9b6da4c968c5cfe85b0cccfe7e56505df52046",
+      "pdf": "0b156d7f442b7187a3d2683261e290d13418123176d4d438adad9758cb274f57"
+    },
+    "verified": "2026-11-06",
+    "duration": 317,
+    "bpm": 192
+  },
+  {
+    "id": "mutopia-1437",
+    "title": "Symphony No. 5 - Opus 67 (2nd Movement)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Orchestra"
+    ],
+    "tags": [
+      "classical",
+      "classical period"
+    ],
+    "description": "Op. 67 · Orchestra. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1437",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf and Härtel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O67/Symphony5_2/Symphony5_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O67/Symphony5_2/Symphony5_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1437/score.mid",
+      "pdf": "/music/mutopia-1437/score.pdf"
+    },
+    "sha256": {
+      "midi": "3f360acfb2e3c4608fb396d0b2ca82d06921ea9fc3946ece46294f24461d7bac",
+      "pdf": "1fc0bc2c8942c65d25f4939ae272b20b37e112b63f9bb2f5b63ddf8826c88cb3"
+    },
+    "verified": "2026-11-06",
+    "duration": 716,
+    "bpm": 31
+  },
+  {
+    "id": "mutopia-955",
+    "title": "Sonata No. 25 (1st Movement: Presto alla tedesca)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 79 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=955",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O79/LVB_Sonate_79_1/LVB_Sonate_79_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O79/LVB_Sonate_79_1/LVB_Sonate_79_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-955/score.mid",
+      "pdf": "/music/mutopia-955/score.pdf"
+    },
+    "sha256": {
+      "midi": "59e09a0eaa1c049b871f4cec47ea945dacc3d0a038217abfc36fa02e9ac693df",
+      "pdf": "250feb82dc4965569c1a8bb6a64e2201abb84a668457a984bbb817c9dc5333d7"
+    },
+    "verified": "2026-11-06",
+    "duration": 149,
+    "bpm": 248
+  },
+  {
+    "id": "mutopia-956",
+    "title": "Sonata No. 25 (2nd Movement: Andante)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 79 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=956",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O79/LVB_Sonate_79_2/LVB_Sonate_79_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O79/LVB_Sonate_79_2/LVB_Sonate_79_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-956/score.mid",
+      "pdf": "/music/mutopia-956/score.pdf"
+    },
+    "sha256": {
+      "midi": "3fca23a26a81e0b98a2d29ee11db2a9715889717eb1107426e8f80929318a575",
+      "pdf": "46e3fb7912fe448ea8408f6ade28131beed46054b683bf94d2a8c09b577a446e"
+    },
+    "verified": "2026-11-06",
+    "duration": 126,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-957",
+    "title": "Sonata No. 25 (3rd Movement: Vivace)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 79 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=957",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O79/LVB_Sonate_79_3/LVB_Sonate_79_3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O79/LVB_Sonate_79_3/LVB_Sonate_79_3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-957/score.mid",
+      "pdf": "/music/mutopia-957/score.pdf"
+    },
+    "sha256": {
+      "midi": "c6b7daa1f65cdf62b1a78eb60c2c0484a4ddc22a3216553b70cffc8ab2aac5fb",
+      "pdf": "b80821ca17ae94f4548a29013f8a5263079bb29af26f294a227a67fd3b1cc060"
+    },
+    "verified": "2026-11-06",
+    "duration": 102,
+    "bpm": 138
+  },
+  {
+    "id": "mutopia-547",
+    "title": "Overture to Egmont",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Orchestra"
+    ],
+    "tags": [
+      "classical",
+      "classical period"
+    ],
+    "description": "Op. 84 · Orchestra: Flutes, Oboe, Clarinet, Bassoon, Horns, Trumpets, Timpani, Violins, Viola, 'Cello, Bass. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=547",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf and Hartel",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O84/Egmont/Egmont.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O84/Egmont/Egmont-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-547/score.mid",
+      "pdf": "/music/mutopia-547/score.pdf"
+    },
+    "sha256": {
+      "midi": "f189d4dfbd6058a144555393bfd3f116e751310ffb5134a5b98193ba92ba548e",
+      "pdf": "9be852e58c42cf5477bda7b197427033d3e779b996c5f6e6c3149dfb7352ae9c"
+    },
+    "verified": "2026-11-06",
+    "duration": 479,
+    "bpm": 84
+  },
+  {
+    "id": "mutopia-891",
+    "title": "Symphony No. 7 in A Major (1st Movement: Poco sostenuto - Vivace)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Orchestra"
+    ],
+    "tags": [
+      "classical",
+      "classical period"
+    ],
+    "description": "Op. 92 · Orchestra: Flutes, Oboes, Clarinets, Bassoons, Horns, Trumpets, Timpani, Violins, Viola, 'Cello, Bass. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=891",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf and Hartel (1862-1865)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O92/Symphony7_1/Symphony7_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O92/Symphony7_1/Symphony7_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-891/score.mid",
+      "pdf": "/music/mutopia-891/score.pdf"
+    },
+    "sha256": {
+      "midi": "59a53b8393227ce1f6dc601f3d4c19cdf95a7bcd318ec110ab9943ce7c9f624c",
+      "pdf": "208791baf0a69548b64456b2c0457daa3ba213a5bad77afb554d6ed110bf86f1"
+    },
+    "verified": "2026-11-06",
+    "duration": 884,
+    "bpm": 56
+  },
+  {
+    "id": "mutopia-595",
+    "title": "Symphony No. 7 in A Major (2nd Movement: Allegretto)",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Orchestra"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "gentle",
+      "reflective"
+    ],
+    "description": "Op. 92 · Orchestra: Flutes, Oboes, Clarinets, Bassoons, Horns, Trumpets, Timpani, Violins, Viola, 'Cello, Bass. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=595",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Litolff Verlag",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O92/Symphony7_2/Symphony7_2.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O92/Symphony7_2/Symphony7_2-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-595/score.mid",
+      "pdf": "/music/mutopia-595/score.pdf"
+    },
+    "sha256": {
+      "midi": "7cf810b4625b9a272d3a0a9153d8beb5750fa3ee64122dc9f27b7661e997b903",
+      "pdf": "947268dd203c808b0478d09f3c9afc5f2a7802aba3d9688c0b8da4014234a99f"
+    },
+    "verified": "2026-11-06",
+    "duration": 438,
+    "bpm": 76
+  },
+  {
+    "id": "mutopia-498",
+    "title": "Rage Over a Lost Penny — Rondo a capriccio, Op. 129",
+    "composer": "L. V. Beethoven",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "classical period",
+      "solo"
+    ],
+    "description": "Op. 129 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=498",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Augener's Edition",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BeethovenLv/O129/beethoven_rondo_op129/beethoven_rondo_op129.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BeethovenLv/O129/beethoven_rondo_op129/beethoven_rondo_op129-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-498/score.mid",
+      "pdf": "/music/mutopia-498/score.pdf"
+    },
+    "sha256": {
+      "midi": "1f628f2abf5b0c193dc808dd75000873ac12bc91b9dc8df12275a75c90f905c4",
+      "pdf": "75f4fd53ce221af51d5541b8f03fd9c3666c87d2939062f042cfa422df2e402f"
+    },
+    "verified": "2026-11-06",
+    "duration": 391,
+    "bpm": 144
+  },
+  {
+    "id": "mutopia-1794",
+    "title": "Sheep May Safely Graze, BWV 208",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Flute",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "song",
+      "vocal"
+    ],
+    "description": "from BWV 208 · Two flutes, soprano, and basso continuo. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1794",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1881",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV208/Sheep/Sheep.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV208/Sheep/Sheep-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1794/score.mid",
+      "pdf": "/music/mutopia-1794/score.pdf"
+    },
+    "sha256": {
+      "midi": "671d16499293e7911cbd717d68fbcc09f122d1195fb2349924c7b9409c4eec1f",
+      "pdf": "a2ef85d749c567207b134348fbd8eea618aea2f30d344cda3ffb98f88909ba84"
+    },
+    "verified": "2026-11-06",
+    "duration": 160,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-378",
+    "title": "Aus meines Herzens Grunde — Chorale, BWV 269",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "learning",
+      "practice",
+      "short"
+    ],
+    "description": "BWV 269 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=378",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Editions de J.P Kimberger - C.P.E Bach",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV269/bwv_269/bwv_269.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV269/bwv_269/bwv_269-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-378/score.mid",
+      "pdf": "/music/mutopia-378/score.pdf"
+    },
+    "sha256": {
+      "midi": "783a5a944f28030876a84c753a47abeeff93c56adb6a3dd7c396d06e07184d10",
+      "pdf": "cdf364311d309de516a685ada7d5c50c081dab7cfbb9af3994841d09957c9a34"
+    },
+    "verified": "2026-11-06",
+    "duration": 52,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-1780",
+    "title": "Toccata and Fugue in D minor, BWV 565",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Organ"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "solo"
+    ],
+    "description": "BWV 565 · Organ. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1780",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft Ausgabe, 1867",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV565/ToccataFugue/ToccataFugue.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV565/ToccataFugue/ToccataFugue-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1780/score.mid",
+      "pdf": "/music/mutopia-1780/score.pdf"
+    },
+    "sha256": {
+      "midi": "1aabd00967aded08d6633482c211af46f679d97f01cfeaca43c83a59dfeeeb6b",
+      "pdf": "85cda3cfbe08bb1b9e2ebcea04c79891b686b4393a35429aeb43b77ab5dc9367"
+    },
+    "verified": "2026-11-06",
+    "duration": 572,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-741",
+    "title": "Passacaglia in C minor, BWV 582",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Organ"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "solo"
+    ],
+    "description": "BWV 582 · Organ. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=741",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "8656, C. F. Peters, Leipzig",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV582/bwv582/bwv582.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV582/bwv582/bwv582-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-741/score.mid",
+      "pdf": "/music/mutopia-741/score.pdf"
+    },
+    "sha256": {
+      "midi": "9d3b3eb437248199223de863b6290ace699abb4974236b76c1bf22f5c8a8085b",
+      "pdf": "4691f969a57249d0bf535543b274bcde8fb0df700c1c5ac30b56adfcc24a1edc"
+    },
+    "verified": "2026-11-06",
+    "duration": 738,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-58",
+    "title": "Invention 2, BWV 773",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 773 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=58",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV773/bach-invention-02/bach-invention-02.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV773/bach-invention-02/bach-invention-02-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-58/score.mid",
+      "pdf": "/music/mutopia-58/score.pdf"
+    },
+    "sha256": {
+      "midi": "b61e1e4d4a42ca70efd0eb8a65de3ed0ca0ee9c31556354608f6caa360e78e98",
+      "pdf": "01e32e691172c3c22bca44f87127fcff60af41339d2a7380e812b70f73f3c021"
+    },
+    "verified": "2026-11-06",
+    "duration": 101,
+    "bpm": 64
+  },
+  {
+    "id": "mutopia-70",
+    "title": "Invention 3, BWV 774",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 774 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=70",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV774/bach-invention-03/bach-invention-03.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV774/bach-invention-03/bach-invention-03-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-70/score.mid",
+      "pdf": "/music/mutopia-70/score.pdf"
+    },
+    "sha256": {
+      "midi": "602579a39b5b0e13ab4740dcff36342302553dcbd3619066e678f0074890c268",
+      "pdf": "c5d22101ccb251805124a3544ac3eebf30b9b7f24e4c387a53e7c2f128d1a0b3"
+    },
+    "verified": "2026-11-06",
+    "duration": 67,
+    "bpm": 80
+  },
+  {
+    "id": "mutopia-67",
+    "title": "Invention 4, BWV 775",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 775 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=67",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV775/bach-invention-04/bach-invention-04.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV775/bach-invention-04/bach-invention-04-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-67/score.mid",
+      "pdf": "/music/mutopia-67/score.pdf"
+    },
+    "sha256": {
+      "midi": "5ecc06eb04d56ea40bd4db64bfd49ac9bff523e46d134912fa5bd07aea1db1c7",
+      "pdf": "5e71399f764ffdca2e7df28ffea92ad092221077eb1369e63d2208e7150e668e"
+    },
+    "verified": "2026-11-06",
+    "duration": 52,
+    "bpm": 90
+  },
+  {
+    "id": "mutopia-55",
+    "title": "Invention 5, BWV 776",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 776 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=55",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV776/bach-invention-05/bach-invention-05.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV776/bach-invention-05/bach-invention-05-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-55/score.mid",
+      "pdf": "/music/mutopia-55/score.pdf"
+    },
+    "sha256": {
+      "midi": "8085d87bd49012a20afd59f79fd8a9864c4634b6303a7606e2e7a61b9e007542",
+      "pdf": "a80b2cbb72f7bc624b0f20a184b741dcc35b71ffcacf117c4800968351b519f1"
+    },
+    "verified": "2026-11-06",
+    "duration": 73,
+    "bpm": 105
+  },
+  {
+    "id": "mutopia-73",
+    "title": "Invention 7, BWV 778",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 778 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=73",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV778/bach-invention-07/bach-invention-07.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV778/bach-invention-07/bach-invention-07-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-73/score.mid",
+      "pdf": "/music/mutopia-73/score.pdf"
+    },
+    "sha256": {
+      "midi": "ee5e02d6a43cd9a45f6c10e3c6b3905190ed42521b1de7487fee8a98c3735eb6",
+      "pdf": "b3002203624ab4a69976cbfa8ccfc7925c3f9a957a17a5a60e5fdc80cec2d582"
+    },
+    "verified": "2026-11-06",
+    "duration": 61,
+    "bpm": 90
+  },
+  {
+    "id": "mutopia-61",
+    "title": "Invention 8, BWV 779",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 779 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=61",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV779/bach-invention-08/bach-invention-08.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV779/bach-invention-08/bach-invention-08-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-61/score.mid",
+      "pdf": "/music/mutopia-61/score.pdf"
+    },
+    "sha256": {
+      "midi": "07238719180171f76283756405ee43a0319226e869283bf29affb9e4c360e6f8",
+      "pdf": "9a0dd599cdea0e39ff8bff9192173a758c979034d3f7da777f4a099ee644b6ce"
+    },
+    "verified": "2026-11-06",
+    "duration": 67,
+    "bpm": 90
+  },
+  {
+    "id": "mutopia-62",
+    "title": "Invention 10, BWV 781",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 781 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=62",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV781/bach-invention-10/bach-invention-10.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV781/bach-invention-10/bach-invention-10-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-62/score.mid",
+      "pdf": "/music/mutopia-62/score.pdf"
+    },
+    "sha256": {
+      "midi": "64eed7d404ddbf668bef6a7e1d227390081e13731b9f2bf6c07792d6562eb822",
+      "pdf": "350b3f29d284b9a6c4aa08b84a86d65896ce10efb2e13563c7385e622d386f12"
+    },
+    "verified": "2026-11-06",
+    "duration": 50,
+    "bpm": 172
+  },
+  {
+    "id": "mutopia-71",
+    "title": "Invention 11, BWV 782",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 782 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=71",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV782/bach-invention-11/bach-invention-11.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV782/bach-invention-11/bach-invention-11-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-71/score.mid",
+      "pdf": "/music/mutopia-71/score.pdf"
+    },
+    "sha256": {
+      "midi": "9f6fce0e5c6f4e8eb28c7decf45e1f1de4474771619bf22884bac12646c49a5e",
+      "pdf": "c17bcc0aed2d4d0d3bdc4302c4bbc48757370ae3a21fb66de7e3a3b0f19585d2"
+    },
+    "verified": "2026-11-06",
+    "duration": 65,
+    "bpm": 85
+  },
+  {
+    "id": "mutopia-59",
+    "title": "Invention 13, BWV 784",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 784 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=59",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV784/bach-invention-13/bach-invention-13.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV784/bach-invention-13/bach-invention-13-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-59/score.mid",
+      "pdf": "/music/mutopia-59/score.pdf"
+    },
+    "sha256": {
+      "midi": "e5b4dd4790ee2f2fdadca75630790a373363e1f6cb4558838e34bbad907364f1",
+      "pdf": "d263a0db7f29e0a4c95110d53c54ba1a25a77f39e13a56b91cb998598cebf571"
+    },
+    "verified": "2026-11-06",
+    "duration": 60,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-72",
+    "title": "Invention 14, BWV 785",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 785 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=72",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV785/bach-invention-14/bach-invention-14.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV785/bach-invention-14/bach-invention-14-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-72/score.mid",
+      "pdf": "/music/mutopia-72/score.pdf"
+    },
+    "sha256": {
+      "midi": "8ef3606dc2b71c51c7c0e4438080ed641963e1a8e69d7b82aba42a04ebc5e9b9",
+      "pdf": "159211c9fe3858d6adc0996fb6c0a567ec15c27f01ecfd34041486d4af156ad7"
+    },
+    "verified": "2026-11-06",
+    "duration": 74,
+    "bpm": 65
+  },
+  {
+    "id": "mutopia-68",
+    "title": "Invention 15, BWV 786",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "study",
+      "practice",
+      "counterpoint"
+    ],
+    "description": "BWV 786 · Harpsichord, Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=68",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV786/bach-invention-15/bach-invention-15.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV786/bach-invention-15/bach-invention-15-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-68/score.mid",
+      "pdf": "/music/mutopia-68/score.pdf"
+    },
+    "sha256": {
+      "midi": "4b629b29d815d9f253600836a2801444780f20718b74892c502a044da6f85a88",
+      "pdf": "3fdf7b44076b3306f41154da2f0920f15eb167c9379c617190bb9960d94fe1c4"
+    },
+    "verified": "2026-11-06",
+    "duration": 50,
+    "bpm": 105
+  },
+  {
+    "id": "mutopia-69",
+    "title": "Little Prelude in D minor, BWV 926",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "learning",
+      "practice",
+      "short"
+    ],
+    "description": "BWV 926 · Harpsichord, Piano, Clavichord. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=69",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV926/bach-praeludium-02/bach-praeludium-02.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV926/bach-praeludium-02/bach-praeludium-02-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-69/score.mid",
+      "pdf": "/music/mutopia-69/score.pdf"
+    },
+    "sha256": {
+      "midi": "f054a135b9ca9925938c5c46606e56b8adeffcd88b60094995c7823304435b15",
+      "pdf": "9cc5f1c500605dd84bb1ea6a66aeafd069c832c6aa60ec3be6e0f87ca08e59d5"
+    },
+    "verified": "2026-11-06",
+    "duration": 62,
+    "bpm": 140
+  },
+  {
+    "id": "mutopia-63",
+    "title": "Little Prelude in F major, BWV 928",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Easy",
+    "instruments": [
+      "Piano",
+      "Harpsichord"
+    ],
+    "tags": [
+      "classical",
+      "baroque",
+      "learning",
+      "practice",
+      "short"
+    ],
+    "description": "BWV 928 · Harpsichord, Piano, Clavichord. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=63",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV928/bach-praeludium-10/bach-praeludium-10.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV928/bach-praeludium-10/bach-praeludium-10-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-63/score.mid",
+      "pdf": "/music/mutopia-63/score.pdf"
+    },
+    "sha256": {
+      "midi": "f83c5ee49e0c38c0307fffd2294e39f8f38b63325466383706cd886592ea8ce3",
+      "pdf": "c5539149c91d68669e834aa26028ea5bce32cc3b7b3eb625a990ad9560c636a1"
+    },
+    "verified": "2026-11-06",
+    "duration": 68,
+    "bpm": 85
+  },
+  {
+    "id": "mutopia-1743",
+    "title": "Bourrée in E minor, BWV 996",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Lute"
+    ],
+    "tags": [
+      "classical",
+      "baroque"
+    ],
+    "description": "BWV996 · Lute or Lute-Harpischord (Lautenwerk). Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1743",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Band I: J.S. Bach: Compositionen für die Laute, Denkmäler alter Lautenkunst Wolfenbüttel: Julius Zwißlers Verlag, 1921. Plate Band I. (among other sources)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV996/bourree/bourree.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV996/bourree/bourree-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1743/score.mid",
+      "pdf": "/music/mutopia-1743/score.pdf"
+    },
+    "sha256": {
+      "midi": "bf8cfbe91fb1510877fd6c44677822663bf0bffeeaa1842ec47c77beb088f595",
+      "pdf": "8608d3627269843951e414ba537dcfb53c92a098af38204e65903308e0950ee9"
+    },
+    "verified": "2026-11-06",
+    "duration": 44,
+    "bpm": 132
+  },
+  {
+    "id": "mutopia-60",
+    "title": "Prelude in D minor, BWV 999 — lute or guitar",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar",
+      "Lute"
+    ],
+    "tags": [
+      "classical",
+      "baroque"
+    ],
+    "description": "BWV 999 · Lute, Guitar. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=60",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Unknown",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV999/Bach_Prelude_BWV999/Bach_Prelude_BWV999.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV999/Bach_Prelude_BWV999/Bach_Prelude_BWV999-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-60/score.mid",
+      "pdf": "/music/mutopia-60/score.pdf"
+    },
+    "sha256": {
+      "midi": "a246bc598d6e9f94a5a42d2f39849883171cec1b4507f59b44d2a156eddba81c",
+      "pdf": "7b05e1c07f853745167474c32ac7ac28c19fcfc17c3dd687234d415d2e51d1af"
+    },
+    "verified": "2026-11-06",
+    "duration": 95,
+    "bpm": 80
+  },
+  {
+    "id": "mutopia-1534",
+    "title": "Air on the G String — flute and guitar",
+    "composer": "J. S. Bach",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Guitar",
+      "Flute"
+    ],
+    "tags": [
+      "classical",
+      "baroque"
+    ],
+    "description": "BWV 1068 · Flute and Guitar. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1534",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "New adaptation from Bach-Gesellschaft",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/BachJS/BWV1068/bach_air_bmv_1068/bach_air_bmv_1068.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/BachJS/BWV1068/bach_air_bmv_1068/bach_air_bmv_1068-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1534/score.mid",
+      "pdf": "/music/mutopia-1534/score.pdf"
+    },
+    "sha256": {
+      "midi": "5f7763dd4d29f309cac6d670c22aa029aca23c8c97743a0511d4b9c6d3435f1c",
+      "pdf": "f7e7e3f993505a05a2176069993251f20176bdbc45074e73a8ed3e466edb2ab9"
+    },
+    "verified": "2026-11-06",
+    "duration": 63,
+    "bpm": 72
+  },
+  {
+    "id": "mutopia-503",
+    "title": "Gretchen am Spinnrade (Gretchen at the Spinning Wheel)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "song",
+      "vocal"
+    ],
+    "description": "D.118 (Op. 2) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=503",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C.F. Peters (Band I)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D118/gretchen/gretchen.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D118/gretchen/gretchen-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-503/score.mid",
+      "pdf": "/music/mutopia-503/score.pdf"
+    },
+    "sha256": {
+      "midi": "1460b5cedc528722939a657b9ab9d7a6fa500d0bc29c7efd78c34466f04d5e5e",
+      "pdf": "7e171e02a0dddce5a775256b09f535888cc06eb9ce0dc2dbad70544809fc77c9"
+    },
+    "verified": "2026-11-06",
+    "duration": 196,
+    "bpm": 110
+  },
+  {
+    "id": "mutopia-1555",
+    "title": "Heidenröslein (Wild Rose)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "song",
+      "vocal"
+    ],
+    "description": "D.257 (Op. 3, No. 3) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1555",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel (1884-1897)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D257/SchubertF-D257-Heidenroeslein/SchubertF-D257-Heidenroeslein.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D257/SchubertF-D257-Heidenroeslein/SchubertF-D257-Heidenroeslein-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1555/score.mid",
+      "pdf": "/music/mutopia-1555/score.pdf"
+    },
+    "sha256": {
+      "midi": "d0853ca601d13d08a8ea804f8a5835d3787d3ab5c24ba0005f2942a37074aef7",
+      "pdf": "290e2499d9e3943f8e14bf2fc3f87f8bb802a02a976a8477e054acc28c0f236b"
+    },
+    "verified": "2026-11-06",
+    "duration": 91,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1030",
+    "title": "Erlkönig (The Erl-King)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "song",
+      "vocal"
+    ],
+    "description": "D.328 (Op. 1) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1030",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C.F. Peters (Band I)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D328/Erlkoenig/Erlkoenig.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D328/Erlkoenig/Erlkoenig-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1030/score.mid",
+      "pdf": "/music/mutopia-1030/score.pdf"
+    },
+    "sha256": {
+      "midi": "e433eca07d4d1ca85622bfc0fafeb6f74ac84710f1eebe57a1e1199876fc6603",
+      "pdf": "dfd76c0ddb804d0587048c61e4edec8dcd7a75b6e39e27420087ed510d89046b"
+    },
+    "verified": "2026-11-06",
+    "duration": 239,
+    "bpm": 152
+  },
+  {
+    "id": "mutopia-1040",
+    "title": "Wiegenlied (Lullaby), D. 498",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "gentle",
+      "reflective",
+      "lullaby",
+      "children",
+      "song",
+      "vocal"
+    ],
+    "description": "D.498 (Op. 98, No. 2) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1040",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Indiana Edu. Web",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D498/schubert_wiegen_lied/schubert_wiegen_lied.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D498/schubert_wiegen_lied/schubert_wiegen_lied-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1040/score.mid",
+      "pdf": "/music/mutopia-1040/score.pdf"
+    },
+    "sha256": {
+      "midi": "c23c9ad4a9604cc0cdd502689c37c95a194c5b1d0bd21dd75ad6e6832bf0d692",
+      "pdf": "ab52b8222afe3c99b71d5abf9b4d6d18b87e281ec70535ba2e35a6ff15ccbd3c"
+    },
+    "verified": "2026-11-06",
+    "duration": 40,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1001",
+    "title": "An die Musik (To Music)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "song",
+      "vocal"
+    ],
+    "description": "D.547 (Op. 88, No. 4) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1001",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C.F. Peters (Band I)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D547/AnDieMusik/AnDieMusik.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D547/AnDieMusik/AnDieMusik-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1001/score.mid",
+      "pdf": "/music/mutopia-1001/score.pdf"
+    },
+    "sha256": {
+      "midi": "85e627c4a4d635e0ef1018b6ae627b44d13d830da821b5c2d7823a8a32e45e7c",
+      "pdf": "0cf95b31cf5628cf84225b5e2bb367d76c7e908d224c64284582f3fc72bb7f25"
+    },
+    "verified": "2026-11-06",
+    "duration": 122,
+    "bpm": 84
+  },
+  {
+    "id": "mutopia-502",
+    "title": "Die Forelle (The Trout)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "song",
+      "vocal"
+    ],
+    "description": "D.550 (Op. 32) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=502",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C.F. Peters (Band I)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D550/forelle/forelle.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D550/forelle/forelle-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-502/score.mid",
+      "pdf": "/music/mutopia-502/score.pdf"
+    },
+    "sha256": {
+      "midi": "3b6726f0ff6beaef51288a6a45f091f12a410adca6bc60e100de5ef62958e124",
+      "pdf": "861ca3eb8a4fb5283a54376738a3ba68fb42b6a1e65c00c727aae972d7f36249"
+    },
+    "verified": "2026-11-06",
+    "duration": 130,
+    "bpm": 75
+  },
+  {
+    "id": "mutopia-1545",
+    "title": "Marche militaire No. 1, D. 733",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.733-1 (Op. 51) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1545",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D733/SchubertF-D733-1-TroisMarches/SchubertF-D733-1-TroisMarches.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D733/SchubertF-D733-1-TroisMarches/SchubertF-D733-1-TroisMarches-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1545/score.mid",
+      "pdf": "/music/mutopia-1545/score.pdf"
+    },
+    "sha256": {
+      "midi": "3b51609b20ce11a74b5b0ae05a415a0adec5551ca4396114aa1b7fade04ef9cc",
+      "pdf": "b27ad3ecf482014e4100e74086a0c36b2a05c8e7bdede2719eae8473f260599b"
+    },
+    "verified": "2026-11-06",
+    "duration": 272,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-1052",
+    "title": "Auf dem Wasser zu singen (To Sing on the Water)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "song",
+      "vocal"
+    ],
+    "description": "D.774 (Op. 72) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1052",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C.F. Peters (Band I)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D774/SchubertF-D774_AufDemWasserZuSingen/SchubertF-D774_AufDemWasserZuSingen.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D774/SchubertF-D774_AufDemWasserZuSingen/SchubertF-D774_AufDemWasserZuSingen-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1052/score.mid",
+      "pdf": "/music/mutopia-1052/score.pdf"
+    },
+    "sha256": {
+      "midi": "b461bad7e937ba271e857bdce4442a70b4fd99703b23b503f7eda4b1e02b2452",
+      "pdf": "4d5f2d5a9b7418bf30aa30c815123bc58fe7f497ca48e1020e806f024e360ac9"
+    },
+    "verified": "2026-11-06",
+    "duration": 176,
+    "bpm": 90
+  },
+  {
+    "id": "mutopia-1053",
+    "title": "Du bist die Ruh (You Are Rest)",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano",
+      "Voice"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "gentle",
+      "reflective",
+      "song",
+      "vocal"
+    ],
+    "description": "D.776 (Op. 59, No. 3) · Voice and Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1053",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "C.F. Peters (Band I)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D776/SchubertF-D776_DuBistDieRuh/SchubertF-D776_DuBistDieRuh.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D776/SchubertF-D776_DuBistDieRuh/SchubertF-D776_DuBistDieRuh-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1053/score.mid",
+      "pdf": "/music/mutopia-1053/score.pdf"
+    },
+    "sha256": {
+      "midi": "2039fcafbdaa63bdd9b73ca97c13e17f7d484830c257050f56bb003bb95b4a62",
+      "pdf": "2f6f268df21f19352522c01a8286397d884613b2ab9d680b213ceb7e17ca950a"
+    },
+    "verified": "2026-11-06",
+    "duration": 299,
+    "bpm": 25
+  },
+  {
+    "id": "mutopia-1023",
+    "title": "Moment musical No. 3 in F minor, D. 780",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.780 (Op. 94, No. 3) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1023",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Sauer & Leidersdorf, Wien, 1827",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D780/MomentsNo3/MomentsNo3.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D780/MomentsNo3/MomentsNo3-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1023/score.mid",
+      "pdf": "/music/mutopia-1023/score.pdf"
+    },
+    "sha256": {
+      "midi": "77b5ccc3a0f33128f9f4c162743d6a484bbfaa952206b69584a4c14bafc60358",
+      "pdf": "d014d132cf834888082903ccc9f595666d0da7766835171a5276386437f8b0d4"
+    },
+    "verified": "2026-11-06",
+    "duration": 117,
+    "bpm": 80
+  },
+  {
+    "id": "mutopia-758",
+    "title": "Hungarian Melody, D. 817",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.817 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=758",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Neue Schubert Ausgabe BA 5521",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D817/Ungarische/Ungarische.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D817/Ungarische/Ungarische-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-758/score.mid",
+      "pdf": "/music/mutopia-758/score.pdf"
+    },
+    "sha256": {
+      "midi": "41f967af6fa4bf21792e9633114d27dbe8c4a605d805ceef1e07fd4fbe0d5e89",
+      "pdf": "cda679f22e92b7f6fc2894121aad03bb6f934adf8fccdda87f4f0ca0e45af187"
+    },
+    "verified": "2026-11-06",
+    "duration": 163,
+    "bpm": 76
+  },
+  {
+    "id": "mutopia-1192",
+    "title": "Impromptu in C minor, Op. 90 No. 1",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.899 (Op. 90, No. 1) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1192",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-1-Impromptu/SchubertF-D899-1-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-1-Impromptu/SchubertF-D899-1-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1192/score.mid",
+      "pdf": "/music/mutopia-1192/score.pdf"
+    },
+    "sha256": {
+      "midi": "715b72203b928db3d3c7327b8cae16124ccdb1fccc4b6040dbda54de1b14b374",
+      "pdf": "e49bd06a384af8e4d31e96030892d9633fdf47d8738cc8ab19d1ed9101d276b5"
+    },
+    "verified": "2026-11-06",
+    "duration": 568,
+    "bpm": 88
+  },
+  {
+    "id": "mutopia-1551",
+    "title": "Impromptu in E-flat major, Op. 90 No. 2",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.899 (Op. 90, No. 2) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1551",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-2-Impromptu/SchubertF-D899-2-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-2-Impromptu/SchubertF-D899-2-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1551/score.mid",
+      "pdf": "/music/mutopia-1551/score.pdf"
+    },
+    "sha256": {
+      "midi": "8e0723800e1cf9e787d496ca5540cac088895dd63566db44f0cad4de2861b786",
+      "pdf": "904ea2c6a241bbf660eba3638d3655d98257fee90a2b9020366214770c8b52d5"
+    },
+    "verified": "2026-11-06",
+    "duration": 319,
+    "bpm": 160
+  },
+  {
+    "id": "mutopia-1193",
+    "title": "Impromptu in G-flat major, Op. 90 No. 3",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "D.899 (Op. 90, No. 3) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1193",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-3-Impromptu/SchubertF-D899-3-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-3-Impromptu/SchubertF-D899-3-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1193/score.mid",
+      "pdf": "/music/mutopia-1193/score.pdf"
+    },
+    "sha256": {
+      "midi": "3ae00ab41634cd65c495a0aec41798ff191bd2690f48ec93daa53dd0266edaa2",
+      "pdf": "8c75248daac401fdb8369330f28a2e2cfb63b2ac0726bbbbe797b0f1dace6f59"
+    },
+    "verified": "2026-11-06",
+    "duration": 354,
+    "bpm": 120
+  },
+  {
+    "id": "mutopia-1552",
+    "title": "Impromptu in A-flat major, Op. 90 No. 4",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.899 (Op. 90, No. 4) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1552",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-4-Impromptu/SchubertF-D899-4-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-4-Impromptu/SchubertF-D899-4-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1552/score.mid",
+      "pdf": "/music/mutopia-1552/score.pdf"
+    },
+    "sha256": {
+      "midi": "6fe7822926b6ae88045511eb8bacd01f3725c1e38f6d140330d5466fd5a06c98",
+      "pdf": "984f7cd1baf2df37171859ff362680f207f427bbde8078cb5f3febca894fcf30"
+    },
+    "verified": "2026-11-06",
+    "duration": 455,
+    "bpm": 60
+  },
+  {
+    "id": "mutopia-1194",
+    "title": "Impromptu in F minor, Op. 142 No. 1",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.935 (Op. 142, No. 1) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1194",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-1-Impromptu/SchubertF-D935-1-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-1-Impromptu/SchubertF-D935-1-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1194/score.mid",
+      "pdf": "/music/mutopia-1194/score.pdf"
+    },
+    "sha256": {
+      "midi": "81a793066aca5732fadcca654ac6d92f0037cdf531102016d87e2a8e7a462afa",
+      "pdf": "128a4333e8ed8952919fde56e139812ed1c67a99abdf7e38d29a5e131aa11fb1"
+    },
+    "verified": "2026-11-06",
+    "duration": 547,
+    "bpm": 110
+  },
+  {
+    "id": "mutopia-1195",
+    "title": "Impromptu in A-flat major, Op. 142 No. 2",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Intermediate",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "gentle",
+      "reflective",
+      "solo"
+    ],
+    "description": "D.935 (Op. 142, No. 2) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1195",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-2-Impromptu/SchubertF-D935-2-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-2-Impromptu/SchubertF-D935-2-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1195/score.mid",
+      "pdf": "/music/mutopia-1195/score.pdf"
+    },
+    "sha256": {
+      "midi": "e4d05090dcc84046317f175fc75c85c59f3327f1966e163b0750dfa766fd49e9",
+      "pdf": "fa348013740258da2b57bbbf7dc00ec70a69849bc62723afaf71bff6e6eea03b"
+    },
+    "verified": "2026-11-06",
+    "duration": 433,
+    "bpm": 100
+  },
+  {
+    "id": "mutopia-1721",
+    "title": "Impromptu in B-flat major, Op. 142 No. 3",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.935 (Op. 142, No. 3) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1721",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-3-Impromptu/SchubertF-D935-3-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-3-Impromptu/SchubertF-D935-3-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1721/score.mid",
+      "pdf": "/music/mutopia-1721/score.pdf"
+    },
+    "sha256": {
+      "midi": "112b07b84dcf1396e2f9cc50e03b6371dff68e76aa22da235e8875f6ce1ad3a4",
+      "pdf": "f1e33fdceea69a282920f310c00080f687b25ef99432b477ab2828aa357d86cd"
+    },
+    "verified": "2026-11-06",
+    "duration": 664,
+    "bpm": 80
+  },
+  {
+    "id": "mutopia-1689",
+    "title": "Impromptu in F minor, Op. 142 No. 4",
+    "composer": "F. Schubert",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "romantic",
+      "solo"
+    ],
+    "description": "D.935 (Op. 142, No. 4) · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1689",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Breitkopf & Härtel, 1888",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-4-Impromptu/SchubertF-D935-4-Impromptu.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/SchubertF/D935/SchubertF-D935-4-Impromptu/SchubertF-D935-4-Impromptu-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1689/score.mid",
+      "pdf": "/music/mutopia-1689/score.pdf"
+    },
+    "sha256": {
+      "midi": "4f61e34b78fb2d3e0f91830769b914147c71aee379466ccaad4dd7228925177a",
+      "pdf": "94986e3b9b297c7cc6ae65fbe6eef9fca4c966dab5dd50b6917ece0de54ab588"
+    },
+    "verified": "2026-11-06",
+    "duration": 481,
+    "bpm": 95
+  },
+  {
+    "id": "mutopia-1777",
+    "title": "Arabesque No. 1",
+    "composer": "C. Debussy",
+    "category": "Classical",
+    "difficulty": "Advanced",
+    "instruments": [
+      "Piano"
+    ],
+    "tags": [
+      "classical",
+      "impressionist",
+      "solo"
+    ],
+    "description": "L66 No.1 · Piano. Complete listed movement or edition; difficulty is an editorial estimate.",
+    "source": "Mutopia Project",
+    "sourceUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1777",
+    "rights": "Public domain dedication",
+    "rightsUrl": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "edition": "Durand et Fils (1904)",
+    "urls": {
+      "midi": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1.mid",
+      "pdf": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1-a4.pdf"
+    },
+    "assets": {
+      "midi": "/music/mutopia-1777/score.mid",
+      "pdf": "/music/mutopia-1777/score.pdf"
+    },
+    "sha256": {
+      "midi": "6732dc10799ec0af47d19d9095562d0671864a750129e0279901def169a34757",
+      "pdf": "5f2fb9087b45d6a030b1827a21dcd1816d24fec6833afff8183bafbee95e72a0"
+    },
+    "verified": "2026-11-06",
+    "duration": 176,
+    "bpm": 144
   }
 ]
