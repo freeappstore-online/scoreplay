@@ -75,6 +75,7 @@ test('invalid and failed links show errors; leaving an in-flight link cancels it
   await expect(page.getByRole('status').filter({ hasText: 'Opening linked piece' })).toBeVisible();
   await page.getByRole('link', { name: 'Library', exact: true }).click();
   release();
+  await page.getByText('Browse composers', { exact: true }).click();
   await page.getByRole('button', { name: /Browse Mozart/ }).click();
   await expect(page.getByLabel('Composer', { exact: true })).toHaveValue('W. A. Mozart');
   await expect(page).toHaveURL(/\/library$/);
@@ -91,6 +92,7 @@ test('dark shelves and favourites are distinct, and a Mozart search can escape f
   await page.getByLabel('Find a song', { exact: true }).fill('');
   const favourites = page.getByRole('button', { name: 'Favourites (1)', exact: true });
   await favourites.click();
+  await page.getByText('Filters', { exact: true }).click();
   await page.getByLabel('Composer', { exact: true }).selectOption('W. A. Mozart');
   await expect(page.getByText('No favourites match these filters.')).toBeVisible();
   await expect(page.getByText('0 pieces found · In your favourites')).toBeVisible();
@@ -109,6 +111,7 @@ test('dark shelves and favourites are distinct, and a Mozart search can escape f
   await expect(page.getByRole('heading', { name: /Turkish March/ })).toBeVisible();
   await page.reload();
   await expect(page.getByRole('heading', { name: /Turkish March/ })).toBeVisible();
+  await page.getByText('Browse composers', { exact: true }).click();
   await page.getByRole('button', { name: /Browse Chopin/ }).click();
   await expect(page.getByLabel('Find a song', { exact: true })).toHaveValue('');
   await expect(page.getByLabel('Composer', { exact: true })).toHaveValue('F. F. Chopin');
@@ -122,6 +125,7 @@ test('Vivaldi discovery, source score, saved filters, sharing and playback work 
   const title = 'Violin Concerto in A minor, Op. 3 No. 6 — I. Allegro';
   const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
   await page.goto('/library');
+  await page.getByText('Browse composers', { exact: true }).click();
   await page.getByRole('button', { name: 'Browse Vivaldi, Antonio', exact: true }).click();
   await expect(page.getByLabel('Composer', { exact: true })).toHaveValue('A. Vivaldi');
   await expect(page.getByText(/196 pieces found · Free collection/)).toBeVisible();

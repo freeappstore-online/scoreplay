@@ -12,7 +12,7 @@ const verified: (CatalogPiece & { sha256: Record<string,string> })[] = JSON.pars
 describe('reviewed free collection', () => {
   it('contains unique, playable editions with intact score assets and recorded provenance', () => {
     expect(CATALOG.length).toBeGreaterThanOrEqual(5261);
-    expect(CATALOG).toEqual(verified.map(piece => Object.fromEntries(Object.entries(piece).filter(([key]) => !['urls','sha256','archiveMembers','verified'].includes(key)))));
+    expect(CATALOG.map(({ kind, ...piece }) => piece)).toEqual(verified.map(piece => Object.fromEntries(Object.entries(piece).filter(([key]) => !['urls','sha256','archiveMembers','verified'].includes(key)))));
     expect(new Set(CATALOG.map(p => p.id)).size).toBe(CATALOG.length);
     for (const piece of verified) {
       expect(piece.sourceUrl).toMatch(/^https:\/\/(www.mutopiaproject.org|www.gutenberg.org)\//);
@@ -70,5 +70,20 @@ describe('reviewed free collection', () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue({ ok:false }));
     await expect(loadCatalogPiece(CATALOG[0], new AbortController().signal)).rejects.toThrow('could not be downloaded');
     vi.unstubAllGlobals(); localStorage.clear();
+  });
+  it('keeps known movements and parts distinct without calling unknown selections complete works', () => {
+    expect(CATALOG.find(p => p.id === 'mutopia-301-spring-score')?.kind).toBe('Movement');
+    expect(CATALOG.find(p => p.id === 'mutopia-1775-part-v1')?.kind).toBe('Instrumental part');
+    expect(CATALOG.find(p => p.id === 'nursery-opera-danceababy')?.kind).toBe('Piece / arrangement');
+    const scores = filterCatalog({ ...DEFAULT_FILTERS, score: 'pdf-only' }, []);
+    expect(scores).toHaveLength(4); expect(scores.every(p => p.kind === 'Score only')).toBe(true);
+    const first = filterCatalog({ ...DEFAULT_FILTERS, collection: 'first-piano' }, []);
+    expect(first.length).toBeGreaterThan(0);
+    expect(first.every(p => p.difficulty === 'Easy' && p.instruments.length === 1 && p.instruments[0] === 'Piano')).toBe(true);
+  });
+  it('clears obsolete filters and deduplicates stored favourites', () => {
+    localStorage.setItem('scoreplay-library-preferences', JSON.stringify({ filters: { composer: 'Missing composer', kind: 'bad', score: 'bad', collection: 'bad', sort: 'bad', tags: ['gentle', 'gentle', 'nonexistent'] }, favorites: ['mutopia-37', 'mutopia-37'] }));
+    expect(readPreferences()).toEqual({ filters: { ...DEFAULT_FILTERS, tags: ['gentle'] }, favorites: ['mutopia-37'] });
+    localStorage.clear();
   });
 });

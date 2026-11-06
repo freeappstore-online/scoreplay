@@ -56,6 +56,7 @@
 
 @layer base {
 :root {
+  color-scheme: light;
   --score-paper: #ffffff;
   --score-ink: #111111;
   --paper: #fffefb;
@@ -141,5 +142,15 @@ h3 {
 html { overflow-wrap: anywhere; }
 body { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
 img, video, canvas { max-width: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+}
+
+@layer components {
+  .collection-tile[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+  .collection-tile[aria-pressed="true"] > span:nth-child(2)::before { content: '✓ '; color: var(--accent); }
+  .preview-bar { bottom: max(1rem, env(safe-area-inset-bottom)); max-height: 45dvh; overflow-y: auto; }
 
 }

@@ -72,3 +72,13 @@ node scripts/measure-catalog.mjs /tmp/scoreplay-review/catalog.json
 ```
 
 Review download errors, `problems.json`, edition licenses/credits, PDF pairing overrides, and the generated metadata before replacing `web/src/catalog-data.json` and `scripts/mutopia-provenance.json`. Known silent files are pinned in `scripts/mutopia-silent-files.json`; changed bytes require another review. The four source-only editions remain visible with PDF links and an explicit explanation, without preview or misleading zero-length playback. After accepting the metadata, run `pnpm catalog:prepare`, typecheck, tests, build, and browser checks. No bulk asset downloads occur in the user's browser.
+
+## Quality and publication safeguards
+
+Library search comes first. Collection shortcuts include easy solo piano and recognisable melodies; advanced filters and composer shortcuts expand on demand. Active filters remain visible as removable chips. Arrangement labels are conservative: explicitly identified movements and instrumental parts are separated, while unidentified archive members remain “Edition selection”, never guessed complete works. `scripts/catalog-kind.mjs` supplies these presentation labels without changing original files or stable piece IDs.
+
+Catalog and saved copies use one favourite identity. Opening a downloaded catalog piece from free results or favourites reuses its local score files, just like preview. Missing server files, server outages and connection failures have distinct messages. Failed opens/saves have a retry beside the affected card. Shared button styles cover player selections, library actions and previews in both themes.
+
+The app deploy workflow uses `scripts/publish-dist.py` instead of syncing directly over live entry points. It compares local content digests with R2 single-part ETags, uploads and verifies changed dependencies first, publishes the page next, and publishes the service worker last. Existing assets are retained for open tabs. The full music archive is not retransferred merely because a new checkout has newer timestamps. Unknown/multipart ETags are conservatively uploaded again. Run `python3 -m unittest discover -s scripts -p 'test_*.py'` to exercise failed-upload ordering, same-size content changes, and retention.
+
+This protects the reported missing-new-asset window in Scoreplay. It is not platform-wide atomic release switching: changed files at stable URLs can still change before the page, and a failed service-worker publication leaves the prior offline version active. Platform release prefixes, rollback and garbage collection remain tracked at https://github.com/freeappstore-online/platform/issues/510.

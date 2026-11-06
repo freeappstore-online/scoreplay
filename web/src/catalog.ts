@@ -10,12 +10,17 @@ export type CatalogPiece = {
   sourceUrl: string; rights: string; rightsUrl: string; edition: string;
   assets: Assets; duration: number; bpm: number;
   creditsUrl?: string; playbackUnavailable?: string;
+  kind: string;
 };
-type PieceFields = 'id' | 'title' | 'description' | 'assets' | 'duration' | 'bpm' | 'playbackUnavailable';
+type PieceFields = 'id' | 'title' | 'description' | 'assets' | 'duration' | 'bpm' | 'playbackUnavailable' | 'kind';
 const data: { editions: Omit<CatalogPiece, PieceFields>[]; pieces: (Pick<CatalogPiece, PieceFields> & { editionIndex: number })[] } = JSON.parse(catalogJson);
 export const CATALOG: CatalogPiece[] = data.pieces.map(({ editionIndex, ...piece }) => ({ ...data.editions[editionIndex], ...piece }));
-export type Filters = { query: string; scope: string; category: string; difficulty: string; instrument: string; composer: string; duration: string; score: string; tags: string[]; sort: string };
-export const DEFAULT_FILTERS: Filters = { query: '', scope: 'free', category: '', difficulty: '', instrument: '', composer: '', duration: '', score: '', tags: [], sort: 'title' };
+export type Filters = { query: string; scope: string; category: string; difficulty: string; instrument: string; composer: string; duration: string; score: string; kind: string; collection: string; tags: string[]; sort: string };
+export const DEFAULT_FILTERS: Filters = { query: '', scope: 'free', category: '', difficulty: '', instrument: '', composer: '', duration: '', score: '', kind: '', collection: '', tags: [], sort: 'title' };
+const famous = new Set(['mutopia-931', 'mutopia-37', 'mutopia-1778', 'mutopia-75', 'mutopia-528', 'mutopia-485']);
+export const inCollection = (piece: CatalogPiece, collection: string) => !collection
+  || (collection === 'famous' && (famous.has(piece.id) || piece.tags.includes('four seasons')))
+  || (collection === 'first-piano' && piece.difficulty === 'Easy' && piece.instruments.length === 1 && ['Piano','Keyboard'].includes(piece.instruments[0]));
 const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
 export const matchesSearch = (text: string, query: string) => normalize(query).trim().split(/\s+/).every(word => normalize(text).includes(word));
 const searchIndex = new Map(CATALOG.map(p => [p.id, normalize([p.title,p.composer,composerInfo(p.composer).fullName,composerInfo(p.composer).label,p.category,p.description,...p.instruments,...p.tags].join(' '))]));
@@ -24,7 +29,9 @@ export function filterCatalog(filters: Filters, favorites: string[]) {
   const result = CATALOG.filter(p => words.every(word => searchIndex.get(p.id)!.includes(word))
     && (!filters.category || p.category === filters.category) && (!filters.difficulty || p.difficulty === filters.difficulty)
     && (!filters.instrument || p.instruments.includes(filters.instrument)) && (!filters.composer || p.composer === filters.composer)
-    && (!filters.duration || (p.duration > 0 && p.duration <= Number(filters.duration))) && (!filters.score || !!p.assets.musicxml)
+    && (!filters.duration || (p.duration > 0 && p.duration <= Number(filters.duration)))
+    && (!filters.score || (filters.score === 'musicxml' ? !!p.assets.musicxml : filters.score === 'pdf-only' ? !p.assets.midi : !!p.assets.midi && !p.assets.musicxml))
+    && (!filters.kind || p.kind === filters.kind) && inCollection(p, filters.collection)
     && filters.tags.every(tag => p.tags.includes(tag)) && (filters.scope !== 'favorites' || favorites.includes(p.id)));
   const levels = ['Easy','Intermediate','Advanced','Not rated'];
   return result.sort((a,b) => (filters.sort === 'duration' ? (a.duration || Infinity)-(b.duration || Infinity) : filters.sort === 'difficulty' ? levels.indexOf(a.difficulty)-levels.indexOf(b.difficulty) : filters.sort === 'composer' ? composerInfo(a.composer).label.localeCompare(composerInfo(b.composer).label) : 0) || a.title.localeCompare(b.title));
@@ -38,12 +45,29 @@ export function readPreferences(): { filters: Filters; favorites: string[] } {
       else if (typeof saved.filters?.[key] === 'string') filters[key] = saved.filters[key];
     }
     if (!['free','mine','favorites'].includes(filters.scope)) filters.scope = 'free';
-    return { filters, favorites: Array.isArray(saved.favorites) ? saved.favorites.filter((id: unknown) => typeof id === 'string') : [] };
+    if (!['title','composer','duration','difficulty'].includes(filters.sort)) filters.sort = 'title';
+    if (!['','famous','first-piano'].includes(filters.collection)) filters.collection = '';
+    for (const [key, field] of [['category','category'],['difficulty','difficulty'],['instrument','instruments'],['composer','composer'],['kind','kind']] as const) {
+      if (filters[key] && !CATALOG.some(p => Array.isArray(p[field]) ? (p[field] as string[]).includes(filters[key]) : p[field] === filters[key])) filters[key] = '';
+    }
+    if (!['','60','180','300'].includes(filters.duration)) filters.duration = '';
+    if (!['','musicxml','midi','pdf-only'].includes(filters.score)) filters.score = '';
+    filters.tags = [...new Set(filters.tags)].filter(tag => CATALOG.some(p => p.tags.includes(tag)));
+    return { filters, favorites: Array.isArray(saved.favorites) ? [...new Set<string>(saved.favorites.filter((id: unknown) => typeof id === 'string'))] : [] };
   } catch { return { filters: { ...DEFAULT_FILTERS }, favorites: [] }; }
 }
 async function getAsset(url: string, signal: AbortSignal) {
-  const response = await fetch(url, { signal });
-  if (!response.ok) throw new Error('This piece could not be downloaded. Check your connection and try again.');
+  let response: Response;
+  try { response = await fetch(url, { signal }); }
+  catch (error) {
+    if (signal.aborted) throw error;
+    throw new Error('The download could not connect. Check your connection, or open a piece saved in My files.');
+  }
+  if (!response.ok) {
+    if (response.status === 404) throw new Error('This music or score file is unavailable on the server. Please retry shortly, or choose another piece.');
+    if (response.status >= 500) throw new Error('This piece could not be downloaded because the music server is temporarily unavailable. Please retry shortly.');
+    throw new Error(`This piece could not be downloaded${response.status ? ` (server response ${response.status})` : ''}. Please try again.`);
+  }
   return response.arrayBuffer();
 }
 export async function loadCatalogSong(piece: CatalogPiece, signal: AbortSignal) {

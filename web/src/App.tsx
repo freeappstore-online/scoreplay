@@ -9,6 +9,7 @@ import type { LibraryEntry } from './library';
 import { useMusicFile } from './useMusicFile';
 import { piecePath, SharePiece } from './SharePiece';
 import { pwa } from './fas-capabilities/pwa';
+import { button, selectedButton } from './ui';
 
 const Library = lazy(() => import('./LibraryScreen'));
 const OriginalScore = lazy(() => import('./OriginalScore'));
@@ -17,7 +18,7 @@ const SheetMusic = lazy(() => import('./SheetMusic'));
 export const fas = initApp({ appId: 'scoreplay' });
 const NAV: NavItem[] = [{ label: 'Player', href: '/', title: 'Scoreplay — MIDI player' }, { label: 'Library', href: '/library', title: 'Library — Scoreplay' }, { label: 'How to use', href: '/about', title: 'How to use — Scoreplay' }];
 function Button({ primary, className = '', ...props }: ButtonHTMLAttributes<HTMLButtonElement> & { primary?: boolean }) {
-  return <button {...props} className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${primary ? 'border-accent bg-accent text-paper hover:bg-accent-hover' : 'border-line bg-paper text-ink hover:bg-panel'} ${className}`} />;
+  return <button {...props} className={`${primary || props['aria-pressed'] === true ? selectedButton : button} ${className}`} />;
 }
 export default function App() {
   const [mode, setMode] = useState('sheet');
@@ -95,7 +96,7 @@ export default function App() {
         <p role="status" className="min-h-5 text-xs text-muted">{notice}</p>
         {song && <>
           <section className="overflow-hidden rounded-2xl border border-line bg-paper" aria-label="Music player">
-            <div className="flex flex-wrap items-start justify-between gap-3 border-b border-line p-5 sm:p-6"><div className="min-w-0"><p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted">Now on the stand</p><h2 className="break-words text-3xl">{song.title}</h2><p className="mt-2 text-sm text-muted">{song.tracks.length} tracks · {song.notes.length.toLocaleString()} notes · {Math.round(song.bpm)} BPM at start</p></div><div className="flex flex-wrap items-start gap-2"><Badge variant={playing ? 'success' : 'default'}>{playing ? 'Playing' : time >= song.duration ? 'Finished' : 'Ready to play'}</Badge>{catalogId && <SharePiece key={catalogId} id={catalogId} title={song.title} />}{sourceEditionId && <a className="inline-flex min-h-11 items-center rounded-xl border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink hover:bg-panel" href={`/music/${sourceEditionId}/credits.html`} target="_blank" rel="noopener noreferrer" aria-label={`Credits for ${song.title}`}>Source &amp; credits ↗</a>}</div></div>
+            <div className="flex flex-wrap items-start justify-between gap-3 border-b border-line p-5 sm:p-6"><div className="min-w-0"><p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted">Now on the stand</p><h2 className="break-words text-3xl">{song.title}</h2><p className="mt-2 text-sm text-muted">{song.tracks.length} tracks · {song.notes.length.toLocaleString()} notes · {Math.round(song.bpm)} BPM at start</p></div><div className="flex flex-wrap items-start gap-2"><Badge variant={playing ? 'success' : 'default'}>{audioLoading ? 'Preparing playback' : playing ? 'Playing' : time >= song.duration ? 'Finished' : time > 0 ? 'Paused' : 'Ready to play'}</Badge>{catalogId && <SharePiece key={catalogId} id={catalogId} title={song.title} />}{sourceEditionId && <a className="inline-flex min-h-11 items-center rounded-xl border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink hover:bg-panel" href={`/music/${sourceEditionId}/credits.html`} target="_blank" rel="noopener noreferrer" aria-label={`Credits for ${song.title}`}>Source &amp; credits ↗</a>}</div></div>
             <div className="flex flex-wrap gap-2 border-b border-line bg-panel px-5 py-3" role="group" aria-label="Music view"><Button primary={mode === 'sheet'} aria-pressed={mode === 'sheet'} onClick={() => setMode('sheet')}>Sheet music</Button><Button primary={mode === 'roll'} aria-pressed={mode === 'roll'} onClick={() => setMode('roll')}>Piano roll</Button>{pdfUrl && <Button primary={mode === 'pdf'} aria-pressed={mode === 'pdf'} onClick={() => setMode('pdf')}>PDF score</Button>}</div>
             {mode === 'sheet' ? <>
               {musicxml && <div className="flex flex-wrap gap-2 px-5 pt-4"><Button aria-pressed={original} onClick={() => setOriginal(true)}>Original score</Button><Button aria-pressed={!original} onClick={() => setOriginal(false)}>MIDI transcription</Button></div>}

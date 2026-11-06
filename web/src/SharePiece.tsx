@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { button } from './ui';
 
 export function piecePath(id: string) { return `/?piece=${encodeURIComponent(id)}`; }
 
@@ -15,7 +16,7 @@ export function SharePiece({ id, title }: { id: string; title: string }) {
     }
   };
   return <div className="min-w-0 max-w-full">
-    <button className="inline-flex min-h-11 items-center justify-center rounded-xl border border-line bg-paper px-4 py-2 text-sm font-semibold text-ink hover:bg-panel" aria-label={`Share ${title}`} onClick={() => void share()}>Share ↗</button>
+    <button className={button} aria-label={`Share ${title}`} aria-expanded={visible} onClick={() => void share()}>Share ↗</button>
     {visible && <div className="mt-2 space-y-1"><label className="block text-xs text-muted">Link to {title}<input readOnly value={url} onFocus={e => e.currentTarget.select()} className="mt-1 block min-h-11 w-full rounded-lg border border-line bg-paper px-2 text-sm text-ink" /></label><p role="status" className="text-xs text-muted">{notice}</p></div>}
   </div>;
 }

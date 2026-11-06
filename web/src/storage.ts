@@ -57,7 +57,15 @@ export function writeLibrary(entries: LibraryEntry[], lastOpened?: Saved): Promi
       const combined = new Set([...keys.result, ...entries.map(entry => entry.id)]);
       // The limit and writes share one transaction, including concurrent tabs.
       if (combined.size > LIBRARY_LIMIT) { fail(new LibraryFullError()); return; }
-      entries.forEach(entry => store.put(entry));
+      entries.forEach(entry => {
+        if (!entry.catalogId) { store.put(entry); return; }
+        const existing = store.get(entry.id);
+        existing.onsuccess = () => {
+          if (existing.result && existing.result.catalogId !== entry.catalogId) {
+            fail(new Error('A personal arrangement already uses this filename. You can open this catalog edition without replacing your saved file.'));
+          } else store.put(entry);
+        };
+      });
       if (lastOpened) tx.objectStore('files').put(lastOpened, 'last');
     };
     return () => undefined;

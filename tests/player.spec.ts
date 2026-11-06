@@ -196,6 +196,7 @@ test('free collection filters, favourites, real nursery score and saved offline 
   await page.goto('/library');
   await expect(page.getByText(/\d+ pieces found · Free collection · \d+ total/)).toBeVisible();
   await page.getByRole('textbox', { name: 'Find a song' }).pressSequentially('London');
+  await page.getByText('Filters', { exact: true }).click();
   await page.getByLabel('Category', { exact:true }).selectOption('Children & learning');
   await page.getByLabel('Difficulty · estimated').selectOption('Easy');
   await page.getByLabel('Instrument', { exact:true }).selectOption('Piano');
@@ -228,6 +229,7 @@ test('free collection filters, favourites, real nursery score and saved offline 
   await expect(page.getByRole('heading', { name:'London Bridge',exact:true })).toBeVisible();
   await page.getByRole('link', { name:'Library',exact:true }).click();
   await page.getByRole('button', { name:'Explore everything',exact:false }).click();
+  await page.getByText('Filters', { exact: true }).click();
   await page.getByLabel('Instrument', { exact:true }).selectOption('Trumpet');
   await page.getByLabel('Category', { exact:true }).selectOption('Children & learning');
   await expect(page.getByText('No pieces match just yet.')).toBeVisible();
@@ -471,7 +473,7 @@ test('Aiken Drum follows its original notes and pickup across every score page',
   await expect(cursor).toHaveAttribute('data-score-beat','0');
   await page.setViewportSize({width:390,height:844});await position.fill('2');
   await expect(cursor).toBeVisible();
-  await expect.poll(async()=>cursor.evaluate(el=>{const a=el.getBoundingClientRect(),b=el.closest('[aria-label="Scrollable original sheet music"]')!.getBoundingClientRect();return a.left>=b.left&&a.right<=b.right;})).toBe(true);
+  await expect.poll(async()=>cursor.evaluate(el=>{const viewport=el.closest('[aria-label="Scrollable original sheet music"]');if(!el.isConnected||!viewport)return false;const a=el.getBoundingClientRect(),b=viewport.getBoundingClientRect();return a.left>=b.left&&a.right<=b.right;})).toBe(true);
   await page.screenshot({path:'test-results/aiken-follow-mobile.png',fullPage:true});
   expect(errors).toEqual([]);
 });
@@ -482,6 +484,7 @@ test('composer surnames, portraits, full-name search and saved filters work toge
   await expect(composer.locator('option').filter({hasText:'Beethoven, Ludwig van'})).toHaveAttribute('value','L. V. Beethoven');
   const labels=await composer.locator('option').allTextContents();
   expect(labels.slice(1)).toEqual([...labels.slice(1)].sort((a,b)=>a.localeCompare(b)));
+  await page.getByText('Filters', { exact: true }).click();
   await composer.selectOption('L. V. Beethoven');
   await expect(page.locator('article').getByText('Beethoven, Ludwig van',{exact:true}).first()).toBeVisible();
   const portraits=page.getByRole('img',{name:'Portrait of Ludwig van Beethoven',exact:true});
