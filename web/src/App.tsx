@@ -11,7 +11,7 @@ import { piecePath, SharePiece } from './SharePiece';
 import { pwa } from './fas-capabilities/pwa';
 import { button, selectedButton } from './ui';
 import { PracticeControls } from './PracticeControls';
-import { transposeSong, pitchLabel, rhythmAt, validLoop, type LoopRange } from './practice';
+import { transposeSong, pitchLabel, formatLoopTime, rhythmAt, validLoop, type LoopRange } from './practice';
 
 const Library = lazy(() => import('./LibraryScreen'));
 const OriginalScore = lazy(() => import('./OriginalScore'));
@@ -58,7 +58,7 @@ export default function App() {
   useEffect(() => { if (path !== '/') player.pause(); }, [path, player]);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if (busy || e.code !== 'Space' || path !== '/' || (e.target as HTMLElement).closest('button,input,select,textarea,a,[contenteditable]')) return;
+      if (busy || e.defaultPrevented || e.code !== 'Space' || path !== '/' || (e.target as HTMLElement).closest('button,input,select,textarea,a,summary,[contenteditable],[role=button],[role=slider],[role=checkbox],[role=switch]')) return;
       e.preventDefault(); if (!e.repeat) void toggle();
     };
     addEventListener('keydown', key); return () => removeEventListener('keydown', key);
@@ -75,7 +75,7 @@ export default function App() {
   const changeSpeed = (value: number) => { const resume = player.playing || player.loading; player.pause(); player.speed = value; setSpeed(value); if (resume) void start(true); };
   const toggleTrack = (i: number) => {
     const resume = player.playing || player.loading; player.pause();
-    const next = new Set(muted); if (next.has(i)) next.delete(i); else next.add(i);
+    const next = new Set(effectiveMuted); if (next.has(i)) next.delete(i); else next.add(i);
     setMuted(next); setSolo(null); player.muted = next; if (resume) void start(true);
   };
   const changePractice = (apply: () => void) => { const resume = player.playing || player.loading; player.pause(); apply(); if (resume) void start(true); };
@@ -127,14 +127,14 @@ export default function App() {
               <div><label htmlFor="position" className="sr-only">Playback position</label><input id="position" type="range" min="0" max={song.duration} step="0.01" value={time} aria-valuetext={`${formatTime(time)} of ${formatTime(song.duration)}`} onChange={e => seek(Number(e.target.value))} className="w-full accent-accent" /><div className="mt-1 flex justify-between font-mono text-xs text-muted"><span>{formatTime(time)}</span><span>{formatTime(song.duration)}</span></div></div>
               <div className="flex flex-wrap items-center justify-between gap-5"><div className="flex flex-wrap items-center gap-2"><Button onClick={() => player.seek(0)} aria-label="Stop and rewind">↤</Button><Button primary className="min-w-28" disabled={busy} onClick={() => void toggle()}>{audioLoading ? 'Cancel play' : playing ? 'Ⅱ Pause' : '▶ Play'}</Button><Button aria-pressed={loop} onClick={changeLoop}>↻ Loop {loop ? 'on' : 'off'}</Button></div><span className="hidden text-xs text-muted sm:block">Space to play / pause</span></div>
               {countingIn > 0 && <p role="status" className="text-sm font-semibold text-accent">Count in: {countingIn} · Get ready</p>}
-              {loopRange && <p className="text-xs text-muted">Section A {formatTime(loopRange.start)} → B {formatTime(loopRange.end)} · {loop ? 'Repeating' : 'Loop off'}</p>}
+              {loopRange && <p className="text-xs text-muted">Section A {formatLoopTime(loopRange.start)} → B {formatLoopTime(loopRange.end)} · {loop ? 'Repeating' : 'Loop off'}</p>}
               {audioLoading && <p role="status" className="text-xs text-muted">Preparing playback…</p>}
             </div>
           </section>
           <PracticeControls key={revision} song={song} transpose={transpose} onTranspose={changeTranspose} metronome={metronome} onMetronome={() => changePractice(() => { player.metronome = !metronome; setMetronome(!metronome); })} countIn={countIn} onCountIn={value => { if (player.countingIn) player.pause(); player.countIn = value; setCountIn(value); }} range={loopRange} time={time} loop={loop} onRange={changeRange} />
           <div className="grid gap-5 md:grid-cols-2">
             <Card><div className="space-y-5"><h2 className="text-xl">Playback</h2><div className="flex flex-wrap items-center justify-between gap-3"><label className="text-sm" htmlFor="sound-mode">Playback sound</label><select id="sound-mode" className="max-w-full min-h-11 rounded-lg border border-line bg-paper px-3 text-sm" value={soundMode} onChange={e => changeSound(e.target.value as SoundMode)}><option value="sampled">Original instruments</option><option value="piano">Grand piano</option><option value="simple">Simple tones</option></select></div><div className="flex items-center justify-between gap-4"><label htmlFor="speed" className="text-sm">Playback speed</label><select id="speed" className="min-h-11 rounded-lg border border-line bg-paper px-3 text-sm" value={speed} onChange={e => changeSpeed(Number(e.target.value))}>{[...new Set([.25,.5,.75,1,1.25,1.5,2,speed])].sort((a,b) => a-b).map(s => <option key={s} value={s}>{s}×{s === 1 ? ' · Original' : ''}</option>)}</select></div><div><label className="mb-2 flex justify-between text-sm" htmlFor="fine-speed"><span>Fine speed</span><span className="text-muted">{Math.round(speed * 100)}% · {Math.round(rhythmAt(song, time).bpm * speed)} BPM</span></label><input id="fine-speed" aria-label="Speed percentage" type="range" min="25" max="200" step="1" value={Math.round(speed * 100)} onChange={e => changeSpeed(Number(e.target.value) / 100)} className="w-full accent-accent" /></div><div><div className="mb-2 flex justify-between text-sm"><label htmlFor="volume">Volume</label><span className="text-muted">{volume}%</span></div><input id="volume" type="range" min="0" max="100" value={volume} onChange={e => { const v = Number(e.target.value); setVolume(v); player.setVolume(v / 100); }} className="w-full accent-accent" /></div><p className="text-xs leading-5 text-muted">Speed changes keep the selected pitch. Loop repeats A–B when a section is set, otherwise the whole piece.</p></div></Card>
-            <Card><h2 className="mb-4 text-xl">Listen in layers</h2>{solo !== null && <p role="status" className="mb-3 text-xs text-accent">Solo: {song.tracks[solo]?.name}. Other tracks are silent.</p>}<div className="max-h-56 space-y-3 overflow-y-auto">{song.tracks.map((t, i) => <div key={i} className="flex items-center justify-between gap-3"><div className="flex min-w-0 items-center gap-3"><span aria-hidden="true" className={`h-2.5 w-2.5 shrink-0 rounded-full ${['bg-accent','bg-mint','bg-sky','bg-warning'][i % 4]}`} /><div className="min-w-0"><p className="truncate text-sm font-semibold">{t.name}</p><p className="truncate text-xs capitalize text-muted">{t.instrument}</p></div></div><div className="flex shrink-0 flex-wrap gap-2"><Button aria-label={`${muted.has(i) ? 'Unmute' : 'Mute'} ${t.name}`} aria-pressed={muted.has(i)} onClick={() => toggleTrack(i)}>{muted.has(i) ? 'Muted' : 'On'}</Button><Button aria-label={`${solo === i ? 'Unsolo' : 'Solo'} ${t.name}`} aria-pressed={solo === i} onClick={() => toggleSolo(i)}>Solo</Button></div></div>)}</div></Card>
+            <Card><h2 className="mb-4 text-xl">Listen in layers</h2>{solo !== null && <p role="status" className="mb-3 text-xs text-accent">Solo: {song.tracks[solo]?.name}. Other tracks are silent.</p>}<div className="max-h-56 space-y-3 overflow-y-auto">{song.tracks.map((t, i) => <div key={i} className="flex items-center justify-between gap-3"><div className="flex min-w-0 items-center gap-3"><span aria-hidden="true" className={`h-2.5 w-2.5 shrink-0 rounded-full ${['bg-accent','bg-mint','bg-sky','bg-warning'][i % 4]}`} /><div className="min-w-0"><p className="truncate text-sm font-semibold">{t.name}</p><p className="truncate text-xs capitalize text-muted">{t.instrument}</p></div></div><div className="flex shrink-0 flex-wrap gap-2"><Button aria-label={`${effectiveMuted.has(i) ? 'Unmute' : 'Mute'} ${t.name}`} aria-pressed={effectiveMuted.has(i)} onClick={() => toggleTrack(i)}>{effectiveMuted.has(i) ? 'Muted' : 'On'}</Button><Button aria-label={`${solo === i ? 'Unsolo' : 'Solo'} ${t.name}`} aria-pressed={solo === i} onClick={() => toggleSolo(i)}>Solo</Button></div></div>)}</div></Card>
           </div>
         </>}
         <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5 text-xs text-muted"><p>A little less setup. A little more music.</p><button disabled={busy} className="min-h-11 underline underline-offset-4" onClick={() => { clearPieceLink(); void forget(); }}>Clear last opened file</button></footer>

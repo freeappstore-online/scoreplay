@@ -1,4 +1,4 @@
-import { beatAtTime, timeAtBeat, type Song } from './music';
+import { beatAtTime, timeAtBeat, formatTime, type Song } from './music';
 export type LoopRange = { start: number; end: number };
 export function transposeBounds(song: Song) {
   let low = 127, high = 0, pitched = false;
@@ -13,7 +13,11 @@ export function transposeSong(song: Song, semitones: number): Song {
 }
 export const pitchLabel = (value: number) => value === 0 ? 'Original pitch' : `${value > 0 ? '+' : '−'}${Math.abs(value)} semitone${Math.abs(value) === 1 ? '' : 's'}`;
 export function validLoop(range: LoopRange, duration: number) {
-  return Number.isFinite(range.start) && Number.isFinite(range.end) && range.start >= 0 && range.end <= duration && range.end - range.start >= .1;
+  return Number.isFinite(range.start) && Number.isFinite(range.end) && range.start >= 0 && range.end <= duration && range.end - range.start >= .1 - 1e-9;
+}
+export function formatLoopTime(seconds: number) {
+  const milliseconds = Math.round(seconds * 1000);
+  return `${formatTime(milliseconds / 1000)}.${String(milliseconds % 1000).padStart(3, '0')}`;
 }
 export function rhythmAt(song: Song, time: number) {
   const beat = beatAtTime(song, time);

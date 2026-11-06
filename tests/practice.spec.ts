@@ -12,6 +12,7 @@ function fixture(high = false) {
 test('transpose changes original notation, preserves the PDF, and resets safely for another piece', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', e => errors.push(e.message));
   await page.goto('/?piece=nursery-aikendrum');
+  await expect(page.getByRole('heading', { name: 'Aiken Drum', exact: true })).toBeVisible({ timeout: 30000 });
   const score = page.getByRole('img', { name: /Original score, measures/ });
   await expect(score.locator('svg')).toBeVisible();
   const initial = await score.locator('svg').innerHTML();
@@ -42,7 +43,9 @@ test('transpose and solo reach audible playback; fine speed preserves pitch', as
       createGain() { const node = super.createGain(), connect = node.connect.bind(node); (node as any).connect = (destination: AudioNode) => { if (destination === this.destination) { const probe = this.createAnalyser(); connect(probe); (window as any).probes.push(probe); } return connect(destination); }; return node; }
     };
   });
-  await page.goto('/'); await page.getByLabel('Choose MIDI file').setInputFiles({ name: 'practice.mid', mimeType: 'audio/midi', buffer: fixture() });
+  await page.goto('/');
+  await expect(page.getByRole('button', { name: '↑ Open MIDI', exact: true })).toBeEnabled();
+  await page.getByLabel('Choose MIDI file').setInputFiles({ name: 'practice.mid', mimeType: 'audio/midi', buffer: fixture() });
   await expect(page.getByRole('heading', { name: 'practice', exact: true })).toBeVisible();
   await page.getByLabel('Transpose', { exact: true }).selectOption('12');
   await page.getByRole('button', { name: 'Solo Melody', exact: true }).click();
@@ -71,7 +74,9 @@ test('A–B validates boundaries, repeats a sampled passage, and count-in can be
       createGain() { const node = super.createGain(), connect = node.connect.bind(node); (node as any).connect = (destination: AudioNode) => { if (destination === this.destination) { const probe = this.createAnalyser(); connect(probe); (window as any).loopProbes.push(probe); } return connect(destination); }; return node; }
     };
   });
-  await page.goto('/'); await page.getByLabel('Choose MIDI file').setInputFiles({ name: 'loop.mid', mimeType: 'audio/midi', buffer: fixture() });
+  await page.goto('/');
+  await expect(page.getByRole('button', { name: '↑ Open MIDI', exact: true })).toBeEnabled();
+  await page.getByLabel('Choose MIDI file').setInputFiles({ name: 'loop.mid', mimeType: 'audio/midi', buffer: fixture() });
   await expect(page.getByRole('heading', { name: 'loop', exact: true })).toBeVisible();
   await page.getByText('Edit A–B times', { exact: true }).click();
   await page.getByLabel('Loop start in seconds', { exact: true }).fill('2');
@@ -105,7 +110,9 @@ test('A–B validates boundaries, repeats a sampled passage, and count-in can be
 
 test('library previews leave practice pitch, solo, section and rhythm settings intact', async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem('scoreplay-sound-mode', 'simple'));
-  await page.goto('/'); await page.getByLabel('Choose MIDI file').setInputFiles({ name: 'preview-practice.mid', mimeType: 'audio/midi', buffer: fixture() });
+  await page.goto('/');
+  await expect(page.getByRole('button', { name: '↑ Open MIDI', exact: true })).toBeEnabled();
+  await page.getByLabel('Choose MIDI file').setInputFiles({ name: 'preview-practice.mid', mimeType: 'audio/midi', buffer: fixture() });
   await expect(page.getByRole('heading', { name: 'preview-practice', exact: true })).toBeVisible();
   await page.getByLabel('Transpose', { exact: true }).selectOption('3');
   await page.getByRole('button', { name: 'Solo Melody', exact: true }).click();

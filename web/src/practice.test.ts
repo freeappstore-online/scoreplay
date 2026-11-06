@@ -38,3 +38,7 @@ it('places compound-meter beats and accents through tempo and meter changes', ()
     { time: 3, accent: false }, { time: 4.5, accent: true }, { time: 5.5, accent: false },
   ]);
 });
+it('accepts a tenth-second loop despite floating-point subtraction', () => {
+  expect(validLoop({ start: .2, end: .3 }, 1)).toBe(true);
+  expect(validLoop({ start: .2, end: .299 }, 1)).toBe(false);
+});
