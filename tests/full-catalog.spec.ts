@@ -1,0 +1,82 @@
+import { test, expect } from '@playwright/test';
+
+test('the complete catalog stays on demand and Four Seasons previews, credits and scores work', async ({ page, context }) => {
+  test.setTimeout(120000);
+  const music: string[] = [], errors: string[] = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('request', r => { if (new URL(r.url()).pathname.startsWith('/music/')) music.push(r.url()); });
+  await page.goto('/library');
+  await expect(page.getByText('5261 pieces found · Free collection · 5261 total', { exact: true })).toBeVisible();
+  await page.evaluate(() => navigator.serviceWorker.ready);
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByLabel('Find a song', { exact: true }).pressSequentially('Die Zauberflöte');
+  await expect(page.locator('article').first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
+  await page.locator('article').first().scrollIntoViewIfNeeded();
+  await page.screenshot({ path: 'test-results/orchestral-library-mobile.png' });
+  await page.getByLabel('Find a song', { exact: true }).fill('Les Plaisirs');
+  await expect(page.locator('article').first()).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.getByLabel('Find a song', { exact: true }).fill('');
+  await page.getByLabel('Find a song', { exact: true }).pressSequentially('Vivaldi four seasons');
+  await expect(page.getByText('12 pieces found · Free collection · 5261 total', { exact: true })).toBeVisible();
+  expect(music).toEqual([]);
+  const title = 'The Four Seasons — Spring: I. Allegro';
+  const card = page.getByRole('article').filter({ has: page.getByRole('heading', { name: title, exact: true }) });
+  await card.getByRole('button', { name: `Preview ${title}`, exact: true }).click();
+  const bar = page.getByRole('region', { name: 'Music preview', exact: true });
+  await expect(bar.getByText('Playing preview', { exact: true })).toBeVisible({ timeout: 45000 });
+  await expect(page).toHaveURL(/\/library$/);
+  expect(music).toHaveLength(1); expect(music[0]).toMatch(/\.mid$/);
+  await page.getByRole('button', { name: 'Stop preview', exact: true }).click();
+  await card.getByText('About, downloads & credits', { exact: true }).click();
+  await expect(card.getByText(/Creative Commons Attribution-ShareAlike 3.0/)).toBeVisible();
+  const [credits] = await Promise.all([context.waitForEvent('page'), card.getByRole('link', { name: 'Edition files & credits ↗', exact: true }).click()]);
+  await expect(credits.getByRole('heading', { name: 'Scores and instrumental parts', exact: true })).toBeVisible();
+  await expect(credits.getByRole('link', { name: 'source.zip', exact: true })).toBeVisible();
+  await expect(credits.getByText(/Typesetting: Anonymous/)).toBeVisible(); await credits.close();
+  await card.getByRole('button', { name: `Open ${title}`, exact: true }).click();
+  await expect(page.getByRole('heading', { name: title, exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: `Credits for ${title}`, exact: true })).toHaveAttribute('href', '/music/mutopia-301/credits.html');
+  await expect(page.getByRole('img', { name: /Staff notation/ }).locator('svg')).toBeVisible();
+  await page.getByRole('button', { name: '▶ Play', exact: true }).click();
+  await expect.poll(async () => Number(await page.getByRole('slider', { name: 'Playback position', exact: true }).inputValue())).toBeGreaterThan(.2);
+  await page.getByRole('button', { name: 'Ⅱ Pause', exact: true }).click();
+  expect(errors).toEqual([]);
+});
+
+test('new nursery notation saves and reopens, while missing upstream MIDI is honestly score-only', async ({ page }) => {
+  await page.goto('/library');
+  await page.getByRole('button', { name: /Little learners/ }).click();
+  await page.getByLabel('Find a song', { exact: true }).pressSequentially('Jack and Jill');
+  await page.getByRole('button', { name: 'Save to my files', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Saved to my files', exact: true })).toBeVisible();
+  await page.reload(); await page.getByRole('button', { name: 'My files (1)', exact: true }).click();
+  await page.getByRole('button', { name: 'Open Jack and Jill', exact: true }).click();
+  await expect(page.getByRole('heading', { name: 'Jack and Jill', exact: true })).toBeVisible();
+  await expect(page.getByRole('img', { name: /Original score, measures/ }).locator('svg')).toBeVisible();
+  await page.getByRole('link', { name: 'Profile', exact: true }).click();
+  await page.getByRole('link', { name: 'Library', exact: true }).click();
+  await page.getByRole('button', { name: /Explore everything/ }).click();
+  await page.getByLabel('Find a song', { exact: true }).pressSequentially('Aurore');
+  const card = page.getByRole('article').filter({ has: page.getByRole('heading', { name: /^Aurore/ }) });
+  await expect(card).toHaveCount(1);
+  await expect(card.getByText(/does not provide a working MIDI/)).toBeVisible();
+  await expect(card.getByRole('button', { name: /^Preview / })).toHaveCount(0);
+  const pdf = card.getByRole('link', { name: /^Open PDF / });
+  const response = await page.request.get((await pdf.getAttribute('href'))!);
+  expect(response.ok()).toBe(true); expect((await response.body()).subarray(0,5).toString()).toBe('%PDF-');
+});
+
+
+test('long source titles also fit the player on a narrow screen', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('/?piece=mutopia-1520-lwv22lesplaisirsdelileenchantee-1');
+  await expect(page.getByRole('heading', { name: /Les Plaisirs/ })).toBeVisible();
+  await expect(page.getByRole('link', { name: /^Credits for / })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
+  await page.screenshot({ path: 'test-results/long-title-player-mobile.png' });
+});

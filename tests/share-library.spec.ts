@@ -84,9 +84,11 @@ test('dark shelves and favourites are distinct, and a Mozart search can escape f
   await page.emulateMedia({ colorScheme: 'dark' }); await page.goto('/library');
   const free = page.getByRole('button', { name: 'Free collection', exact: true });
   await expect(free).toHaveAttribute('aria-pressed', 'true');
+  await page.getByLabel('Find a song', { exact: true }).pressSequentially('Aiken Drum');
   await page.getByRole('button', { name: 'Favourite Aiken Drum', exact: true }).click();
   const star = page.getByRole('button', { name: 'Favourite Aiken Drum', exact: true });
   await expect(star).toHaveAttribute('aria-pressed', 'true');
+  await page.getByLabel('Find a song', { exact: true }).fill('');
   const favourites = page.getByRole('button', { name: 'Favourites (1)', exact: true });
   await favourites.click();
   await page.getByLabel('Composer', { exact: true }).selectOption('W. A. Mozart');
@@ -122,7 +124,7 @@ test('Vivaldi discovery, source score, saved filters, sharing and playback work 
   await page.goto('/library');
   await page.getByRole('button', { name: 'Browse Vivaldi, Antonio', exact: true }).click();
   await expect(page.getByLabel('Composer', { exact: true })).toHaveValue('A. Vivaldi');
-  await expect(page.getByText(/23 pieces found · Free collection/)).toBeVisible();
+  await expect(page.getByText(/196 pieces found · Free collection/)).toBeVisible();
   await page.getByLabel('Find a song', { exact: true }).pressSequentially('A minor');
   await expect(page.getByText(/3 pieces found · Free collection/)).toBeVisible();
   const card = page.locator('article').filter({ has: page.getByRole('heading', { name: title, exact: true }) });

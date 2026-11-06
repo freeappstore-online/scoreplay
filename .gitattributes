@@ -1,0 +1,3 @@
+# Preserve licensed upstream music files byte-for-byte, including original line endings.
+# Their source hashes, rather than app-code whitespace rules, verify these assets.
+web/public/music/** -text -whitespace linguist-vendored

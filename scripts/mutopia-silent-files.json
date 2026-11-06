@@ -1,0 +1,102 @@
+[
+  {
+    "id": "mutopia-2157-tenthregdrums",
+    "sha256": "87eb1efcb6ad9538d34a27d566ce96292cf5602b630a4b852fff03971e735eb7",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-459-trombone",
+    "sha256": "3c3116874d56b39d9a274362eda95d06155ee31f45fed9b6f2f1df23e19211f1",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-1186-kopprasch",
+    "sha256": "625afb98eca0bfd795da80c83e70f7d8f75a54d40f7b579f7b09d1ee6f764fb9",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-1947-alto-1",
+    "sha256": "db9cd50bde02b30b016368757325aa104e42593d73ea842519e3c4efca68ba44",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-1947-clarinetti-1",
+    "sha256": "def726dc456d68a795cff9ead58472c31e663c94810d2ca767a14e088dfa4ede",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-1947-fagotti-1",
+    "sha256": "de7d638fbd5db4d29759d17af1f93eadd9de5f3f371ebba67c205fd88d9ccc81",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-1947-flauti-1",
+    "sha256": "34e1a5c2119a3bce0dc569ff320ed6fd37f513d088b3e0f7a383619ad309507c",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-1947-oboi-1",
+    "sha256": "a71325add8e89ec7733fe2f3bf3f66e72736f8e3a2a47fb4930159e20e808a4a",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-1947-soprano-1",
+    "sha256": "50d21bafe03cb4aaa4f377e49ff8758ae167fe9afe6dcd960b6010ee81032110",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-2229-mozartwa-kv488-midi-3-presto",
+    "sha256": "302a69b56a4663462005f60160c24e7e0dc47c10cd1234be8a5634658573d1d4",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-248-contrabasso-2",
+    "sha256": "7a4b81bc61f9b7b53a3d85fe5320538bccde77cdbc6f5ccc8df34dd4b42055d5",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-248-timpani-2",
+    "sha256": "2db0e4543c6c746e3ad743a84235e2d5466cc90b09e8458d5cc0b51f09e474de",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-248-viola-2",
+    "sha256": "d4b22bac1f5895b764265ad30ffb96a00f3b99d5a149b9bcb1de02f420a0112a",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-248-violinoi-2",
+    "sha256": "41988fb0d76ca1f59bde7f9bf6064d70df9d5a68871e9b24c78ffafe3a1f6287",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-248-violinoii-2",
+    "sha256": "63adab155a8e8423ced866c250ece9dfb49b9bf68f29ffb8313889e9605edd32",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-248-violoncello-2",
+    "sha256": "88a6a947dab394f0443b99e74e143240abffe4acf93b3976cf396c5e3cec6e13",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-2048-5-bass-1",
+    "sha256": "d9f98a56433a284eab76dd4c21f1cdf48a68731943c68df9c535865f3fb3ae46",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-2048-5-cello-1",
+    "sha256": "edfede0bb5ddce3ec842861ea014697e36392ccc93d0f67bda4d4583461b18f1",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-2048-6-bass-1",
+    "sha256": "a5261098c27564c4f9f787a14be7490b36ebf61921599707cb790b9e7e4b2ada",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  },
+  {
+    "id": "mutopia-2048-6-cello-1",
+    "sha256": "f5e05dcfc3d3627864d2babda074860f6fbfaf6b6f47bacee2908fd8249843b7",
+    "reason": "The original MIDI contains no playable notes. Retained in the edition files, omitted from playable search results."
+  }
+]

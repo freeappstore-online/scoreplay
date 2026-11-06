@@ -13,3 +13,6 @@ dist
 /web/public/maskable-icon-512x512.png
 /test-results/
 /playwright-report/
+
+# Python import-tool bytecode.
+/scripts/__pycache__/

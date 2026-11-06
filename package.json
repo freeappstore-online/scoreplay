@@ -13,10 +13,11 @@
   },
   "scripts": {
     "dev": "pnpm --filter @scoreplay/web dev",
-    "build": "pnpm --filter @scoreplay/web build",
+    "build": "pnpm catalog:prepare && pnpm --filter @scoreplay/web build",
     "preview": "pnpm --filter @scoreplay/web preview",
     "typecheck": "pnpm --filter @scoreplay/web exec tsc -b",
-    "test": "pnpm --filter @scoreplay/web test"
+    "test": "pnpm --filter @scoreplay/web test",
+    "catalog:prepare": "node scripts/prepare-catalog.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1"

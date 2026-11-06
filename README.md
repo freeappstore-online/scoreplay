@@ -19,7 +19,11 @@ Open Library to import up to 100 arrangements. Select MIDI, uncompressed partwis
 
 A paired MusicXML score is shown as its original notation, with measure paging and optional MIDI timing following. Repeats or different arrangements can make score and MIDI timing diverge. PDF scores use the browser PDF viewer with a separate-tab fallback. The MIDI transcription remains available.
 
-The free collection bundles 226 public-domain pieces and movements: 24 nursery songs and 202 classical/traditional entries. All have MIDI and original PDF; nursery songs also have MusicXML. Sources, rights links, original download URLs, verification dates and SHA-256 hashes are recorded in `web/src/catalog-data.json`. Mutopia editions are explicitly public-domain dedications. The 1878 nursery collection is from Project Gutenberg's *The Baby’s Bouquet*, arranged by Lucy Crane (1842–1882), transcribed by Linda Cantoni; the source terms are retained in `web/public/music/gutenberg-license.txt`.
+The collection covers all **2,123 editions** in Mutopia's published index as reviewed on 2026-11-06, plus **60 nursery songs** from Project Gutenberg. It contains **5,257 playable pieces, movements and instrumental parts**, plus **four PDF-only editions** whose upstream MIDI links are unavailable. All twelve movements of Vivaldi's *The Four Seasons* are included. Twenty original MIDI files contain no playable notes; these remain available in their edition downloads but do not appear as playable search results.
+
+Mutopia editions are public domain or freely licensed under CC BY / CC BY-SA (versions 2.0–4.0 as specified by each edition). The original files and notices are unchanged. Every edition has a local credits page linked from the player and the library’s “Edition files & credits” link with its original MIDI files, all A4 PDFs/parts, editable LilyPond source, named contributor credits and license link. These music licenses apply to the files separately from the app's MIT license. `scripts/mutopia-provenance.json` pins all 10,568 upstream files/members with SHA-256 hashes; `scripts/mutopia-coverage.json` records complete coverage and source exceptions. Three broken upstream MIDI filenames were resolved against their official directories.
+
+The nursery scores include MIDI, original MusicXML and PDF. They come from *The Baby’s Bouquet* and *The Baby’s Opera*, transcribed by Linda Cantoni. Their source terms are retained in `web/public/music/gutenberg-license.txt` and `gutenberg-opera-license.txt`. New additions include Baa, Baa, Black Sheep; Jack and Jill; Three Blind Mice; Hickory Dickory Dock; Little Bo-Peep; and Rock-a-Bye Baby.
 
 Search is accent-insensitive and matches all words across titles, composers and tags. Filters combine category, estimated difficulty, instrument, composer, duration, original MusicXML and multiple tags. Sort by title, composer, length or difficulty. Favourites and filters persist locally. Assets load on demand; Save to my files stores MIDI and scores in IndexedDB for reuse without another download. The app shell must have been cached for offline navigation. User imports are never uploaded or included in the public catalog. No paid sources or Disney downloads are bundled.
 
@@ -40,12 +44,9 @@ Composer names are displayed and sorted surname first while retaining the origin
 
 ## Sharing and discovery
 
-Each free piece has a stable link, such as `/?piece=nursery-aikendrum`. Share uses the device share sheet or copies the URL, with a selectable link if the browser denies access. Direct links load the matching MIDI and score without autoplay or sign-in, and support reload and browser history. Saved catalog files can reopen offline. Personal imports never get public links; replacing any catalog file with an import clears its public provenance.
+Each playable free piece has a stable link, such as `/?piece=nursery-aikendrum`. Share uses the device share sheet or copies the URL, with a selectable link if the browser denies access. Direct links load the matching MIDI and score without autoplay or sign-in, and support reload and browser history. Saved catalog files can reopen offline. Personal imports never get public links; replacing any catalog file with an import clears its public provenance.
 
-The library now includes 24 Mozart entries, 18 Chopin pieces, all three Gymnopédies, Czerny melodic studies, Burgmüller studies, and works by Mendelssohn, Liszt, Saint-Saëns, Dvořák, Scarlatti and Sor. New source editions have public-domain dedications verified on Mutopia, with original URLs and asset hashes in the catalog. Composer shortcuts reset conflicting filters and open the full collection. Shelf selection uses a solid contrasting fill and checkmark; empty favourites can search the entire free collection without losing the composer filter.
-
-
-Vivaldi has 23 movements from the first six concertos of *L’estro armonico*, Op. 3, and the Concerto for Viola d’amore and Lute, RV 540. Each MIDI is the complete selected movement; its PDF contains the full concerto, as noted in the piece description. The two Mutopia editions are public-domain dedications. The archive member names are pinned alongside the source ZIP URLs and extracted-file hashes in `catalog-data.json`.
+Composer shortcuts reset conflicting filters and open the full collection. Shelf selection uses a solid contrasting fill and checkmark; empty favourites can search the entire free collection without losing the composer filter. Indexed composer names are presented surname first, with full names where verified from the source. Existing portraits are retained; other composers use an initials fallback. Unassessed editions use “Not rated”, rather than an invented difficulty. Collection parts may have a full-edition or part PDF; the selected filename is stated and all alternatives are available on the edition page.
 
 `node scripts/sync-catalog.mjs [piece-id ...]` also supports ZIP-backed editions using Python 3's standard library; shared archives are fetched once per run. Omitting IDs verifies the full catalog. The browser receives ordinary static MIDI/PDF assets and needs no ZIP support.
 
@@ -58,4 +59,16 @@ Preview buttons play MIDI directly in the free collection, favourites and saved-
 
 The catalog module is lazy-loaded for Library and shared links, with precomputed search text and filter options. Result calculations are memoized; transport progress updates only the preview bar, not the search results. Reading a known saved piece uses an IndexedDB key lookup instead of loading the whole saved library. The PWA caches app JavaScript, portraits and the shared sound bank; it does not precache all music or score files. Catalog growth increases hosted static storage and small searchable metadata, not simultaneous playback engines or downloaded score files.
 
-The latest 60 additions include Bach inventions and organ works, Beethoven sonata and symphony movements, Schubert songs and impromptus, and Debussy’s first Arabesque. Each source edition's public-domain dedication and MIDI/PDF hashes were verified before adding it.
+The browser catalog is generated by `pnpm catalog:prepare`: repeated edition metadata is stored once and verification hashes/upstream archive details stay outside the app bundle. Its JSON is approximately 300 KB gzipped. The approximately 800 MB original-file collection is explicitly excluded from PWA precaching, including the edition HTML pages. Only selected music files are requested; the UI initially renders twelve results.
+
+## Updating the complete Mutopia snapshot
+
+The optional importer requires Python 3, `requests`, and `beautifulsoup4`. Use a fresh cache directory for a fresh upstream review:
+
+```sh
+python3 scripts/fetch-mutopia.py --cache /tmp/scoreplay-mutopia
+python3 scripts/import-mutopia.py --index /tmp/scoreplay-mutopia/index.json --cache /tmp/scoreplay-mutopia/assets --output /tmp/scoreplay-review
+node scripts/measure-catalog.mjs /tmp/scoreplay-review/catalog.json
+```
+
+Review download errors, `problems.json`, edition licenses/credits, PDF pairing overrides, and the generated metadata before replacing `web/src/catalog-data.json` and `scripts/mutopia-provenance.json`. Known silent files are pinned in `scripts/mutopia-silent-files.json`; changed bytes require another review. The four source-only editions remain visible with PDF links and an explicit explanation, without preview or misleading zero-length playback. After accepting the metadata, run `pnpm catalog:prepare`, typecheck, tests, build, and browser checks. No bulk asset downloads occur in the user's browser.
