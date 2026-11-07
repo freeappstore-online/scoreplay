@@ -100,6 +100,27 @@ jobs:
           fi
           rm "$log"
           fi
+      - name: Install extra dependencies
+        run: |
+          set -euo pipefail
+          if [ ! -f pnpm-lock.yaml ]; then
+          echo "Creating the first dependency lock for this app."
+          else
+          log=$(mktemp)
+          if pnpm install --frozen-lockfile >"$log" 2>&1; then
+          cat "$log"
+          else
+          status=$?
+          cat "$log"
+          if grep -q 'ERR_PNPM_OUTDATED_LOCKFILE' "$log"; then
+          echo "Dependency manifests changed; updating the app lock deliberately."
+          else
+          rm "$log"
+          exit "$status"
+          fi
+          fi
+          rm "$log"
+          fi
       - name: Resolve build target
         id: target
         run: npx --yes @freeappstore/cli@0.4.79 build-target --app-id "${GITHUB_REPOSITORY##*/}" --github-output
@@ -213,13 +234,16 @@ jobs:
           export -f upload
           if jq -e 'has("missing")' "$RUNNER_TEMP/session.json" > /dev/null; then
             # Delta: upload only what changed; the API copies the rest from the live release.
+            echo "Delta deploy: $(jq '.missing | length' "$RUNNER_TEMP/session.json") to upload, $(jq '.reuse | length' "$RUNNER_TEMP/session.json") reused from the live release"
             jq -r '.missing[]' "$RUNNER_TEMP/session.json" | tr '\n' '\0' | xargs -0 -P 8 -n 1 bash -c 'upload "$1"' _
-            jq -c '.reuse as $r | if ($r | length) == 0 then empty else ($r | _nwise(100) | {paths: .}) end' \
-              "$RUNNER_TEMP/session.json" | while IFS= read -r batch; do
+            reuse_batch() {
               curl -sS --fail-with-body --retry 3 --retry-all-errors -X POST \
                 -H "Authorization: Bearer $DEPLOY_TOKEN" -H 'Content-Type: application/json' \
-                --data-binary "$batch" "$DEPLOY_URL/reuse"
-            done
+                --data-binary "$1" "$DEPLOY_URL/reuse" -w "reuse batch: HTTP %{http_code} in %{time_total}s\n"
+            }
+            export -f reuse_batch
+            jq -c '.reuse as $r | if ($r | length) == 0 then empty else ($r | _nwise(100) | {paths: .}) end' \
+              "$RUNNER_TEMP/session.json" | tr '\n' '\0' | xargs -0 -P 3 -n 1 bash -c 'reuse_batch "$1"' _
           else
             find . -type f -printf '%P\0' | xargs -0 -P 8 -n 1 bash -c 'upload "$1"' _
           fi
